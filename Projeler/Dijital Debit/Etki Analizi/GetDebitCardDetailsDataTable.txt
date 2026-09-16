@@ -1,0 +1,55 @@
+GetDebitCardDetailsDataTable
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/Web References/DebitCardService/Reference.cs
+	GetDebitCardDetailsDataTable fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetDebitCardDetailsDataTable servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetDebitCardDetailsDataTableAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Operation/Web References/DebitCardService/Reference.cs
+	GetDebitCardDetailsDataTable fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetDebitCardDetailsDataTable servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetDebitCardDetailsDataTableAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/Web References/DebitCardService/Reference.cs
+	GetDebitCardDetailsDataTable fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetDebitCardDetailsDataTable servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetDebitCardDetailsDataTableAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/DebitCardsCore.cs
+	GetCustomerDebitCardsWithDetails fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+	GetCustomerDebitCardsWithDetailsUnique fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+	CheckDebitCardLastValidDate fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+	GetDebitCardDetail fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/CardPwdManager.cs
+	CheckCardPIN fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+	GetNewCardPIN fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/CreditCardsCore.cs
+	GetCardType fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+	FillCreditOrDebitCardInfo fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/DebitCardsQueries.cs
+	SearchCustomerNo fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+	QueryDebitCardValidationInfo fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetailsDataTable fonksiyonu kullanılır.
+-------------------------
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fAppCreditCards/fAppDebitCard.cs
+	DebitCardListWithDetails fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsCore üzerinden GetCustomerDebitCardsWithDetails fonksiyonu kullanılır.
+	DebitCardListWithDetailsUnique fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsCore üzerinden GetCustomerDebitCardsWithDetailsUnique fonksiyonu kullanılır.
+	GetDebitCardDetailInfo fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsCore üzerinden GetDebitCardDetail fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fAppCreditCards/fAppCreditCard.cs
+	CheckCardPin fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.CardPwdManager üzerinden CheckCardPIN fonksiyonu kullanılır.
+	ChangeCardPin fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.CardPwdManager üzerinden GetNewCardPIN fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fCustomer/fCustomer.cs
+	CustomerNewPswProcess fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.CardPwdManager üzerinden CheckCardPIN fonksiyonu kullanılır.
+	LoginUserWithCardNumberNew fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.CreditCardsCore üzerinden FillCreditOrDebitCardInfo fonksiyonu kullanılır.
+	LoginUserWithCardNumber fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.CreditCardsCore üzerinden FillCreditOrDebitCardInfo fonksiyonu kullanılır.
+	
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fAppCreditCards/fAppIM.cs
+	CardType fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.CreditCardsCore üzerinden GetCardType fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/CardPwdManager.cs
+	ReadCardPIN fonksiyonu tanımlanır. DebitCardsQueries referansı üzerinden SearchCustomerNo fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/DebitCardsCore.cs
+	GetCustomerNumberWithDebitCardNumber fonksiyonu tanımlanır. DebitCardsQueries referansı üzerinden SearchCustomerNo fonksiyonu kullanılır.
+	GetDebitCardValidationInfo fonksiyonu tanımlanır. DebitCardsQueries referansı üzerinden QueryDebitCardValidationInfo fonksiyonu kullanılır.

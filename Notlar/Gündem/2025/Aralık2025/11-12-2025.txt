@@ -1,0 +1,44 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Sanal kart limit değişimi, Tunç'la ilerlenmeyecek
+-Limit artırım ve sanal kart başvuru transactioncode
+-UAT'i de batch çalışmıyor. Ayrıcalıklar dünyası MCC çalışmıyor.
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-Visa Clearing Exchange Geçişi , Emrah Mersinli ve Hasan Cihan, takas operasyon, 2026 Ağustos deadline
+Daily hızlıca konuşabilir, Meral de götürebilir.
+-LKS pazartesiden itibaren aktif olacağız. Netleştirelim, https://jira.intertech.com.tr/browse/SD-2866025
+-Production Call Center ek kart başvuru iptal, Çağlar'da, takip
+-Production Call Center teslimat adresi, Batuhan'a ata.
+-CMS menülerinin call center ekranlarında gizlenebilmesi isteri hakkında, maili ,konuyu konuşmak gerekli.
+-Pusula Ekstre Adres Değişikliği Hakkında , Murat Takip et
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı, takip
+-Codem konusu test , takip , KMH ile alakalıydı, sıkıştıran var mı, varsa Yusuf'u sıkıştıralım.
+-Temassız ve yurt içi - yurt dışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+-Online Vergi Dairesine bilgi gir
+
+
+Barış'a hata listesini çıkaralım.
+
+Regresyon hatası pre-login QR para çekme limitleri hatalı görünüyor.
+
+HSM, Fırat takip etsin, Emrah İstanbul'a gelince bakacaktı. 10k geçişi gerekecek ilgili Eforu 
+ key block'a adresleyelim
+ 
+
+LKS , Özgün , Koray, ben esra konuşalım, Servis ismini çıkarması lazım.Perşembe gece 1 gibi işlem yapmıi, ertesi gün yansımamış
+o akşam , son gönderdiği gelmiş. Turgut , gelen hatalar neden kaynaklı.
+Geç de olsa çalışıyor, sen bize yanlış söyledin, 
+Özgün'e gidip paycore'da farklılık var altyapı nasıldır bize anlatmanız lazım.
+Biz bu sistemi MS'e alsak nasıl bir sıkıntı çıkabilir.
+
+
+-Kart başvuruda idempotency, profilde bir kaç serviste deniyorlar, test edelim
+9. ayın 23'ü chat bak ve Ayşenin yapamadığını göster

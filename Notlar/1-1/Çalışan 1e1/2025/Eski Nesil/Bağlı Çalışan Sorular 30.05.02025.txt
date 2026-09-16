@@ -1,0 +1,88 @@
+Önemli bir noktadasın, içerde yazılım üreten ve bu süreçte öğrenen nadir kişilerdensin.
+
+Sefa: maddi anlamda moral bozucu olunmaması lazım, işini seviyor. Burada da sorun çözüldüğünde teşekkür ediyorlar.
+30 yaşında, bursa'da 2-3 senedir evli, adana'lı, kocaelinde okudu, 6-7 senedir sektörde. İstanbula ofise arada geliyor.
+
+Avni: 31 bitti, bekar, yazılım 3.5 sene, mühendislik, 6 ayda gömülü yaptın. c, c++ . giresun.
+age of çu , fifa , 
+Avni: Maaşla ilgili sorunun vardı, şu an memnunsun. Danışmak için teknik lider olması, 
+
+İstanbul: Evli, 
+
+apple severence , 
+elder rings, rpg 
+HOC FE refactor
+
+Kariyer Gelişimi:
+
+*1. Geçtiğimiz hafta moralinizi bozan bir şey var mıydı, olmasaydı iyi olurdu dediğin şey nedir?
+Sefa: Yorucu bir haftaydı
+Avni: Altyapı sorunları, kod yazmadı.
+Ayşe:
+
+* 2. Bu hafta öğrendiğiniz en sevdiğiniz şey neydi? 
+Sefa: xcode'da configlerini öğrendim, daha hızlı ve sağlıklı build aldın, o da mutlu etti.
+Daha iyi neler yapabiliriz şema dosyası, cms yeniden yazılması gündemde.
+Sistem iyileştirme işleri yapıyorsun, kaynak ayırmada sorun yok.
+Avni: backend chapter diye bir şey yapılıyor, ekiplerin sorunlarına çözüm bulunmaya çalışılıyor, herkes için uygunsa ben bu sorun için şöyle bir şey düşünüyorum.
+Öğrenmek , hata mesajlar olarak aklında tutulabilirsin. hata mesjalarında yapılabiliyorsa bütün mesaj türlerinde de yapılması gerekiyor.
+Ayşe: speed up diye bir ekip var, performans iyileştirmesi yapıyor, speed up tarafına iletişim koran kişi. Cacle'le yağmayı öğrendiler.
+
+3. Bu hafta işinizin hangi kısmı size en çok mutluluk verdi?
+4. Şu anda hangi becerilerinizi geliştirmek istersiniz?
+*5. Zamanınız veya kaynaklarınız olsaydı, şu anda neyle uğraşıyor olurdunuz?
+Sefa: ekiple ilgili jira kullanımı daha detaylandırılması nı isterdim. fleks'lik sayesinde feature çıkıyoruz,
+development sıkıntısı olabilir. İlerde bir adam feature gündeme geldi, niye geliştirildi diyebilir.
+ Geriye baktıklarında çok detaylı şeyler göremiyorlar. Jira flow'da daha fazla bilgi olmalı.
+ ekipte business ve technical'ler aynı po ve uzmanlarla birlikte.
+Ayşe: Jira'yı çok etkili kullanmıyoruz. Taskları eritme konusunda sıkıntı yaşanmıyor. Planlamada sıkıntılar yaşanabiliyor, boş kalınıp yoğun olduğu dönemler oluyor.
+
+*6. Kendinizi altı ay sonra nasıl hayal ediyorsunuz? Bir yıl sonra? İki yıl sonra? Beş yıl sonra?
+Ayşe: teknik şeyler öğrenmeyi çalışmayı daha çok seviyorsun. Business'ten daha teknik konular ilgili çekiyor. Expert ve Sr. Expert olmayı hedefliyor.
+Kod iyileştirmeleri, performans iyileştirme,
+
+7. Bu şirkette öğrenmek istediğiniz biri var mı?
+
+Geri Bildirim Almak ( 1'e 1 lerde mi söyleyeyim, ayrı arayıp mı yazayım? )
+*1. Hayatını kolaylaştırmak için ne yapabilirim?
+2. İşinizin hangi yönüyle ilgili daha fazla yardım veya koçluk almak istersiniz?
+*3. Çalışmanlarını hangi alanında gelişmek istersiniz?
+4. Bu ay farklı şekilde deneyebileceğim bir şey var mı?
+5. 1-10 arasında bir ölçekte, bu ay size gösterdiğim ilgi ve destek seviyesi nasıldı?
+Sefa: Ortaya birşey atılıyorsa kişisel değildir, kişisel algılanmıyor.
+Avni: Konuyu Hakim değilim, teknik seviyede destek olamadım(Ahmet). 
+Ayşe: 
+
+*6. Bu ay bir becerimi geliştirebilseydim, bu ne olurdu? Beni başarılı yapmak için ne önerirdin?
+7. Yeterince geri bildirim aldığınızı düşünüyor musunuz?
+Sefa: İş yaptığımda görüdüğünü düşünüyorsun.
+
+Moral Verme
+*1. Hissettiklerin, ruh halin hava durumu olsaydı, şu anda ne olurdu? Bu hafta?
+*2. Şu anda sizi strese sokan bir şey var mı? Nedir ?
+Sefa: Kdig projesinde teknik olarak altyapnın iyi olmaması sıktı. Projedeilerlemeden başka projeye geçmek can sıkıyor.  
+Ayşe: İş olarak yürümeyen bir şey yok.
+
+3. 1-10 arasında bir ölçekte, bu hafta iş-yaşam dengenizi nasıl derecelendirirdiniz? 10 olmasını engelleyen şey nedir?
+Sefa: puan 7, infra strese sebep neden oldu.
+Avni: Çok fazla mesai harcamadığın için iş yaşam dengesi diyorsun. Udemy sorayım, Ahmet emin şit, 
+
+*4. İşe gelmek konusunda sizi en çok ne heyecanlandırır? Ne için uyumayı tercih edersiniz?
+Hayvancılık, seviyorsun. 
+
+5. Bir proje üzerinde çalışmak için sizi ne motive eder?
+*6. Mükemmel iş gününüz nasıl görünüyor?
+*7. Bu hafta en çok neyle gurur duyuyorsunuz?
+Ayşe: Performans çalışmaları bizi gurulandırıyor. Uygulama kağnı gibi çalışıyor, ekşide yorumlar varmış.
+Kart detay'a girmesi kağnı gibi 13 saniye.
+Interapi üzerinden fortuna'ya gidiyor, Fortuna tarafından da intertech kendisi bir servis yazıyor, 
+
+Sefa'nın Yorumları:
+
+
+Avni: CMS ile alakalı işler haftaya bitecek, 1-2 gleiştirme daha var. new card program, contrallerdakilerin hepsini biz yazdık. 
+Bazı dönüşümler v eekstra geilştirmeler yapılacak, temmuza doğru beraber yapabiliriz.7
+
+Ayşe: Geç cevap verdiyse çalıştığından dolayı yavaş yanıt veriyor. Bilgisayar başında iken telefonu uzakta tutar
+
+ 

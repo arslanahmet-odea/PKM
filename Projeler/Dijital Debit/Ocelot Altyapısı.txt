@@ -1,0 +1,70 @@
+NFC:
+showVerifySheetModal  , hangi doğrulamaların çıkaracağını nasıl anlayacak? Mesela IB için NFC çıkmaması gerektiğini nasıl anlayacak?
+
+-Aşağıdaki sözler başarısız olsa bile success dönebileceği anlamına mı geliyor ? Şayet güvenilir değilse sadece sunulan GET /verification/session-status  tekrar önyüzden çağrılabilir.
+Eğer modülden success döner ise işlem yapılmadan önce DomainPrincipal/ UserFraudVerify/VerifyStatus property'si ile yapılmalı. 
+Eğer oturumda daha önce başarılı bir doğrulama yapılmamışsa (isVerified = False ) işleme devam edilmemelidir. İş birimi kararına göre ilgili ekranlara yönlendirilmelidir.
+
+
+Ocelot: Emirhan karaağac kullanmış, ondan öğrenilecek!
+
+Kimlik Doğrulama (Authentication)
+JWT, OAuth2, OpenID Connect gibi protokollerle erişimi sınırlandırın.
+
+Token süresini ve kapsamını dikkatli belirleyin.
+
+Ocelot’un AuthenticationProviderKey özelliği ile koruyun.
+
+2. Yetkilendirme (Authorization)
+Hangi endpoint’lerin hangi kullanıcı ya da uygulama rollerine açık olduğunu net şekilde tanımlayın.
+
+RouteClaimsRequirement gibi Ocelot kurallarıyla belirli claim'leri kontrol edin.
+
+3. Rate Limiting / Throttling
+DDoS veya kötü niyetli kullanımlar için koruma sağlar.
+
+Ocelot'ta RateLimitOptions kullanarak IP veya kullanıcı bazlı limit koyabilirsiniz.
+
+4. IP Kısıtlama ve Whitelisting
+Sadece belirli IP aralıklarından gelen isteklere izin verin.
+
+Firewall veya Ocelot’ta DownstreamHostAndPorts veya middleware ile IP kontrolü yapılabilir.
+
+5. HTTPS ve Sertifika Güvenliği
+TLS/SSL zorunlu hale getirilmeli.
+
+Sertifikaların geçerliliği ve yenileme süreçleri takip edilmeli.
+
+ Versiyonlama
+ Servis Dökümantasyonu
+ Monitoring ve Alarm
+ Tenant Bazlı Ayrım (Varsa)
+Multi-tenant yapı varsa her müşterinin erişimi ayrıştırılmalı.
+
+Token bazlı tenant validation yapılabilir.
+
+Layer7 ürünün uygulama ekibi yönetiyor, api gtw , layer 7 url'i
+
+uat ortam gq linki:
+Enes Ahmet Kuzgun 7/17/2025 12:14 PM • https://odeaapigwtest.odeabank.com.tr/
+
+
+prod ortam gw linki: Enes Ahmet Kuzgun 7/17/2025 12:14 PM • https://odeaapigw.cloud.odeabank.com.tr/
+
+
+
+ Versiyonlama
+ Servis Dökümantasyonu
+ Monitoring ve Alarm
+ Tenant Bazlı Ayrım (Varsa)
+Multi-tenant yapı varsa her müşterinin erişimi ayrıştırılmalı.
+
+Token bazlı tenant validation yapılabilir.
+
+Layer7 ürünün uygulama ekibi yönetiyor, api gtw , layer 7 url'i
+
+uat ortam gq linki:
+Enes Ahmet Kuzgun 7/17/2025 12:14 PM • https://odeaapigwtest.odeabank.com.tr/
+
+
+prod ortam gw linki: Enes Ahmet Kuzgun 7/17/2025 12:14 PM • https://odeaapigw.cloud.odeabank.com.tr/

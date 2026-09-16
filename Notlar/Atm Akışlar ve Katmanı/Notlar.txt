@@ -1,0 +1,22 @@
+fortuna temel bankacılık sistemi, yazılımı dzd yapıyor.
+debit forat
+kredi kartları paycore
+atm yazılım güncelleme qubetron
+
+ATM yazılımı tamamen Intertech ->Cubetron tarafından alınıyor  .  
+Müşteri ve limit gibi işlemleri  ->Fortunadan geliyor  
+Debit kartlar – 4Arc 
+Kredi kartları ve switch tarafı ise Paycore 
+HSM bizim sunucularda duruyormuş.
+
+
+kredi kartları veya başka banka işi varsa ocean ve meral üstünden ilerleniyor
+
+qr para yatırma'da yaşanan sorun, mobil uygulama üzerinden qr çekiliyor. atm'ye geçtikten sonra mobil uygulamda işlem başarılı görünüyor. 
+atm takıldı, interneti gitti, atm muhasaebe tarafında reverse işlemi yapıyor, para iade yani. gündelik para lmitinden düşüyor, ve limit geri iade edilmiyor.
+atm'den onay gelmeden müşteri lilimitinden düşülmeyecek diye bir yapı kurulmalı. 
+
+ekranlar , arıza olduğunda kayıtlar açılması, para yüklenmesi, özlem anapa, tek kişi ile atm ile ilgileniyor.yükleme bankaş, teknik destek ncr, muhasebe kontrolü özlem anapa
+
+hsm in işi key yüklemeleri vs kim yapıyor, pin doğrulama mı yapılıyor, markası nedir?
+hsm yazılımını simax(rkl sisteminde değişiklik istenirse) , atm operayon key yükleme yapıyor

@@ -1,0 +1,23 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+
+"Bana haksızlık olarak algıladığınız bir geri bildirim aldığınız bir zamanı anlatın. Sonra ne yaptınız?"
+
+❌ Uzun uzun savunur, başkalarını suçlar.
+
+✅ Düşünür, uyum sağlar, ilerler.
+
+ 
+Kullanıcı deneyimini geliştirmek veya projeyi ilerletmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

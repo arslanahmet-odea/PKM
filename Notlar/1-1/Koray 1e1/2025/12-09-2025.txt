@@ -1,0 +1,27 @@
+Trendyol Dijital Debit Kart,
+Avni'ye son 3 endpointini hazırladı bugün iletmeyi
+
+Bizim mobil uygulama için Kaan'a analiz mi yazdırayım yoksa Tunç mu başlasın? Tunç'a ata, Kaan'a söyle destek olması konusunu, bir yerden tutup destek olması lazım. Murat da geliyor.
+
+Dolandırıcılık Önleme,
+Pilot yapısı bugün tekrardan entegre edildi.
+
+Açık Bankacılık - Kart 
+-Kart statü değişikliklerini bildirmemiz için paycore ile toplantı yaptık, Fatih inceleyecek.
+
+Debit Projesi:
+Start date geldi koda ekleyeceğim.
+
+CVV konusunu Duygu tekrar soracak, mobil şifre doğrulama post login'de kullanılabilecek component var mı, 
+Limit'ten sıfır geliyor, testler yapılırken tespit edildi, Kaan soracak.
+
+KMH Tahsilat Onay:
+Mobil geliştirme -Test OK, IB'de başka ekip transfer test 
+Codem ekranında KMH uyarısı çıkmasında hata alınmış ve otomatik ödeme var, orada sadece test yapacak.
+
+-Agile koçlar konusunda destek isteyecekler.
+-Servisler geldi gelmedi, belirtilen servis deploy olmadıysa doğrudan bana gel.
+
+
+Duygu ile yaptığım eşleştirme fotosunu atacağım.
+kdig' otomatik ödemede sorun var, Tunç'tan bilgi al. Kdig'te alakalı bir sorun varsa kimse gitmemiz gerekiyorsa zorlayalım. Osman'a gideriz gerekirse.

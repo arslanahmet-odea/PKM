@@ -1,0 +1,48 @@
+dotnet format --severity error
+
+git rebase --continue
+git rebase feature/SWAT-000/userfraudverify
+git rebase origin/feature/FA-000/december-release-main
+git reset --soft HEAD~100 
+
+
+ilk commit: 41bc3a5be4e6aeed91f6a1c467eb0de7fe52face
+
+git reset --soft 41bc3a5be4e6aeed91f6a1c467eb0de7fe52face
+
+
+git pull origin feature/SWAT-000/userfraudverify
+
+
+
+bu komut ile tüm ci folder altındaki değişiklikleri master'dan aldım:
+git restore --source origin/master ci/
+
+bu da tek dosya:
+git restore --source origin/master ci/.ci-accounts.yml
+git restore --source origin/feature/FA-000/december-release-main 
+git restore --source origin/feature/FA-000/december-release-main .gitlab-ci.yml
+
+//squash yapmak için ilk commit id'sine gider
+git reset --soft 51df05a5
+git commit -m "PYMNT-2220 feat: qr singularity development in one commit"
+//bu komutla mevcuttaki branch'imi uzaktaki masterın tepesine koyuyorum
+git rebase origin/master
+//local branch'imdeki değişiklikleri remote'taki branch'imde eziyorum
+git push --force
+
+Fraud için yapılan:
+bu commite göre tüm değişikliklerdeki commit id ilişkisi sonlanır ve değiişklikler staged'e alınır
+git reset --soft 41bc3a5b
+
+
+bu commite göre tüm değişikliklerdeki commit id ilişkisi sonlanır ve değiişklikler working directory'e alınır
+git reset --mixed 41bc3a5b
+
+feature/PYMNT-1590/fraud-merge-work
+
+git checkout -b feature/PYMNT-1590/fraud-merge-work-v2
+git reset --soft <xxx_commit_id>
+
+If you're editing commits (interactive rebase) and want to stop mid-way:
+git rebase --abort

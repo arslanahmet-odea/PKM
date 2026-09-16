@@ -1,0 +1,42 @@
+22:47 ve 23:06 arasında hata alınmış
+Problem Tanımı (Neyi çözüyoruz?)
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+İş Değeri / Etki (Neden önemli?)
+
+Yeni NCR Recycle ATM'sinin Kurulumu
+Problem Tanımı (Neyi çözüyoruz?)
+Mevcut parkurdaki ATM’lerimizin Recycle olmaması nedeniyle yatırılan paranın atıl olarak ATM’de kalması 
+ve sık para yükleme ihtiyacı durumu çözümlenecek.
+Eski ve uzun zamandır kullanılan cihazlar olduğundan donanımsal olarak arızaya daha yatkın olması, 
+hem de yen cihazlara göre daha yavaş çalışması durumu çözümlenecek.
+
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+Yeni nesil Recyle ATM’ler satın alındı ve gerekli sertifikasyonlar alındı,
+ kontroller yapıldı ve konfigürasyonlar tanımlandı. Sonrasında uçtan uca tüm testler tamamlandı.
+Testlerimizin başarılı tamamlanması ardından, ilk recycle ATM’miz L199 binamızın önüne kuruldu ve
+ müşterilerimizin kullanımına açıldı.
+
+İş Değeri / Etki (Neden önemli?)
+Yeni ATM’lerin Recycle özelliğinde olması, yatırılan paranın tekrar çekilebilmesini sağlamakta ve 
+nakit yönetimi verimliliğini arttırmaktadır. 
+Böylece Bantaş’ın ATM’ye yönlendirilme sıklığı da azaltılarak maliyeti de düşürmektedir.
+Yeni ATM’lerin performansı da müşteri deneyimini arttıracaktır. Arıza verme oranı düşecek, 
+işlemler çok daha hızlı şekilde tamamlanacak ve müşteri memnuniyetini arttıracaktır.
+Prestij açısından da sahada eski model ATM’lerimiz yerine yeni nesil ATM’lerimizin görülmesi önemlidir. 
+Birçok büyük bankanın da kullandığı son model ATM’lerimiz, sahada bankamızın imajını arttıracaktır.
+
+Ayrıcalıklar Dünyası Geliştirmeleri
+Ayrıcalıklar Dünyası kapsamında elde edilen kazançların değerlendirileceği yerlerde
+müşteriye fon ve oksijen/vadesiz hesap olmak üzere iki adet seçenek sunuyorduk. 
+Yeni istere göre Oksijen ile Vadesiz hesap seçimini birbirlerinden ayırıyoruz.
+Fon ile Oksijen hesabın kazanç oranlarını birbirlerine eşitledik. 
+Böylece müşterinin elde ettiği kazançları 3 farkl seçenekte değerlendirebileceği bir geliştirme yaptık. 
+
+TYF Performans iyileştirme çalışmaları
+
+Dijital gelir belgesi
+
+Fiziki POS cihazından QR Ödeme
+6 Mayıs'ta canlıya pilot kullanıcılar için alınacak.
+
+

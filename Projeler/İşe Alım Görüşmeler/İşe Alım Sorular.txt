@@ -1,0 +1,29 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Tahsilat projesinde MVP belirlemede zorlanmışlar, eğitim öğrenci muhasebesi önceliklendirirdi. Başkasını suçluyor, olumsuz.
+Api bağlantıları ile teknik detay json bodyleri oluşturmuş, req response gelmesi ile alakalı daha detaylı bilmek istermiş.
+Kendinde geliştirmesi gereken yerler olduğunun farkında , olumlu.
+
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+ ✅ Reflects, adapts, moves forward.
+ 
+"Çok detaylı bir sunum hazırlamış, benchmarking ile hazırlamış, önceliklendirmiş başka bir mekanızma tercih etmişler. "
+Başkasını suçluyor, olumsuz
+ 
+Kullanıcı deneyimini geliştirmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Kendisi Postman öğrenip API'Leri test etmiş. Olumlu
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+yok, Başka projeleri yapmaması çalışkanlığı sorgulanabilir, olumsuz, meraklı değil
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

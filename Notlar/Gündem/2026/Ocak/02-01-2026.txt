@@ -1,0 +1,34 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-Meralin şu başlıklı maili : "Eksik Belge Onay Doküman Güncelleme"
+-Hüseyin Çetin, güvenlik bulgusu, kart üretirken ve hesap değiştirirken hesap var mı konrolünü koy,
+Mevcut olmayan kart için işlemler hata vermeli,tekrar açabilir, yapılabilecek işlem tipi kısıtlanmalı.
+-QR dokümantasyonunu oku
+-Sinem hanımla dolandırıcılık önleme sanal kartla ilgil  bulgu düşmüyor, bildir
+-Master MR'larda sorun yaşıyoruz, her Mr için otomatik code review yapan(clean code veya unit test yazan) bir tool var mı?
+-uygulamada en çok nereyi kullanıyorlar, en çok nerede hata almışlar?
+-Herkesin ürünün bir yerini sahiplenmesi ve güzelleştirmesi için sahip olması gerekli.
+-Product engineering nedir, Sefa ile konuş ve eğitim vermesini iste
+-Sistemlerimiz ne kadar hata alıyor, takip
+-Production Call Center, yeni hatalar geldi, takip
+-CMS menülerinin call center ekranlarında gizlenebilmesi isteri hakkında, maili ,konuyu konuşmak gerekli.
+-Pusula Ekstre Adres Değişikliği Hakkında , Murat Takip et
+
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı, takip
+-Codem konusu test , takip deploy 18'inde takip et.
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+
+
+1e1'lere ekle.
+What can I do to help you work better? 
+What do you wish that I did less of? 
+What has frustrated you in the last sprint? 

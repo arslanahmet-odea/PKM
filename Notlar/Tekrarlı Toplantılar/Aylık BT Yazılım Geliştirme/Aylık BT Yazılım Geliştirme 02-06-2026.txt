@@ -1,0 +1,18 @@
+22:47 ve 23:06 arasında hata alınmış
+Problem Tanımı (Neyi çözüyoruz?)
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+İş Değeri / Etki (Neden önemli?)
+
+Favori Kart
+Problem Tanımı (Neyi çözüyoruz?)
+Müşteriye daha kişiselleştirilmiş bir deneyim sunmak için birden fazla kk olan müşteriye ana ekranda 
+tek bir kart gösterilecek.
+
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+Bankacılık tabında tek bir kart görünecek, bu otomatik olarak ilk biz atayacağız.
+Buradan kart borç öde, favori kart seç vb gibi menülere girecek.
+
+İş Değeri / Etki (Neden önemli?)
+Müşteriye çok kullandığı kartındaki fonksiyonelliklere daha hızlı erişim sağlamış olacağız.
+
+

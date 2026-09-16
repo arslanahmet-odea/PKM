@@ -1,0 +1,11 @@
+- AES keyler ayrı olacak , tüm endpoint'lerde yapılması lazım.
+- Kartı yeni alan kişi ekstre göremiyor, bu önemli bir problem.
+-Android testlerinin bitmesi lazım
+-Ayşe ve Avni ile işlerin ne zaman bitebilecğine dair bir plan hazırla
+-Koray'dan gelecek kişnin ismini ve MR'larını iste, belki bir şey farkederim kodlamasında, sana kara vermende yardımcı olur. 
+Yöneticinle ayrı düştüğünde önce hizalan ve neyin dikkate alınırsa işin resminin değişebileceğini söyle.
+Bulgularla konuş, inançlarını değil
+İnsanlar kendi keşfettikleri konulara karşı daha açık fikirlidir bu yüzden soru sorarak fikir uyandırmaya çalış.
+Çözüm sun ki amacın eleştri değil ortak çözüm üretmek olduğu anlaşışsın.
+
+-Trendyol endpointlerini bizim uygulama için test et.

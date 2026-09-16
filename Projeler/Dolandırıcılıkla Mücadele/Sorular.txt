@@ -1,0 +1,94 @@
+-Kullanıcı bazlı kısıtlar konuluyor, Pilot yapısı da buna benzer çalışıyor, pilot yapısı yerine bu yapı kullanılabilir mi?  Bir kullanıcı için kısıt tanımlı ise Dolandırıcılıkla Mücadele işlemlerini destekliyor anlamına gelir, 
+değilse kısıt konulmamıştır ve ekranda NFC çıkarmayız.
+
+-Ortak menü'deki kısıtlar için ilk değer atamaları nasıl olmalı? Mesela kullanıcı için EFT kısıtı NFC yapacak şekilde mi atanacak yoksa kısıtsız mı olacak?
+
+-Bize doğrudan fortuna servisi mi verilecek yoksa ms servisi yazıp mı verecek? Sahte veri dönen bir servis verilirse ne zaman alabiliriz? 
+Ekosistem veya Dijital Platformalar ekibi yazacak.
+
+Sorgulama (GET) Servisi
+"IsRestrictionTime": Saat alma işlemi zaten BFF'den alınıyor,config'te tutulabilir, bu alana bence gerek yok. Şayet kullanıcı pilot kullanıcı değilse ve kısıt eklenmişse bu nasıl kurgulanacak?
+IsActive : Kısıt aktifse , kısıtın kendisi döner ve aktifliğini anlarız, false ise bize kısıt dönmese bizim için yeterli olur. Bu şekilde anlamsal tekrar (redundancy) oluşur. MS'ye gönderilmesinin değerlendirilmesini rica ederim. 
+IsRestriction. Kısıt varsa, kısıtın kendisi dönse yoksa boş dönse bizim kodu kurgulamamız daha basit olacaktır, gerekliliğinin değerlendirilmesini rica ederim. Hiçbir kısıt gelmediyse kısıt yoktur diye anlarız.
+RestrictionLimit ve zaman kısıtı aslında farklı kısıt türleridir, ama aynı tabloda duruyor. Bu, tablonun anlamsal bütünlüğünü bozar.
+
+"Channel": "MOBILEAPP", 4 kanal var ve veritabanında aynı kısıt için farklı kanalları işaret etmesi için 4 farklı kayıt mı olacak?
+Channel, Module, GroupModule, TranCode gibi alanlar tekrar eden sabit metinler içeriyor olabilir. 
+
+Kısıt tablosunda "Müşteri Tipi" alanı olması gerekir mi?
+
+Mevcut Tasarımın Sorunları:
+Null Değer Problemi:
+RestrictionLimit, StartTime, EndTime alanları "kısıt tipine göre" null olabiliyor. Bu, veri bütünlüğünü zorlaştırır ve sorgularda karmaşıklığa yol açar.
+
+Esneklik Eksikliği:
+Yeni bir kısıt türü (örn: günlük limit) eklenmek istendiğinde yapısal değişiklik gerektirir.
+
+GroupModule ve Module Get servisinde gelmiş ama GroupModule bilgisi upsert servisinde yok, bilgi hiçbir zaman verilmezse GroupModule bilgisi nasıl sağlanacak?
+
+
+Örnek tablo:
+| Column        | Type   | Açıklama            |
+| ------------- | ------ | ------------------- |
+| RestrictionId | PK     | Kısıt ID            |
+| GroupModuleId | FK     | Transfer, vb.       |
+| ModuleId      | FK     | EFT, havale, vs.    |
+| TranCode      | string | ESONY vs.           |
+| ChannelId     | FK     | MOBILEAPP, WEB, vs. |
+| IsActive      | bool   | Aktif mi            |
+
+
+CREATE TABLE GroupModules (
+    GroupModuleId INT PRIMARY KEY IDENTITY,
+    GroupName NVARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Modules (
+    ModuleId INT PRIMARY KEY IDENTITY,
+    ModuleName NVARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Channels (
+    ChannelId INT PRIMARY KEY IDENTITY,
+    ChannelName NVARCHAR(50) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE Restrictions (
+    RestrictionId INT PRIMARY KEY IDENTITY,
+    GroupModuleId INT NOT NULL FOREIGN KEY REFERENCES GroupModules(GroupModuleId),
+    ModuleId INT NOT NULL FOREIGN KEY REFERENCES Modules(ModuleId),
+    TranCode NVARCHAR(50) NOT NULL,
+    ChannelId INT NOT NULL FOREIGN KEY REFERENCES Channels(ChannelId),
+    IsActive BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE TimeRestrictions (
+    TimeRestrictionId INT PRIMARY KEY IDENTITY,
+    RestrictionId INT NOT NULL FOREIGN KEY REFERENCES Restrictions(RestrictionId) ON DELETE CASCADE,
+    StartTime DATETIME NOT NULL,
+    EndTime DATETIME NOT NULL
+);
+
+CREATE TABLE LimitRestrictions (
+    LimitRestrictionId INT PRIMARY KEY IDENTITY,
+    RestrictionId INT NOT NULL FOREIGN KEY REFERENCES Restrictions(RestrictionId) ON DELETE CASCADE,
+    LimitAmount DECIMAL(18,2) NOT NULL
+);
+
+-- Grup, modül, kanal tanımları
+INSERT INTO GroupModules (GroupName) VALUES ('TRANSFER');
+INSERT INTO Modules (ModuleName) VALUES ('EFT');
+INSERT INTO Channels (ChannelName) VALUES ('MOBILEAPP');
+
+-- Kısıt ekleme
+INSERT INTO Restrictions (GroupModuleId, ModuleId, TranCode, ChannelId, IsActive)
+VALUES (1, 1, 'ESONY', 1, 1);
+
+-- Opsiyonel zaman kısıtı
+INSERT INTO TimeRestrictions (RestrictionId, StartTime, EndTime)
+VALUES (1, '2025-07-16T23:00:00', '2025-07-17T05:00:00');
+
+-- Opsiyonel limit kısıtı
+INSERT INTO LimitRestrictions (RestrictionId, LimitAmount)
+VALUES (1, 2000.00);

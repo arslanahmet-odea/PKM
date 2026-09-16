@@ -1,0 +1,20 @@
+Dolandırıcılık Önleme Fe ve BE geliştirmelerimizi tamamladık,
+Ortak Kısıt Ekran için UAT testlerimizi tamamladık. 
+2. Paket kapsamındaki analist testlerimizi tamamlayarak iş biriminin UAT testlerini yapması için ilettik.
+Bu ayın 15. olacak geçiş için hazır olacağız.
+
+Dijital Debit Odea
+Fe ve BE fonksiyonel testlerimizi tamamladık, 
+Transaction olarak testlerimizi tamamladık
+Global Par'a parametreleri gireceğiz. 4 Aralık'taki Intertech canlı geçişine hazır olmuş olacağız.
+
+TYF UAT testimizi tamamladık
+Transaction olarak testlerimizi tamamladık
+Global Par'a parametreleri gireceğiz. 4 Aralık'taki Intertech canlı geçişine hazır olmuş olacağız.
+
+TFY ve Odea uygulamasını birlikte açarak karşılıklı işlem gerçekleştirdik.
+uyumlu şekilde fonksiyonel olarak çalıştıklarını gördük.
+
+Açık bankacılık kartlar, 
+Kart statüs değişikliklerin
+Paycore 

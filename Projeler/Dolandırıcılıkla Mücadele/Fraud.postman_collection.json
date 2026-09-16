@@ -1,0 +1,3171 @@
+{
+  "info": {
+    "_postman_id": "7ac06d89-c1bb-4f85-b897-2b219ba29f53",
+    "name": "Fraud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "13093850"
+  },
+  "item": [
+    {
+      "name": "MS",
+      "item": [
+        {
+          "name": "CashAdvance Restrictions",
+          "item": [
+            {
+              "name": "3-SetCashAdvanceRestriction",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJmajdwSnRCVkozSkpickxCaXlzaSt0MklSQWVyVFVVbjRDckJ0cHA2T2tBcHdJeUN3enowNjJmVk9QTUhEbVAxVmhPWTdDU2poUlRqalkrWkYyTmpVZz09Iiwic3ViIjoiMmEzOGI3OWUtYjczYS00ODk3LTk3OTEtOTQzZTY3MDMxODExIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1MDIzNjUwMywiZXhwIjoxNzUwMjM2NjIzLCJpYXQiOjE3NTAyMzY1MDMsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.e3oOvGJh-aLRcNN-zLR_phqAGGQKPBWJb2gMf92H0JyzLWIvqckTehclELeADnk68-KrupGAKRyI9JZP-LnWBeIwg-uKk8688GL67R521HqNBPUblH_HtWVq3fyU20Kr_qZbmy9G47SNkCsaYWf0hoMklEmKts6WGoAclbXouLGlFhf-4WosEryCxs6JvteQSTOCWasVA3YdZr4_gTIyXGogM6QC4J7B5TaTQRjjkj-G2bI9vIkAY8LbNenSstx1RKbr1DQnOsIjF31wV0gm6dstLrpDdFmYstNRNEHR_dNO-UUgmXHn_YcyN8H_5TiUot6kruOcPymx6FfrMB1Kgg"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"cashAdvanceRestricted\": false,\n  \"cashAdvanceToAccountRestricted\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "cash-advance"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "4-SetCashAdvanceRestriction-Confirm",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"restrictionConfirmationToken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJmajdwSnRCVkozSkpickxCaXlzaSt0MklSQWVyVFVVbjRDckJ0cHA2T2tBcHdJeUN3enowNjJmVk9QTUhEbVAxVmhPWTdDU2poUlRqalkrWkYyTmpVZz09Iiwic3ViIjoiMmEzOGI3OWUtYjczYS00ODk3LTk3OTEtOTQzZTY3MDMxODExIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1MDIzNjUwMywiZXhwIjoxNzUwMjM2NjIzLCJpYXQiOjE3NTAyMzY1MDMsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.e3oOvGJh-aLRcNN-zLR_phqAGGQKPBWJb2gMf92H0JyzLWIvqckTehclELeADnk68-KrupGAKRyI9JZP-LnWBeIwg-uKk8688GL67R521HqNBPUblH_HtWVq3fyU20Kr_qZbmy9G47SNkCsaYWf0hoMklEmKts6WGoAclbXouLGlFhf-4WosEryCxs6JvteQSTOCWasVA3YdZr4_gTIyXGogM6QC4J7B5TaTQRjjkj-G2bI9vIkAY8LbNenSstx1RKbr1DQnOsIjF31wV0gm6dstLrpDdFmYstNRNEHR_dNO-UUgmXHn_YcyN8H_5TiUot6kruOcPymx6FfrMB1Kgg"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ConfirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "cash-advance",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "1-GetCashAdvanceRestriction",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3VlR2dGwzS1pubTRhRFpMb0VBUVZnR2xFa000YWllbDZ0Z1Zwc3Z1OUFhKzJ2dEZreW81YXVKeVYvRHBudFB5UUVCVEw0WFFtV0lrb1BlVEZ3bnAwdz09Iiwic3ViIjoiMDMzMDkyOTgtZmJkMS00Nzg4LTlmYjQtMTkyMDk4NzU3NDY1Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1MDE1NTg0OSwiZXhwIjoxNzUwMTU1OTY5LCJpYXQiOjE3NTAxNTU4NDksImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.N1Cjpr1ESmZgTLuUJvTp93DzoNvYldBMfjg-U0S5ZU2UWja7b7-UDqcs0t1Tr2ZrGlg_1EnV9we1EK0VZew6ux6V7mwq6QzVeexZuxRhwEVhA5ptTD4OIu4QCfuNpgy7CYzD5RhYM_3dr6ramM8KONDZOa2a7wc3WeqJELeCB-fPPqxvFV7m8gXKFuivOs-dEITT72ugO5Kpho4Kw2DAfi1p_GPf_CXmtdqu1-5WQsaMMOKOVZhBW6v-dAug1jnB59zMs5yBfeYbzSiLaqZs1wMVT5a-D5A4n4_D6Q-tchiLl9Y_RIKfKBhlyOda5G6Q891JVtpjOoflRy5hfWSgaQ"
+                  }
+                ],
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance?CreditCardNo=9792200003797650",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "cash-advance"
+                  ],
+                  "query": [
+                    {
+                      "key": "CreditCardNo",
+                      "value": "9792200003797650"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "2-CheckModalFor-NA Restrictions",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"CashAdvanceRestricted\": false,\n  \"CashAdvanceToAccountRestricted\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "cash-advance",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Ecom-Moto Restrictions",
+          "item": [
+            {
+              "name": "GetEcomMotoSettings",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3VlR2dGwzS1pubTRhRFpMb0VBUVZnR2xFa000YWllbDZ0Z1Zwc3Z1OUFhKzJ2dEZreW81YXVKeVYvRHBudFB5UUVCVEw0WFFtV0lrb1BlVEZ3bnAwdz09Iiwic3ViIjoiMDMzMDkyOTgtZmJkMS00Nzg4LTlmYjQtMTkyMDk4NzU3NDY1Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1MDE1NTg0OSwiZXhwIjoxNzUwMTU1OTY5LCJpYXQiOjE3NTAxNTU4NDksImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.N1Cjpr1ESmZgTLuUJvTp93DzoNvYldBMfjg-U0S5ZU2UWja7b7-UDqcs0t1Tr2ZrGlg_1EnV9we1EK0VZew6ux6V7mwq6QzVeexZuxRhwEVhA5ptTD4OIu4QCfuNpgy7CYzD5RhYM_3dr6ramM8KONDZOa2a7wc3WeqJELeCB-fPPqxvFV7m8gXKFuivOs-dEITT72ugO5Kpho4Kw2DAfi1p_GPf_CXmtdqu1-5WQsaMMOKOVZhBW6v-dAug1jnB59zMs5yBfeYbzSiLaqZs1wMVT5a-D5A4n4_D6Q-tchiLl9Y_RIKfKBhlyOda5G6Q891JVtpjOoflRy5hfWSgaQ"
+                  }
+                ],
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/settings?CreditCardNo=9792200003797650",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "settings"
+                  ],
+                  "query": [
+                    {
+                      "key": "CreditCardNo",
+                      "value": "9792200003797650"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CheckModalForEcom-Moto",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"eCommerceRestricted\": true,\n  \"phoneRestricted\": false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/settings/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "settings",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "SetEcomMotoSettings-Confirm",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"restrictionConfirmationToken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Authorization",
+                    "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJmajdwSnRCVkozSkpickxCaXlzaSt0MklSQWVyVFVVbjRDckJ0cHA2T2tBcHdJeUN3enowNjJmVk9QTUhEbVAxVmhPWTdDU2poUlRqalkrWkYyTmpVZz09Iiwic3ViIjoiMmEzOGI3OWUtYjczYS00ODk3LTk3OTEtOTQzZTY3MDMxODExIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1MDIzNjUwMywiZXhwIjoxNzUwMjM2NjIzLCJpYXQiOjE3NTAyMzY1MDMsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.e3oOvGJh-aLRcNN-zLR_phqAGGQKPBWJb2gMf92H0JyzLWIvqckTehclELeADnk68-KrupGAKRyI9JZP-LnWBeIwg-uKk8688GL67R521HqNBPUblH_HtWVq3fyU20Kr_qZbmy9G47SNkCsaYWf0hoMklEmKts6WGoAclbXouLGlFhf-4WosEryCxs6JvteQSTOCWasVA3YdZr4_gTIyXGogM6QC4J7B5TaTQRjjkj-G2bI9vIkAY8LbNenSstx1RKbr1DQnOsIjF31wV0gm6dstLrpDdFmYstNRNEHR_dNO-UUgmXHn_YcyN8H_5TiUot6kruOcPymx6FfrMB1Kgg"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ConfirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/settings/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "settings",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "SetEcomMotoSettings",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"eCommerceRestricted\": true,\n  \"phoneRestricted\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/settings",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "settings"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CashAdvance Usage Restrictions-v1",
+          "item": [
+            {
+              "name": "CheckModalForCashAdvanceUsage",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/cash-advance/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "cash-advance",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CashAdvance-Confirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/cash-advance/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "cash-advance",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Cash Advance Usage",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sourceCreditCardNo\": \"9792200003797650\",\n  \"amount\": 120,\n  \"installmentCount\": 0,\n  \"destinationAccount\": {\n    \"accountSuffix\": 352,\n    \"branchCode\": 9019,\n    \"customerNo\": 3426412\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/cash-advance",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "cash-advance"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CashAdvance Usage Restrictions-V2",
+          "item": [
+            {
+              "name": "CashAdvance-Confirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/cash-advance/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "cash-advance",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Cash Advance Usage",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"sourceCreditCardNo\": \"9792200003797650\",\n  \"amount\": 100,\n  \"installmentCount\": 0,\n  \"destinationAccount\": {\n    \"accountSuffix\": 352,\n    \"branchCode\": 9019,\n    \"customerNo\": 3426412\n  },\n  \"CreditCardFeatureKey\": \"CreditCardV2\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/cash-advance",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "cash-advance"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CheckModalForCashAdvanceUsage",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"CashAdvanceUsage\",\r\n    \"CashAdvanceUsageAmount\": 149\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "PayForOtherOdeabankCard-V1",
+          "item": [
+            {
+              "name": "CheckModalForSecurity",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"CreditCard_ThirdPerson_Payment\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Pay",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"amount\": 1,\n  \"currencyCode\": \"TRY\",\n  \"sourceAccount\": {\n    \"accountSuffix\": 352,\n    \"branchCode\": 9019,\n    \"customerNo\": 3426412\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/payment/other",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "payment",
+                    "other"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PayConfirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/payment/other/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "payment",
+                    "other",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "PayForOtherOdeabankCard-V2",
+          "item": [
+            {
+              "name": "CheckModalForThirdPerson_Payment",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"CreditCard_ThirdPerson_Payment\",\r\n    \"isKMHUsed\" : true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Pay",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"amount\": 1,\n  \"currencyCode\": \"TRY\",\n  \"sourceAccount\": {\n    \"accountSuffix\": 352,\n    \"branchCode\": 9019,\n    \"customerNo\": 3426412\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/payment/other",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "payment",
+                    "other"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PayConfirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\",\n  \"isKMHUsed\" : true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/payment/other/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "payment",
+                    "other",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "SensitiveDataDisplay",
+          "item": [
+            {
+              "name": "CheckModalForSensitiveDataDisplay",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"SensitiveDataDisplay\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetDebitCardDetail",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/debitcards/5169********4614/detail",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "debitcards",
+                    "5169********4614",
+                    "detail"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CheckPilotUser",
+          "item": [
+            {
+              "name": "CheckPilotUser",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"CheckPilotUser\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CCVirtualCardApplication-V1",
+          "item": [
+            {
+              "name": "Apply",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"amount\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Apply Confirm",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CCVirtualCardApplication-V2",
+          "item": [
+            {
+              "name": "CheckModalForCCVirtualCardApplication",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"CCVirtualCardApplication\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Apply",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200003797650\",\n  \"amount\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Apply Confirm",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\",\n  \"CreditCardFeatureKey\": \"CreditCardV2\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CCVirtualCardLimitIncrease",
+          "item": [
+            {
+              "name": "ChangeLimit",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\"amount\":18000,\"creditCardNo\":\"9792200009448340\"}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ChangeLimit-Confirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"confirmationToken\": \"{{confirmationtoken}}\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "CCVirtualCardLimitIncrease-V2",
+          "item": [
+            {
+              "name": "CheckModalForCCVirtualCardLimitIncrease",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"CreditCardPayment\" : \"CCVirtualCardLimitIncrease\",\r\n    \"NewVirtualCardLimit\" : 100000 ,\r\n    \"CreditCardNo\": \"9792200009927046\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/security/check-modal",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "security",
+                    "check-modal"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ChangeLimit",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200009927046\",\n  \"amount\": 10000\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "ChangeLimit-Confirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"creditCardNo\": \"9792200009927046\",\r\n  \"amount\": 10000,\r\n  \"creditCardFeatureKey\": \"CreditCardV2\",\r\n  \"confirmationToken\": \"{{confirmationtoken}}\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GetLimit",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/detail?CreditCardNo=9792200009927046",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "detail"
+                  ],
+                  "query": [
+                    {
+                      "key": "CreditCardNo",
+                      "value": "9792200009927046"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Helpers",
+          "item": [
+            {
+              "name": "CashAdvanceLimit",
+              "item": [
+                {
+                  "name": "GetCashAdvanceLimits",
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "{{token}}",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "accept",
+                        "value": "text/plain"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance-limits",
+                      "host": [
+                        "{{creditCardsBaseUrl}}"
+                      ],
+                      "path": [
+                        "cards",
+                        "security",
+                        "cash-advance-limits"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "SetCashAdvanceLimits",
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          "// Parse the response body\r",
+                          "let response = pm.response.json();\r",
+                          "\r",
+                          "// Check if confirmationToken exists\r",
+                          "if (response.confirmationToken) {\r",
+                          "    // Set it as an environment variable\r",
+                          "    pm.environment.set(\"confirmationtoken\", response.confirmationToken);\r",
+                          "    console.log(\"confirmationtoken set:\", response.confirmationToken);\r",
+                          "} else {\r",
+                          "    console.warn(\"confirmationToken not found in response.\");\r",
+                          "}\r",
+                          ""
+                        ],
+                        "type": "text/javascript",
+                        "packages": {}
+                      }
+                    }
+                  ],
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "{{token}}",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "accept",
+                        "value": "text/plain"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json-patch+json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"newCashLimit\": 677\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance-limits",
+                      "host": [
+                        "{{creditCardsBaseUrl}}"
+                      ],
+                      "path": [
+                        "cards",
+                        "security",
+                        "cash-advance-limits"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "SetCashAdvanceLimitsConfirm",
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "{{token}}",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "accept",
+                        "value": "*/*"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "application/json-patch+json"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{creditCardsBaseUrl}}/cards/security/cash-advance-limits/confirm",
+                      "host": [
+                        "{{creditCardsBaseUrl}}"
+                      ],
+                      "path": [
+                        "cards",
+                        "security",
+                        "cash-advance-limits",
+                        "confirm"
+                      ]
+                    }
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Get cash-advance-limits",
+                  "request": {
+                    "auth": {
+                      "type": "bearer",
+                      "bearer": [
+                        {
+                          "key": "token",
+                          "value": "{{token}}",
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "accept",
+                        "value": "text/plain"
+                      },
+                      {
+                        "key": "Authorization",
+                        "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4M0N6WEpEbHEzTlZBaVkrOXJiZWFBTFdlZjYwR3lJaXFaMDZGTGlFUDVJU3Y3VFFBTm9Ja2tlZWhkMDFjQXg4cTMrVDRVNFNkd2V1c1ovejBDRlFPZz09Iiwic3ViIjoiOTA4MTQ3ZWEtZWYwMi00OTUxLWIwNTQtNmQxNDliNTdkM2EwIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzQwMTYxMiwiZXhwIjoxNzU3NDAxNzMyLCJpYXQiOjE3NTc0MDE2MTIsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.ehtSe6AH2aN0X19sbf6nPi4lNjDQ12Qha87wMR43YFVJhpRh6QUD1KtbUYl2zbP2EACVhs30TE9oXho8iePtVOA8vemvR8aFczPG5MRSf5GdKj9AOBazyB0ESQt5KfJnLkfHtgzFAWEmdHXq0S1TdzJNJ1HNMCQWMzxrwR0uKqjB7XfCHv7SuZrxQGPHDzQPIAsHkKD_Tae9ijCn5d-sl2kYGeqqO6Lz-iH_JvEiHhqyn8Bi9rZkrIrTktjmkR9ImlhRhxjBsOSLVAUaTAlw0CTE_otkbcGXR0Wo6gUIA2Kve6GfgdOP57Ax0hSKObVsKdzVF0OeZsQTjn5c821Ljw"
+                      },
+                      {
+                        "key": "Cookie",
+                        "value": "75757ba28b9ac35696e129376047f716=8b6f5977ff6f6105d69f582362324e52"
+                      }
+                    ],
+                    "url": {
+                      "raw": "https://cards-feature-2937.appdev.ocpdev.odeabank.com.tr/api/cards/security/cash-advance-limits",
+                      "protocol": "https",
+                      "host": [
+                        "cards-feature-2937",
+                        "appdev",
+                        "ocpdev",
+                        "odeabank",
+                        "com",
+                        "tr"
+                      ],
+                      "path": [
+                        "api",
+                        "cards",
+                        "security",
+                        "cash-advance-limits"
+                      ]
+                    }
+                  },
+                  "response": []
+                }
+              ]
+            },
+            {
+              "name": "Get CC Virtual Cars",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  }
+                ],
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Cancel CC Virtual Card",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "// Parse the JSON response\r",
+                      "let response = pm.response.json();\r",
+                      "\r",
+                      "// Extract the confirmationToken\r",
+                      "let token = response.confirmationToken;\r",
+                      "\r",
+                      "// Set it as an environment variable\r",
+                      "pm.environment.set(\"confirmationtoken\", token);\r",
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"creditCardNo\": \"9792200009927046\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/cancel",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "cancel"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Cancel CC Virtual Card-Confirm",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "accept",
+                    "value": "text/plain"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json-patch+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"confirmationToken\": \"{{confirmationtoken}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/cancel/confirm",
+                  "host": [
+                    "{{creditCardsBaseUrl}}"
+                  ],
+                  "path": [
+                    "cards",
+                    "virtual-cards",
+                    "cancel",
+                    "confirm"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fortuna",
+      "item": [
+        {
+          "name": "GetCreditCardRestrictions",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CardNo\": 5269528246515337\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/GetCreditCardRestrictions",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "GetCreditCardRestrictions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCreditCardRestriction",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 7648438,\n            \"CustomerIdentity\": 100344103,\n            \"CustomerPersonelAccountNo\": -1,\n            \"TxnCode\": 10, //10 -> 11: Moto, 12: E-com || //11 -> 10: NA, 20: Hesaab NA\n            \"InsertSubCodes\": [],\n            \"DeleteSubCodes\": [\"11\",\"12\"],\n            \"CardNo\": \"5273838187249695\"\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/UpdateCreditCardRestriction",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "UpdateCreditCardRestriction"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCreditCardRestriction-Confirm",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n        \"ConfirmationToken\": \"{{confirmationtoken}}\"\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/UpdateCreditCardRestriction",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "UpdateCreditCardRestriction"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCustomerCashLimitInformation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"BankingCustomerNo\": 5418730\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/GetCustomerCashLimitInformation",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "GetCustomerCashLimitInformation"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCustomerCashLimit",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 5418730,\n            \"CustomerIdentity\": 100344226,\n            \"CustomerPersonelAccountNo\": -1,\n            \"BankingCustomerNo\": 5418730,\n\n            \"NewCashLimit\": 7993,\n            \"UserCode\": \"MOBILE\"\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/UpdateCustomerCashLimit",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "UpdateCustomerCashLimit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCustomerRestrictionPreferences",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-01\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 3426412,\n            \"CustomerPersonelAccountNo\": -1,\n            \"CustomerIdentity\": 100344123,\n            \"SessionLanguage\": \"TR\",\n            \"RPsFilter\": {\n                \"GroupModule\": \"CreditCardProducts\",\n                \"Module\": \"CashAdvance\",\n                \"Channel\": \"INTERNET\",\n                \"CustomerType\": 1,\n                \"RPsApplicationType\": 0,\n                \"RPsState\": 0,\n                \"TransactionCodes\": [\n                    \"CashAdvance\"\n                ]\n            }\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetCustomerRPs",
+              "protocol": "https",
+              "host": [
+                "uatintervisionapp",
+                "odeabank",
+                "com",
+                "tr"
+              ],
+              "path": [
+                "Intertech.Fortuna.WebApi.Services",
+                "api",
+                "fortuna",
+                "GetCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCustomerRestrictionPreferences",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 3426412,\n            \"CustomerIdentity\": 100344123,\n            \"CustomerPersonalAccountNo\": -1,\n            \"SecurityContext\": {\n                \"VerifiedType\": \"NFC\"\n            },\n            \"Entries\": [\n                {\n                    \"ModuleID\": 89,\n                    \"RPLimit\": true,\n                    \"LimitValue\": 10000,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                },\n                {\n                    \"ModuleID\": 90,\n                    \"RPLimit\": true,\n                    \"LimitValue\": 10000,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                },\n                {\n                    \"ModuleID\": 91,\n                    \"RPLimit\": true,\n                    \"LimitValue\": 10000,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                }\n            ]\n        }\n    ]\n}'"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/UpsertCustomerRPs",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "UpsertCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCustomerRestrictionPreferences-Confirm",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n         \"ConfirmationToken\": \"{{confirmationtoken}}\"\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/UpsertCustomerRPs",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "UpsertCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateCustomerCashLimit-Confirm",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n           \n            \"ConfirmationToken\": \"{{confirmationtoken}}\"\n\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/UpdateCustomerCashLimit",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "UpdateCustomerCashLimit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpsertCustomerRPs",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 3426412,\n            \"CustomerIdentity\": 100344123,\n            \"CustomerPersonalAccountNo\": -1,\n            \"SecurityContext\": {\n                \"VerifiedType\": \"NFC\"\n            },\n            \"Entries\": [\n                {\n                    \"ModuleID\": 89,\n                    \"RPLimit\": true,\n                    \"LimitValue\": 10000,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                },\n                {\n                    \"ModuleID\": 90,\n                    \"RPLimit\": true,\n                    \"LimitValue\": 10000,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                },\n                {\n                    \"ModuleID\": 91,\n                    \"RPLimit\": true,\n                    \"LimitValue\": 10000,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                }\n            ]\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/UpsertCustomerRPs",
+              "protocol": "https",
+              "host": [
+                "uatintervisionapp",
+                "odeabank",
+                "com",
+                "tr"
+              ],
+              "path": [
+                "Intertech.Fortuna.WebApi.Services",
+                "api",
+                "fortuna",
+                "UpsertCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpsertCustomerRPs KMH",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "// Parse the response body as JSON\r",
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "// Optional safety checks before accessing deeply nested properties\r",
+                  "if (response?.Data?.ConfirmationToken) {\r",
+                  "    // Set the environment variable\r",
+                  "    pm.environment.set(\"confirmationtoken\", response.Data.ConfirmationToken);\r",
+                  "    console.log(\"Confirmation token saved:\", response.Data.ConfirmationToken);\r",
+                  "} else {\r",
+                  "    console.warn(\"ConfirmationToken not found in response.\");\r",
+                  "}\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {  \n            \"CustomerNo\": 3426412,\n            \"CustomerPersonelAccountNo\": -1,\n            \"CustomerIdentity\": 100344123,\n            \"SecurityContext\": {\n                \"VerifiedType\": \"NFC\"\n            },\n            \"Entries\": [\n                {\n                    \"ModuleID\": 76,\n                    \"RPLimit\": false,\n                    \"LimitValue\": 0,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                },\n                {\n                    \"ModuleID\": 81,\n                    \"RPLimit\": false,\n                    \"LimitValue\": 0,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                },\n                {\n                    \"ModuleID\": 86,\n                    \"RPLimit\": false,\n                    \"LimitValue\": 0,\n                    \"LimitCurrency\": \"TRY\",\n                    \"RPTime\": false,\n                    \"TimeWindowStart\": null,\n                    \"TimeWindowEnd\": null,\n                    \"IsRestricted\": true\n                }\n            ]\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/UpsertCustomerRPs",
+              "protocol": "https",
+              "host": [
+                "uatintervisionapp",
+                "odeabank",
+                "com",
+                "tr"
+              ],
+              "path": [
+                "Intertech.Fortuna.WebApi.Services",
+                "api",
+                "fortuna",
+                "UpsertCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCustomerRPs",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 3426412,\n            \"CustomerPersonelAccountNo\": -1,\n            \"CustomerIdentity\": 100344123,\n            \"SessionLanguage\": \"TR\",\n            \"RPsFilter\": {\n                \"GroupModule\": \"CreditProducts\",\n                \"Module\": \"OverdraftUsage\",\n                \"Channel\": \"MOBILEAPP\",\n                \"CustomerType\": 1,// (Sadece bireysel müşteriler)\n                \"RPsState\": 0,//Active = 1 (Sadece aktif modüller)\n                \"RPsApplicationType\": 1,//Restricted = 1 (Sadece müşterinin kısıt tercihleri olanlar)\n                \"TransactionCodes\": [\n                    \n                    \"CreditCard_CashAdvance\"\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/GetCustomerRPs",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "GetCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCustomerRPs Copy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            // \"CustomerNo\": 3426412,//yenikart5\n            // \"CustomerPersonelAccountNo\": 0,\n            // \"CustomerIdentity\": 100344123,\n            \"CustomerNo\": 113031,\n            \"CustomerPersonelAccountNo\": 0,\n            \"CustomerIdentity\": 100343924,\n            \"SessionLanguage\": \"TR\",\n            \"RPsFilter\": {\n                \"GroupModule\": null,\n                \"Module\": null,\n                \"Channel\": \"MOBILEAPP\",\n                \"CustomerType\": 1,// (Sadece bireysel müşteriler)\n                \"RPsState\": 0,//Active = 1 (Sadece aktif modüller)\n                \"RPsApplicationType\": 1,//Restricted = 1 (Sadece müşterinin kısıt tercihleri olanlar)\n                \"TransactionCodes\": [\n                    \n                    \"CreditCard_CashAdvance\"\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/GetCustomerRPs",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "GetCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCustomerRPs Cash Advance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 3426412,\n            \"CustomerPersonelAccountNo\": 0,\n            \"CustomerIdentity\": 100344123,\n            \"SessionLanguage\": \"TR\",\n            \"RPsFilter\": {\n                \"GroupModule\": \"CreditCardProducts\",\n                \"Module\": \"CashAdvance\",\n                \"Channel\": \"MOBILEAPP\",\n                \"CustomerType\": 1,\n                \"RPsState\": 1,\n                \"RPsApplicationType\": 1,\n                \"TransactionCodes\": [\n                    \"CreditCard_CashAdvance\"\n                ]\n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{fortunaUrl}}/GetCustomerRPs",
+              "host": [
+                "{{fortunaUrl}}"
+              ],
+              "path": [
+                "GetCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetCustomerRPs KMH",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 3426412,\n            \"CustomerPersonelAccountNo\": -1,\n            \"CustomerIdentity\": 100344123,\n            \"SessionLanguage\": \"TR\",\n            \"RPsFilter\": {\n                \"GroupModule\": \"CreditProducts\",\n                \"Module\": \"OverdraftUsage\",\n                \"Channel\": \"MOBILEAPP\",\n                \"CustomerType\": 1,\n                \"RPsState\": 0,\n                \"RPsApplicationType\": 1 \n            }\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetCustomerRPs",
+              "protocol": "https",
+              "host": [
+                "uatintervisionapp",
+                "odeabank",
+                "com",
+                "tr"
+              ],
+              "path": [
+                "Intertech.Fortuna.WebApi.Services",
+                "api",
+                "fortuna",
+                "GetCustomerRPs"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Generate Token",
+      "item": [
+        {
+          "name": "SecureSealLogin",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var value = pm.response.headers.get(\"Authorization\");\r",
+                  "pm.environment.set('loginToken',value);"
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "strictSSL": false
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{guestToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-channel",
+                "value": "2",
+                "type": "text"
+              },
+              {
+                "key": "Accept-Language",
+                "value": "tr-TR",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"5424ab16-6b95-4aa1-811c-323aba071eca\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Yenikart5\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3NWU3N2VhOS1kODcxLTQ1ZWItYTYxNC1kYjkwNGRiYjgwMzgiLCJzdWIiOiI2NTYwYjAwYy1hNGRhLTRiMDctYmZiZi0zYTgyZWQ3ZjU2ZGMiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzU4MjA0NzM0LCJleHAiOjE3NTgyMDQ4NTQsImlhdCI6MTc1ODIwNDczNCwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.khh0-F0GbMgzlFSNw6M7NKJZ56NDyF_WBaUoo_S7sbthqx8LR8Hh03yHgGPuURbdFWHWEhaN_8LQLI3ulbHci_BEdze4UBSVS83Sw5nrMURmx-U5XtW0UaCBwpr-T318w-YARWIq_ZW-pnejggXNU0UR9PiOR6bKrPeYy1YYvlywcWzyZ3vLRwjS03MERSkEEpP7uNMXU8jyb_wM-CR0T_ZQIKSOSyEqavgv3LXFA-AVNUe-E-w3ymTkO_KoGVtt0nXGNe4taMLBDp_CA3-Yck5vmpshIKzTD06-sXShujnsVzG9GlhZ0LacXLol22v8UqLFjBfTas2G8NrV1lfZoA\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.MUePRV3x40v2vTc99432SKkcrq9ZbGOgXDyDFWS06_yAQml9jpHkO-St3P5Kw97Li8H6zlDpxr5o4a6L95-rKDzBIRG2PRKmO_fo2XIYrpPKp5VPONZZVznzdiTROrM8bETKmrVcacFY9CX_4tshORDL8p3HQgyg-LZMUUjsuUEJLmD57Gfq4lS63O7Sck7pw33fTWtBVfTi4tquPGGrm7S1OHEu4SOOOe2BEzdEWvbU55o89JerNe-o-bVxbLU90YOs7M6B8E0BUZhrgnleq3AP5JIbgQ5PYT1-DRGGw5r3BQJboKI2IuSiH_RNSsmReCN6NuReM4TnpNGybsAtFw==.Bjz6aQ_usE2NGx5F7-lNsCUIM0nGA-6HyPuSC9Xt9lkXGxgYGHHy7axB3ZFth8HLYox9rf34mr76HJ7dyF11TTE8SNkB6_bcyqnb-hWHwJao5IOq9o4qt42e6x3hbbQ5a6b1cwskXjENiGA18c6u7eja6OX5UbOEVfpaLkYrzJ6EJ3FfyAprhX2_oe86_qfy9McKyNny69TLt-FsA1Zex--oYL7cZjBoTrpmBgdA7XkkCZYY60_VoJ29eNtibmPEZJULsO4l__SCZtBet5_o4Dv1_-PP2BmRsQ6UvAQ9dCJH5Tzl_zzUmEyQyGmjU5MwzK2_MPXDZvszFruB8TzdVcRQjfzNO5P6r0tl2RTfiK7YCKohBBQ3Jtix4gclhZOzP19Yu7U2cRbEuZUcVM8_PXsv-AcxqcRuSMJ7hRI2HkLIwtk8r7dWGkOD42qzX9UeMC7I4ph326qLCB97eK3NcYN_62vlyT11F78akex4bH80I3TnZWE_ypM6nKjtgnk_zEfq--KAxGNFsMtTLVfos-yza_MzqiMGq1-ahBkwX6OMuR36JmKdgb3CNYHeHUsnTeFOVc79cHSp3rBjM-_O9AtUYRQnmGNYNfZ4n6bpAF1Im7AWnj3KCs_FKzUPF_yJyr5RfhZRKzyZwEGdIUmneH-ELJiN6qOFK5DB2i7dumJ_cfvhSvKPyYAh2p6T4Vx6JqUZkgF3KCNw5BwO1Vik7V7rCGk8Ju75j2FDV7oGq-yrCeMLpbxU3A---n3pV_sDHZlpiJLN_vlgNsfBSf_3p9LVKY0RdCy6JBLiIUrE_QXY8fZ1T2ntuk1_OHgD2HAkReyHtqKSbsQ4DUJNnYbnkqOcO_-KLXZNgEsELRB0mvSbnz4FdtL5oS6mk0__Bjp5aUoWy4yr8SJZW7vFCpN1cwrxX24yapgPLzMP5VlkWw4=\",\r\n        \"x-connection-type\": \"Cellular\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"1AQmVBsBpN7Ze8PgxXVBYw==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"35\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.113.12\",\r\n        \"x-owner-id\": \"USER:3426412;-1\"\r\n    },\r\n    \"userId\": \"USER:3426412;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTk5NWQyNC1lNTMzLTdiMDAtYmExNC1jNTE3NjNlYzg3N2IiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..vBr9c9d_3PAq4rR9.-Mv8_GToq7jFhY8yaQ_tT0unNMGP_YFnLSIYYqndk8n6GzoZ5esYd1BrXruOnA_xBQQcnf9w64mfDp1dst8X_3Bj6rtJOhHjOrG7cdcfY-_8dAfPtMvzwguLPaQ0odh_HxhOmQTDEk4mA9uxuoJzqVuaFlrm-dkbOzT-SmjD7GtkzPGJDFDLv6G_z4C4ytiT65EEtAswd_lWh4CWxZH8BR-rx7hSC0XgNOmYyJ4PZ3gmd2OBEFAjnPRKZvn3kyb2sjbp9ppRpbQSG_jkYWxT6Q0WfKnjsVWxiyZEEc5ouJPzi0HffVInYVpzJI2o1AiaMxeQTMUpmlaAcIlLvqNHwqI_TbVw5cYOYtawCJ4Caa-NliD1F-bgCkar60X_7VX84vWrK7x8hAMgLny_sQxMSrUoJsK6e8eNmxhafU92MSl4tbFtgB938RFpZkHh5_6nUfc4KBGdBZxEjc4GcKTaqk82VLFkr9bioVBcA_iaiiNd5hx0V4viP0vb8pvv9w.R_VGc2rGwHOrNU98m1JzPQ\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.110\\\",\\\"remotePort\\\":\\\"32978\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/seal/verify",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "seal",
+                "verify"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "x-channel",
+                    "value": "2",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Accept-Language",
+                    "value": "tr-TR",
+                    "type": "text",
+                    "disabled": true
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/authentication/login",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "authentication",
+                    "login"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Mon, 11 Mar 2024 08:30:34 GMT"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "authtorize",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var value = pm.response.headers.get(\"Authorization\");\r",
+                  "pm.environment.set('authorizeToken',value);"
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disabledSystemHeaders": {
+              "content-type": true,
+              "accept": true
+            }
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept-Language",
+                "value": "tr-TR",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json",
+                "type": "text"
+              },
+              {
+                "key": "x-channel",
+                "value": "2",
+                "type": "text"
+              },
+              {
+                "key": "accept",
+                "value": "text/plain",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{loginToken}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/authentication/authorize",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "authentication",
+                "authorize"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var value = pm.response.headers.get(\"Authorization\");\r",
+                  "pm.environment.set('token',value);\r",
+                  "console.log(\"Bearer \" + value);"
+                ],
+                "type": "text/javascript",
+                "packages": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{authorizeToken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept-Language",
+                "value": "tr-TR",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "token"
+              ],
+              "query": [
+                {
+                  "key": "CodeVerifier",
+                  "value": "{{codeVerifier}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

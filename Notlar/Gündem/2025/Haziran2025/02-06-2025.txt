@@ -1,0 +1,5 @@
+-ecom ve moto hata alıyordu,jira hatası için firmaya sorulacak.
+çarşamba sprint planninge gelecek, Avni veya Ayşe'nin çalışması gerekiyor mu, kim çalışacak belirlenmesi gerekiyor.
+DebitCardListAllWithDetailsi
+, atanması planning'te olacak
+

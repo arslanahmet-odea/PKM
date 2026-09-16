@@ -1,0 +1,4762 @@
+{
+	"info": {
+		"_postman_id": "c1c17c91-e581-404c-a6ad-4ff2c54f698d",
+		"name": "Generate Odea Token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13093850"
+	},
+	"item": [
+		{
+			"name": "baristest5",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"05c88770-df16-4f39-8571-e018b22fa59c\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Baristest5\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiIxYzIwY2NkNC02YWRiLTRiN2EtODM1ZS0yYzkwOGQ2ZjcwYWIiLCJzdWIiOiIwOGE3ODFjMi04YTAzLTQ3NzYtOGEwNS03NDE1MWEwYmVjY2QiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzU5MzkyMjY1LCJleHAiOjE3NTkzOTIzODUsImlhdCI6MTc1OTM5MjI2NSwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.rV72wANfJQZeSLGHYMjfgENYBlL9dCO-c9r3SJ793u6UbS8HoBnKswcfTNop97YW2AGzrmKmQlt3HWm2_HOIEyn8q0pkYJFSMvi7yLkgx9bbVb-LgMNkCdsFg8qPBy4IGFVLjHe8q2rF6bGjQAbqD6Ly_--FXsQrYOEnDhcvKEIgV6xmLUX-JTGlWv9RvbH_hNw2OT9x3-3WeD9RCR7TrCh353BIovtSMHsTkpY_eWXCu91XHUIiucqhsT3XA51FoI1TCUBrp6_45Qh1pXn5hV_LO1WxVUj9BzYhU3HP7Ydmq6bp7phasMvwGE3CQbvkT3Q6J6wDHUVhuGW4u7Ak1w\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.UoYiD5zYz9kiJLc4wEd_KjLBMyHxB97X8wfBlSVWW2pe1DQ4sTVz3ziLBjEW_DqvQ_v3GGCooISDOEa3mpswuj9S_sFy4z8V4brBPKu3QqZFgGBMJshFKB8Gu02ODpmwrpej7oYSJb30_GuBFiC5as8nF5AIeyJbg8roohwoHWSyF3bGGxFKwye32HBQuAUbarQKK00fI3GdcN2K-iBIS9o6BpLYGCVitjfc-lTNr6o9kiB9sFosFg8lr5rKQg4dp3OB8D3VJ085P-PIJwVEVI3TdOydgdXCndMHy8i_UcW7eoTz3YZsbHvQW0V4_sHbdyPkSMLBt9b2faYNFD3ANg==.Po3gTNpf2nEgiwgXjyfjPvot-MumiUTn6gpR9r4WhtEK4n5-up9H3eyJL0TxezHsCYXsqVR0tE-ROAFx4WzqEpL8J7ZJ8Zqh_xGjO4E6fA-AmFKPrJzuM9hI-UMZTt2wX4qXztklhW0Tx05mp8PNi_KAW6OVb5hq9dqdA8ELbR9Cq9cPhKyCsDGABUtUxUpTZBNj2DeksccvzOp2W4653JNkN0l37y7paD4eWAhatXpQadnKjSR7EOS3LxS2bUySWiFAPscbT424J-PwfPBDikzyh5awd69FvLbHna8DoUJdIB6OsvzHNj_VhbVxlQjyY-0VcKWGPtpimBifAvx7Sy1sRNPISfJHNewZddO2sZyQwdf4wAcoDqd2ltylsLFdtO6SHrir3nPj_qIL3ix6wZIKALgWp6zKGy4uybC7mcrvmENzZjILkh29saQL9wZjKvAr2IuYIKABS4nEa0IGNPjki1VyC6DyAu4Y4TBOBKCOLGLkgxUlMpxyja-t0vdeKSEQ25rRbS7XbZ-NwbwbUdo0QCn5sEchxC9E22IBM6dn6FkGKc-EIR2MIhjHfAkk-TnWcKaohVZi62EDado2TeF24HrBQOq146tsdXGnsnWORAzbGEAHycisjsjIgIDGt3btmRnMnH73LkB2xElk5e6Pfxq0DXkiaHIYwFtqWitRyXSfoWMKaeTUOlwF1FcvXhSeedRLXqto-3Vsk5SLSZmk-Df86AaNpOu6WoSSJ1dYV3-yom1MdHoFTRXx4SFYwAmptnEBxYkN2swWg9WcA2OZTz0P_Or38xkeV53QMbAaTFdO_v9DDnjErIHT9ob_gTwzFweTbp92XGW4rCQv_21VzTStxuAfIW1pO3ZenKid7IA8kyk2UhBHnEwIWtr8lsVh4mVc22eBv09N4u2MsxSKJI9v-9ZaT7jReQSik8o=\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"nGUGNDSqwTvmZbX9WB9J/A==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"35\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.113.12\",\r\n        \"x-owner-id\": \"USER:7648438;-1\"\r\n    },\r\n    \"userId\": \"USER:7648438;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTk5YTNmMC1jYmYyLTcxZGItYTViNy0wZTg3Njk4NDIxMjQiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..JZEirs23SgqUZojt.41v8EEbF3j8BMREMDMQoV3THMNNVIfAZnn5bX2iezyG89wvW8GOjqsw3R-dh_FgRqPbFrgyAy-d0ejygr1tt33Hr-10mpyeadwnQ2QDk9IGv1WT51tebxEorwmkIHTCxffDyIkRqqrrB83yhz-UaR3jRqX3IO7x6LVWu47OMOprkV736R9g77UP4zg6tilTwS1ufsa8bijQEXnIr57lE2yhVyOsi17lhrwH6EhTfnSWb5S7137_Nq2AoOLBFRwLfo3td21Ke6KtGZq3W1cxP1WguUaq4TlfXQEFARXwz0_P7pv0njip3Nt_3XA0rDK0PbnkFwC_6mwAVE8dcxbEVv-wmhN3cFp312PuWUPmMFXgGCZ_wEOWiDVu2Z_B6qknwd2GtkSi-KUz2LlkBwFTG6JvGwPWwgW66aBw3_1OC6wYS_fCQZPeGge5p1c-0ry2C8dbDlnol6cgpfICdZ2dQf6dabI1GcvFvL8mGU6T0f1mo37gI-togLFql1rvvFQ.BoyRyMkE4ngXpY1Nw5jVoQ\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.64\\\",\\\"remotePort\\\":\\\"59168\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kartbusra",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"9c72bc1b823e928b-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"c3f56147-306a-4088-ba12-3bcd1b1d9d40\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Kartbusra\",\r\n        \"octopusChallengeValue\": \"GeGkhUnSishdu8i9Hz3Jtg==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJhYjk1ZGJiOC1hMjBjLTRlODItYmVhMC0wMjBiMzBmYTkwOGMiLCJzdWIiOiJjNzczODE1NC02NTM5LTQ5MzUtYmE5YS1kODk2ZDYyYmFlNGEiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjljNzJiYzFiODIzZTkyOGItdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYzNTYwMzczLCJleHAiOjE3NjM1NjM5NzMsImlhdCI6MTc2MzU2MDM3MywiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.I10P4K0h2skEIxMxOiS2bavXS70p7MTAb0s_yyTlbI9J3Us326IRVDCCfDZzROKiJtw5wp2OOyPPPKBKfjhqPuOsVkiubLL0mm5Rv5KV_mGbVS2ZqdhF95dUtYzg4pZuzarrlUFIgsiNl9gHmQIvt3m-fVz-Tsxf92IW135tSgrqinSPCCbKU4eCJnGNOnqB4VU8mGNumu9FR-XY4JtIlLf3TxnWyQNyFt9pGdOIenpltxqF4dqsnFqPiDX0qSQYiPQhiTLD4GAnAu9xYTre-jNkJG3t-OMXkk7ijQY_ZuZi3spQhic6BNer5ByCD_0gyRfC9dKB_vHR90DgNoY34A\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.lgWH0kYwfjfI3P5ZICHh71f85XXw5PToH1htskFSDV7wf7OGWOcd0LRxOacOIWyeIKANvnMYmhynlYGQqe__fB_WuDQZ0MjkL-l3bMzGZMb7ab7XXQ4quD9TiClVm-YIXGsJE5UgfAi1TNd-Sfy-rsHCcfzpZitJ4UM_0CFg5q6iwxa4HyO8efjVeMWXkjoXoWCZSgO-CZ7jMElc8gfltPaVhTMx9x4BordL0C9a2Rn5G0_cBhcDJ1mTOgcnueCzIO1zTewrhCoM7JMjzKAwbCpxBtwAr0bvbdimuXzmGon-qX6Cjc92TU1CjYZ5VbGbLNOwdLo23ihmIWEJPorcMA==.YfEBr_w9ZdkyviT5J5lrpnu0x7uUfH7zcrbh_IR1Yh5W3t2k1suSc--zLBT3OwkW89GPhcrLy5zOSL6bDXGypFuDbh6mQVmPELynp3kk8ptIsn2QhAT6s1SN9iPQgAepTvDVsWf7bXYaiCm0isKfvpKVu_CZsuQH_Th7dhpDVRUGNNNTExPKRcN5wCW2Yt5jro6mat6RGTzF7D9Wcgz_4-pmT5Sv52srn4uSZxueeYssFSv4wAmGuuSkEZJSiLlxQurQnEz4vsSIN53XEy3AmEmT6saoJQ79FQ4dXZcoHKhfrubLSQEvyEuw9isJ1GcWmtop-BcaMiH1StfkOKunuHIYC82pFv5xVPig2yYwk-iLSv5yZT400WXSHIaUMv7fcx2wkt2IQLzr7RXqcyKFoWKubpRz_aPqwJlRnXiswpDmRWmx1ft4csxRgrIw6yccDMjqkfYcv2u10ebWZWbE1HGGFe_A85yjekIkccTMjdNlEdXQR1cM6fLPfHG8pHVxxe44A9j5jrYQ3qyYIO4kynrF54Y7HFIyG94ag3W3NNeV1o8EcSP5Nskh_6EK3nj7ds9X0cqN1bP78zthaRumZJxoWr1tYGYBf9gBwq_uLMZ3H9VJUm0ZiCmKPgw-YxJopEEk-77_r5Pl-ODauSje1DKhv0GaFrOAcjupeuoeT9AuK8lVjCipyhowF8hT0t38uFq-cp_sMagRg10et1u4Bydc-UtpO-Ec5N9iJvBDl3Ox3zAdeGe_rWMo27RriomYps7lhMhg4XJqSJfznRWfcGhEb4vwixbZhdOwg_C57Wn5XqiGPJQIIBYlLG6eSlhMud7uGi-RYk15wK3D6BEgjarVuJET9lwCtcJvBMKtSIoWriK7SH5UwjCqeDpkw9833D2mf3YD_8KDxSFKUkkQ1r7cvl0_uuU0vfaYqqV1knE=\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"GeGkhUnSishdu8i9Hz3Jtg==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"31\",\r\n        \"x-model\": \"Xiaomi, M2010J19SG\",\r\n        \"x-app-version\": \"0.6577.48722\",\r\n        \"x-owner-id\": \"USER:147811;-1\"\r\n    },\r\n    \"userId\": \"USER:147811;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhOWM1Zi05NGNlLTc5MGUtOWY3Yy1jN2JlNWRlNzQxOTUiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..qSWndlqMYjZiLbJ6.5kzEClWbgJpspUl9W-v_n2BqXyR-Eu4pps_AlYH0d3yfz5eyaLi4cCrvZeHF_wAtYbSd_hthEIAt7jhsziBCASZv5xBpTECo-hDwVsmWLRWK5FJMBijDn0PtYbDXRESY28NiZdW5LsmKQeWPqaqau3vfNAKX40Uggl2xSvBQ16uS4TeHyKYrysszFcFqDOqdlBQfS4umpjgQafpsHTwMBiJZnfAJrkYxwky2TjhND7ApPRoz_IQc-aKU2_azWQlf9x30CfMsYOkptuPqIjEWjVAMDvuswWmNZonm54go02vGHhZXjTCJ9NMYHR7aod4j0KbHS6sigqIIgKF4ujwRiWxFtXtkIzq3VdGZNB5INAs8RH7YA4UEUAeW71n8awh7YYrQNWF-nxKlf5F7DjcqsftQi78mkV_a3uwrETmuplSBjbNohUlp4N7l84c-uQib6AZKCqCbWHJB2ycLa3rrCdJeRdD2wMdZfoF5PaSu8lRdWN-oDiMOgexqaO3y5Q.J97-gXDtVNPlBQU9HlvExg\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.128\\\",\\\"remotePort\\\":\\\"46550\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"M2010J19SG\\\",\\\"manufacturer\\\":\\\"Xiaomi\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "57039848486",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"octopusChallengeValue\": \"Ingk4jTX5ymCyXNcwoMvTQ==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.D7lybxOC96B5JAazrYZm1hy_OrP2BWcNBCLrhsv5zg76NnxkAa9C6ZIALZR1PlpNwCi3Z9Mmq0jm-HBj27Tf2WPffjT7G6JKKMINeI3AvUATj8tuCAU5R9U0BNwqtz2lAFFehsbMBr0uzTZFR22ImV7zJMp9-Zw_ZY4ot1Xz-NXBhSjg5lDt3qSf9cMLUqG8W0V9shc-NssXiWZ9TcL5dOvcc9eykQBXNvPYfrfWuc0dBNaozkL64GXFJoVj5ls1XmjMrii2g3LjkfrYtJzQ1-uF23K1bA3cqXen1WFxC3BA9YDHWCkxJmaWBFdrs1q7-k2pReNkCuHJcZb-8SagEA.GZ3VOFj5WFKIWFTqqIGRIKUZhKeLFdQr8GP6dTVXi1UWO34m0Jx0uy2-_4bvhJwnnl3sExDE1zBbtpS9lNJluvueHDur22y5R8x9qfJbDT2HAfiDiLEC3-qX5Mhv22B9popLL4pZvU9Omhg8kGL9zzwXBBVLXjtLJauwzfuaxhzhXAnh3EF2pQ-L1vScWqn-S-mbtzUsQlhMN1T9-9WQNYZoyT7kJil1EM0OI6N80BI_T0XTRsM7CzbuxgNxPlmIoPY-uetHCZ-fmbIuJCpR_E6iEnGmQp3_UFZH50WNtda6jVcqSjKlJSsCfYmdpMMhoQ-JTyBYvrrWSGA9chV8Q_OhP_5OZjN-wtvA7lae7YzckWEMGu38CYJDrYCIn_r5zbbZeRBrpVzSaqTJYTqE3596AocFSL2Zvz10nfb25m58wc_-pQg0WK87OFdkaqY290Vu62BK1ho_ek660gwLgwAMcb11TLi1bFR6KwuSm0Y\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"x-interapi-channel\": \"TYFMOBAPP\",\r\n        \"userId\": \"57039848486\",\r\n        \"x-connection-type\": \"Cellular\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-owner-id\": \"USER:6227436;-1\",\r\n        \"challenge\": \"Ingk4jTX5ymCyXNcwoMvTQ==\",\r\n        \"x-app-version\": \"0.6747.48003\",\r\n        \"x-correlation-id\": \"8fef7eda-4d3f-414d-a84e-2fa981895952\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"isPaired\": \"false\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3NjgyMzZiNC1mM2EyLTQ1OTAtOThiMC03MDljNWFiMDYyZmIiLCJzdWIiOiI2OWMyNWViNC1iZGNhLTQ1NDYtYjNjZS1mYWQ4OTJhZGVmOWMiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhGM0UyRUEyLTg1QkYtNERCNy04MDI2LTEyNDM3Qjk1NTNFRC11YXQiLCJtYzovL2lkZW50aXR5L2NsYWltcy91c2VydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9jdXN0b21lcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXNwcml2YXRlY29tcGFueSI6IkZhbHNlIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXN2ZXJpZmllZGVtYWlsIjoiRmFsc2UiLCJuYmYiOjE3NjIzMzU1MzUsImV4cCI6MTc2MjMzNTY1NSwiaWF0IjoxNzYyMzM1NTM1LCJpc3MiOiJPREVBQkFOSyIsImF1ZCI6Ik9ERUFCQU5LIn0.DqXF3-scrhYYHqtgEYBtMusRBMOzi1gmvLoXiffYIohZXbgrruFeYFCTR5RqtWEtjU7qAxVlPUt1kMMVdXJnlzxwT80uquOvwHJ67e0QLIEIJCdfClx5Sf17M-FPBwOKqbzPq3yedal7GEzRnAtQ-p745k6BOpnf-cpzsGzmAndLSm9EZxY_U0a6YrZ-gTnIdcjN6k4HsYe9_DKhxwe4SVaUo_m8FBhVQDpvEFuHZi2NE5GuG-Y25G1On4wGuypL_CQBTHznLEZMRi5GmHlO_4peidzHLZxv0kac-dZIRMmQtabHznXRs6MJLStrzLUXFWOvAnS40AUiIGntFpChyA\",\r\n        \"x-os-version\": \"18.6.2\",\r\n        \"x-platform\": \"ios\",\r\n        \"x-model\": \"Apple, iPhone14,4\",\r\n        \"x-device-id\": \"8F3E2EA2-85BF-4DB7-8026-12437B9553ED-uat\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"x-current-screen-name\": \"QXV0aA==\"\r\n    },\r\n    \"userId\": \"USER:6227436;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNTM1Zi1hNDNhLTc2MWEtOGIyYy1kM2ZjNTA0MjA3ZGYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..XVs3ofhacz_jeLtc.xg7ol9fGkVnZ-f0N7-E75PQryngHsRpN-BMMjvni54uCNXewuLb7vx9SoX1QFztdXRDn9r9BDLRWCkTU484iBCaHaQxUL9Wm0RQn6M6eUMGEErkr_QMtzl0c5-YXS94TVtrSOSLI67fAu1lxHAL-L7PJgChsx4zELN1XzPI-vBPMtY1d3GJdF-RtSGciV0krg-oBUTDYVWBplFlT8E5WxXuGx2Cyyqu5g2lL0PZNEZ9bYnWPQCPCQbqYStLgqe4ZwJl4LULIz4SmzNnJ3W6zv3yLujwvf6IKYQi6GpfYVU6yQAnbeJbGAsLGooxO_hVQY6covlMpL0xsfWrFB1DokL2oPxJkZ7yo9cbKEx2e5vTgBFuYFB5XnAFkn2IeXpC2B1TJ9Sx3YptsD8wfJTSc1pjeN9x3_0mdU5q9e1ffRG8z8-lM2MUWUTfhq6AU6x2qXjF-PU0SGCdE7J3r7Q1eInzDlNcg.bJ-muXNTpg1lvARyd0kuZQ\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.11\\\",\\\"remoteAddr\\\":\\\"10.229.8.185\\\",\\\"remotePort\\\":\\\"59293\\\",\\\"model\\\":\\\"iPhone\\\",\\\"name\\\":\\\"iPhone14,4\\\",\\\"manufacturer\\\":\\\"Apple\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "baristest7",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-platform\": \"ios\",\r\n        \"x-correlation-id\": \"01f14aa6-9015-4d3d-bb34-c2d115e74855\",\r\n        \"x-owner-id\": \"USER:9592889;-1\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"challenge\": \"Dz45KicuM/o3fVdoayw74g==\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4MDMyNGJlNC1jZmJjLTQ0MGYtOWNjMy05NGI2NjdiNDFjYjUiLCJzdWIiOiJlZWJiZGRmMi1mOWM4LTQxM2YtOGVhYi1kZTU5N2ZlZTBjNTYiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IkI5MDg3MTQyLTAxQ0ItNDlDOC05NDIxLTI2QUNGRkZERUM5My11YXQiLCJtYzovL2lkZW50aXR5L2NsYWltcy91c2VydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9jdXN0b21lcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXNwcml2YXRlY29tcGFueSI6IkZhbHNlIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXN2ZXJpZmllZGVtYWlsIjoiRmFsc2UiLCJuYmYiOjE3NTgxOTU4ODUsImV4cCI6MTc1ODE5NjAwNSwiaWF0IjoxNzU4MTk1ODg1LCJpc3MiOiJPREVBQkFOSyIsImF1ZCI6Ik9ERUFCQU5LIn0.Syx3itNAlgF_tWfLS8n4hbS5yJDsFj7HDzjn-tosr5saleC9hYxzY3av1SwVu1srU49DuxEKlCIDA99uczyw86Y5QXkKk5eR-KC6puuIn_jlSGPeeWoxK0dxFvZzkmRn0vs_P5nZM8IbYrDX_GNgIOijsm-a-1I1L54R6b7osX8IspZC7cJnCwjcI4KGGBWVzyFdVRmfKNjz2iUQF-Uf_UNblG3dUSRj4A8eGyDEo6hKo2TP34PCMba8oLbss6n3gcMm353AT3z2tTwV6v5TOyHBueCA0YwUXpk7LJrS00j4dBPBT00iuPz7nmrFOJODLbKToYyeE3yD4oWSLInuSw\",\r\n        \"x-device-id\": \"B9087142-01CB-49C8-9421-26ACFFFDEC93-uat\",\r\n        \"x-app-version\": \"0.6427.45573\",\r\n        \"x-os-version\": \"18.6.2\",\r\n        \"userId\": \"Baristest7\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.YJ3bLwIThfIbZUHqkP1HfuE1Z0lzDnRr1TFjQgvzlsWCED2mYzeXaekJ-8J3aEKwmkkQN3iTSnitCD65hmp0DVGmQyUzxhKnjqcDvGcV7HgcDDJMYK4K1TIds4ziow4iDJL44gohHT_vLmB9-FwY8ZfbTvJSaB_9xpfbl3v_afaDJRVV5iri4s05Q6-y2P7TxW9TKNcIcP5yiJyhiPrIea6mXKvqqA92yI2a__sionaoWWY5EXSMI86vNq_N5ytOW9rLyHfCDQxto4HAnGxxJxZ2vPnzfWGI2wslpCIYNt3shfrKoZ5cIPky9LwkwexX6vGRF4E_Wu79dp87fJPNTQ.VS9SjyYKAUAe42LPkcpyPcJvKdRXNVGbZ1b-8CMAZEyINI5Bo3vrz0m2eaMiCz0Eh5ooxuH1y4JNSTu4DwdSW1lUH4_7p2W6TsIQicCasUwdeYYtw097Yf81dfkWRiXrOLeRz63vnwlGPh84BlhWlLOW82szn6Z1CNb_WOthfA9b33CUpNam6arwr2qZR-linGNLYD45H1UBv9IlS2S0K9UP_3b_2TDcRtez1S6wV-0NErS9cgOs0YGFoSNsl1Q0DF7Id2LSuGVsvv18bHrk6mXZac6qQ1u-agnScdv5RoEiJixg0fyVk8i8GjwORnI7XfItU3LZqCIGEDLP9SrXjxSitr7PtMxVDCPgvGbHjd0lcVX3vYE1hzg_CGFegnC3VzIWgMXzshYE7l4R1uCqKsV8MRyPrqqUsaE5Kk6ZIvD62NmeR5aMwe5C4dnI4-OX9qZKUvACnvo1cQLV6HDpSGqmPzlE2YY_3fLJ98_KmXw\",\r\n        \"x-model\": \"Apple, iPhone14,8\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"isPaired\": \"false\"\r\n    },\r\n    \"userId\": \"USER:9592889;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTk5NWM5Yy0wMzYyLTdmNzQtODIyOC1mNTQ2MWQwYWVjZmQiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..XM11vCMmi9zmJDj-.uDoIdfsczNDZXadnm9asBM8yozAT79kFQWSHyjwRyFEahXA5ABfc-MFjooa1LGsZ4nH-c5ZXxjp8G1VmtxtdOYVu0_aUyPXQITaHBzC87bbbW_o6Z_UIEZpKkBmZIPf3DWaTDQ0D7jx8Vy2trLr_40kKNzCN7rWXxagPJV5xxQ9R2bgj2KyiVqllIF1AfAo30QLvEgwI4FFssaO5ZcB4bhovDPelNxPyYpToOrqureh-usGrGmOZuFJM5u_J-1TwedAAdLFcPnxk9ulxp3u5VvagYnfPO4kAp4ezNVThER2OzXNEK3LQiP9Y2z_LfMdwvOllqCAFwKcDaD9CTeRuwrEv-aVBaD5s5aq3owd5incUJiFSutVRQoprV2XuUydj5MNQXE9WQ4FfeDM5I6ZQt_KL22o_o_vQTCJetPE76tovO4NubFJvtpG8m1EBcBot2MCRD_V4-aLnEVNsPonuRH-Tfk4.fu-DnjYq6KypfyeOUoItfg\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.10\\\",\\\"remoteAddr\\\":\\\"10.229.8.108\\\",\\\"remotePort\\\":\\\"49621\\\",\\\"model\\\":\\\"iPhone\\\",\\\"name\\\":\\\"iPhone14,8\\\",\\\"manufacturer\\\":\\\"Apple\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "odea5",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"B9087142-01CB-49C8-9421-26ACFFFDEC93-uat\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"x-os-version\": \"18.6.2\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"octopusChallengeValue\": \"lfEVujXwY9O8K3he2cOVyg==\",\r\n        \"x-app-version\": \"0.6598.48132\",\r\n        \"isPaired\": \"false\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-owner-id\": \"USER:140099;-1\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-platform\": \"ios\",\r\n        \"x-model\": \"Apple, iPhone14,8\",\r\n        \"challenge\": \"lfEVujXwY9O8K3he2cOVyg==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiIyMGQxOGQzMi1jZGFjLTRiZTctYmNkYS01ZTM1NjYzZGY0MWEiLCJzdWIiOiI1NGViNzg0ZC1jODMyLTRhYzktYWJlNi0zNGM5MWQ2MTE0MTUiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IkI5MDg3MTQyLTAxQ0ItNDlDOC05NDIxLTI2QUNGRkZERUM5My11YXQiLCJtYzovL2lkZW50aXR5L2NsYWltcy91c2VydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9jdXN0b21lcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXNwcml2YXRlY29tcGFueSI6IkZhbHNlIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXN2ZXJpZmllZGVtYWlsIjoiRmFsc2UiLCJuYmYiOjE3NjIzNTA4MDUsImV4cCI6MTc2MjM1NDQwNSwiaWF0IjoxNzYyMzUwODA1LCJpc3MiOiJPREVBQkFOSyIsImF1ZCI6Ik9ERUFCQU5LIn0.LlAiXaAiyPq7WYk9aGPDIaxLLSL7wFqX1MsgzFQ41-z1dgkDDDuFg1TzJMckuPWq3P5vmuK8TVFrwE4nFKGhxNOvlCzadq8vFUA76A3WMpvhiAy8E_Eq3Dk9RROH1FCMdqpbt-1GQSIFwP5rJpdLOvBn55HKHjmM_xGEOfDeI7vCnLfGzpiDzgwOZJeSsf5WTKJGIwGJoBV-5SUufOassuKAAYuGO4F0Ll6UkRD16InGGaaO1yy1899w96oCD71FxZ8bAw5rEHweysN9W2QCz58ZAPbzP5UgHj8OipipTuKhyf9rxCuKhpatQ859vjTmQR26OR9edqf2yLCLa2v3QA\",\r\n        \"userId\": \"Busradeneme\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.Pz4TEBw1Q7bDrSqhrGT7GHlHgUXwhGHYHGdhq1OkMRIXVXXjyfuEwGEKpUzFQv08bry3NewlIScRE9-yTixRsmFxyeCrt58bhNR3NP-xqsqy1ZertuCnMGzCFFO3KMf4xgFofpT_tL7bah-fPfPq6zTGTZ2Ckn91RJoLzEa0KFM6ZEFlgaYYOOuPynHLkota5r4DUrxMsZBVQZGSU3PHWzuEGi7s_wK2MpmEwIX0WA4kwxvGCsF1cBNJDMFuBRnXXL5cUFsptZcRe5zoJY-g3Ba7u6V5XALLQYJDPzbHMGPdsf6-ElgbXpbGPzB3XEQcIBkhJhE6ogs1bYJIYHrNYg.VLIHFyiQePbMjfu6plfWRlPLWVQrfbBSX0sBONNKYSUb7GXu_lujlD1cndYOqHubJ_3vRHTA2fq2pVxJby8J4U0LApGbwj-3UullnuWXjbjjkq_BbJGSrNj9oQUOldIL8WNeW_BCzffbeDAkBmsmLhW3c89L3kH3LV7S8n1jsHZGz-qoIZ01RAaIAbJ6tXhTbFhh4VDlwZ6Y71YufNvcCkhFKEXBSXVLgTY82FnvhCQp56D8-611RLOsdGYtYOWwaoWhEZo5_G36DBJD5md2YP_5rSFqjJQcsXebTfc2BAYg_PnwjTxKfCcdlsFqoVndWDD2bPcD8BzRW-jf3rkt48x43H62Gj0pkYBzbJLDnH-7zCUtTiORzA60cG2vbLCViQ-hmr6XODtNBd8xVT5Jf0qxZs-F9sNt2NDZjDeVkz-67YFXlo6v2OS_gDiuGmAegr2zzrizjuxuuWMnNRKxZZ2o5JkzXvyvgZ37XXTP6Xo\",\r\n        \"x-correlation-id\": \"029f18b0-d4a5-4b1c-a6d8-3b7af2a25d3e\"\r\n    },\r\n    \"userId\": \"USER:140099;-1\",\r\n    \"password\": \"******\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNTQ2MC03NTY3LTc3OTItOTVhOS04MDI0OGVmYTg4OTMiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..gXNz6GILMzgDUIL2.GTJmAEePu1yqXTzTC_FS6Hreagf4idC0ni6Ht_7vAgWodE0mtCLxbyt0EqIEgNBYiV2OwrneIZmnzXVNkcLRlwAgCahxDBVZBMZOa2SSN9n6dXC1nLPcwCLspJ8kMR5lzBMfdEKOCGI7jimtrXM8j5VKGILIg58WMK72oN0wIXQ0ZEgGba3gGZHuXtPdQiXuUCadnDwiL0Pb2qKP0pciEDeLsw98JaQVLEki67wbdpiiLPijzn9G1sznWXwA_q-SYBaaskn4j1FcFta03rsDRPBLfodJfcdJ0FL9Fis77mecs4bDMCWnJK23ki0EL0mMBwvjNZtyfmw3o4aInlFhTHsSHjEPmkPAXK1yHf4e4xX5ExYXHwWKhhkT2SJAnJZS6tEquA0bj0qBdPndW4mWpFs9TqJviVBrNFbg3WZuiC_ruDCL25yT2mrGquOW9iS-2JLxgb0hYWp_qA2P3gMOrmHqg_o.6KLkKrciP705DSmfcuBg7Q\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.11\\\",\\\"remoteAddr\\\":\\\"10.229.8.180\\\",\\\"remotePort\\\":\\\"54119\\\",\\\"model\\\":\\\"iPhone\\\",\\\"name\\\":\\\"iPhone14,8\\\",\\\"manufacturer\\\":\\\"Apple\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "101",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"575fce7d32685726-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"49fe6258-9df7-4c43-99b9-20e3d3175460\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"101\",\r\n        \"octopusChallengeValue\": \"p1pWBDr/ZZXCO4vw7fEBMg==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJmNjk2MjcwNS00NzBiLTQyMWQtYTQwZS1lNWExY2U3NjI4OWMiLCJzdWIiOiIwODZjOTVmYy0yMzJjLTQ5ODAtYTAxMS00NTM4ZWMzNjhjNjkiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjU3NWZjZTdkMzI2ODU3MjYtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYyMzU0NzEzLCJleHAiOjE3NjIzNTgzMTMsImlhdCI6MTc2MjM1NDcxMywiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.hTTYHC149agrUR-uCjSHdcUVb9rp6gxS_eOZiyFteYq5ui3Xvb_SVCjQsZN4XzY7NN6UDeJyQESocRkJX-KINReiJuu4vyTNMbku3zi1TzaNoFoJI8dcsK7Zl2bB3cMUok2WJiljdNT_7RGYIBfYe3PyJdZkZ1kgoEuB6lCp4iZV9vbyfIqsAng3E597Pa5HJasikyaSTaXmC_PCNx32BHPk146gANnSHPJ4Faycc5oky5nQE15laZf3XuOzx8EpjMQnI1U2hppVLFezgKK8evjqmOBiPlNweXa5CcBvb55FELziEfeb-ww-nghZ2wTtYHjvYw-vTzgzhtjiQ9kJfQ\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.RammJ-sMm4Mi5FrOYPEKL9sWg3Wqo6r88xHe3c33sGNF240trL7d2UoSmbuxzjSyWQKbZvNdSXiejd7s52xz4iC3Z7h8J2a15SQoMsGiQRgyMsbGwMBhObP5nzi_4VnoHOVFZ5y-Gak9M4XURK08ISqkcKhL_0W021lvFedvSPKXk4QnSf73fwRC_RFwj0vyoWBrvZJqDhEP-beEd7hjDyCU3X7SCpaewSjuYNfcgJzorn0lpE_xRFf3FTvu9z0i0rLJLH-CUXC_cZHlfsnAXwJwEAMDSOh56QsXpME6hL3XVCKgJr9Ss-C6PNymAzI_Q1rV0X44oUdnXIQ6HgNttw==.UGwdRWjYV0FRIvlfLJoo4EOhuu4Gnjf_o94W6rr03IAYZAkDHofdgI_M16t_2eBLosLiF-TU5fHqx2nZqTn-PDy5dcmRNNByeaDQ-zzBYXt2uihusuqeTvbxL6xy0Hl5B8RelKZTTkZJioHg3SIGMW-CetVsvASLnDSQC9f49XInDu4KWg17aS9v5oQkbFUHycdiXneQvWMm2yEUcrIIpA75m9HynbwlkDK_2Az2Npf8sxAwfMNTO7iZUOdJZwer4Q9I-gHxHLh7vlR28vnoeJcNcbF5quAIjs_MFJCRqXfB01zdeJ-WLn6KA7B3zkgKneN8jxgKTuCuofiFrjah6HJQn0YckN0kUxp-6VxCYoXaly9s-85xglx0RiiWOQjUmdE2ah3EzdHiPs8GbjdL3TKJaSbhK2kUktoMOOJUXd1zeaJ0Z6qs8Uvl09z3NgDoIJhuFgp3QRT8UpTn1XmnSqd0osgFfRxmixJhbLCoQuQP9gqJejm1eP-qVWWpK-hRYmISJU7cXEWX8d5Qy23SeGDa9TQ6c5Fp1-e0eZ-dyGl4hkFlQtRo9efN9-ZobwcqxWGc0LATxx3uo2-_Lr5xN4zlkEet-3HTi9cJKYjDGgq9wva4kLhPt6j4KG2hLgUcoI1dh3fVXcAPHO740kAJ_Ezbhf0488vGPityZdX-3s-yNYf9eFDVgaP-VtOCn-Mtihhx_xphS4VN6GoXr7CHRYbUdaQAyTf8DhA-30quP9EDAOPLFnO-_aDfzCVbY0eeam07rE4yCP-aFrbyrcBg2pgB18Ctus87dB7Kiwb709BrlFrqmWZzDkgLry5W8EPzMqs8sIWik1mw5hqzYvGBrgZ7bWSPcIG9br-7w_E-9h-pAHZwLQGXfn57Nnec3-mGN1aT-Bl5kjmrLaShmiYsA4S7hba5SkhlwQ-7kNtOF6k=\",\r\n        \"x-connection-type\": \"None\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"p1pWBDr/ZZXCO4vw7fEBMg==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"34\",\r\n        \"x-model\": \"vivo, V2206\",\r\n        \"x-app-version\": \"0.6577.48170\",\r\n        \"x-owner-id\": \"USER:2049310;-1\"\r\n    },\r\n    \"userId\": \"USER:2049310;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNTQ4NS1hOWM0LTc5YzAtOGI0Mi1jMjI4NzI4MmZhN2UiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..M67gOf8o2B2tuEGE.ABRtuqdmq52jBKr5VqI1YC_MNt8BZ3GuyrnULT4mZdOrGtk0KiYVJtzkyFEEgd0Pqlg-A5RQVoRlA7B6lggCosQ8pFjJV1a5hK2oC_R6qQibhz9X0QxzupNtV9lkD-tYF3yWcb-Nd_GTFlA509FhotvKg_Pg6X71fYWJDz4D8hxszSZHHqFBj68IgpimiXg8elpI1AyYSHkYUz7UYc7_ANQzQaRMyJ7ZmiluUzHKt2azuP3J-mn1LfRO-b3wUC-xw-lxYVISWmftI-D0nrzuBR-0f-asErFFExrpTYY9Zi-C0GK4tnyb1NULdhd4uJN2Q4RErABBOvAyUW70gLIqnAYK2UGMRn5Hwu6ruRHPyzRGPGKwgadxY96cEcHSuNpAVzHV7Jx2nl2B0ujmgrgScc7S4s0js19urkmMZLZNuW83vM9ZpPn3KodP0xTlTzIPRTzJq892p-xxe8tC0JU_l1QTpG6pKdMJcslKXfJJliO9bRDHphtl4lFnrcUj6z8.8YWbR6mi-lBG67Bx0iRpfw\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.182\\\",\\\"remotePort\\\":\\\"41320\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"V2206\\\",\\\"manufacturer\\\":\\\"vivo\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dilara2",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"42e696f8-c006-47c9-b9fd-96c3a4b6b822\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Dilara2\",\r\n        \"octopusChallengeValue\": \"Gx7R1TfCRT0qbNaOeU/gpA==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4ZmQ0YjQ2MC02YmM5LTQ1Y2YtYjUzZS00ZWZiYWFjZDNmZjMiLCJzdWIiOiI0NDgyMDQ3NS1jNDgzLTRmNGQtYmFhNS0zYWYzODZiNzQwZGIiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYyNTI0NDk5LCJleHAiOjE3NjI1MjgwOTksImlhdCI6MTc2MjUyNDQ5OSwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.F1QGuteWjMZ6r90UnQSFLrkICSSlV3f2Z0S22Yqup7tkvwHXbDIf8gNzJLcXPqYiuV8RkY7gJrBhn7IEg0LpM0BLXo8K3N3qRu9JRfm8p9q8mSwzArCDtI-0XjAv_PewIJr2dVFFQNd6biVo0eeVZf244DPOeKTf0NLXloB_UCFf7L6ufjI1cLluI5Zb-McRZM9tbvSA1J7guupaRx9XlXyyUkoofpC2_H4vfi5T4Y4myv0YhPSv60_55YZuaoRUbkd9Y3oxiYR1zGY5j-MxqLEAekNgOD7L7doV_jSXxKYCuAc32uTF0ziPlCWJSCAhAtOplURzNOedcwG3ZzUL_A\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.LYKtR2QdSflcwEpvLFRvNb8JjhPdcr7SBaNpy3X7rmdkVfSNpick3QzkejhcGOlMIr2qgkEBe9nxvOwseLip-r-4srgo0QL0q3aNq9f-ENqxNZdMls9LT3-8EngOnLdy3iv9JejnL6Av0P3dwxfJEzeS_HkFH4dc9c2w7KFoNvFDG8_wLddlzzqB1o4cxuT5kM4QeNv0nZi-9lZtR9bO5IqIjgk8_5-u3QpsNqxA_hVHE9xW1-ZQSmW7yWWTYsmPl-CfZ-IEHXmHZ7LjGUkKUb-8Y0JOJRQStj0WGPw4jreZkxBQCvav3_ao7H6KiEjog3Hk78iJS5t2Cw3gf3BjyQ==.Quffbq49S9re386kr-eImjaUXzbxcUB2EHrmXzEsBwFPHKX8PUvP7vHWSgQ8cPWS9owjlPtyUdcgExZYg5-eiXXlRQgw17QCYWdYc8hTOJB4iJW8wN3wTO3u7R8gLDeksPpz6vMUQWBhSXewN2eosmqksV8Xu5_L1roVA6zNdL5d-A3lAIswKjm6mDlNPbLcAWxT74Rt0Ku5WTtFzroirCuzu2W5eaWZ0YRa1YC4l50vvLWsNEkvxqr3bXlETVxUETgHl17uROmjFihLKPW6L_V_xJmPodolKZIoXFEXYWokruQcfCiOYOKKPYCNPacX3GtTjHPZHEXRkx8GdpnpN8PqfC9A3C24EknCTNdAt0GSCvxBGBbsv7KlZVl0ZlFn5SZ4HjFfV_n4H-X6PKo5rEeRUcYrWdlsemsMGOAKfeuuKnAynFQVpKw2ByOFPkhKyv8yp5UIZ29xwxiyevtbyPowEtAtkK8D31ogEusXWgUj_noJJwA--fc5SziO1iPkSCtpQTzAVlBZg1lqog9mAQizGl-kJcb2Ui4m2HvJGnuqFTAr5c8CAT4SPs8uLqyx90mscZYqcl7viA_l1GPXmLTz3E96HPZbu4e4AKCMMEx6pYy3plMx3bZyXL-0A4vdy3M0c6XAmEEfXtnj9LICyWvnwY7pkLnhNeurRPtF0HPnRkqzW35cwxRx7esXQm72Q6xfPEgroCqsZOVHk34y8DfSvJ_TvdUaGYnCyDNKEVBeQkXRIOvhp-DBM8ckgCstn-vx6NEqdeO-ubWq2Jet9eqQ-1bcvUBUnEXlraGHm0x-6excat1PCBlFaQprB8JkZWmu42ZYgVvHLeDzLOGI7hDP6jCK4J3cewANaqBnF-iKGq2W7REGphVF-vR6jQzZfiA6JAWdM4svgIntPAunBRdzkZRu7gxzh79qV6x3Ppc=\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"Gx7R1TfCRT0qbNaOeU/gpA==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"36\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.120.4\",\r\n        \"x-owner-id\": \"USER:5752810;-1\"\r\n    },\r\n    \"userId\": \"USER:5752810;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNWVhMS1hOTg0LTc0NWMtYTY4ZS1hMWFjZWJiOGY2OTMiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..2RvjV846RZMeWx0x.Kkc3PftHs6U-oa0sjXJAmTqNzcdHT0-WvfZOctgMhNOcSpnpDsMEW17y6bifoupkdQnBt9Hea_lOXUkzCX5oIq2aLvXgnfCT_gMZVvmE5sGZP1HK5LPO0Hp4dMLfQIFwDpVZJatFCBrU51Dz3Z9BWiJnz35tgTjUAgY8REFKupL4tC47YxSyEKjQjhr6kfbKUQ8g_E_1xEk5y7MnWC0_63FHb3F6oE4Nl-wDb6qnXUalfFaXJqQRqy-xgEFvBU1SWlsibkZZf5GvIWAFiwM4UJUTIiTf-LR9AjkiDrqqXgRuX5sUzhTdUFdpX46fkx2H_68BCFwObFTIl1YCCv5nl5xIZ0vpJhFq8v0RUPQGr0jdIeoMo2BxTdtC73v0oK6Eeg2EIvORKJ6mWG-b1avS-lXd4kvLaw4OaQS1_qebZTpd7osWZQCh2v0lzbVl-e7YXShQEZsVX8-oU9t6fvoxw2dE2ibf58CZya22mF3K880IjL7JRqnd6bgsdQ_uBUk.Fxj0aPMzKEdvVQP8lAa6Iw\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.248\\\",\\\"remotePort\\\":\\\"45518\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dilara",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"575fce7d32685726-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"263523ba-446a-4fe1-9095-ffacb76931b0\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Dilara\",\r\n        \"octopusChallengeValue\": \"3SX9HrUcewn8qNJz/mWCCA==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiIxNGZlZjcyZC0xYTg1LTRmZTQtYmY5Zi0yMjlhZDJlMWEyMTgiLCJzdWIiOiI3YTQ2MzZiMi0xNThlLTQ3MTUtYmM5Ni01OTdiMWUwOGFlNjYiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjU3NWZjZTdkMzI2ODU3MjYtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYyNTExNDAxLCJleHAiOjE3NjI1MTUwMDEsImlhdCI6MTc2MjUxMTQwMSwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.pMSxQMO-6VwFJcGo_Fn3cOmNegi8X9st5_PESeJ9_fSDEf62pGXHn_TEbaullhClwrcsRxB-xNCdQGEbjLR9pUsldyd7Pxtpbu_WJPTrKn2Fm0cGOmdZZMwGwDvMVcNL1UfljMhTR-r1SbQSJbuT_ciBgt0YRHEfH_0XxxcQjhEqEf81Vs6aYaadezjBBjrfJ3jKuPTEU64r_wxcsq7f9OJCFq7WyBiZBsDmdtAcSejeklRdJcfZPIiTHwarm79Ei_8kXqVcIwhCiIpVW1kblaOXojaHYQO1cRgjcHu_xSg3UGLZYb_o4RcGtPI1uGq5mQi1MAwuieBmvrY2q56HZg\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.ULyCfkuYWnvjYlBl1FRonZJUqKJsTOwmh2RNcdlsrFgj5xvYCDxkbxDvRNKfqWgVSnj87cbgkj6oNan_MYxeB3YkKjzVPXXLcG5LdYpD7pwV69duwGKtSFocZ7owok1EGhxq7PH4oQW1ZEbIYuOyvyt5MB4I534PuN0UvOGPB5bkfDR4bmwctAxZbhKboPFbkVOBXzjfTpsAewSQsYQ7SHTpt2F2c700QTs8LV5gMzkh6_KRzu8Mudnvfover3N1i-YUZe18N2_3tenQ-YFGWdsUjL7v4QfxoOf2o302j_xoXbv4A6JuT5Kwl5fWP_Kbokj7I38TjqBhspvQuWeGWw==.I2WVKYQvZaXxHTcgwIDLe9uahBJJKa1Vis4ePMIxK21V3Mw7tcvRaQ1zw1VCb5OtcfjPdWCiPNOadZn6K8793av3ha4pV42YyTcEscZb698GorPSE9vZNKh0KUFeT8nmiB6OHUmAsT0cjtVkfO0t4pq08uVNSYm4drImeq0bFyEWBS3MCv2gnQSEybKr4r1kvIW6aT5l7x8QB4RNsuILuwnzD-abt_ShR87i6-cdU7p-U95RKCq1DVAfIaXU0inT-v9-wsW_A3OaQMEHNVknOM4zzvAC5_omsGf2PxLyKUhgJEhdHnwLePtmxHlU72yFDb418VCV44hJDNx8EAIkJsywjRIoAyfykbyNbIvZ2QLA_s_R-x9LK2QH29O1iWXSP-J9ad0IQGqQOm2X7j05ynFgwaMMjWEu4AyCjclmBI0Qqmj824A5ltAnYURZCsm_IDlsLkTt0Rwz9zhbtCSKTVCWLT_ypP90UGwxqYrDzpjZeLL0K1A1lAIHgeGHDBHi3qhMQjZB3yALNq2wVC-GwXagDfRzuFI7fOwcKM_1xmnYOiXzwtqt-RdflEGc1I5tnJBYYt257DUw_W7vx-HCeKOQzXjbhrE9TiA6PzR3m1LzMv4hy2VTdh5QqUNcoXgFkshoCWW3DWJ6xA77ZcLXqPcnyx09ycx3mFARO2H32Wg1hAgqWGuqpXPpZm4MN-XdU5lfrkQPjXGdiaO5AvCIfxCjYJ_HXDPJpmX5xvxMTMW9myDhxSGcqJoMXC9GN99LKPE9gdvR1YLR9qrRAQrjmpBIXotizPZPtcHgBmp4g941s2D9AoObU8MZEysVtpYChEj7JkZCWeNR-Pku4uQn6zlYaVEAwZYTcx3xxdqLd1vzgDe_t-yw8N6QGpfT05zW3YduOKmVN7DQN4EjTdEKMfe_r4UXLgqjYkHC50uDjis=\",\r\n        \"x-connection-type\": \"Cellular\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"3SX9HrUcewn8qNJz/mWCCA==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"34\",\r\n        \"x-model\": \"vivo, V2206\",\r\n        \"x-app-version\": \"0.6577.48170\",\r\n        \"x-owner-id\": \"USER:6759555;-1\"\r\n    },\r\n    \"userId\": \"USER:6759555;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNWRkNy01YjBlLTdmZGQtYTI4My0wYWZiZWY2ODBjODEiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..YIghYxO1xyeyhZHu.LFZZjTkp1851emWEfQOuVBEMbpr0QCdCoBUKadAIEKAr8MsCK85o-m25KuWlZeeAADlVDwY6pDUSHCklh37T-tMqh5j6wFJtWP-wu5FiWGZ2hkT9bRkQfevKYlYn1j9eIHCbDJ0F190AksksrjGX6S2cFIQKSvVtuWJYiqd4sazyqTTKTx-4mLRnjCXyc22w3tgkKxBz2jI83EMCjIqWzvWyOozjKltknMW4n53m2JUn9iiFVc1FkSnX4QSAI21l9aJX-AqB8Hr_Jfbj1lw6TJ1-E3xX9RKerKYS855mA8ehGnLU_D9Yyo4Rxqb3NF5gNcSiJ5X12gIpni61Rej9v0LTm2X5iPGdET7UN1Z71biCk59nqU6eZ7nir9wHeaZ_9HE9GXedSoZcPyBZBBXfptpIruD8Uet4EWzhkgOztoYuj9YI6y-W52nvnVZo0V7t5GeTyfN4EosTR7zfpABdwNhwMRKe_J76QDqvKL1R278ZHhOXIg35ANtPqqDTB8g.LN11c5gqEdgT_3LRfIlFyA\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.226\\\",\\\"remotePort\\\":\\\"38946\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"V2206\\\",\\\"manufacturer\\\":\\\"vivo\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Odea2310",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"8acf2d10-a3b8-4da8-ac27-01c26bd3c408\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Odea2310\",\r\n        \"octopusChallengeValue\": \"BE+EVlWm+U0uZMtsO45/1g==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJhMjYxNTg0ZS1lOTZmLTRhZjEtOTNiMi02NmE2NWJlMTIzYmYiLCJzdWIiOiJhMGE5MDIxZS1hODhmLTRlYjEtOTUwMS05N2I0ODZkYmNmMmMiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYzMTEyMTEzLCJleHAiOjE3NjMxMTU3MTMsImlhdCI6MTc2MzExMjExMywiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.nMptpHJGcEbM0qUzER_LRUdaKC0LcF0vunPAK7arUw1IAtZ34Fj349RRoVvTeKXocuU-F7GhSjdRmrq-gx9ozXwULu8bohv7OqGaG-gEivpCdJLclJQYR9AjG4ckEGVO-UY7Vi4k0J2TMl-30962Dn1UUbR7NwVC5dMCRn5VVv9-wDyKxkaPg4bo8M5BZ0g_sIv-m87JpkJLlvOmhEU9OC_NFtSpG8Dm7HdEzYNJ1jQ9MokRDwYTgdnFnOlQMYiJtN0c6EqgFrd_62wqZx3nQ2_sa25olUo0ayZF3W6jgchoi-yMDY7r288UVVTUO29mKAE7_gOSWx7Y0PSX6RwAlA\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.gfWTpSh-3Q1Zt0dqIXXFG7RNzt0ed1azgNIerNDe7AQXf32x2KGUO8j5Er4JK2mY8aFVgjoUPCovHQz7QayqEKCZ5qBB5C7dGGkLCYSk0FwgzlNAp1XpyWi3IkB7NXOBbSxnTz1Ajcw5CDVnGnGTAcvSe1HMdoqzby6UUsk0Dag82v0D0hNFTi9WtIqyE5NI4MkcNXrG5TQHPB8GFCu3Xyuvwtf9_2CpvjKehjA8WVoaaspT7icSHzrVsoRFu2nWWC7-M2OuPlFDYDVJDg4V7LT8sLmB2klOmI42cA9BeWnjanut_1hRlJ_F3KLpn1vTu-0Iwa8bPRAPD8X3Am_xww==.jROaPHmkdwrSv-tFimQ2hicuvrdGIB_ONnCt6yOtyN5HPsrWbmpBib4K02lSN96pUh1SYQmCJ1DVshsfHefKhH7_xa1TO6xV5_6vtHP_ErWlYb0jkNELNHjyFmYCQZnVRkZK_Tt-qwBGSeM3JiH8bn2oujlFPaVNNVZEo-CilNA8bLOPKtcvjxkdICFoJbJ-vPOoLSKzyy_VJaE7-4d3i8VPWzYz5kZ-A4fYQzRswXlt8-6l8-I1Lyng8ae26gar4dddz-S9Wkmuh5IEZ-XkHk4r6-klnDI5bEzvVDeP2hJCNRw0w5kZz7zjgcKDncXD1rXd9UVDTg5i22eqASweo9dfbMtR3N8N0KOsG09WBnO2rPsc_2G8AszZLO0zlIiDwb9GdU65n3cw1w3I44Y3RIPj3aAxGjRCcR4wSvR1nLsL0xLUwFhnZz5WhzsWd28qaBIKXEiKdlJauaV_xLZt-DVXVqAG2ZFX0z0s64yFGIULUGihVEXwLEbveP-9i-jYFOvaiwd04tvqhAMIwFypjFYeRzTDghh1H9H0TRBLmStxVdiOtwHWbEki6BTUA1AN4-G3hutDtNCbhfTVuMzCwX_GLQlnPKrktT10Clg_gpTcW23yKIGA8sjERlTQLRwxtpkq3bb-OjMteVdKXnjOHVyGM29jOpPw7UYVeMj6TOvHpHLXrxueRWMm7t0ue81vdRm7dSOVJ3O1Ivq-NrWXw_1Du_5YKG9V8nBZ0OEKwajwH80Ag7EkER4zONHRJHCObXZsoOWYHg6hIAx4jc2UlmSKzBUTXMjlLzueEcIbQmootd-ElEf_YRkUZhMhtC8tLIkEXmRikLr5rJ7rgn0_U8t1WCSBDlPLzPg77LqH1SmboOi5BzjbzpF5jWlpbbGF-huQAiN9NUELgR30B7XdUNDq6C2XSB1m9HOhYjcWt2U=\",\r\n        \"x-connection-type\": \"Cellular\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"BE+EVlWm+U0uZMtsO45/1g==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"36\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.120.4\",\r\n        \"x-owner-id\": \"USER:2112657;-1\"\r\n    },\r\n    \"userId\": \"USER:2112657;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhODFhMi1mNTY2LTc5NGUtODE2OC0xNDNjN2VhMWY4MTUiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..-f2N1okFZv8RuWhx.Sqo6R3pDQICccmINztzyIIm8xbX5kaaxBhHsr4yOA01lqFsajm3ZfvCnL9_WIwMSV8K31Laqd0L-4CnGIq-mlgC4RHj5caAL3X5ncgZIAY_vU4vWwv6UfAwiSdG7VL8_ZrR6KueZVYvpVJaGCmKBQBppRvyULyR_B8h5rkLb3Se22ViE5nX6b-ltyboWURXrZq29Fbi5wlAzSSlr-Cs-CBC08JORz6fOkUFq72x8l_taA6qyHefuk0NMyPTdvZ0_YQtzsx5Ad7Ept-vzx-JFQkns4PTQ-QikZVvH76GoITsXbQ31zmh2Ro2FkngXauatSNE-1i-m4H-exo4C_tF4bOIM9pK53EHeOj4LsCsWfWti19llpcjUimhrikHQ2-9ZVYCAfLxNBykMXLpoJcd1wipxPR8AlVYCopkd_OT_suJog4bVBz0RFYwSbvEgfC-RRu4jmHWTUVDjtC9mPw6-ZUve5T3Kt61qP6f03hbgWjt7Hdd4LsWaYGv62NIQWBk.VKKAT3wMt6A7sEYIQElMUg\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.57\\\",\\\"remotePort\\\":\\\"36676\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dilara3",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"42e696f8-c006-47c9-b9fd-96c3a4b6b822\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Dilara3\",\r\n        \"octopusChallengeValue\": \"AONhzrJYNhAG9ECHpOS8fA==\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJlYWQ0MTU5YS1kZDUwLTRlNmUtODQwMC0wNWI5MmRmYmQzMWIiLCJzdWIiOiI0MGQzZDhlMi0xYTIyLTRiY2QtODU5YS0xODZiZjQ3NmVmMjQiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYyNTI1MDIwLCJleHAiOjE3NjI1Mjg2MjAsImlhdCI6MTc2MjUyNTAyMCwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.XrJAc_eFLxDFRAe13CCfkEm4CBz4jztvONrX6yQHrPG-2rFWWNuxK92YU0H7YC7O9E315Bh5gClGxKxPkQpSq5XuqBaztDVfTbJS9wzykCO211xuphIHp6k8YdU5lp0SaHGn43JdPpO7RoaljzPjgwSJdJqbkn9XbHJ8OaeljhNadHm6AqgDUjTqYf58NOu6yvCsT3d_j_nxy_JoEVXr_7M26SjAujXNnOZVbS-TB65cvyv1o4BRUOItVNe_AXGXDQhnAsxKpeOsm1ymFWnnFxyiMR6wah9IeXT8G01zIALs4tSjWUbiocWMsfRED7uW20Y3FE-VQaildvCr65_EDg\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.mqBoNj5Im2uhy5d4TLyAN_6M83EHFug1-2lziQCaPg8i4310TpnPIivvG2Oy_Zl6YpUCR7gVvnwb5KXFLQGNxdDQc9PskAjrnYGTGDQlB1UBYAwHy-NypPSO5xSJP9E5zz_esjK4j9SbAMDGtgydlKECD0y6ivwlillA4XgEclZrj0vhJPIBrpYqw8n-O-FDMR7qCF6l11QuTjyhlKWAn7_yMwUbxnYWVuQSH6xmHtsteC1Ak3P9oijHPY7m3tFmZkHVXq9webht8Q2tTY3vhTk4wObYUMu152r7DKIxoHc244mCEX32jyZ0CNhu9DB80roYCCPgH_nFLHeuXpFXeA==.VhUDdk60uad98D3xQUq50AHk_U6nWJ6nCqGYMYYmctrh7U5Or4GRNtugs4MTwyeHzcv1UPfMKlk65VpIsYaB40qDIehfAB8NWZ-iWhShyQ98r5tyKtaE6OPxquKKdM2cjqVku3RlqWfim0VzGsVWWhmqbt1Ya3RPNXO0d0ZC_wnYyO-HVmp7fbSioqEvtE7oZWrm2oIFTRfTbZwccpubY0i2gGUG0DycGYQi-SvFTw6TAv_PwqDOkKrvvKVUlm2Va5lCJyFDi2fA_c3gQ1F4sLtlYQmfm4A6_gMe5RnwJAQJLJ_Y5ZnU4jwa3gc6bI3MpNuyGPOJYxKSOZ1l_NbIzlWQ-Ix_NYx82mWa83dsxRSM0PB7MgLyOjZgYr3QCD9dfWBQDcGId6R8wAVmla_hGCMl9LNxOfDTf810buTe3makHmP7gaGs2c-dn0PEJTISvepy_aZFW9V8LnywKj5HOmiabEflIyHxzgUemuoxrCSaJv5Sj5sV_8w-_KJJPAdMybAoG35SEWYdlKteqhwGdR356UYVlKvzo8DPHMIPKoqBgtdxsvzFc_sR--wS9YPQVeAkT2p1bn5C3ehEQgsEJ5wLc3Sad2zO8RM78b3NLncSVMLOp6xnq4b-AgUYKHaiwKwpwar-XiQ3gUxT8sCHM3PIFpeMkNzxPgAzV9aJnnLT1rcCjKmzxu91H3-3bU4JW-D1VeqqjpZTkmlgrqeawJx867jev2REBmQz7Rz8pB7xZ_07GamdyiKtJil8farspcnpFnuIjYBMQMbfAAmwmnHswNoyrozu0pKsSDku8mZ49hshp-8NMa8R_biL93_YCmT76f2DGGBPn-vn4QMyOPQwXtz7-RSZ6hk21nRPzPCMayUx9Zp1I3BVMNLzqBcTcSz66GumV9kL_OLOdIfVj9HuE5ysXqU4GCAh4ey4uOU=\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"AONhzrJYNhAG9ECHpOS8fA==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"36\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.120.4\",\r\n        \"x-owner-id\": \"USER:3293789;-1\"\r\n    },\r\n    \"userId\": \"USER:3293789;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNWVhYS1kOGRjLTcyZjgtOTZjNy1mYjgzYThhYmEyNzMiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..3Lhu6ApdcYXkLYF3.44K_MM0oJJRzdO0CLu70wSV4kH5c_m8_HQhEki-NDbU0z9VB5Z_xRNo_av_M9ErOQKuP8wnVKDG-_Il0DrdlFUUr_E_Fa1yLFJigC2A0G0Hari9fc29UBmX5dXZ9K9iBsiVsce1a3EPSJ3uyCMfHYitmjYRlZjgNmTsfKvZUOB_vvmZiJmh89mhY291RNyVxVwfljfRXyRXZtdqw_fnoP7PKa85opIwc6tyEP5LxF4raHu30TnE0wuys61XrJ-1NIZEErlQ0DKSnJN7_rVwH0Hew515V06YQbt0_l5SSlNl20z1UAkkejQgwfpGI5-Z-TDY64qXYXIJbD2HRBOnjyKhR2NoDHt26XrQfZY_54_9_pYUe2QEXlG27J6EhyPlkfXfQhHd1m1BJbB-3vBJxco2cyjGxur9birhU667d8zxIZ8Urz7POo_Jre1Vyfgc5YSPjbpM8myE4ppG4sfjq19gG_rBCctAYV46qAS0aTwqYy-gRRjtUMfwY6hoVvLA.sYl-AJIO7M-H_R5OIps8cg\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.248\\\",\\\"remotePort\\\":\\\"33730\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Yonca1000",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"x-app-version\": \"4.120.1\",\r\n        \"x-owner-id\": \"USER:5153931;-1\",\r\n        \"isPaired\": \"false\",\r\n        \"x-os-version\": \"18.6.2\",\r\n        \"x-correlation-id\": \"63dac133-cfc2-4573-ab6d-f25ba4ad7dcd\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJhNjNhNzNiOS00MjEyLTQ4NWQtYWY5NC0wNGYwYTE1NmFhNGEiLCJzdWIiOiI0YTlhYmJmZi1jYzkzLTQ1MWYtYmMyNi1jZjU1NGNjNzg4NmYiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjlBNTM0NTE0LUU3MkQtNDczMS04NDhDLURFMDI1RTZCQzNEQy11YXQiLCJtYzovL2lkZW50aXR5L2NsYWltcy91c2VydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9jdXN0b21lcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXNwcml2YXRlY29tcGFueSI6IkZhbHNlIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXN2ZXJpZmllZGVtYWlsIjoiRmFsc2UiLCJuYmYiOjE3NjIzMzkzNzEsImV4cCI6MTc2MjM0Mjk3MSwiaWF0IjoxNzYyMzM5MzcxLCJpc3MiOiJPREVBQkFOSyIsImF1ZCI6Ik9ERUFCQU5LIn0.jKROj6XwftUjEOQPXiAuOyh3rpF8_NIFR94v56-FuUe_PGCxO6Yjvv1dgoLHEiHCark6xn5MAXo06F8xrqKUFauizmvEjAvn-1PPQ_qOlfKme_dwxmjO6IXa9Yi_6pfRXn6E19-Aiynkhn8Itj5jIaEcKL3QcgSvHBkmRoyuzqnDMVwdMTRAnG9J4eni0z2_PbPGsabXtlK4GtSq7tkhqVbhROEpgccyGO1l8t9AM31Iq9CC1bbdidJPyH-ez7a5_qxNLYLVwe_JZOpJ6uhfy-ee7_fE_77gIggJ1KsZ8yMGbwWjXzSBVA0ZKlrm4vUNcD9Sh_jpEzWzLW6p1XqxXw\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.pR1HKFq8kS2UoFkfeA3Eu2I_nLAgY5nCMAzNnXy9JDs9swC8yok6-4_wnvrgPjimA-L8JrgHnba9AMPNIQlgy6KwzWpZVcGzJS-3kv4eG7PGAzLsds_9mTu8eMA0J0ZZMlQpkkqaHqW3nQl4FfSlTGP8j-v7LoUEpCIyGfpB-6z_Uube8cGnk95oDMJCLKLI79Nv0APgyZ43qiISsr4p4z09PPi4M5uZ0itoe3SbaMahx63twCkn1mPsUvAKMgL6pqrAUA9Pw3RptL18kNkSrUWq5uR0A7M2IV9BHg6-OxjW84k6ilkPWxkm2zTm1gAQ-9pEgTj6iFLjxv3x1byBzg.XZ18mfpAoEE4Ib5zoYoKwVZzat65PRHxVcWyNpYS_tiYxErHXsZwi7MqeIiqfEA99A2YDq_I7XcmKbopTCcgAPp8OaC4Q_QV6QDaMjvaAG5tGziYe-AzhvONks4_mcwQP3izPZO1S3z9dHjVXmEtQXUMCleigO6C_2PFCN8aLPw7IoPwaP05Nc6IXugEBcXVIcWB-t6P4aToQ4_c2viiAwPkmTzyhdDNvEkS6B9VJTZksZ8DOc4x1VQYrDgnIu_dQpzICbwC61k7gLEDJwUpuXrN398XiJU-K6tQYsD5YozmGGaSdksKWS3evu4Rm7Q4SZjWmt0RbCHdJ-rLf1WJxLzIi0uGpt5C9Q6vQboceFf8plkgl2bFtcnSxfIqIlNJdEj75i7yvTV_jiJ0buVFklZj13Bv20EWdJgj4HdOqUxkkrLLVvJ8z8iEYBvRm_6tuCaGYkekpxrV96ocjrsyvvC60pzRiSbo1NDFs52c2XA\",\r\n        \"octopusChallengeValue\": \"nWBamtngJd9E8nMsblGmNg==\",\r\n        \"userId\": \"Yonca1000\",\r\n        \"challenge\": \"nWBamtngJd9E8nMsblGmNg==\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-device-id\": \"9A534514-E72D-4731-848C-DE025E6BC3DC-uat\",\r\n        \"x-platform\": \"ios\",\r\n        \"x-model\": \"Apple, iPhone14,5\"\r\n    },\r\n    \"userId\": \"USER:5153931;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhNTM5Ny0yYjJiLTcxMWMtODJjZi1iNTdkMjM2YWIyYTciLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..xgORvQXRZcqIo4XG.KZ6HyHGDEVv3lSj3j6nbmXqCPs5b1V0jD7cV4YiEsVbhbVYG0DbLrt5uA33kOyIg5-jupSPjVa1RxNpBTx4ITSa5vYkyUtiOhztZ43G-vS0_oghhLlE9eZJntxZYPPVyZIUd8MWXEH1c3NPJV-cyK0v9cvcm8Pqh5IpKp-7WaQN4boLCKjwWwN259Lv7bwcLCv8-ogzPeG5vn4t3dGfmpz8QIOBA9PwGeA7b-EXmX4nXmyjbwMYTd-sK3e8BSAEhiLDkIZjAGe3DwxSD_RbMUt990iDqKd7hmttckxLfvpkwLD0quR3dW8dVTEAZ3fWO7VHQM0f9obJ22-aFe6nFxNSYH26kpTut4AH9icFeX4k9fP5PYZbOVQZyFdaAfTl0MoQpm_QOe6Ils7YWudIJAP-dzst656hO5wrA5hhM9aHMTfon75QRrhiXnsBTxzdmE8n88NXsjRkxQJlYJbQGWGmGHTZi.GpHr6w2vIm-HMWuzr5ULMQ\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.11\\\",\\\"remoteAddr\\\":\\\"10.229.8.203\\\",\\\"remotePort\\\":\\\"56846\\\",\\\"model\\\":\\\"iPhone\\\",\\\"name\\\":\\\"iPhone14,5\\\",\\\"manufacturer\\\":\\\"Apple\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wee1234",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"clientExtras\":{\"x-device-id\":\"8aecdecee85df503-uat\",\"Accept\":\"application/json, text/plain, */*\",\"accept-language\":\"tr-TR\",\"x-correlation-id\":\"4c91e0b8-e2f9-4074-9de8-a3726e37ff1c\",\"x-session-correlation-id\":\"\",\"userId\":\"Wee1234\",\"authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI2M2M3YmExMS1mZmVlLTQ1YjktOWZlMC1jYTEwMGYxMzQzZTciLCJzdWIiOiIzYzg0NDM0ZS1mNGU1LTRjYzItYjVmYS1jZGIzODdiZjE5M2QiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzU4MTg2NTU1LCJleHAiOjE3NTgxODY2NzUsImlhdCI6MTc1ODE4NjU1NSwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.MIi0tbYIF83gaIrxVk9i8TdRF1wGnppmcJNljR_BDHWMGV-wz20pPAGAYvriDlc5MsmhU7JtjNV9vBDl0GJ5B0gmstQ26_5j61nNhIsifoZi_on81jprl0Lz7GLKCebyQdRVFXuvSgSop4Mkb1_wsbtPTNL9f5wPlby-iPukIZ7p7SePJB3U0-bIBan0krxHK0N_xbZy8An2z2d9h2JP0jsWOhPQ8PramBzEbYeE2mBHFK99ppQisd4ZLsP5yYfKk24QfBax_7lqI_28FjjnXFTFj7BRWR_HIYxq5rN9aoRgvJFrcgA3tuL0_UBWW6eXdpnMkTO35z9ylzkv147rOw\",\"x-device-type\":\"MOBILE\",\"x-current-screen-name\":\"QXV0aA==\",\"octopusIdToken\":\"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.UtRaowDxq-PXvFmCqhcvvEbA5xac4MSnxJgBa1dZQaxDehf7RxA6PbmGWKoMJ8OOBSewbGa1iWsrQ3vgTePQsD4Wn_qFb-FfHkn2AhLOqxr6rpaLmagOFTCAL54p6DrOxewR3F8M8QDQ43sQ8AlWFz0xZIICnZ7uU7SQcJEygqLTS2mwAqSZ9lypgN29Ba5-m6VLPQMEVSh1MYnuC6vMdkn96GyBxreMN9zXacvbX0s0OVFlZBSBrGVU3PiYwpATwge39zBJoAn5tx3KDuyT0GzqrOB_vgKMgIMi38MDs8bkNLVGWbjdAXNt3QMEqPg56xXYlfMtl4_A6nKCykLSwg==.EjMDhhjnhEkS9_rKLwZakUTw6VK2bDGeVY3_mpUeDC9ps8pc_lqDukVMTVR8xpaBc3CbDzS-4crmH6DLqr4y-JPxANIU-V8U8IyfnGquYhYPkq8e5B1vcKKNC6DFb-7NbTOsMHN8QZOWJWzoPygOCtSH6HkFE0lVUr9-yQb4E3vXB9zEGeAbH-RLd-g3nvpY5VE7sp6ucF_bX6Q-KynTqHmX4wbLyoqcEd9d7mCegmBOsTyT6hSiU582Egy10eks_giX9WODzaCt6bFj_H4aL45bge6QOiX4SR0aYlVO5Ot3zWHgyOE5IuObhVKKi5xxS4tW2QUj7sd7GcG0TAblRivZ0gESns4UjJ5UV83aWborivifhS28z9LV1aImb9hExbxnvtwJm9FSruTOG-Xi4GAv2-7xMTuBJcM4-kY8orVFrKKISsmVWsPxo1ADmnSfdkvQCyFSWjG59tqJ9pF6CZqJUD_9UUDLGBspoO6apeO7X98mpKZv0KfsLcuweMNgxQ6LHDF2qUhyd43dYlOJb_EVeUOc-jer3jeDnSHmolr9zqXC-h_E6ysE5ET89OvrwqhNPOIaWBhU9Eox5h14rCuQDtFdIHT8jmw8Qf43Ezj2vnF0zIp30lZmCmk7YukkZ9HlH-wCuBEc_xrTPR7oKGMOXIj7Yvx3uBT_ddX-JSJ0lnUBEh4sDBzP2kp-iEUyC7D2ETOg2MUh5LtrpCun0NyCqD5U1O2TNS0ky7Kuc_xsFnxQhTrgxEbeeUNiCqUcUWitIhb8Bx6VPcuC-vS3V9fWaAOwax8FVNXWywKyhCPamflTeztwvtFviSziBV9o-oh4w5ou2ftKxFOfbm2EFiHxwyTo9Ytqb2XdL0CzAFPbhofQvU9rU6g3Qm1hDQwWQ5lYCAYYDXisCkeCM_OFucWiICxSBx1JYlKuPmN9F_c=\",\"x-connection-type\":\"Wifi\",\"isPaired\":\"false\",\"x-platform\":\"android\",\"challenge\":\"ZR+t3QPHzkKJwCERXqRtHQ==\",\"x-channel\":\"Mobile\",\"x-os-version\":\"35\",\"x-model\":\"samsung, SM-A546E\",\"x-app-version\":\"4.113.12\",\"x-owner-id\":\"USER:1822081;-1\"},\"userId\":\"USER:1822081;-1\",\"password\":\"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\"flowId\":\"eyJraWQiOiIwMTk5NWMxMS1iMTA0LTc4NDctYjQ5Ni0zMDUzY2U2MDQ1OGYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..RdsyZ6OdiEHNz76E.AEIYHDLqDfqPPPaQDYbfLRxKMVBCFF0ZSSkdvR9gJTlLq06weS0usVreNrFEAUZoCJjVkwGlNdX0vuHbKwY_MwXAHAO4ng9TNEkjVgSCIPZ388yqZV17YkQABS6W3KCYTKZT-5JTMDYao1FIpptrMOZjQ6eSPWzGRkJNTLfdvMGQgJwFfQXo4QVW1EUeecJMm7yl7i3gIuURKqXRyBjgdUrxgUEgyTr2NHH1kRLpeScTO4rSICRtWNbj9YDEvjIVbDb0xxZ8_oVHAWAvPQpWvMdocpBgEWmcfyDn58lXniH7LSWYkwEQf_aMdVZCTT0jWZ3JMdabLCjZBEWvKoOPjSuBfJup3gULXBunGQRZuwyCYYDgEisFlOuUy4EYhTsCXUHhToWAUkjE7bM3udjnO8027l1DaT5cwDeRJn664UwGkP7PtLA9oIYdKWNx7bqf8HKIBi80yWhDwwDbarDC9-iqVgVQSw9vPoGS8dBZtE495iodVl1FMZLXaweomQ.MGevenBk3ttrqyDjHNfohw\",\"clientInfo\":\"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.132\\\",\\\"remotePort\\\":\\\"38744\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\"ownerId\":null,\"attested\":false}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "yenikart5",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"5424ab16-6b95-4aa1-811c-323aba071eca\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Yenikart5\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3NWU3N2VhOS1kODcxLTQ1ZWItYTYxNC1kYjkwNGRiYjgwMzgiLCJzdWIiOiI2NTYwYjAwYy1hNGRhLTRiMDctYmZiZi0zYTgyZWQ3ZjU2ZGMiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzU4MjA0NzM0LCJleHAiOjE3NTgyMDQ4NTQsImlhdCI6MTc1ODIwNDczNCwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.khh0-F0GbMgzlFSNw6M7NKJZ56NDyF_WBaUoo_S7sbthqx8LR8Hh03yHgGPuURbdFWHWEhaN_8LQLI3ulbHci_BEdze4UBSVS83Sw5nrMURmx-U5XtW0UaCBwpr-T318w-YARWIq_ZW-pnejggXNU0UR9PiOR6bKrPeYy1YYvlywcWzyZ3vLRwjS03MERSkEEpP7uNMXU8jyb_wM-CR0T_ZQIKSOSyEqavgv3LXFA-AVNUe-E-w3ymTkO_KoGVtt0nXGNe4taMLBDp_CA3-Yck5vmpshIKzTD06-sXShujnsVzG9GlhZ0LacXLol22v8UqLFjBfTas2G8NrV1lfZoA\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.MUePRV3x40v2vTc99432SKkcrq9ZbGOgXDyDFWS06_yAQml9jpHkO-St3P5Kw97Li8H6zlDpxr5o4a6L95-rKDzBIRG2PRKmO_fo2XIYrpPKp5VPONZZVznzdiTROrM8bETKmrVcacFY9CX_4tshORDL8p3HQgyg-LZMUUjsuUEJLmD57Gfq4lS63O7Sck7pw33fTWtBVfTi4tquPGGrm7S1OHEu4SOOOe2BEzdEWvbU55o89JerNe-o-bVxbLU90YOs7M6B8E0BUZhrgnleq3AP5JIbgQ5PYT1-DRGGw5r3BQJboKI2IuSiH_RNSsmReCN6NuReM4TnpNGybsAtFw==.Bjz6aQ_usE2NGx5F7-lNsCUIM0nGA-6HyPuSC9Xt9lkXGxgYGHHy7axB3ZFth8HLYox9rf34mr76HJ7dyF11TTE8SNkB6_bcyqnb-hWHwJao5IOq9o4qt42e6x3hbbQ5a6b1cwskXjENiGA18c6u7eja6OX5UbOEVfpaLkYrzJ6EJ3FfyAprhX2_oe86_qfy9McKyNny69TLt-FsA1Zex--oYL7cZjBoTrpmBgdA7XkkCZYY60_VoJ29eNtibmPEZJULsO4l__SCZtBet5_o4Dv1_-PP2BmRsQ6UvAQ9dCJH5Tzl_zzUmEyQyGmjU5MwzK2_MPXDZvszFruB8TzdVcRQjfzNO5P6r0tl2RTfiK7YCKohBBQ3Jtix4gclhZOzP19Yu7U2cRbEuZUcVM8_PXsv-AcxqcRuSMJ7hRI2HkLIwtk8r7dWGkOD42qzX9UeMC7I4ph326qLCB97eK3NcYN_62vlyT11F78akex4bH80I3TnZWE_ypM6nKjtgnk_zEfq--KAxGNFsMtTLVfos-yza_MzqiMGq1-ahBkwX6OMuR36JmKdgb3CNYHeHUsnTeFOVc79cHSp3rBjM-_O9AtUYRQnmGNYNfZ4n6bpAF1Im7AWnj3KCs_FKzUPF_yJyr5RfhZRKzyZwEGdIUmneH-ELJiN6qOFK5DB2i7dumJ_cfvhSvKPyYAh2p6T4Vx6JqUZkgF3KCNw5BwO1Vik7V7rCGk8Ju75j2FDV7oGq-yrCeMLpbxU3A---n3pV_sDHZlpiJLN_vlgNsfBSf_3p9LVKY0RdCy6JBLiIUrE_QXY8fZ1T2ntuk1_OHgD2HAkReyHtqKSbsQ4DUJNnYbnkqOcO_-KLXZNgEsELRB0mvSbnz4FdtL5oS6mk0__Bjp5aUoWy4yr8SJZW7vFCpN1cwrxX24yapgPLzMP5VlkWw4=\",\r\n        \"x-connection-type\": \"Cellular\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"1AQmVBsBpN7Ze8PgxXVBYw==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"35\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.113.12\",\r\n        \"x-owner-id\": \"USER:3426412;-1\"\r\n    },\r\n    \"userId\": \"USER:3426412;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTk5NWQyNC1lNTMzLTdiMDAtYmExNC1jNTE3NjNlYzg3N2IiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..vBr9c9d_3PAq4rR9.-Mv8_GToq7jFhY8yaQ_tT0unNMGP_YFnLSIYYqndk8n6GzoZ5esYd1BrXruOnA_xBQQcnf9w64mfDp1dst8X_3Bj6rtJOhHjOrG7cdcfY-_8dAfPtMvzwguLPaQ0odh_HxhOmQTDEk4mA9uxuoJzqVuaFlrm-dkbOzT-SmjD7GtkzPGJDFDLv6G_z4C4ytiT65EEtAswd_lWh4CWxZH8BR-rx7hSC0XgNOmYyJ4PZ3gmd2OBEFAjnPRKZvn3kyb2sjbp9ppRpbQSG_jkYWxT6Q0WfKnjsVWxiyZEEc5ouJPzi0HffVInYVpzJI2o1AiaMxeQTMUpmlaAcIlLvqNHwqI_TbVw5cYOYtawCJ4Caa-NliD1F-bgCkar60X_7VX84vWrK7x8hAMgLny_sQxMSrUoJsK6e8eNmxhafU92MSl4tbFtgB938RFpZkHh5_6nUfc4KBGdBZxEjc4GcKTaqk82VLFkr9bioVBcA_iaiiNd5hx0V4viP0vb8pvv9w.R_VGc2rGwHOrNU98m1JzPQ\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.110\\\",\\\"remotePort\\\":\\\"32978\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "U113031",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-session-correlation-id\": \"\",\r\n        \"octopusChallengeValue\": \"3I6D0HFYMmxwkfhTsxKGyw==\",\r\n        \"x-correlation-id\": \"feb61052-58c4-4260-a91f-e30ae603f8fc\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.sDZ7Txn8QmaTSlxKOlKrw99PuigPmSsM-xE7mbM4VDVfOHGd53hNBUcvLNWcSEY9KmZKF8hyXam1gfJT6akzC0JB0RpoIpS8_yYN0NhrHxacuRFONDKqXA_SHK9tj-O6-diTygHSa1iIH1Ctonbx-TBTZVdTlpVt6Oh2O0toDHnFxv9OFbqOeoPy9mkkvGXh-Y0LLFrehThH8fU5RBwpbaeWEV0NZhG6C0BNQrsFK4gD6Jjm2nrW0iS6xYEtock2flsze1b_EH0YSqQMi7rVciizzPP4WjyJ6WJoyFg8wv7gbcuYlqaOqC5wzMFoma8sJHKRomVn7vDS3VcDlJ77tw.cIh4_mW5PTDhemrgyFXIjDFiNy9yRWDFRo9JIw3LY9QogjmzmCEZCottjzPEaZkZR_ZOpLKTfk9iR8-DPsLdq5YyiGZdWs-Gx8UaFwiIV3ChyscERPVvUlDoIau9vNQtq0Vo3wzkMzp6LBDDVUGO4MQ4dMQKC3Zuulmd9cQGge5MVg19LbNi54TDBOMxTWw8Kry_QW3wT_YPmcu6M87faE5spwT9blD6S6Bt5LhaUGC98Dbgq6prbKodKHQtnwhXmHnFZ3hHRbHy4hoj8iAxdFYUJvWRG61wxS9MkQwB1JhEibpPTJqxxhLz6wIxzqvf_uea4RzdlAePjLoXs5RMqAUQOCM-j5vDJKRGkvvyQKesqosq9m_UgZYW4CLejEV84EQERUQaHnfpV1Jvjo_a845iYz38Bav1rEjLNu2rNC-6YbkhLxNEHtnykdr0IzuxagW1CrMXOncuJM3I1RRwl8jjH95R1mdq27-pNO5sWko\",\r\n        \"challenge\": \"3I6D0HFYMmxwkfhTsxKGyw==\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-device-id\": \"EA45B393-5499-4B8F-B7E6-8C3503948622-uat\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"16.3.1\",\r\n        \"x-model\": \"Apple, iPhone13,2\",\r\n        \"x-app-version\": \"0.6747.48003\",\r\n        \"x-platform\": \"ios\",\r\n        \"x-owner-id\": \"USER:113031;-1\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJmNWJhY2M5YS1mMjRjLTQ5ODMtYTU3Zi03ZmIzNGJjZTE3N2MiLCJzdWIiOiJjN2VmOTg0YS1jYzY1LTQ5ODgtYTY2My05OTQ4MzUzZTBmZWYiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IkVBNDVCMzkzLTU0OTktNEI4Ri1CN0U2LThDMzUwMzk0ODYyMi11YXQiLCJtYzovL2lkZW50aXR5L2NsYWltcy91c2VydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9jdXN0b21lcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXNwcml2YXRlY29tcGFueSI6IkZhbHNlIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvaXN2ZXJpZmllZGVtYWlsIjoiRmFsc2UiLCJuYmYiOjE3NjM1NTk4NzksImV4cCI6MTc2MzU1OTk5OSwiaWF0IjoxNzYzNTU5ODc5LCJpc3MiOiJPREVBQkFOSyIsImF1ZCI6Ik9ERUFCQU5LIn0.hUajEeXbQikJzI17xk84RGgIcXLZyy8ICA78DhV6ZsA_pwjE-oC-CkxA4XBC_tcm3gyMM_X9bzUaDOZY8cYqwg6em_43wDtY9NEXvK3GgT473d4Mqj717uAab-hHNWaHt4OV1Lzny0sA_LylBJ8B8zJY2qm8amqTZfHaxRmCMN8XoO2Hd8AY6m8zqrkdKIkp_kzDKK3_VwzYCurD9pfg13Ij0J-yfKrLXF0xW3WY8fQ0JWGVcdPrLdXbnXmSjjP__wyPrQzlSdykyCU4bibtAk8hiiSx07bGOBYVIJMic_vx_h7hLjWQZ0ffjpP2-cgnsENwVZgUUEEbwX_3uLgxmg\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"isPaired\": \"false\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"userId\": \"U113031\"\r\n    },\r\n    \"userId\": \"USER:113031;-1\",\r\n    \"password\": \"LT4exikPUzMuYzAlpsjDEGGfjqJ/L2IgjxKhBu30VIsJC7bgovANroR+xQK97iEjMpQImHMwjrbt+K6lJ1w0ig==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhOWM1Ni05M2YzLTc1NzUtYWUxNS05YmJhN2VjMjNhZmMiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..EH2LaXWo1AorfMUp.3oUKK7yarit9wsimn0LNCM5nB-Lr7AtuDdgkZAIjSK4EVj4YRzh4blA2asDEy7Q2Un_Z5snvBCkeFJnOmrdiqIkbtESM_ko4-ZVMGd42I1vfcTxY9GfBqkEtK_ahysxQIhovXfI52AT-c8EU6sey8dQY3vXVE7ZCtNkPAgThEYoG2mWsZzYaygJmc__vRuXvvtua02y-fP9wGXG2P8XCR1gzd7VTRX2vjp6mhZHvfoKlqzhacFvWUh1ruz4r__GK4Px0qgwV0EWMoeAqaZjsLaqhHntwD4hSQVtq-mv_Yb93tp-wUK2FRk1CmrxoGg2rftnzwKCxy8HhjYkkxucB2zJOUx5n57DPjad6QyaTx5V5LHXsLqNYuFkj9BL8zJMPx656cQYZaffUWORM2UmyKMan-x6MsZhVNnydTi46I-d9-l-71pSQ3wbOFybBONBTdM4KBNFZ7unATq8h2UzM039KMvIPPhLjDRCtVpWF8nlOuwU37ZnAN26VPNW2-mPZK3PIbpyNHIuIKqEa2Po4UmJj.6nwdBy-7eUbdb7BinbbgCg\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.11\\\",\\\"remoteAddr\\\":\\\"10.229.8.98\\\",\\\"remotePort\\\":\\\"64725\\\",\\\"model\\\":\\\"iPhone\\\",\\\"name\\\":\\\"iPhone13,2\\\",\\\"manufacturer\\\":\\\"Apple\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "yenikart8",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"clientExtras\":{\"x-device-id\":\"8aecdecee85df503-uat\",\"Accept\":\"application/json, text/plain, */*\",\"accept-language\":\"tr-TR\",\"x-correlation-id\":\"8592c26a-e7d9-4e3c-8db5-096aa7a6d894\",\"x-session-correlation-id\":\"\",\"userId\":\"Yenikart8\",\"authorization\":\"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJkZWYzOGQ5ZC01NGRjLTRjZTctOTRlNC1iMzUwNGViOTYyNzEiLCJzdWIiOiI3YzdmNGVhYy0yZGY5LTQxNDItYjhiZS0zYWZjMGY2OWIzNTQiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzU4MTc5OTg3LCJleHAiOjE3NTgxODAxMDcsImlhdCI6MTc1ODE3OTk4NywiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.ZuvJB_6IoiRj-C7a05paHb2UPXhXssEHquE-L3pEGt6RvMa9bFTinniXe_NpWO9bCtsmRrxytDT72Q11mggzsc66oaktna9S0nXy8EEK6OEldyELAuiO4XY6vrDYZn2pyvsv8uXo-oEnVF-uBPTl-h9oBDszVSXYyyC6R_q55dPK7tGDNXrm5bJthTMkxKdtYElxXww1cnDQb6y6FTB_uu8Uo6YcyD6DMftWEWvgXi4KBYaLm7qWWbF146ZhVolLOXtUFgAW_N4ZTsyCZTrawVrTRR_DOqzF7cfCy8f3rET002jKxNugLVj9WeodlYkaRnpK4wjdIWWN5_b2R6e_WA\",\"x-device-type\":\"MOBILE\",\"x-current-screen-name\":\"QXV0aA==\",\"octopusIdToken\":\"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.UPjNoahGO5cU0xGlsp0HcUG8yQUxvilezc-9tI6p1-unIINEJ0vzNQLATjAySFGDiICVJVthct8awki1aUDklbzYOEhZH5g8va6F0AuNi4PKfQNn3RB5MyAQBTqKN5fjC3hJmf9G7rzXJf2wtG5-jUrLmaJGpjBXWc_2VkMuq9d4UnsFzPSySGZkE0a0Wn4jWIABmmvXWFPBVIryIGKY1_mmAmSpS9z9Hx2mtbXKXTQ-BIcLUaBd1RxfV0WTZweM465maejUWd3vQE14aztM9n9qoUs7PercWuZV4_DmTFs1ooDzHSxkTiPzSzdeNsJPcLRN0CUsqaC0Ty_70zKziw==.uCmKZ4-bJLX1YFym7pMVKqj3h9IT3aOxvgpsynxltNNTpdCPVkQZafZ0rxBVc30kTwco7ZPOp8NGhobbRbCbjS9G9mJgVot8xaiNwFKxx95hfr4VNHKVzl2fWk4y6hnABVPVksq8NP25HTes1Gh5bYzWDASslGKtvdLifTXTEhBzSMHAtTlU_Ic6-ZjQbXmj9w9B2nOoCywu1G-MxY869OSty2nRxm4pv7smpVwg5g5bjvIuwYobceii3kyDlDql5d0PF3nx7SkmbGPa8r2brRn5D0Vd9iOsJm2B_HrUZmQADBadCS0AwvT1B6wcrVzuEzdMmCB-ZzTaVIHVfyEtwBoQKMBWRbhN5yZ8tmwpqg7BnBdbDeF9B-RpBdotvxFewYB5Upa3xwUGuhNXiEPtH2gdanBZHJcZo0qbV4GisxBz-48BLK95REN0CWg92zIw1MFNA_RGZHqENJrOC4ZrldcpwiQcprUZtSJjFJnKu1n37eWJOGz6iZ6kEVI3Z4GzOQQYHNH0ABvI8ahU2EfmubXEvaG3lsJDQ7qX-Ddfbu7AqgTHDI3LBwgOo3XTRpHPpz3my5sM4OsNNxNHPB_s-8aOPMQiJfot4PYNGIDhdsRtbwzFhfEhtlat7dnYcVFdCgiPTCaF5rcWcFlMGYghh4n_-p1yZW9OvVBjBFM0K06fJlHOy1yp2SDYrJAMQJxZmmSCUdt-9h2Gyh_zVENl-VrMReZ50q_m78WhsaEMI_gAxyf3BzGq7WUuLgk4OxWcGyagzBYt-i3JZJETau_olOyZuS8DWhYuhVceD61xZETt-0B_G6fbNTKndFTGkGmiaJ0cEU28uwTlfN-RZIJzt1NwBx_RWPnWo0zMDgc5Wsd99ibvLqDpKttTHTUYcRodseAHFZHTOCRLTUzXuVln1RINAsrrJFsu3sXqo8MW63Q=\",\"x-connection-type\":\"None\",\"isPaired\":\"false\",\"x-platform\":\"android\",\"challenge\":\"g6uA92O5a6z9DdM5KkwyCg==\",\"x-channel\":\"Mobile\",\"x-os-version\":\"35\",\"x-model\":\"samsung, SM-A546E\",\"x-app-version\":\"4.113.12\",\"x-owner-id\":\"USER:113208;-1\"},\"userId\":\"USER:113208;-1\",\"password\":\"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\"flowId\":\"eyJraWQiOiIwMTk5NWJhYy1kMWRkLTdmYmMtOTRjZi1mMThkZDM5ZTI1ZmYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..Y5b3xRu2pw03AoMx.beNvBuTmy1yMGRdmpd2VYYfbq3cVxVqSqsFsyl3gEoVeSG1hUB2gUGN807_WWzzf51DxWTrtb16mD-VEUzBk1EaJnQO9hrS1RWYdp6gs0foSq8Wzf5JlEFK8WgU7M2WqeUsbCvJxs870NPnTs-kQ1xkS_sWVN5_H9yUuBJ4fmKT8ZMpQ8ZCNEWUxal8hLdvBOkD2b0-UoFETrAr2_xIKK1JnZFh1vRmmcRpYMKCfEiKDnWe-xjBueiH3rNHtYNyb_fUWeS0Aer6zPZmVosXF_bUWD6JE0s9WD_rJ7Dr5pEUe-N0OF6SNHfFOdfaaNQhWK4OMdFyFJ0k69lgj-YqIFTkeOuyPYADpcY5qU6s3hqNJIF2JAD4bhFdwmucfC-X-9670hjbZdqqCReJ2u3q7l99gR7Z4twO-89o71Riwg-MlAy_mQ4hW7GFpCcEo-b90RDEv8eDMnahbL8WY2ex39shQESqivnmj52DJrL4BR1lURCJW3DVZOIbb-WdE.kkDMLjtRe0zezwqfASnYtQ\",\"clientInfo\":\"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.132\\\",\\\"remotePort\\\":\\\"59734\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\"ownerId\":null,\"attested\":false}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "elite1",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"24ad555f-b5ae-4818-b91d-794c433cd831\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Elite1\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3YTA1MmVlZC1lOTAzLTRhOTYtYjFmMC05MGU2OTA5M2M4ZTUiLCJzdWIiOiJhZjYxNDA4NS0xMGY2LTQxMzYtYTUwZi00OWMzZjczZDEyZDkiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYxODE5NzMyLCJleHAiOjE3NjE4MTk4NTIsImlhdCI6MTc2MTgxOTczMiwiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.ERdc59wSusAxn4kvGIX4aQx1r8xfQxkQbJtOFrEjNorGFgd5S19fhpNz0AOSOJqIR7wr73oeHvnICk4JJktidYx5hVx2EEMpz0VKCxiaiFPhOCI9-b07GKSRdRrwsNUIDP_OYDsEikxzhpMa4qELN0UsTLHYiuewSIQtwTF-Go7ISCpikXsJLsWwE9LV4ZNV7-JM2KmBEvDXw6Gt1fPrxp3jnFuVZwHJ63jHLZ-wMkajGx2o7XD3X6X52IKZkqmDv_IN8rOObVkhaTlbyI830IC4DCha3-riTAqtjJ08gkkgy61hndAvfZIXNjRL2387WCE33flMeMPhP85ZbtBiGA\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.ZAoqE-hPwmpHRKv82ewVPimPZrJ6dukc5JVlE1YNrUGAUOD2UrwhRyEUrDeAP0cLMYKDMpJvchUZpe1d_-0y36bbnjWf_UTKKdeDhjgWv2UFyYieNTDoubPwrQ0gcuBzanuA5l_VSZuB5vBXHS_e27AI-rnbWCb2CRlrmLZn9TW7KRSQfPt_K5sirAK4Nt_d_RLAO-Mjr5FcFvXgMSHLCRBhOFCdJajBPvYbmv39Py7dnJktPELj7jxRqcfo1NeSS204y0OpReBJp2BaJWxaKk6DWy_iS_nIBiqy1hEgTTDRGk4RC4Swxu3s6mFd3HHGnBRKh1ZGfZpx3aBPAMJfew==.PkXDX1Z6-NFQatubt2TpfY9L9hF_TY_-kIlTivdXgm27tBScNSD5VZVSxcbg2Ynwq0MEbby8oW62kZnUt6PW59JXkZQl8shoVTkro4tpeTMFFiKRWoNOtj2IAvd7HxLPywkDfnUcPoxq2u1R6KXbqMFA9W6PtYlGXHyoLoggMgcaCQVeKjrvD-jlRSyr3fT_j7KwYEbW5i6vUtOhBnonjAP4c6h_LoZW0MhYekBSmRv_ebA9aqiUugNgj1jbzBmkxl6GsFi7L3tsHQe_EZGvNW08Odu6llnJ-RMreM0v3O1HkAI4QU7dlx5G9Vf3wq3p2DbGnCoYEbf0WKbQPgFRKAIiUZOWVvCjSRo5L75iXiiJZVMcnmCubc6F0Y_YTXDJLpE7jG9RQDg-cv5P34zmO0cMD5EhOMUhYzPJ2omxHrJFhCOPM0qlZo-tj6GxFpyMWFOitegzA-wGc982QNTRKrrPptQ39IDr3SGm1EjI8wVi79SJc1-PNlIunUfA9d4C-iyOy0kz1Zl-Nkjpi_-V6SVqcCKPOBPjIfs3WiGnjYy3m4_54TTPRxFbFiiKnLKmg30SkDq5i7fPMoOQ1d3bWSn3JmNRrIOKQaLDebmPH65d6fqx8459fWxsOf7LzYG6weWfrdwSWef-DBnw0428XqbpYVJwHrHLo5n4K-pUddJG2fzQOHMPLtym7JYcQL6tCiQ3e8Eoi4NFk0t_ztAb7QYtiSQ7aGTuINKGi2IktIyNZxmA10fqkY4roedofyI4GnEcI6C0GFlffuzI32p6pOaml--PMBE06TVkeyxknMfCRl0Taq3Xq7UyAyR-IkTnMdInSGETaj_XFnaT2AAMtIrrsNFZaaKXVVvjhU1UMUdsUNYPXtnSR4zgYDbccg57OpKrPS6W-7Cwv9QUVg6x0g==\",\r\n        \"x-connection-type\": \"None\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"93+NjhNgE4Epav3ox850Wg==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"36\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.116.3\",\r\n        \"x-owner-id\": \"USER:600154;-1\"\r\n    },\r\n    \"userId\": \"USER:600154;-1\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhMzRhMC1iM2RkLTcwYzItYjFkYi02NjBmMTEyYjY2YzkiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..NTgBytG98TT6l7c9.jmQLjoDwaKsSrMmXP680k4xyWmPXkmRg01ij0c2Uy3OyYzvunXfyqP861LfXo0lgDlpQFd0fIAZQSuP8KgSCNmoKIPUQT6ECMg_KseF5DRAVyxhDFh0x-4-WGYC7wi54ar8_OLcdmCZjWviXXNVBUvUUUeY7E_lqabGEin2vSTtkYiOarOr-T5Y9pFEIe-SHmT8TwN2Uk4EzOOPrfd1IzvbQROatgPfgUbHXGsE2G8fD8NtfidKgKg-xsEDuvuTV4zUH4FN4t5moYzfzgEM3R0uC28XDCLJyuSF9h307hb4q-4yFKJCEilOqjU7yCbNXx_I9T7RsnC1_NiCyPSbIEFBW21CuE0MAzWc4CAYtxWm-RpHY2myWWyp04najz2vXFtKn8ckJVIKodaj2_UGJP8W42ida3NH2XTI8TVrbMO6Vx28PqGMAi3YFI37AaC2Ms_sR1Ch4ADCPkyUGYmXGb7bYy726YzEY-tLfqjqBTehl1M55MzF_oPZ6sjmx.LkTz1M0PHcDPq3PUZuXpew\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.106\\\",\\\"remotePort\\\":\\\"55422\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "iron5",
+			"item": [
+				{
+					"name": "SecureSealLogin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientExtras\": {\r\n        \"x-device-id\": \"8aecdecee85df503-uat\",\r\n        \"Accept\": \"application/json, text/plain, */*\",\r\n        \"accept-language\": \"tr-TR\",\r\n        \"x-correlation-id\": \"5716d71b-5f86-45a3-8931-38e0eb8747dc\",\r\n        \"x-session-correlation-id\": \"\",\r\n        \"userId\": \"Iron5\",\r\n        \"authorization\": \"Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI3MDE4MDE3Yy1jYTRmLTQxMzktYTQzYy0xYTczYzE4MGJjMWMiLCJzdWIiOiIzZjAwMTZhMS0zY2YzLTQyMmYtOTBlYy1jZWEzODY4ZDU2ZGIiLCJyb2xlIjoiR3Vlc3QiLCJtYzovL2lkZW50aXR5L2NsYWltcy9kZXZpY2VpZCI6IjhhZWNkZWNlZTg1ZGY1MDMtdWF0IiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvdXNlcnR5cGUiOiJOb25lIiwibWM6Ly9pZGVudGl0eS9jbGFpbXMvY3VzdG9tZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzcHJpdmF0ZWNvbXBhbnkiOiJGYWxzZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2lzdmVyaWZpZWRlbWFpbCI6IkZhbHNlIiwibmJmIjoxNzYxODk4MDg3LCJleHAiOjE3NjE4OTgyMDcsImlhdCI6MTc2MTg5ODA4NywiaXNzIjoiT0RFQUJBTksiLCJhdWQiOiJPREVBQkFOSyJ9.sjQcYRNXH5rcMfAzR_hAbtRCxX9hTKm8gIDUXp-RNhQ4W1WsdVdfVk2iqNRn3sVo5--QQ8f10c9PmI1Mu6sbPa4Vx_gMNUrRKHLK4kEXDaefJwHP-MxrDVHfDKZOzrtA5n6jaja0mbYG0ZwqfwWR5F-rTaoq8J0qVBcM-F2bhC-fEXrdfYw1HI0804qf7q_yjyVfeP5Qn5i6sMpKpV00ACeq1WxBdFRhB0egco5fAClVBzoRiKG3SJjnYonEQpdhwyrajVm47z2usjAE_E66lKMXdb4xWhYjGDiREUn3SUYhcZjTGzcUu-7BqEGrdJOCqMtZ57ZAgPBfJVI6ZGEQdw\",\r\n        \"x-device-type\": \"MOBILE\",\r\n        \"x-current-screen-name\": \"QXV0aA==\",\r\n        \"octopusIdToken\": \"dD0yOyBrPWI4MTBhZGU0MzNkNzUxNDM5MDY3NTMyMTdlZGFkMGIy.PKzbm5NHNB9OK6gDRbqe5bL1MVozv7dwyRXArVRMkTZ33F8bH6UXaFdhq76NhzOeH5c2ov22Buv82e1X5nNE7se60d_p0lySWmsu-Cz77Axa2Z4rPPF84I0-rLmooqrutmGQ_RcZFMnyOWE-V85VCTTAdWfp69oiLtnBd5uru9oRCndN_0bpFSd0RE0Idl-gq-e62x5H5p_-9J1dGAuCWfNAzuEjNeQSd9eBIEsIXEqv2zubL-Y9JXy6oIU2fOlKLuhkaRvvCVtFO8seCUe3gyddddw6GeYjcVNT-OUhDY_zI8FSqd_UYpS8aMJlVyJFvEaqx8dFSKXIWqUa_3-Skw==.zanLQNmVrNYpZqAWAnKxI5MPLGcOI2vGxYp7kpnZ6kAHrgY-xN6_mIgP5BsFZ1IvjCfDQOhctoHJ_O5u3Qs1PoqepLeeKPYa1xSnmRNYgSUiUT5AkllEEaIaNU1xIjKALAEsvn7NG5DiqikpQ1ypWLi3yEWVfCVJItrmNMrETAx-GahiFi3ZF-6dT0550epXAt3OLxr4y5YDRmEYIMyBfP2Km0ydtUMdTTNeLlOfx9-qOAgc5RJs3IlCL-LOKhzwhC_m6ob3xTua2X2AxZUNeONbsJHaa1U5zl1E2AgLtzksOjx0rADWU36vdxaOdeSrcmgFNT20TCJ177MSs98kiQRsScP88moz-O0WWR5olnppLwLE-OD8WewI6LbJExU7-_5y6qh0SG4-ckPHxbuJKw2n2cbdPNYpqaKh-uy3TIhqmqXGoU8natR2sgtB7mXDmilCrQZX5ytKI-bKEi01txRv_E4QrQfGHwoPUbjv1OEvRcBJTrTG0GaaBao0qOcgBcruerkmFCSzR-e1AFPxx1aD0-rEfg1bfsmbY8xvrbacQTmfDDAUN6FhisWc58l77ffH7mn4FozHf35UMgGbmeQ2k6OSOclR3gJzVGF0w-IK3SHnGRaucPJNK8Ac-YsE2O4Z0WCRQH51PXRHOJcTCgxvqS-BgApTtBntbX7YA42PnehzuwLpKiO-7hp8fJYA93awkXL5a_tNyJ7CzE_QiX5Bx-XgciDrnVM5-UZZgrTjL8h99dym7aww87dhuPi5eJYZ7xX7WjuY8Yz2Wgee4FmfjhnWgEtEsVSclULCaNyOoUaCxzI-xk3BNO3T7rO1V_LlOFf5jBgvO-aFhwCisC5TGhOxiazKYj6WHz6N4gLxq033QdcXdoBXwABhmITo8HMHRhaKab1iYngTPEN3Gw==\",\r\n        \"x-connection-type\": \"Wifi\",\r\n        \"isPaired\": \"false\",\r\n        \"x-platform\": \"android\",\r\n        \"challenge\": \"6Fp6iaxc4e5KM715pnpLEw==\",\r\n        \"x-channel\": \"Mobile\",\r\n        \"x-os-version\": \"36\",\r\n        \"x-model\": \"samsung, SM-A546E\",\r\n        \"x-app-version\": \"4.116.3\",\r\n        \"x-owner-id\": \"Iron5\"\r\n    },\r\n    \"userId\": \"Iron5\",\r\n    \"password\": \"WGxyNxK+h8L5U2l7Snrs3IAAMAvuJJav5i81YGujChDoaCJugMasyh2tF09uEKxYaJJdq15aKY1Uk9PGMo249g==\",\r\n    \"flowId\": \"eyJraWQiOiIwMTlhMzk0OS04OWVmLTczMzctODI0Mi1lMTM0NTU0ZTM5MTMiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIn0..eZikueLxKRwH1kc8.SZX4PHnT3dbHMMOhRnR4WK5i59nzDcDgtaud9gycRxkU0RShc38yC8YNGVxH6A4OvwBjDLfPltYL88GIIEMTtwGLynFE3l3PwwR_XVPmr29kzwOqZB9mCj3iH9EGkmfPc6swj5QZGzIfRqBBqf-v9QM0q5vklvFkD9vlNTv0jy88jqcFfyScmVZbxr6pfgRH8b6TTnWd6xbMMlUJOElU2Dq0EkT5qa8CgsVd4H9Y7kndd4MQFMxevs6wqypLQtZEomg7fLBRMzsqR6MDwPi6PrV3nRrNFlLpXKLm1eWMC2ttglbA8kBao8GyVRGlBFwLLsUYWQ1Q6YddZeZp32-bOuzLfhb4JKwEyB9uzSYw4BKECXfHm3mFW-XSoZnFp6xiCtApb7PQCQYNeGj_L3NAoBwlH-LLlMjiKPmOGGijETtFQEICtGXUOS5pQ6WNksNrVS_AJQC9auDHkjzE9nMvyIw0olBCVUAK06XP2bV978PPsfb_.hPk6dwUK38nvjtiqI9MGZA\",\r\n    \"clientInfo\": \"{\\\"fingerprint\\\":null,\\\"applicationId\\\":2,\\\"sdkVersion\\\":\\\"3.9.8\\\",\\\"remoteAddr\\\":\\\"10.229.8.110\\\",\\\"remotePort\\\":\\\"36362\\\",\\\"model\\\":\\\"Android\\\",\\\"name\\\":\\\"SM-A546E\\\",\\\"manufacturer\\\":\\\"samsung\\\"}\",\r\n    \"ownerId\": null,\r\n    \"attested\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/seal/verify",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"seal",
+								"verify"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-channel",
+										"value": "2",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "tr-TR",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"u110181\",\r\n  \"password\": \"160119\",\r\n  \"IsIbDokaTrust\":true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/authentication/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Mar 2024 08:30:34 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errorCode\": \"10000\",\n    \"errorMessage\": \"Girmiş olduğunuz bilgilerden biri eksik veya hatalıdır. Lütfen tüm bilgilerinizi kontrol ederek tekrar deneyin.\",\n    \"systemMessage\": \"Bilgileriniz hatalı. Toplam 5 defa hatalı giriş yapılması durumunda erişiminiz 3 saat için durdurulacaktır.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "2",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{loginToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "old token",
+			"item": [
+				{
+					"name": "guest-login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('guestToken',value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "{{x-channel}}",
+								"type": "text"
+							},
+							{
+								"key": "x-device-id",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/guest-login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"guest-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('loginToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{guestToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "{{x-channel}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //u110181,iron1a -> 6629000, baristest15 -> 7648438,Odea5 -> 741852,yenikart5:741852(trendyol kayıtlı kartı)\r\n   \"username\": \"iron1a\",\r\n   \"password\": \"741852\"\r\n //\"username\": \"yenikart5\",\r\n  // \"password\": \"741852\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-verification-code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"console.log(pm.response.headers)\r",
+									"pm.environment.set('sendVerificationToken',value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{loginToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-channel",
+								"value": "{{x-channel}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/authentication/send-verification-code",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"send-verification-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-security-code",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('verifySecurityToken',value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{sendVerificationToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/verify-security-code",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"verify-security-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authtorize",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('authorizeToken',value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true,
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{verifySecurityToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json",
+								"type": "text"
+							},
+							{
+								"key": "x-channel",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "accept",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"codeChallenge\": \"{{codeChallenge}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/authentication/authorize",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"authentication",
+								"authorize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var value = pm.response.headers.get(\"Authorization\");\r",
+									"pm.environment.set('token',value);\r",
+									"console.log(\"Bearer \" + value);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{authorizeToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr-TR",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/token?CodeVerifier={{codeVerifier}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"token"
+							],
+							"query": [
+								{
+									"key": "CodeVerifier",
+									"value": "{{codeVerifier}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

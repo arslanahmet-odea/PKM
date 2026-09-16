@@ -1,0 +1,22 @@
+Methodda alınacabilecek kart statüleri => Z,N,G,K 
+K-kayıp, istememiştik
+Z-Basım Blokeli(ilk oluştuğunda böyle, N'ye çevirmezse iyi olur, sadece şfire değiştirme işlemlerinde N'ye çeviriyorsunuz.) Z,
+ kartın şifresi oluşturulmamış hali demek. G veya K çevirebilsin
+N-Normal(Kart kullanabilir anlama geliyor, atmde kullanılabilir hale geliyor.)
+M-Müşteri isteğiyle İptal
+G-Geçici bloke
+
+Geçici kapama olabilir -> G
+Normal -> N
+Müşteri isteğiyle iptal -> M
+
+olabilir 
+
+
+paycore oracle kullanıyor
+intertech mssql'de kullanıyor. rdp ile bağlanıyoruz.
+
+cardpayment.cor.parameters where parameter_code like '%Status%'
+
+
+

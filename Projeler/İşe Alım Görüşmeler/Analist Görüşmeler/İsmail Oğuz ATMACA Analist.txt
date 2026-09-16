@@ -1,0 +1,35 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Ekibi büyütme ve bir aşamaya getirme,
+Neyi farklı yapardı: yapmazmış, başarılı bir ekip varmış.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+✅ Reflects, adapts, moves forward.
+Ekip arkadaşlarından almış, haksızsan haksız olduğunu düşünüyor. 
+Örnek aklına gelmiyor.
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+Production'da hatalar, test edilmeden ani müdaheleler sonucu olmuş.
+Garanti Bonus kartlarda puanlar düşmüyordu,
+o gün mesaiye kalınarak, detaylı test etmişler.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+
+Fiziksel pos tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+Authorizasyon aşamasında fark yok.
+işlem şekilleri ile değişiklikler var.
+
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3ds doğrulamada nerede kullanılır?
+Çok az bildi
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+
+Clearing dosyası ile authorization logu neden tutmayabilir?

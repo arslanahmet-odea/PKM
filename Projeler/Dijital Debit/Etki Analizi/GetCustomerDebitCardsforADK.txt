@@ -1,0 +1,13 @@
+GetCustomerDebitCardsforADK
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/Web References/DebitCardService/Reference.cs
+	GetCustomerDebitCardsforADK fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetCustomerDebitCardsforADK servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetCustomerDebitCardsforADKAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Operation/Web References/DebitCardService/Reference.cs
+	GetCustomerDebitCardsforADK fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetCustomerDebitCardsforADK servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetCustomerDebitCardsforADKAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/Web References/DebitCardService/Reference.cs
+	GetCustomerDebitCardsforADK fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetCustomerDebitCardsforADK servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetCustomerDebitCardsforADKAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.

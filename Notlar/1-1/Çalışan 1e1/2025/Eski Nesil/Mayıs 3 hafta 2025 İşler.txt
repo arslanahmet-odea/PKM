@@ -1,0 +1,59 @@
+Sefa:
+PYMNT-1141 KDIG-FE-Geliştirmelerinin tamamlanması, altyapı hazır değilken base infra lara commit çıkılıyor, buglarla karşılışıyor, infra cılar fix leyecek. 
+benzer sorunlarla karşılaşıldı, domain feature test ile infrada geliştirmeler devam ediyor. Infra hazır olmadan ve buglar ahzır olmadan domain testi isteniyor.
+blokluyor, Sefa ile çömzüm yöntemleri
+Loan ekibi geliştirmesi tahsilat ekibi yapıyor, onların kurdukları yapıyla entegrasyon yapılacak. Arkadaşın koduna refactor yaılması lazım.
+Birlikte yapacaklar.
+PYMNT-1486, testi yapıldı, uat ve prod ok geçildi.
+PYMNT-1483-Uygulamada Düzenlenecek Kalan İngilizce Alanlar(netleştirilecek, Ayşenin haberi yok, Avniyle konuş.)
+fe tamam, be bekleyen işler var,  avni veya ayşe, onlarıan tabloları var. bazıları için tablo yapılmış,
+gastroclub firmasının geliştirme yapması isteniyor, Duygu'dan haber gelecek işler ne durumda diye.
+
+PYMNT-1444, ek kart limit artır menü , ek kart kullanıcı göremeyecek, asıl kart sahibi görebileek, %50-%60 tamam , ayşe backend de ön taraftak tablo için düenleme yapıyor.
+Ayşe geliştirme gerek kalmadı, teste çıktın  
+/Kdig, kmh , ek kart limit artırımı çıkılmayı planlıyor,kart limit azaltım testleri tamam, 
+dolandırıcılık için tasarım bekleniyor, geldiğinde 
+buglar mr lar içine yediriliyor, form validation içinde yapılıyor.
+
+haftaya kmh bitirme, bayram öncesi, 10 haziranda 
+
+Avni:
+PYMNT-1181- CMS geliştirmesinin tamamlanması
+Musahan, geliştirme yapacak onun üstüne bizim entegre edeceksin. Bitirdin ama daha mantıklı bir yola çevirmek istendi, bekleme süreindesin ve revize yapacaksın.
+2-3 gün sürmeyecek entegrasyon süreci olacak, servisi sıfırdan yazıldı. Muasahan'ın yapacağı entegre edeceksin.
+Musahan bu hafta yapacağını söylemiş, pazartesi sen kontrol edeceksin, haftasonuna biter.
+
+PYMNT-1480-Bakiyen Yetersiz Uyarsının Düzenlenmesi
+Bu senlik değildi, Buse'den bilgi alınacak. prod ortam düzelmiş mi diye bakılacak. 
+
+PYMNT-1445 Program Tercih Kalan Hak Gösterimi 
+birkaç satır kod yazılacak, CMS'ten sonra yapılacak ,cumaya bitmiş olur.
+
+PYMNT-1482 Limit Düşürme - 
+Yusuf Zopçuk Prod Geçişi, bitti ve testte , unit testleri yazılacak,, yasal olduğu için, geçişten önce unit test yazılacak.
+22 haziranda geçiş olacak, ondan önce bitecek.
+
+PYMNT-1416 
+Ön geliştirme diye açtın, geliştirmeler yapıldı. CMS'ten sonra yapacaksın. 
+
+Ayşe:
+PYMNT-1472 - Dönem içi harcama konusunun netleştirilmesi ve geliştirmesinin tamamlanması
+Geliştirmesi bitti, kaan ve damla ile tasarım yaptılar, tatil öncesi netleştirdiler. gelnce konuşalım dediler.
+Sanal kartlara brand eklenmesi işi var.  bittikten sonra Toplantı ayarlanacak, 
+
+
+https://jira.odeabank.com.tr/browse/YKDOP-209
+limit artırım butonunu kaldırılması için be geliştirme gerekiyor. test yazılacak ve uat çıkılacak.
+Bugün feat sonra UAT çıkacak
+
+jira açılacak, 
+Sanal kartlara brand eklenmesi işi var. 
+
+
+https://jira.odeabank.com.tr/browse/PYMNT-1429
+Mobilde Troy Kart Görselinin Güncellenmesi 
+access kartların odea 600 ve 700 ürünü görsel gelmiyordu, script çıktı çözüldü.,bitti
+
+
+https://jira.odeabank.com.tr/browse/PYMNT-1486
+705 ürün kodu görsel güncelleme ,bitti

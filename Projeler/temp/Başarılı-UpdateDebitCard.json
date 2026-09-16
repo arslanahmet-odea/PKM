@@ -1,0 +1,288 @@
+{
+  "$type": "Intertech.QueueManager.QueueMessage, Intertech.QueueManager.Client",
+  "QueueCode": "UserName=fortunaUser;Password=Odeabank2025;Server=10.224.122.209;Port=5672;ExchangeDurable=true;QueueRoutingKey=FortunaCallerLog;QueueName=Fortuna.FortunaCallerLog.Queue;PrefetchCount=10;QueueNoAck=false;RabbitMqExchangeType=direct;ExchangeName=FortunaCallerLog;VirtualHost=fortunalog;QueueDurable=true",
+  "OriginalMessage": {
+    "$type": "Intertech.Monitoring.FortunaCallerLog, Intertech.Monitoring",
+    "LogGuid": "35b6920f-9b86-4de1-9faf-c8ee4f63e849",
+    "ObjectFullName": "Intertech.Application.Facade",
+    "CalledAssembly": "Intertech.Facade.fAppDebitCard",
+    "CalledMethod": "GetDebitAllowedCardGroupsStyles",
+    "LayerInfo": null,
+    "CustomerNumber": -1,
+    "ChannelName": "MOBILEAPP",
+    "Request": {
+      "MessageDescription": "Get Debit Allowed Card Groups Style",
+      "FinansInvestCustNo": -1,
+      "QueryId": -1,
+      "CustomerNo": -1,
+      "QueryDate": "0001-01-01T00:00:00",
+      "EndDate": "0001-01-01T00:00:00",
+      "QueryCode": "",
+      "Explanation": "",
+      "QueryState": -1,
+      "QueryLogDate": "0001-01-01T00:00:00",
+      "LogQuery": false,
+      "CustomerPersonelAccountNo": 0,
+      "ShareAccountNumber": 0,
+      "SealId": 0,
+      "IsRecorededTransaction": false,
+      "OperationSystem": "",
+      "SessionLanguage": "",
+      "ScreenResolution": "",
+      "FlashVersion": "",
+      "GmtTime": "0001-01-01T00:00:00",
+      "ClientTime": "0001-01-01T00:00:00",
+      "LoginOperatorName": "",
+      "FraudCheckStatus": "",
+      "Source": "MOBILEAPP",
+      "MainLogId": "00000000-0000-0000-0000-000000000000",
+      "GUID": "e1437fdc-467a-4b3d-b484-7f08564665d0",
+      "Channel": "MOBILEAPP",
+      "SubChannel": "",
+      "TellerName": "ODEABANK\\MOBILEUSER",
+      "ChannelCode": 9300,
+      "SubChannelCode": 0,
+      "Version": 1,
+      "EBranchSessionID": -1,
+      "CustomerIdentity": 0,
+      "MessageId": 0,
+      "TraceId": 0,
+      "ByPassLogOperation": false,
+      "ClientContext": {
+        "ClientApplication": {
+          "Code": "FortunaWebApi",
+          "Hostname": "OMV3IXAPP2",
+          "Ip": "10.224.107.74",
+          "SecurityKey": ""
+        },
+        "FileSummary": {
+          "Intertech.Common.Messaging.dll": {
+            "Checksum": "3b??13??e9??0a??ff??5c??d3??e7??8a??ce??37??dc??e8??00??a5??74",
+            "CreationTime": "2022-06-06T15:56:04.1747871+03:00",
+            "LastWriteTime": "2025-07-28T17:00:15.2069762+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Common.ParameterCache.dll": {
+            "Checksum": "79??84??3b??54??91??7c??be??c0??3d??13??89??fd??88??49??1d??4d",
+            "CreationTime": "2022-06-06T15:56:04.2060369+03:00",
+            "LastWriteTime": "2025-06-03T19:08:50.7659921+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Proxy.dll": {
+            "Checksum": "c1??6f??ae??ed??14??f6??59??6a??a6??ee??a5??a7??de??17??f9??f8",
+            "CreationTime": "2022-06-06T15:56:04.3935428+03:00",
+            "LastWriteTime": "2025-06-03T19:08:51.5726838+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Utility.dll": {
+            "Checksum": "b7??3a??73??c4??a9??62??8b??a7??83??8b??67??8c??a3??75??26??52",
+            "CreationTime": "2022-06-06T15:56:04.3935428+03:00",
+            "LastWriteTime": "2025-06-26T11:49:21.4307745+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Utility.Compression.dll": {
+            "Checksum": "8a??b7??65??b7??69??78??f3??24??09??3e??58??8b??3e??a6??62??17",
+            "CreationTime": "2022-06-06T15:56:04.3935428+03:00",
+            "LastWriteTime": "2025-06-03T19:08:54.1406761+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Utility.Context.dll": null
+        }
+      },
+      "ApplicationContext": {
+        "CallingApplicationCode": "",
+        "CallingApplicationIP": "",
+        "CallingApplicationSecurityKey": "",
+        "CallingApplicationHostName": "",
+        "CalledApplicationIP": "",
+        "CalledApplicationHostName": "",
+        "CommonMessagingCreationTime": "0001-01-01T00:00:00",
+        "CommonMessagingVersion": ""
+      },
+      "WebContext": {
+        "CallerIP": "10.224.107.200:50259",
+        "CallerIPPort": "10.224.107.200:50259",
+        "CallerDomainName": "",
+        "WebServerIdentity": "OMV3IXAPP2",
+        "RequestedURL": "GetDebitAllowedCardGroupsStyles",
+        "RequestedURLWithQueryString": "/Intertech.Fortuna.WebApi.Services/api/fortuna/GetDebitAllowedCardGroupsStyles",
+        "BrowserType": "Unknown",
+        "UserAgent": "PostmanRuntime/7.44.1"
+      },
+      "TenantCode": "",
+      "ChannelSessionId": "APITEST_20190406_1644",
+      "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56",
+      "ApiApplicationKey": "d00b33d618c44e9187f947f8eacbd80f",
+      "CustomerBirthDate": "0001-01-01T00:00:00",
+      "CustomerRecordTime": "0001-01-01T00:00:00",
+      "CustomerApprovementDate": "0001-01-01T00:00:00",
+      "Properties": [],
+      "ExecutionTimeOut": 420000
+    },
+    "Response": {
+      "AllowedCardGroupsStyles": [
+        {
+          "StyleCode": "007",
+          "StyleName": "MasterCard Temassýz",
+          "GroupCode": "516944",
+          "GroupName": "Mastercard",
+          "InternetAllowed": false,
+          "DashboardAllowed": false,
+          "IsChipCapable": true,
+          "Bin": "516944"
+        },
+        {
+          "StyleCode": "008",
+          "StyleName": "MasterCard Temassýz Hazýr",
+          "GroupCode": "516944",
+          "GroupName": "Mastercard",
+          "InternetAllowed": false,
+          "DashboardAllowed": false,
+          "IsChipCapable": true,
+          "Bin": "516944"
+        },
+        {
+          "StyleCode": "009",
+          "StyleName": "Mastercard Ticari",
+          "GroupCode": "542724",
+          "GroupName": "Mastercard Ticari",
+          "InternetAllowed": false,
+          "DashboardAllowed": false,
+          "IsChipCapable": true,
+          "Bin": "542724"
+        }
+      ],
+      "MessageDescription": "Get Debit Allowed Card Groups Style",
+      "FinansInvestCustNo": -1,
+      "QueryId": -1,
+      "CustomerNo": -1,
+      "QueryDate": "0001-01-01T00:00:00",
+      "EndDate": "0001-01-01T00:00:00",
+      "QueryCode": "",
+      "Explanation": "",
+      "QueryState": -1,
+      "QueryLogDate": "0001-01-01T00:00:00",
+      "LogQuery": false,
+      "CustomerPersonelAccountNo": 0,
+      "ShareAccountNumber": 0,
+      "SealId": 0,
+      "IsRecorededTransaction": false,
+      "OperationSystem": "",
+      "SessionLanguage": "",
+      "ScreenResolution": "",
+      "FlashVersion": "",
+      "GmtTime": "0001-01-01T00:00:00",
+      "ClientTime": "0001-01-01T00:00:00",
+      "LoginOperatorName": "",
+      "FraudCheckStatus": "",
+      "Source": "MOBILEAPP",
+      "MainLogId": "00000000-0000-0000-0000-000000000000",
+      "GUID": "e1437fdc-467a-4b3d-b484-7f08564665d0",
+      "Channel": "MOBILEAPP",
+      "SubChannel": "",
+      "TellerName": "ODEABANK\\MOBILEUSER",
+      "ChannelCode": 9300,
+      "SubChannelCode": 0,
+      "Version": 1,
+      "EBranchSessionID": -1,
+      "CustomerIdentity": 0,
+      "MessageId": 180106121,
+      "TraceId": 105295716,
+      "ByPassLogOperation": false,
+      "ClientContext": {
+        "ClientApplication": {
+          "Code": "FortunaWebApi",
+          "Hostname": "OMV3IXAPP2",
+          "Ip": "10.224.107.74",
+          "SecurityKey": ""
+        },
+        "FileSummary": {
+          "Intertech.Common.Messaging.dll": {
+            "Checksum": "3b??13??e9??0a??ff??5c??d3??e7??8a??ce??37??dc??e8??00??a5??74",
+            "CreationTime": "2022-06-06T15:56:04.1747871+03:00",
+            "LastWriteTime": "2025-07-28T17:00:15.2069762+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Common.ParameterCache.dll": {
+            "Checksum": "79??84??3b??54??91??7c??be??c0??3d??13??89??fd??88??49??1d??4d",
+            "CreationTime": "2022-06-06T15:56:04.2060369+03:00",
+            "LastWriteTime": "2025-06-03T19:08:50.7659921+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Proxy.dll": {
+            "Checksum": "c1??6f??ae??ed??14??f6??59??6a??a6??ee??a5??a7??de??17??f9??f8",
+            "CreationTime": "2022-06-06T15:56:04.3935428+03:00",
+            "LastWriteTime": "2025-06-03T19:08:51.5726838+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Utility.dll": {
+            "Checksum": "b7??3a??73??c4??a9??62??8b??a7??83??8b??67??8c??a3??75??26??52",
+            "CreationTime": "2022-06-06T15:56:04.3935428+03:00",
+            "LastWriteTime": "2025-06-26T11:49:21.4307745+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Utility.Compression.dll": {
+            "Checksum": "8a??b7??65??b7??69??78??f3??24??09??3e??58??8b??3e??a6??62??17",
+            "CreationTime": "2022-06-06T15:56:04.3935428+03:00",
+            "LastWriteTime": "2025-06-03T19:08:54.1406761+03:00",
+            "Version": "1.0.0.0"
+          },
+          "Intertech.Utility.Context.dll": null
+        }
+      },
+      "ApplicationContext": {
+        "CallingApplicationCode": "",
+        "CallingApplicationIP": "",
+        "CallingApplicationSecurityKey": "",
+        "CallingApplicationHostName": "",
+        "CalledApplicationIP": "",
+        "CalledApplicationHostName": "",
+        "CommonMessagingCreationTime": "0001-01-01T00:00:00",
+        "CommonMessagingVersion": ""
+      },
+      "WebContext": {
+        "CallerIP": "10.224.107.200:50259",
+        "CallerIPPort": "10.224.107.200:50259",
+        "CallerDomainName": "",
+        "WebServerIdentity": "OMV3IXAPP2",
+        "RequestedURL": "GetDebitAllowedCardGroupsStyles",
+        "RequestedURLWithQueryString": "/Intertech.Fortuna.WebApi.Services/api/fortuna/GetDebitAllowedCardGroupsStyles",
+        "BrowserType": "Unknown",
+        "UserAgent": "PostmanRuntime/7.44.1"
+      },
+      "TenantCode": "",
+      "ChannelSessionId": "APITEST_20190406_1644",
+      "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56",
+      "ApiApplicationKey": "d00b33d618c44e9187f947f8eacbd80f",
+      "CustomerBirthDate": "0001-01-01T00:00:00",
+      "CustomerRecordTime": "0001-01-01T00:00:00",
+      "CustomerApprovementDate": "0001-01-01T00:00:00",
+      "Properties": [],
+      "ExecutionTimeOut": 420000
+    },
+    "RequestTime": "2025-07-30T14:38:21.6607129+03:00",
+    "ResponseTime": "2025-07-30T14:38:21.8170182+03:00",
+    "ProcessResponseTime": 156,
+    "MessageGUID": "e1437fdc-467a-4b3d-b484-7f08564665d0",
+    "EbranchSessionId": -1,
+    "CallerIP": "10.224.107.200:50259",
+    "CallerDomainName": "",
+    "CalledIP": "",
+    "CalledDomainName": "OMV3IXAPP3",
+    "ChannelSessionId": "APITEST_20190406_1644",
+    "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56",
+    "TransactionId": 0,
+    "TransactionCode": null,
+    "HasError": false,
+    "ErrorCode": 0,
+    "ProcessCount": 0
+  },
+  "TryCount": 0,
+  "QueueName": "UserName=fortunaUser;Password=Odeabank2025;Server=10.224.122.209;Port=5672;ExchangeDurable=true;QueueRoutingKey=FortunaCallerLog;QueueName=Fortuna.FortunaCallerLog.Queue;PrefetchCount=10;QueueNoAck=false;RabbitMqExchangeType=direct;ExchangeName=FortunaCallerLog;VirtualHost=fortunalog;QueueDurable=true",
+  "MessageId": 0,
+  "State": 0,
+  "NextTryTime": "0001-01-01T00:00:00",
+  "Label": "FortunaCallerLog",
+  "OriginalMessageType": "Intertech.Monitoring.FortunaCallerLog, Intertech.Monitoring, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "SendMessageDirect": false
+}

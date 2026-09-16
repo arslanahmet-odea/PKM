@@ -1,0 +1,213 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardın sor.
+
+"Bana haksızlık olarak algıladığınız bir geri bildirim aldığınız bir zamanı anlatın. Sonra ne yaptınız?"
+Biz şuna bunu dedik diye şu anki işinde alıyormuş. İşi ve takımı yönetme durumu , notlarında olduğunu iletiyormuş. Yapabildiklerini sunum haline getiyirromuş.
+ 
+Kullanıcı deneyimini geliştirmek veya projeyi ilerletmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Kapsam genelinde iş aldıkları için eksik noktalar oluyor. Süreç düzeltmesi yapıyor.
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+Şu anda yok.
+
+github adresini ve personel project adresini iste:
+
+Multi the ile asenkron programlama arasındfaki farklar nelerdir?
+Thread blocklama nedir? Bazı transaction lar beklediği için bloklanıyor, ayrı transactionları sonuçları eklemeden yönetilebiliyormuş.
+Paralel programlama ise farklı threadlar çalışıyor.
+
+### Soru 1
+**Soru:** `async/await` ve `Task.Run` arasındaki farklar nelerdir? Hangi senaryolarda kullanılır?  
+**Beklenen Cevap:** `async/await` I/O-bound işlemler için, `Task.Run` CPU-bound işlemler için kullanılır.  
+**Ayrıntılı Açıklama / Örnek:** `async/await` thread’i bloklamadan çalışır. `Task.Run` CPU yoğun işlerde thread pool’dan thread alır. Örnek: DB çağrısı için `async/await`, hesaplama için `Task.Run`.  
+**Zorluk Seviyesi:** 3  
+**Takip Soruları:** ValueTask farkı, thread pool limitleri, performans etkisi
+Paralel yürümesi adına başka Task.Run işlem yapıyor.
+
+### Soru 53
+**Soru:** Deadlock nedir ve .NET uygulamalarında nasıl önlenir?  
+**Beklenen Cevap:** Thread’lerin birbirini beklemesi sonucu tüm sistemin durması.  
+**Ayrıntılı Açıklama / Örnek:** Lock sıralamasına dikkat ederek, timeout kullanarak veya Concurrent Collections ile önlenebilir.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Async/await ile deadlock senaryoları
+
+### Soru 23
+**Soru:** Thread Pool nedir ve performansı nasıl etkiler?  
+**Beklenen Cevap:** Thread reuse sağlar ve sistem kaynaklarını optimize eder.  
+**Ayrıntılı Açıklama / Örnek:** CPU-bound task’lar ThreadPool ile çalıştırılır; task sayısı çok fazla ise blocking olabilir.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** MaxThreadPool ayarları, async/await ile ilişkisi
+
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);
+
+
+### Soru 3
+**Soru:** Dependency Injection ile Scoped, Singleton, Transient farkları nelerdir?  
+**Beklenen Cevap:** Scoped: request başına, Singleton: app lifetime, Transient: her resolve’da yeni instance.  
+**Ayrıntılı Açıklama / Örnek:** Singleton içinde scoped kullanmak tehlikelidir; memory leak veya stale data oluşabilir.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** IoC container konfigürasyon örneği
+Her seferinde yeni objeck oluştuyuro.
+
+### Soru 46
+**Soru:** Dependency Injection ve Inversion of Control neden önemlidir?  
+**Beklenen Cevap:** Loose coupling ve testability sağlar.  
+**Ayrıntılı Açıklama / Örnek:** Service registration ve constructor injection ile uygulanır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Scoped vs Singleton lifetimes
+
+
+### Soru 7
+**Soru:** lock, SemaphoreSlim, Monitor, ConcurrentDictionary farkları nedir?  
+**Beklenen Cevap:** Thread safety sağlarlar ama farklı senaryolar için uygundur.  
+**Ayrıntılı Açıklama / Örnek:** lock basit thread safety sağlar, SemaphoreSlim async uyumlu, Monitor advanced lock. ConcurrentDictionary concurrent collection için optimize.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Deadlock senaryoları, async/await ile uyumluluk
+ConcurrentDictionary kullanmamış
+thread safety ne demek? Aynı sonucu elde ediyorsa, string thread safe data tipi olarak kabul ediyor.
+
+### Soru 9
+**Soru:** CQRS pattern’i nasıl uygularsınız ve ne zaman tercih edilir?  
+**Beklenen Cevap:** Read ve Write operasyonları ayrı katmanlara ayrılır; yüksek performans ve maintainability sağlar.  
+**Ayrıntılı Açıklama / Örnek:** Komutlar için CommandHandler, sorgular için QueryHandler kullanılır. Örnek: Inventory write, Reporting read.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Event sourcing ile kombinasyon
+Kullanmamış ama yazma ve okuma farklı yerler kurgulamış.
+
+### Soru 10
+**Soru:** Circuit breaker pattern nedir ve .NET’de nasıl uygulanır?  
+**Beklenen Cevap:** Remote service hatalarını yönetir, retry ve fallback ile kombinlenir.  
+**Ayrıntılı Açıklama / Örnek:** Polly library ile uygulanabilir. Örnek: API 3 kez fail olursa fallback’a geç.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Timeout pattern, retry policy kombinasyonu
+
+
+### Soru 11
+**Soru:** Microservice’ler arası synchronous ve asynchronous iletişim farkları nelerdir?  
+**Beklenen Cevap:** Sync: request-response, Async: event-driven.  
+**Ayrıntılı Açıklama / Örnek:** Sync hızlı ama tight coupling, Async loose coupling, scalability sağlar. Örnek: Kafka event tüketimi.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Eventual consistency, retry pattern
+Message broker'a mesja bırakılması ise asenkron adlandırdı.
+Senkron iki farklı servis gibi düşünürse iki 
+asenkron, kod bağımsızlığı sağlar, servisler birbirini beklemiyor.
+asenkron, tebrübesi zayıf.
+
+### Soru 12
+**Soru:** Event-driven architecture avantajları nelerdir?  
+**Beklenen Cevap:** Loose coupling, scalability, async processing sağlar.  
+**Ayrıntılı Açıklama / Örnek:** Kafka, RabbitMQ ile mesaj tabanlı eventler. Örnek: OrderCreated event -> Inventory update.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Eventual consistency senaryosu
+
+### Soru 15
+**Soru:** API Gateway kullanmanın avantajları ve dezavantajları nelerdir?  
+**Beklenen Cevap:** Centralized routing, authentication, throttling. Dezavantaj: single point of failure.  
+**Ayrıntılı Açıklama / Örnek:** Örnek: Ocelot veya YARP ile microservices yönlendirme.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Rate limiting ve caching stratejileri
+Api gateway biliyor, authentication , routing, nodejs kullanmış
+
+### Soru 25
+**Soru:** Caching stratejileri nelerdir ve ne zaman tercih edilir?  
+**Beklenen Cevap:** In-memory, distributed, write-through, write-behind gibi stratejiler vardır.  
+**Ayrıntılı Açıklama / Örnek:** Redis distributed cache; write-through DB ile senkronize, write-behind async update.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Cache consistency sorunları
+Inmemory, distributed ise redis üzerinde tutuluyor.
+
+### Soru 17
+**Soru:** Distributed caching ne zaman ve nasıl kullanılmalıdır?  
+**Beklenen Cevap:** Sık kullanılan veriler için, performansı artırmak ve DB yükünü azaltmak için kullanılır.  
+**Ayrıntılı Açıklama / Örnek:** Redis veya Memcached ile microservices caching yapılabilir. Örnek: Product catalog cache.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Cache invalidation stratejileri
+
+### Soru 18
+**Soru:** Idempotency nedir ve API tasarımında neden önemlidir?  
+**Beklenen Cevap:** Aynı isteğin tekrar edilmesi durumunda sonucu değiştirmemesi.  
+**Ayrıntılı Açıklama / Örnek:** Payment API’sinde duplicate ödeme önlemek için idempotency key kullanılır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** RESTful API’de uygulama örnekleri
+Idempotency, bir servise aynı işlemi atıyorsa aynı sonucu almak istiyor.
+
+### Soru 19
+**Soru:** Event Sourcing nedir ve hangi durumlarda tercih edilir?  
+**Beklenen Cevap:** State yerine event’lerin saklanmasıdır; audit ve rollback avantajı sağlar.  
+**Ayrıntılı Açıklama / Örnek:** Örnek: Banka hesap işlemleri, her transaction bir event olarak kaydedilir.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** CQRS ile kombinasyon, snapshot kullanımı
+
+### Soru 21
+**Soru:** Vertical vs Horizontal Scaling farkları nelerdir?  
+**Beklenen Cevap:** Vertical: mevcut sunucuyu büyütme, Horizontal: daha fazla sunucu ekleme.  
+**Ayrıntılı Açıklama / Örnek:** Horizontal scaling genellikle microservices ile uyumludur; load balancer gerektirir.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Auto-scaling senaryoları
+
+
+### Soru 26
+**Soru:** ACID prensipleri nelerdir ve neden önemlidir?  
+**Beklenen Cevap:** Atomicity, Consistency, Isolation, Durability. Veri tutarlılığı için gereklidir.  
+**Ayrıntılı Açıklama / Örnek:** Örnek: Banka transferinde ya tüm işlem yapılır ya da hiçbiri.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Isolation level ve deadlock örnekleri
+veriyi yazdıüna acid operation deniyor.
+
+### Soru 29
+**Soru:** Indexing nedir ve performansı nasıl etkiler?  
+**Beklenen Cevap:** Sorgu hızını artırır ama write maliyeti vardır.  
+**Ayrıntılı Açıklama / Örnek:** Clustered vs Non-clustered index. Örnek: ProductId üzerinde index sorgu hızını artırır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Composite index, covering index
+
+### Soru 30
+**Soru:** NoSQL ve SQL veri tabanları arasındaki farklar nelerdir?  
+**Beklenen Cevap:** SQL: relational, schema; NoSQL: flexible, scalable.  
+**Ayrıntılı Açıklama / Örnek:** MongoDB, Cassandra; Redis key-value store.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Eventual consistency, CAP theorem
+Mongo kullanmış, index based - document based. ACID işlemlerin gerçekleştiği veritabanları denilebilir.
+
+### Soru 31
+Authentication-Authrozation
+Yetkilendirme ve kimliklendirme,
+
+### Soru 36
+**Soru:** JWT token nedir ve nasıl doğrulanır?  
+**Beklenen Cevap:** JSON Web Token, kimlik doğrulama ve authorization için kullanılır.  
+**Ayrıntılı Açıklama / Örnek:** Token imzalanır, signature doğrulanarak payload güvenliği sağlanır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Refresh token, token expiration
+Nereden generate edilir?
+
+### Soru 40
+**Soru:** Sensitive data encryption ve hashing farkları nelerdir?  
+**Beklenen Cevap:** Encryption reversible, hashing tek yönlü.  
+**Ayrıntılı Açıklama / Örnek:** Password hashing için bcrypt, data encryption için AES.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Salting, key management
+
+### Soru 45
+**Soru:** Logging ve Monitoring best practices nelerdir?  
+**Beklenen Cevap:** Centralized logging, structured logs, metrics ve alerts.  
+**Ayrıntılı Açıklama / Örnek:** Serilog, Seq, Prometheus, Grafana.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Distributed tracing, correlation ID
+
+### Soru 51
+**Soru:** Observability kavramı nedir ve .NET uygulamalarında nasıl sağlanır?  
+**Beklenen Cevap:** Metrics, logging ve tracing ile sistem davranışının izlenmesi.  
+**Ayrıntılı Açıklama / Örnek:** OpenTelemetry, Prometheus, Grafana ile monitoring; distributed tracing ile request flow takibi.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Correlation ID, latency measurement
+
+
+
+

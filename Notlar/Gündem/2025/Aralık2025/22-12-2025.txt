@@ -1,0 +1,57 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Koray'la 1e1'deki kararları incele ve ilgili kişilere yaz.
+-Kaan ve Meral, hatalar oluştuğunda kimler aranacak. Debit 3D,  debit işlem, kk işlem hatası.Hangisi takas hangisi
+online switch vb. 
+-Özgür'e Kaan hakındaki şikayetini aktarmamaı tercih ettiğini, şimdi hemen sorun çıkaran ve şikayetçi gibi duruma düşmemesi
+için yaptığımı söyle. Hatasının farkındayım, bana yaptığı örnekten benzer durum yaşanmaması için uyaracaımı ileteceğim.
+-Master MR'larda sorun yaşıyoruz, 
+her mr için otomatik code review yapan(clean code veya unit test yazan) bir tool var mı?
+-uygulamada en çok nereyi kullanıyorlar, en çok nerede hata almışlar?
+-Herkesin ürünün bir yerini sahiplenmesi ve güzelleştirmesi için sahip olması gerekli.
+-Kaan'la Avni bir araya gelip sunum hazırlasınlar, ne nerede yapılıyor?Ayrıcalıklar dün neden önemli ve nasıl
+iyileştirilebilir?
+-Product engineering nedir, Sefa ile konuş ve eğitim vermesini iste
+-MCC konusunu Özgür'le konuş, hot fix' beklemeden ekleyelim.UAT'i de batch çalışmıyor. Ayrıcalıklar dünyası MCC çalışmıyor.
+-Sistemlerimiz ne kadar hata alıyor, takip
+-Limit artırım ve sanal kart başvuru transactioncode
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-Production Call Center ek kart başvuru iptal, Çağlar'da, takip
+-Production Call Center teslimat adresi, Batuhan'a ata
+-CMS menülerinin call center ekranlarında gizlenebilmesi isteri hakkında, maili ,konuyu konuşmak gerekli.
+-Pusula Ekstre Adres Değişikliği Hakkında , Murat Takip et
+-Mert'e yumuşak mail hazırlayalım. 
+-Bilgi aktarım toplantıları
+-2026' Q-1 slicing, Duygu ile konuşmak gerekli ,  Troy Debit, Key Block
+
+
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı, takip
+-Codem konusu test , takip deploy 18'inde takip et.
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+-Online Vergi Dairesine bilgi gir
+
+Paycore'da dedike online işlem, takas, 
+
+Regresyon hatası pre-login QR para çekme limitleri hatalı görünüyor.
+
+Mert'e yumuşak mail hazırlayalım. 
+
+
+1e1'lere ekle.
+What can I do to help you work better? 
+What do you wish that I did less of? 
+What has frustrated you in the last sprint? 
+
+Geri bildirim istediğinde ve aldığında asla görmezden gelme çünkü bir daha alamazsın.
+-Aldığın geri bildirimi doğru aldığını anlamak için yüksek sesle kendi kelimelerinde tekrarla ki yanlış aktarma olmasın
+-Bu tekrar bildirimi kabul ettiğini gösterir.
+
+Asla savunmaya geçme, geri bildirim için teşekkür et ve düşünmeye başla.

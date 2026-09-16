@@ -1,0 +1,25 @@
+Koray gündem:
+-TLS konusu için Fatih İstanbullu mail atmam diyor.
+Dijital Gelir belgesinde pilot ayrıştırma sonrası yaygınlaşacak
+-Limitler konusunda neler yapılacak planlamayı ilet
+(dijital gelir belgesi canlıya açılması ve limit konusu nasıl çözülecek, selinle konuş)
+-25-26 ağustos atm ve pos qr pentest yapılacak. Göker izinli olduğu için sonraki geçişe kalacak.
+-Avni'nin kodlar konusunu Yetkin'e kadar çıktı Avni uyuyamamış aradı vb. fazla bugfix yapıyruz diye adımız çıkıyor
+-Hüsyin'in kdig işleri için Hüseyin, "Berk'le Çağlar konuşmuştu Berk diğer işlerden henüz bakamadı ama bu hafta başlayacak"
+
+Koray'a fe 'de intellisense'e sorun var, fe frameworkers çözmeli, 1 yıldan eskiden beri devam ediyor
+
+başvuru devam ederken giden LKS red SMSi mi
+
+Datça, karaincir plajı pek iyi değilmiş, tavsiye ediliyor.
+hayıtbükü, palamutbükü
+
+
+
+SMS gitmesi konusu ayrıntılı incele, Selin'le ve Barış'la konuş.
+KK akışı ise sizin bakmanız gerekir. Koray'a bilgi ver.
+Duygu'ların da akışı bilmesi lazım.
+
+Geçiş öncesi iyice test edilmeli, sonrasında 
+kdig konusunda mimari onayı alalım, etkileşimli çalışalım
+

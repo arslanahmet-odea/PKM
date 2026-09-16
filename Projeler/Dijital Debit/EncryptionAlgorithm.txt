@@ -1,0 +1,38 @@
+using System.Security.Cryptography;
+using System.Text;
+
+string hexString = "34eb99a3bea39aace81a615e93cbd70d00a2dd8c1661d8c465218bec2641df69";
+
+byte[] aesKey = Enumerable.Range(0, hexString.Length / 2)
+                         .Select(i => Convert.ToByte(hexString.Substring(i * 2, 2), 16))
+                         .ToArray();
+
+
+string sampleHexCipher = "265328D67853EA1B71BFE96AFF08DFBA36167EB961392B187A800C274656FCB6";
+byte[] cipherBytes = Enumerable.Range(0, sampleHexCipher.Length / 2)
+                               .Select(i => Convert.ToByte(sampleHexCipher.Substring(i * 2, 2), 16))
+                               .ToArray();
+
+
+byte[] iv = new byte[16];
+
+using (Aes aes = Aes.Create())
+{
+    aes.KeySize = 256;
+    aes.BlockSize = 128;
+    aes.Key = aesKey;
+    aes.IV = iv;
+    aes.Mode = CipherMode.CBC;
+    aes.Padding = PaddingMode.PKCS7;
+
+    using (ICryptoTransform decryptor = aes.CreateDecryptor())
+    {
+        byte[] decryptedBytes = decryptor.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);
+        string decryptedText = Encoding.UTF8.GetString(decryptedBytes);
+        Console.WriteLine("Decrypted Text: " + decryptedText);
+    }
+}
+
+
+Kısıt mesaj ayrımı ödeme sistemleri için zorunlu. Bizde 22:00-06:00 arasında ve 7/24 gösterilen iki farklı mesaj olması gerekli. Ekim ayında bu geliştirmenin çıkacağı şekilde konuştuğumuzu hatırlıyorum, Kübra Hanım'ın geliştirmesini FE paketlerimize entegre ettik. 
+

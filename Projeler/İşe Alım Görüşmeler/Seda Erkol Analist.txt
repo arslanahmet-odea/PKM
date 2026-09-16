@@ -1,0 +1,61 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+-Garanti BBVA'daki projesi, legacy sistemi anlamak, bir dönüşüm hem yeni sistemlerinde hem de eski sistemi
+öğrenmek gerekiyor. Mainframe'den açık sistemlere geçmek, bağımlıklıkları tespit etmek ve doğru şekilde
+yapmak gerekiyor, doğru analiz, geliştirme doğru ilerlemesi , doğru testleri yapmak iyi emziyet.
+-Yapay zeka tool'ları ve lisanslar satın alınarak ilerleniyor, BKM dönüşümü 
+tarafında copilot daha yoğun kullanırmış, Cludue kullanırmış.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+✅ Reflects, adapts, moves forward.
+-Ziraat teknolojide her şey çok iyi, her noktada iletişim yüksek olmasına rağmen.
+Yönetici iletişimin iyi olmadığını düşünmüş, ilgili ekiple konuşmuş ve öyle olmadığını görmüş.
+
+-Pluxee ekibinde dışarı çıktığında sen de onlara katıl diye geri bildirim almış,
+iş dışı eventlere sen de katıl diye geri bildirim alınmış.
+
+-Başka projede testçi ihtiyacı olduğu için yazılımcı olacakken testçi olarak atanmış.(Smartsoft)
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+Garanti BBVA'da acqurer switch dönüşümünde pilotlama geçişi sırasında, aynı salisede aynı rrn çakışması oluyor
+ve advice(para yatırma) işlemlerinde oluyor. Pilotlama işlemi sırasında yaşanmış.
+Karşı bankalarla anlaşarak chargeback sürecinde halledilmiş.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+Fiziksel pos'tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+-Sanal pos'ta çeşitli flag'ler söz konusu,
+-fiziksel pos'ta EMV süreçleri yaşanıyor, sanal pos'ta track dataları üzerinden ilerliyor.
+-Kart sanal fiziksel olması durumu
+-Sanal kart kullanımı da yapılabiliyor
+-Temassız fiziksel tarafta
+-Sanal pos tarafında 3D işlemler yaşanıyor, fullsecure ve halfsecure farkı flag'ler üzerinden dönüyor.
+
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3DS doğrulamada nerede kullanılır?
+-HSM , key'lerin tutulduğu sistemetik, zmk gibi keyler tutuluyor. Şifreleme ile alaklı bir sistematik.
+Testler simülatör kullanıyorsunuz, karta girdiğiniz keyler ile simülatör keyleri farklı ise
+authorization alamıyorsunuz.
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+ATM, POS,'dan acquier olarak işlemler yapıldğında gün sonuna çıktı, işlemlerde 
+ATM , out id f038 boş çıkabilir, sqitch'te var ama ATM-POS almamış olabilir ve bu da takas'a çıkmamış olabilir.
+Kaydı karşılaştıramaz ve sorun çıkabilir.
+Saat farklı olabilir.
+
+Sertifikasyon süreçlerine girdin mi?
+Issuer tarafta süreçlere girmemiş, zirat teknolojide bkm'nin key sistematiğine sertifikasyon sürecine girmiş.
+Dönüşüm projesi yaptığı için hem poS hem ATM için belli başlı işlemler içinsertifikasyon sürecim yürütülmüş.
+Switch bazında sertifikasyon süreci geçirmiş.
+
+Garanti'de outsource çalışıyormuş, kadro bu şekilde sabit kalacak, ai'ye çok hız veriyoruz
+%75 oranında verim almak hedefimizdir, bilgisniz olsun diyor.
+GMY diyormuş, çalışanları korkutuyormuş.

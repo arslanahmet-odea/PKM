@@ -1,0 +1,33 @@
+22:47 ve 23:06 arasında hata alınmış
+Problem Tanımı (Neyi çözüyoruz?)
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+İş Değeri / Etki (Neden önemli?)
+
+
+Fiziki POS cihazından QR Ödeme
+Mobil uygulamamızla POS cihazı ekranında oluşan QR ödeme işlemi yapamıyorduk.
+Paycore'a core servisleri yazdırdık. Ödeme,iade ve iptal servisleri yazdırıldı.
+Üstüne be ve fe geliştirmeleri devam ediyor.
+Böylelikle artık mobil uygulama ile kredi kartı veya debit kart taşımadan ödeme yapabileceğiz.
+
+
+ATM QR Hesaptan Para çekme-yatırma
+Mobil uygulmada başka banka atm'lerini kullanırken sadece debit kartı olan hesaplar seçilerek işlem yapılabiliyordu.
+Şimdi herhangi bir hesabını seçerek para çekebilecek.
+Bu proje kapsamında bir sorun da başka banka veya Odea'dan para çekerken iki farklı ekrandan birini seçiyordu.
+Bu ekranları da teke indiriyoruz, böylelikle müşteriler sorun yaşamayacak.
+Müşteriler hata bildiriyordu, artık daha basit, diğer bankalarla uyumlu bir tecrübe sunmuş olacağız.
+
+Dijital Debit Akıllı Hesaplar
+Sanal Debit karta sadece tek bir hesap bağlanabiliyordu, hesapta parası yoksa işlem red alıyordu.
+Avro ilem yaptığında döviz çevrimi oluyordu ve maliyetli olabiliyordu.
+Şimdi kullanıcı hesabına 3 ek hesap daha bağlayabilecek, 1 avro , 1 usd ve 1 adet tl olmak üzere.
+Yurt dışında avro , dolar işlem yaptığında bağlı hesapları avro veya usd ise doğrudan o hesaptan çekecek
+ve para çevrimi oluşmadan ek hesaplarından çekebilecek.
+
+Ayrıcalıklar Dünyası Geliştirmeleri
+Ayrıcalıklar Dünyası kapsamında elde edilen kazançların değerlendirileceği yerlerde müşteriye 
+fon ve oksijen/vadesiz hesap olmak üzere iki adet seçenek sunuyorduk. 
+Yeni istere göre Oksijen ile Vadesiz hesap seçimini birbirlerinden ayırıyoruz. 
+Fon ile Oksijen hesabın kazanç oranlarını birbirlerine eşitledik.
+Böylece müşterinin elde ettiği kazançları 3 farkl I seçenekte değerlendirebileceği bir geliştirme yaptık. 

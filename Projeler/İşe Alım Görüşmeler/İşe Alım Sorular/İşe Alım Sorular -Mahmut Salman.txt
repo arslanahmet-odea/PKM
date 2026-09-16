@@ -1,0 +1,124 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Ocean paketinde busines anlamında ve teknik anlamında tecrübesi var. Debit ve Preparid kartta uğraştı. 
+Yazılan projenin okunabilir ve müdaheleye açık olması önemli, daha temiz kod yazarken, yazılım anlamına geliştirmiş.
+
+"Bana haksızlık olarak algıladığınız bir geri bildirim aldığınız bir zamanı anlatın. Sonra ne yaptınız?"
+Geliştirme yapmış, iş birimi tarafında şikayet alınmış, istenen talebe yönelik yeterliliği sağlamış, müdüre gidip konuşmuş, yeni bir talep olduğunu belirtmiş.
+haksız yargılama olduğu ortaya çıkmış, yanlış anlaşılma olabiliyor. Kendi iletişim kurup doğrusunu aktarmış.
+
+❌ Uzun uzun savunur, başkalarını suçlar.
+
+✅ Düşünür, uyum sağlar, ilerler.
+
+ 
+Kullanıcı deneyimini geliştirmek veya projeyi ilerletmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Müşteri tarafından geldiğinde bu talebin doğru anlaşılması çok önemli, müşteri tarafından onaylanıyor, iş birimleri bunu doğru akarması gerekli.
+Developer'lara göre istenen talepten farklı bir talep oırtaya çıkabiliyor. 
+Proje gereksinimi ile alakalı talep olduğunda, developer katılmayabiliyordu, developer de katılsın. Proje sürecinde ilerleme sağlamış, gereksinimleri doğru 
+anlaşılması noktasında geniş bakıp proje sürecini iyileştirmiş, olumlu.
+
+Başka projeler yapıyor musun, open source, veya başka projeler.
+yok, thredd'de yapıyor.
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);
+
+transaction'da yapılan temel bir işlem, trendyol projesinde 3d secure olarak gelme
+kart paketinin içinde değerlendirmesi 
+
+
+**Soru:** `async/await` ve `Task.Run` arasındaki farklar nelerdir? Hangi senaryolarda kullanılır?  
+**Beklenen Cevap:** `async/await` I/O-bound işlemler için, `Task.Run` CPU-bound işlemler için kullanılır.  
+**Ayrıntılı Açıklama / Örnek:** `async/await` thread’i bloklamadan çalışır. `Task.Run` CPU yoğun işlerde thread pool’dan thread alır. Örnek: DB çağrısı için `async/await`, hesaplama için `Task.Run`.  
+
+
+
+
+**Soru:** Dependency Injection ile Scoped, Singleton, Transient farkları nelerdir?
+**Beklenen Cevap:** Scoped: request başına, Singleton: app lifetime, Transient: her resolve’da yeni instance.  
+**Ayrıntılı Açıklama / Örnek:** Singleton içinde scoped kullanmak tehlikelidir; memory leak veya stale data oluşabilir.  
+Farkları tecrüğbesi yok yanıt vermeiyor.
+
+### Soru 11
+**Soru:** Microservice’ler arası synchronous ve asynchronous iletişim farkları nelerdir?  
+**Beklenen Cevap:** Sync: request-response, Async: event-driven.  
+**Ayrıntılı Açıklama / Örnek:** Sync hızlı ama tight coupling, Async loose coupling, scalability sağlar. Örnek: Kafka event tüketimi.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Eventual consistency, retry pattern
+MS trafında tecrübesi yokmuş
+
+
+### Soru 12
+**Soru:** Event-driven architecture avantajları nelerdir?  
+**Beklenen Cevap:** Loose coupling, scalability, async processing sağlar.  
+**Ayrıntılı Açıklama / Örnek:** Kafka, RabbitMQ ile mesaj tabanlı eventler. Örnek: OrderCreated event -> Inventory update.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Eventual consistency senaryosu
+
+
+### Soru 17
+**Soru:** Distributed caching ne zaman ve nasıl kullanılmalıdır?  
+**Beklenen Cevap:** Sık kullanılan veriler için, performansı artırmak ve DB yükünü azaltmak için kullanılır.  
+**Ayrıntılı Açıklama / Örnek:** Redis veya Memcached ile microservices caching yapılabilir. Örnek: Product catalog cache.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Cache invalidation stratejileri
+Bankalarda çalışırken framework'ün desteklediği ktüphaneleri kullanmış.
+
+### Soru 18
+**Soru:** Idempotency nedir ve API tasarımında neden önemlidir?  
+**Beklenen Cevap:** Aynı isteğin tekrar edilmesi durumunda sonucu değiştirmemesi.  
+**Ayrıntılı Açıklama / Örnek:** Payment API’sinde duplicate ödeme önlemek için idempotency key kullanılır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** RESTful API’de uygulama örnekleri
+Restfull tecrübesi fazla değil. Idempotentn işlem nedir?
+
+### Soru 25
+**Soru:** Caching stratejileri nelerdir ve ne zaman tercih edilir?  
+**Beklenen Cevap:** In-memory, distributed, write-through, write-behind gibi stratejiler vardır.  
+**Ayrıntılı Açıklama / Örnek:** Redis distributed cache; write-through DB ile senkronize, write-behind async update.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Cache consistency sorunları
+
+
+**Soru:** JWT token nedir ve nasıl doğrulanır?  
+**Beklenen Cevap:** JSON Web Token, kimlik doğrulama ve authorization için kullanılır.  
+**Ayrıntılı Açıklama / Örnek:** Token imzalanır, signature doğrulanarak payload güvenliği sağlanır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Refresh token, token expiration
+Authencticaiton authorization , jwt bilmiyor.
+
+### Soru 42
+**Soru:** SOLID prensipleri nelerdir ve örnekleri?  
+**Beklenen Cevap:** Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.  
+**Ayrıntılı Açıklama / Örnek:** Örnek: SRP -> Class tek sorumluluk, DIP -> high-level module abstraction üzerinden dependency.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Anti-pattern örnekleri
+
+### Soru 46
+**Soru:** Dependency Injection ve Inversion of Control neden önemlidir?  
+**Beklenen Cevap:** Loose coupling ve testability sağlar.  
+**Ayrıntılı Açıklama / Örnek:** Service registration ve constructor injection ile uygulanır.  
+**Zorluk Seviyesi:** 4  
+**Takip Soruları:** Scoped vs Singleton lifetimes
+
+### Soru 49
+**Soru:** Eventual consistency nedir ve microservice mimarisinde nasıl uygulanır?  
+**Beklenen Cevap:** Sistemin zaman içinde tutarlı hale gelmesi; immediate consistency garanti edilmez.  
+**Ayrıntılı Açıklama / Örnek:** Örnek: Order ve Inventory service ayrı DB’de, event-driven update ile zamanla tutarlılık sağlanır.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Conflict resolution ve idempotency
+
+
+### Soru 51
+**Soru:** Observability kavramı nedir ve .NET uygulamalarında nasıl sağlanır?  
+**Beklenen Cevap:** Metrics, logging ve tracing ile sistem davranışının izlenmesi.  
+**Ayrıntılı Açıklama / Örnek:** OpenTelemetry, Prometheus, Grafana ile monitoring; distributed tracing ile request flow takibi.  
+**Zorluk Seviyesi:** 5  
+**Takip Soruları:** Correlation ID, latency measurement

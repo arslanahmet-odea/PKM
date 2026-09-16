@@ -1,0 +1,47 @@
+Gündem:
+
+-Trendyol projesi
+TY ,fiziki debit verilerin birleştirilmesi en doğru yönten o kartların arkasında bir tane parametre okunacak bir yapı kurulması, önyüz de değişmez
+Hassas veri şifreleme için Ezgi ile yarın toplantı yapılacak, ATM, Iletişim Merkezi'nden kimseyi almak gerekir mi, mobil taraftan yapılan işlemlerde loglamada hassa veriler olmamalı
+Önyüzle alakalı yerler bitti, Intervision ve ATM limitleri konusu var
+
+Hassas verilerle konusunda mail attıım geri dönmediler,
+Yetkin bunun için de proje açtırın demiş, Duygu'lara açtıralım, Bengü'ye arayıp biz bu konuyu iletmiştik
+Pazartesi toplantıda anlatılacak.
+
+-Debit Kart Başvuru Düzenlemeleri
+
+-Dolandırıcılık Önleme, faz1 için önyüzde mesajın değişmesi
+BE bitti, FE çalışması devam ediyor.
+
+-Açık bankacılık Kartlar
+Özgür'den bize anlatın, Koray da dinleyecek, 
+özge swat adımına konuşmuş, yği yapamıyor olması
+
+Sana güvenmek isterim,  yazılım ekibine katkı sunacak mısın?
+
+enterpriseapp.odeabank.com.tr Özgür yapmış
+
+Sefa ve Kaan'la konuşalım, default değer gelmediğinde hata alıyorsa durdurucu bir iş mi?
+Tarihi seçip ilerleyebiliyorsa sıkıntı yok
+
+--Bireysel'in direktörüne gitsin demişler, Duygu blocker diyorsa Emre( bireysel bankacılık ) karar versin diyorlar
+
+-Kmh geliştirmeleri
+Yusuf Zopçuk haftaya iletecek
+
+Maliyetler konusu:
+
+1-“Önümüzdeki 12 ayda bu pozisyonda benim için başarıyı nasıl tanımlarsınız? Hangi sonuçlara ulaştığımda 
+‘Ahmet bu rolde gerçekten fark yarattı’ dersiniz?”
+Amaçlanan: "Beni hangi sonuçlara göre değerlendireceksin?” sorusunun profesyonel hâli."
+2-“Senin yükünü nasıl hafifletebilirim?” Yöneticine doğrudan destek olabileceğin alanları öğrenmek.
+“Günlük operasyonlarınızda ya da projelerde üzerinizdeki iş yükünü azaltabilecek bir alan var mı? 
+Benim katkı sağlayabileceğim yerleri öğrenmek isterim.”
+
+3-“Şu anda çözülmesi gereken en acil konu nedir?”
+“Size göre şu anda benim odaklanmam gereken en kritik konu nedir? Nereden başlamam en doğru olurdu?”
+Timesheet konusu önemliymiş, geliştirme olarak trendyol olarak toparlıyoruz.
+Geçiş'le alakalı iş çıkmış, kritik değilse kalsın.
+
+4-“Yarın elimizde ek kaynak olsa, benim ekibim veya alanım içinde bunu nereye yatırmamı önerirsin?”

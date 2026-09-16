@@ -1,0 +1,43 @@
+TSİ 22-06 saatleri harici 
+Sınırlandırma Kapsamındaki İşlemler(Ek Önlem yok):
+-Nakit Avans Kullanımı Kapatma,
+-Hesaba Nakit Avans Kullanımı Kapatma,
+-Nakit Avans Limit Azaltma(Sonraki Fazda),
+-Hesaba Nakit Avans Limit Azaltma(Sonraki Fazda),
+-Mail Order Kullanıma Kapatma
+-İnternet Alışveriş Kullanıma Kapatma,
+
+
+Sınırların Kaldırılması Kapsamında İşlemler( Ek Önlem gerekli ama NFC olmak zorunda değil):
+-Nakit Avans Kullanımı Açılacak,
+-Hesaba Nakit Avans Kullanımı Açılacak,
+-Nakit Avans Limit Artıracak(Sonraki Fazda),
+-Hesaba Nakit Avans Limit Artıracak(Sonraki Fazda),
+-Mail Order Kullanıma Açma,
+-İnternet Alışveriş Kullanıma Açma,
+
+
+TSİ 22-06 saatleri arasında Ek Önlem( NFC veya kişinin aranması) Gerekli Olanlar:
+-Nakit Avans almak istediğinde
+-Hesaba Nakit Avans almak istediğinde
+-Nakit Avans Kullanımı Açma-Kapatma,
+-Hesaba Nakit Avans Kullanımı Açma-Kapatma,
+-Nakit Avans Limit Artırma-Azaltma(Sonraki Fazda),
+-Hesaba Nakit Avans Limit Artırma-Azaltma(Sonraki Fazda),
+-Mail Order Kullanıma Açma-Kapatma,
+-İnternet Alışveriş Kullanıma Açma-Kapatma,
+
+
+"Müşterinin, anılan işlemlere ilişkin tercihinin alınmasının sağlanması" nedeniyle bu ayarların oluğunu gösteren hatırlatıcı popup gerekebilir.
+5. Maddeki ek kontroller ile 8. Maddede belirtilen müşterinin işlem yaptığını teyid eden tedbirler ifadesindeki farklılığın önemli olduğunu düşünüyorum.
+Bu bize dijital kanallar arasında farklı ek önlemlerin kullanılması imkanını açabilir. İnternet şubeden NFC gerekmeyen ek önlemli işlem yaparken OTP kullanılabilir.
+
+
+[TSİ 22-06 DIŞINDA]
+├── Kapatma/Azaltma İşlemleri → **Serbest**
+└── Açma/Artırma İşlemleri → **Ek Önlemler**
+
+[TSİ 22-06 İÇİNDE]
+├── Kapatma İşlemleri → **Serbest**
+└── Açma/Artırma/Azaltma İşlemleri → **Kişi Kimlik Teyidi -> NFC veya Telefon**
+└── Avans Kullanım → **Kişi Kimlik Teyidi -> NFC veya Telefon**

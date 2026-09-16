@@ -1,0 +1,11 @@
+DB_Odeabank_DVP_Loans @Phoenix
+DB_Odeabank_DVP_Authority @Sopranos @IT4IT@odeabank.com.tr
+DB_Odeabank_DVP_Campaign ?
+DB_Odeabank_DVP_Cards @House of Cards
+DB_Odeabank_DVP_Payments @Commission Hunters
+DB_Odeabank_DVP_RelationshipManagement ?
+DB_Odeabank_DVP_Transfers @Commission Hunters
+DB_Odeabank_DVP_Investment @Nautilus
+DB_Odeabank_DVP_PackageManagement ?
+DB_Odeabank_DVP_RoboAdvisory @FundingFathers
+DB_Odeabank_DVP_BackOffice @Dijital Kanallar Deneyimi TrainingPlaylist ve TrainingAssetSegmentMapping tablolaları için takım ve tarih girilmemiş iki sorgu daha var, bunlarda size mi ait?

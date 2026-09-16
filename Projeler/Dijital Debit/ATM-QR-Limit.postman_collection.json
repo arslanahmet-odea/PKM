@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "3b574439-b4f6-43d6-9c29-1d753f421ed1",
+		"name": "ATM-QR-Limit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2972989"
+	},
+	"item": [
+		{
+			"name": "Odea Mevcut - Limit Query",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl-Transfers_UAT}}/transfers/transfer-limit?TransactionCode=OnasQRCodeMessage",
+					"host": [
+						"{{baseUrl-Transfers_UAT}}"
+					],
+					"path": [
+						"transfers",
+						"transfer-limit"
+					],
+					"query": [
+						{
+							"key": "TransactionCode",
+							"value": "OnasQRCodeMessage"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYF - Account List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					},
+					{
+						"key": "x-interapi-channel",
+						"value": "{{x-interapi-channel}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl-Cards}}/cards/atmqr/accounts?excludeOxygenAccounts=false&onlyCardAccounts=false",
+					"host": [
+						"{{baseUrl-Cards}}"
+					],
+					"path": [
+						"cards",
+						"atmqr",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "excludeOxygenAccounts",
+							"value": "false"
+						},
+						{
+							"key": "onlyCardAccounts",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYF - Limit Query",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					},
+					{
+						"key": "x-interapi-channel",
+						"value": "{{x-interapi-channel}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl-Transfers}}/transfers/atmqr-limits",
+					"host": [
+						"{{baseUrl-Transfers}}"
+					],
+					"path": [
+						"transfers",
+						"atmqr-limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYF - Withdraw Limit Query",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					},
+					{
+						"key": "x-interapi-channel",
+						"value": "{{x-interapi-channel}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl-Transfers_UAT}}/transfers/transfer-limit?TransactionCode=QRCodeTransactions",
+					"host": [
+						"{{baseUrl-Transfers_UAT}}"
+					],
+					"path": [
+						"transfers",
+						"transfer-limit"
+					],
+					"query": [
+						{
+							"key": "TransactionCode",
+							"value": "QRCodeTransactions"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYF - Deposit Limit Query",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					},
+					{
+						"key": "x-interapi-channel",
+						"value": "{{x-interapi-channel}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl-Transfers_UAT}}/transfers/transfer-limit?TransactionCode=QRCodeDepositTransactions",
+					"host": [
+						"{{baseUrl-Transfers_UAT}}"
+					],
+					"path": [
+						"transfers",
+						"transfer-limit"
+					],
+					"query": [
+						{
+							"key": "TransactionCode",
+							"value": "QRCodeDepositTransactions"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYF - Withdrawal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					},
+					{
+						"key": "x-interapi-channel",
+						"value": "{{x-interapi-channel}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceAccount\":  {\r\n        \"customerNo\": 9592889,\r\n        \"branchCode\": 9990,\r\n        \"accountSuffix\": 351,\r\n        \"connectedCardNo\": \"516944******3108\"\r\n    },\r\n    \"qrCode\": \"9801461c6ef814-bda9-43ee-a924-aa77beb3ac7f\",\r\n    \"locationData\": {\r\n        \"latitude\": 39.99255638,\r\n        \"longitude\": 32.63005134\r\n    },\r\n    \"amount\": 9000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl-Cards}}/cards/atmqr/withdrawal",
+					"host": [
+						"{{baseUrl-Cards}}"
+					],
+					"path": [
+						"cards",
+						"atmqr",
+						"withdrawal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TYF - Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-correlation-id",
+						"value": "{{x-correlation-id}}",
+						"type": "text"
+					},
+					{
+						"key": "x-channel",
+						"value": "{{x-channel}}",
+						"type": "text"
+					},
+					{
+						"key": "x-interapi-channel",
+						"value": "{{x-interapi-channel}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceAccount\": {\r\n        \"customerNo\": 9592889,\r\n        \"branchCode\": 9801,\r\n        \"accountSuffix\": 351\r\n    },\r\n    \"qrCode\": \"980134e6de810e-315e-493a-a668-fb00d36768dc\",\r\n    \"locationData\": {\r\n        \"latitude\": 39.99255638,\r\n        \"longitude\": 32.63005134\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl-Cards}}/cards/atmqr/deposit",
+					"host": [
+						"{{baseUrl-Cards}}"
+					],
+					"path": [
+						"cards",
+						"atmqr",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Odea Mevcut - Fortuna_GetCustomerLimitInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Channel",
+						"value": "MOBILEAPP",
+						"type": "text"
+					},
+					{
+						"key": "AppKey",
+						"value": "d00b33d618c44e9187f947f8eacbd80f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Header\": {\r\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\r\n        \"Channel\": \"MOBILEAPP\",\r\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\r\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\r\n    },\r\n    \"Parameters\": [\r\n        {\r\n            \"SecurityContext\": {\r\n                \"OTPVerificationUsage\": false,\r\n                \"SMSVerificationUsage\": true,\r\n                \"MobileSignatureVerificationUsage\": false\r\n            },\r\n            \"CorporationNo\": 0,\r\n            \"CustomerNo\": 9592889,\r\n            \"TransactionCode\": \"QRCodeTransactions\",\r\n            \"ErrorLevel\": 1.0,\r\n            \"FraudSessionId\": \"c64ca934-3c0f-483d-9b52-cbe42b98adc4\",\r\n            \"MainLogId\": \"9aac4e7b-4c36-4548-8bce-1177269be8a8\",\r\n            \"WebContext\": {\r\n                \"CallerIP\": \"10.131.2.17\",\r\n                \"BrowserType\": \"API,,None\"\r\n            },\r\n            \"SenderName\": \"MURAT ÇALIŞKAN\",\r\n            \"GmtTime\": \"2025-10-24T12:49:09.7551888Z\",\r\n            \"ClientTime\": \"2025-10-24T15:49:09.7551889+03:00\",\r\n            \"Device\": {\r\n                \"DeviceId\": \"\",\r\n                \"Brand\": \"\",\r\n                \"Model\": \"\",\r\n                \"RecordDate\": \"2025-10-25T15:49:09.7552244+03:00\",\r\n                \"IsSealActivation\": true\r\n            },\r\n            \"CustomerPersonelAccountNo\": -1,\r\n            \"CustomerIdentity\": 100344107,\r\n            \"EBranchSessionID\": 27530374,\r\n            \"Amount\": 0.0,\r\n            \"OctopusCheckupOutput\": {\r\n                \"StatusCode\": 400,\r\n                \"Status\": \"BadRequest\",\r\n                \"ResponseCode\": 1000,\r\n                \"ResponseErrorMessage\": \"Challenge mismatch. Expected: 4g474Hy6XYL058qXBf+gDQ== Actual: \",\r\n                \"HaveOctopusId\": false,\r\n                \"LastScanDate\": 0,\r\n                \"CreateDate\": 0,\r\n                \"ServiceRequestTime\": \"2025-10-24T15:48:35+03:00\",\r\n                \"LastScanDateTime\": \"0001-01-01T00:00:00+01:56\",\r\n                \"CreateDateTime\": \"0001-01-01T00:00:00+01:56\",\r\n                \"UserId\": \"USER:9592889;-1\",\r\n                \"ChallengeToken\": \"4g474Hy6XYL058qXBf+gDQ==\"\r\n            }\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetCustomerLimitInfo",
+					"protocol": "https",
+					"host": [
+						"uatintervisionapp",
+						"odeabank",
+						"com",
+						"tr"
+					],
+					"path": [
+						"Intertech.Fortuna.WebApi.Services",
+						"api",
+						"fortuna",
+						"GetCustomerLimitInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl-Cards",
+			"value": "https://cards-feature-3001.appdev.ocpdev.odeabank.com.tr/api"
+		},
+		{
+			"key": "baseUrl-Transfers",
+			"value": ""
+		},
+		{
+			"key": "baseUrl-Transfers_UAT",
+			"value": "https://dvp-ms-banking-accounts.apptest.ocpdev.odeabank.com.tr/api"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiIvN0dZMTd5ZlV4WE5Da2xoTGQwWGxHNWx4d3RKajRjL3NDMG83V0JCZnJGdWI2dk80dUZjMnVoVGdzNGRtUkdaQmxMZFhNckt1U003aE4xeEQyRnVwZz09Iiwic3ViIjoiNDM1Yjc2MjAtMTZkMi00YzFmLThlZDItMDIyYTlmOTI3NzVkIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTAyODUxMSwiZXhwIjoxNzYxMDI4NjMxLCJpYXQiOjE3NjEwMjg1MTEsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.ICqQJknbCZZ9zwjJvrR0in14jb6In19QZoaWShlFBFJwfpVvn2qO4rNtvA6ogPTHPgZKK0ERYKpHA5LHsr64iAHThrJAPT6a9pSf9ZOtKUOsnsKTQBWQDTX89Jq6VH-a4vYbuQTEeycYa1Vzfbcil9zCRkm82PYD1Fb5f-H4VPi7cFPFjOo6lBE8z0FrOn50Bngx_X1D3j5VhzgWokleXFl-HNJMXFBux7nGKF-ONL43CuXQhT3OlgLK9q03xGxgbqeGUoDVXrqM3rGeiAd0Iu3hGdfpd2DYuGuIEXlAuGB-1eST_tkuayWqsTMMeWMjKH93uREBwmTCzyGC4lCV8Q"
+		},
+		{
+			"key": "x-channel",
+			"value": "Mobile"
+		},
+		{
+			"key": "x-interapi-channel",
+			"value": "TyfMobApp"
+		},
+		{
+			"key": "x-correlation-id",
+			"value": "tyf-ms-20251016-01"
+		}
+	]
+}

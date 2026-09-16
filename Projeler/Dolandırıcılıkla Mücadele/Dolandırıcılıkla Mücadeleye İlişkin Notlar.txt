@@ -1,0 +1,11 @@
+Kaan analiz yazmış,  Tunç ile bakalım, Ayşe ile 
+5.	Madde Elektronik dağıtım kanalları Yorumlar:
+a-)Sınırlı bir müşteri grubu için ön onaylı ihtiyaç kredisi teklifi sunuluyor ve diğer işlemler şubeler aracılığı ile yapılmaktadır. Kredi kullanımı ve sınırlandırması 
+bu sınırlı müşteri grubu için yapılabilir.
+
+b-)Para Transferleri limit sınırlandırması yukarı yönlü yapılabilmesi için Genel Müdürlük Merkezi Operasyon aracılığıyla olmaktadır.
+Zaman aralığı belirlemek için bir ekran yapılabilir.
+
+c-) "Mobil ve internet bankacılığı kanallarına erişim için 'Zaman Kısıtlama'" konulabiliyormuş ama nereden? Mobil ve internet bankacılığın tamamına mı erişim kapatılabiliyor?
+Mesela hesap açarken konulmadığı takdirde bu ayarların ekrandan değiştirilebilmesi gerekmez mi?
+ 

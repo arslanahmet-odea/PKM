@@ -1,0 +1,43 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+YAY projesi(ziraat bankasının ATM orta ve üst katman yazılımı, monitoring ve raporlama tarafındaymış),
+ ziraat bankasına yapılmış 2017 yılında yapıldı.
+Bir çok farkı ekiple çalışmıi bankacılık, uygulama geliştiğrme, izleme ayrı.
+Sadece kendisi zamanında teslim etmiş, diğer hiçbir ekip teslimat yapamamış.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+✅ Reflects, adapts, moves forward.
+
+Diobold firmasında girdiğinin  3. haftası, cuma günü kuveyt türke gönderdi.
+tecrübesiz olmasından kaynaklı yapılmaması gereken bir deişiklik yapmış
+kırmırı alarm verilmiş ve düzeltilmiş.
+Zor duruma bırakmışlar , müşteri tarafında kriz olmuş. Aynı gün çözüldü.
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+garanti bankası gece sabah 4:00 gibi ATM'lerini göremediklerini söylemişler.
+Uygulama network bağlantısı kapatmış, ece 4:00'da 20 tane telefonla uyanmış.
+Uygulamnını bloke eden portu açmışlar, bankanın sorunu çözülmüş.
+Canlı yaşayan sistemin canlı kalması lazım.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+Fiziksel pos'tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+Son kullanıcı gibi konuşu, bilemedi
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3DS doğrulamada nerede kullanılır?
+HSm bilmiyor.
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+yok
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+
+Sertifikasyon süreçlerine girdin mi?
+yok
+

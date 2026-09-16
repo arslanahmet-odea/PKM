@@ -1,0 +1,50 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-masterpass konusunda iletişim kuruyorlar,
+-troy go konusunda geliştirme ve sertifikasyon sürecek.
+-Toplantı notlarını hazırla
+-DGPays CMS Teknik soruları incele. 
+-BKM testi için yetki istenecek, BT Güvenlik biz yanıt verdik dedi, onur uğraşkan
+-3d Secure ve Go entegrasyonunda sim blok'lu hatası gösterilmesi, doküman incele.
+-KK başvuru'da dosya Nasıl upload edilecek, nasıl saklanacak, personel için ayrışması gerekli.
+-Re: ODEA-11955 DebitKartların Masterpass'e Eklenmesi key blok keyler hangi HSM'e konulacak?
+-Intertech konusunda gelen listenin üzerinden git.
+-Codem hatırlatılacak
+-Kart başvuru ve Limitlerin mobilden kaldırılması 
+-Troy TY dokümantasyonunu TY'ye ilet
+-Troy kartlar doğru çalaşacak mı?
+-Barış'ın 3Dsecure ekranına hata mesajı konusunu incele.
+-TY kodu için redis ayrımı vb istenmişti.
+-Debit Kart Otomatik İade, konusu hızlandırılmalı.
+-LKS konusu ne oldu Murat'a sor.
+-Onboarding + Tüm Transaction IP + Port bilgileri, Ahmet ve Deniz. TYDen girilecek ve işlemler yapılacak
+ip ve port bilgileri loglanıyor mu loglanmıyor mu görülecek? BFF'de loglama yok, MS'de loglanacak.
+her case'de loglandığının ortaya çıkılması lazım.
+-Mobil Uygulama – Erişilebilirlik (VoiceOver/TalkBack) Geliştirmeleri / Ocak Release(Yasal olduğunu hatırlamıyorum)
+-Yeni BKM Express Issuer OTP Güncellemesi
+-ie11 bırakılması, Sefa 1/3 mesaim gidiyor diyor.
+-Başvuru bilgisi silme, Duygu ile görüş, Aysa ve ITLoans, topu bize atıyorlar
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-QR dokümantasyonunu oku
+-Master MR'larda sorun yaşıyoruz, her Mr için otomatik code review yapan(clean code veya unit test yazan) bir tool var mı?
+-Uygulamada en çok nereyi kullanıyorlar, en çok nerede hata almışlar?
+-Herkesin ürünün bir yerini sahiplenmesi ve güzelleştirmesi için sahip olması gerekli.
+-Sistemlerimiz ne kadar hata alıyor, takip
+
+
+Önemli: These are critical tasks with minimal urgency. 
+-Hata kodu listeleme ve izleme için zappix kaydı açılmalı.
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı, takip
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+
+
+1e1'lere ekle.
+What can I do to help you work better? 
+What do you wish that I did less of? 
+What has frustrated you in the last sprint? 

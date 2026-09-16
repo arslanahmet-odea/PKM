@@ -1,0 +1,35 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+AustriaCard yeni kart basımı projesinde kendi başına devam etmiş ve başarmış.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+✅ Reflects, adapts, moves forward.
+Geri bildirim almış, hakedip hak etmediği yargısıyla bakmıyor.
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+ING, Kart detay servislerine erişilememiş, tüm ekipler ayağa kalktı.
+Pod'ların sayısı artırıldı.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+Fiziksel pos'tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+fiziksel pos'ta çip kullanılıyor, sanal pos'ta ne kullanılıyor.
+e-com , halfsecure olması devreye giriyor.
+
+
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3DS doğrulamada nerede kullanılır?
+Ayrı ayrı hsm'lerde , daha güvenlik amaçlı kullanılıyor, 
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+
+Sertifikasyon süreçlerine girdin mi, sanal6629000 pos ?

@@ -1,0 +1,21 @@
+22:47 ve 23:06 arasında hata alınmış
+Problem Tanımı (Neyi çözüyoruz?)
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+İş Değeri / Etki (Neden önemli?)
+
+Kontrol Sende Projesi
+Problem Tanımı (Neyi çözüyoruz?)
+Müşteri kartlarının ayarlarını mobil ve İB'den yönetebilmesi için fonksiyonellikler eklenmesi.
+
+Çözüm Yaklaşımı (Nasıl çözüyoruz?)
+Mobil ve İB'ye iki özellik ekledik, kredi kartını kapatabiliyor ve debit kartını geçici olarak kapatıp açabilecek.
+
+İş Değeri / Etki (Neden önemli?)
+kk kapatma için bazı bankalara ceza gelmiş, bu sebeple acilen kk kapama çıkılması istendi.
+debit kartlar için müşteri kullanmadığı
+
+Ayrıcalıklar dünyasında müşterinin hangi segmentte olduğunu daha açık şekile gösterecek geliştirmeler yapıldı.
+
+
+Alert mekanızması 
+ATM para çek/yatır sadece hesap listeleyip işlemini yapacak.

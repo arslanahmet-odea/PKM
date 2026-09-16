@@ -1,0 +1,21 @@
+{
+    "Header": {
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "API",
+        "ChannelSessionId": "APITEST_20190406_1644",
+        "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 123,
+            "CustomerIdentity": 100000078,
+            "CustomerPersonelAccountNo": -1,
+
+            "BankingCustomerNo": 123,
+            "CardNo": "",
+            "NewCashLimit": 995,
+            "UserCode": "SA",
+            "ConfirmationToken": "55ujNgVaNzhTKF-MdRdFbXsgXWCzp2lzWp7WBnm2m-a_E1UZLIe7BcoAlWZNvbva3j6OAbqWnGi27BXo6BeXoYrrfuRVV2zqEl2CWX3UPWQE0IdGXiRPVjBUKLYa0YEMZD3QDEJnvSTAjxoSf1nA3pBMfo8EW6z2WnmeHJcjWDb7RndDi6rZc9ktuoyPqM5DcbWsqlFkUVI9SITiHk8lxCl_Bp6ImG5aOtioTnRkxlg1;YBosOU7QzFnH6GRnvkoCTA2"
+        }
+    ]
+}

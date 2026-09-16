@@ -1,0 +1,46 @@
+-Debit Projeleri, Kaan'ın adres bilgileri için attığı maili incele
+-Kdig geliştirmeleri
+
+Aktif beklenen bir şey yok
+Debit muhasebe hesapları yanlış. Kartlardaki muhasebe akışları nerede ve nasıl yapılıyor, kk ve debit için nasıl yapılıyor.
+Key Block, ATM'de satın alma yapılmış, bu altyapının olması için para vermiştik, dmeişler. Toplantı ayarlanacak, 4arc adamları olacak.
+Tunay başkan da gelecek, 
+
+Hazırlanıp
+Adaptör raporu bugün soruldu, inceleyecek. Anlatsın diyor.
+Aradaki adaptör nasıl kullanılıyor, onu soruyor. ESB ve soap olarak çağrıldığını düşünüyor.
+Arada interapi var mı sordu,
+ , adaptörü nerede yazılacak
+Soap, rest dönüşümü 
+V2 olarak düşünme, ocean'da durum nasıl, nasıl konumlandıracağız.
+Asıl takıldıı nokta soap mı rest mi, 
+geçerken soap mı geçiyor, ocean a giderken interapi mi çağrılıyor.
+Paycore ile oturup konuşalım, sorularım varsa, 
+mobil, atm var bu sistemler ocean ile nasıl haberleşiyor?
+
+Adapterden oceana nasıl gidilecek?
+Ocean içinde kart numarasında müşterinin core servislerini çağırarak paycore ile konuşun
+Ocean içinden ters yönlü nasıl oluyor. Muhtemelen arasında ESB var.
+Alım konuşalım, 
+Paycore'daki adam, mustafa şimsek anlatsınlar.
+PUSULA, sigorta, mobil, atm , özet bilgiyi toplayıp getirmemiz lazım, ne iş yapıyor ? paycore ile konuş, 4arch, core development ile yapan arkadaşlardan biriyle konuşabiliriz.
+intertech içindeki koda başka birilye gitmek lazım, paycore koduna sokmazlar, .Fatih erboy, dedike ekipte team lead gibi çalışacak. kodu açacaklarını sanmıyorlar.
+
+Ayrıcalıklar Debit Kart:
+Mert beyin taip etmek istediği, ayrıcalıklar dünyası, kredi limiti vermiyorsunuz, 
+Adamın debit kartı varsa ayrıcalıklar dünyası için bunu kullansın. 
+Debit kartın ayrıcalıklar dünyası çalışması için neler yapılmsaı lazım. Ödül yüklemelerinde sıkıntılar var, Kaan'la konuşulacak.
+Hafta içinde toparlanacak.
+Ezgi küçükunsal mailinde notlar alınmış.
+
+kart ayrıcalıklarında kredi kartı işlemleri geçiyor.
+Debit kart harcamalarına bakmıyor.
+Debit kharmalarını da hesaplayıp debite iade edecekler, hesaıbına iade. 
+bunu Ezgler Çalış müşteri hesabına iade kısmı, Evam tool'unu yürüten Anıl Aybakan, şu kredi kartı işlemerine bakıyor, debit kart işlemlerne de bakacak.
+EVAM tooal, dışarıdan alınan, sms gönderimi, kazanımları hesaplıyor, şu kadar kazandınız diye işlem bazında veya toplu olarak yolluyor.
+Müşteri hem kredi hem de debit kartı varsa her ikisini de saycak mı, yoksa sadee tek kartı olanları mı kazanacak.
+1. kahve debit 2. kartı kredit ten aldı, ikisini kontrol etmesi lazım, iade edecek mi, 
+sadece kredi kartı olmayanların mı debitine bakılacak?
+
+Ayşe'nin durumundan bahsetmiş, baksın yapoabildiği kadarıyla yapsın, sıkıntı varsa feedback versin, ms tarafında sıkıntın mı var, neden yavaş yapıyorsun ?
+Geldiğinde de 2-3 bakarsınız. Kırmadan, üzmeden ilerleyelim.

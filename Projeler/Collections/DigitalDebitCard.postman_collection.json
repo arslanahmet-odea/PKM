@@ -1,0 +1,1451 @@
+{
+	"info": {
+		"_postman_id": "c8e5e536-6f46-4a74-a3b2-63fb3268a810",
+		"name": "DigitalDebitCard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13093850"
+	},
+	"item": [
+		{
+			"name": "MS",
+			"item": [
+				{
+					"name": "CreateDebitCard",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Parse the response body\r",
+									"let response = pm.response.json();\r",
+									"\r",
+									"// Check if confirmationToken exists\r",
+									"if (response.confirmationToken) {\r",
+									"    // Set it as an environment variable\r",
+									"    pm.environment.set(\"confirmationtoken\", response.confirmationToken);\r",
+									"    console.log(\"confirmationtoken set:\", response.confirmationToken);\r",
+									"} else {\r",
+									"    console.warn(\"confirmationToken not found in response.\");\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": \"9990-5418730-351\",\n  \"idempotencyKey\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"currencyCode\": \"TRY\",\n  \"isDomestic\": true,\n  \"isAbroad\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cards-feature-3005.appdev.ocpdev.odeabank.com.tr/api/cards/virtual-cards/debits",
+							"protocol": "https",
+							"host": [
+								"cards-feature-3005",
+								"appdev",
+								"ocpdev",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"api",
+								"cards",
+								"virtual-cards",
+								"debits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitCardDetail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}s/cards/virtual-cards/debits/{{shadowCardNumber}}?includeSettings=true",
+							"host": [
+								"{{creditCardsBaseUrl}}s"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}"
+							],
+							"query": [
+								{
+									"key": "includeSettings",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEncryptedCvv2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits/{{shadowCardNumber}}/cvv2",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"cvv2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEncryptedPan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits/{{shadowCardNumber}}/card-no",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"card-no"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Debit Cards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/debitcards",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"debitcards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Atm List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:64889/api/cards/debitcards/atmlist",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "64889",
+							"path": [
+								"api",
+								"cards",
+								"debitcards",
+								"atmlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ATM Limits",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-interapi-channel",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://dvp-ms-banking-transfers.apptest.ocpdev.odeabank.com.tr/api/transfers/transfer-limit?TransactionCode=QRCodeTransactions",
+							"protocol": "http",
+							"host": [
+								"dvp-ms-banking-transfers",
+								"apptest",
+								"ocpdev",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"api",
+								"transfers",
+								"transfer-limit"
+							],
+							"query": [
+								{
+									"key": "TransactionCode",
+									"value": "QRCodeTransactions"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitCards",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits?Status=1",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits"
+							],
+							"query": [
+								{
+									"key": "Status",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Virtual Card Limits",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJtd0FJWVZaV2pxWVBXRkNxRHdjbzU2R3NsTHB4d1dnN0xVRkdnQ004Z2RHLzkvbkQ3bEx5UHR3bFRhSWxuWFJwMW50YUhyWmFLd0gvSXE4SHhKcHN6QT09Iiwic3ViIjoiZjdkMGVhMDktOGJlMy00OGIwLWIyOTUtYjAyZjBiNTA5Y2RjIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTgwNTAzNywiZXhwIjoxNzYxODA1MTU3LCJpYXQiOjE3NjE4MDUwMzcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.k4zjJZldwEOnCwFzQbKTX4o6D8A68vZllGLWOs-Xvo1G_bAYTYgwvhs6f6Mm3dyc3xLADQxqk5zNSrhjRz0pmn2lkwAPhaIBkljX4ymDXgK5clfWw46-ZJ9UIH3_6AIV6E2CDpXYQD19gu3Ds8I6uTm0jFd4m4VE37Js0Mcrwl65UxOsNf1SUNk7U_mZHhMC7KGfop5ixbm5gxMF9IjKUNdh67xr7ukswvtRfNPioI_VcfyKJr4HbOsAeA6CZRwHtRAETA7YOCWJiDM7KrCh0dz2I2N52WDEgOPgpyBS6nnQqR0RNISkYM_3Wxz0UGISbbxHOMZxp_ONuYXSFf5mgA"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits/{{shadowCardNumber}}/limits",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"limits"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ecommerce Restrictions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJtd0FJWVZaV2pxWVBXRkNxRHdjbzU2R3NsTHB4d1dnN0xVRkdnQ004Z2RHLzkvbkQ3bEx5UHR3bFRhSWxuWFJwMW50YUhyWmFLd0gvSXE4SHhKcHN6QT09Iiwic3ViIjoiZjdkMGVhMDktOGJlMy00OGIwLWIyOTUtYjAyZjBiNTA5Y2RjIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTgwNTAzNywiZXhwIjoxNzYxODA1MTU3LCJpYXQiOjE3NjE4MDUwMzcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.k4zjJZldwEOnCwFzQbKTX4o6D8A68vZllGLWOs-Xvo1G_bAYTYgwvhs6f6Mm3dyc3xLADQxqk5zNSrhjRz0pmn2lkwAPhaIBkljX4ymDXgK5clfWw46-ZJ9UIH3_6AIV6E2CDpXYQD19gu3Ds8I6uTm0jFd4m4VE37Js0Mcrwl65UxOsNf1SUNk7U_mZHhMC7KGfop5ixbm5gxMF9IjKUNdh67xr7ukswvtRfNPioI_VcfyKJr4HbOsAeA6CZRwHtRAETA7YOCWJiDM7KrCh0dz2I2N52WDEgOPgpyBS6nnQqR0RNISkYM_3Wxz0UGISbbxHOMZxp_ONuYXSFf5mgA"
+							}
+						],
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits/{{shadowCardNumber}}/restrictions/ecommerce",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"restrictions",
+								"ecommerce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Ecom Restrictions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJtd0FJWVZaV2pxWVBXRkNxRHdjbzU2R3NsTHB4d1dnN0xVRkdnQ004Z2RHLzkvbkQ3bEx5UHR3bFRhSWxuWFJwMW50YUhyWmFLd0gvSXE4SHhKcHN6QT09Iiwic3ViIjoiZjdkMGVhMDktOGJlMy00OGIwLWIyOTUtYjAyZjBiNTA5Y2RjIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTgwNTAzNywiZXhwIjoxNzYxODA1MTU3LCJpYXQiOjE3NjE4MDUwMzcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.k4zjJZldwEOnCwFzQbKTX4o6D8A68vZllGLWOs-Xvo1G_bAYTYgwvhs6f6Mm3dyc3xLADQxqk5zNSrhjRz0pmn2lkwAPhaIBkljX4ymDXgK5clfWw46-ZJ9UIH3_6AIV6E2CDpXYQD19gu3Ds8I6uTm0jFd4m4VE37Js0Mcrwl65UxOsNf1SUNk7U_mZHhMC7KGfop5ixbm5gxMF9IjKUNdh67xr7ukswvtRfNPioI_VcfyKJr4HbOsAeA6CZRwHtRAETA7YOCWJiDM7KrCh0dz2I2N52WDEgOPgpyBS6nnQqR0RNISkYM_3Wxz0UGISbbxHOMZxp_ONuYXSFf5mgA"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"contactless\": true,\n  \"isAbroad\": true,\n  \"isDomestic\": true,\n  \"isMailOrder\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits/{{shadowCardNumber}}/restrictions/ecommerce",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"restrictions",
+								"ecommerce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CloseDebitCard",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJtd0FJWVZaV2pxWVBXRkNxRHdjbzU2R3NsTHB4d1dnN0xVRkdnQ004Z2RHLzkvbkQ3bEx5UHR3bFRhSWxuWFJwMW50YUhyWmFLd0gvSXE4SHhKcHN6QT09Iiwic3ViIjoiZjdkMGVhMDktOGJlMy00OGIwLWIyOTUtYjAyZjBiNTA5Y2RjIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTgwNTAzNywiZXhwIjoxNzYxODA1MTU3LCJpYXQiOjE3NjE4MDUwMzcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.k4zjJZldwEOnCwFzQbKTX4o6D8A68vZllGLWOs-Xvo1G_bAYTYgwvhs6f6Mm3dyc3xLADQxqk5zNSrhjRz0pmn2lkwAPhaIBkljX4ymDXgK5clfWw46-ZJ9UIH3_6AIV6E2CDpXYQD19gu3Ds8I6uTm0jFd4m4VE37Js0Mcrwl65UxOsNf1SUNk7U_mZHhMC7KGfop5ixbm5gxMF9IjKUNdh67xr7ukswvtRfNPioI_VcfyKJr4HbOsAeA6CZRwHtRAETA7YOCWJiDM7KrCh0dz2I2N52WDEgOPgpyBS6nnQqR0RNISkYM_3Wxz0UGISbbxHOMZxp_ONuYXSFf5mgA"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://cards-feature-3005.appdev.ocpdev.odeabank.com.tr/api/cards/virtual-cards/debits/{{shadowCardNumber}}/status",
+							"protocol": "https",
+							"host": [
+								"cards-feature-3005",
+								"appdev",
+								"ocpdev",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"api",
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Accounts",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json-patch+json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": \"1000-5418730-351\",\n  \"currency\": \"TRY\",\n  \"accounts\": [\n    {\n      \"accountId\": \"string\",\n      \"currency\": \"string\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{creditCardsBaseUrl}}/cards/virtual-cards/debits/{{shadowCardNumber}}/accounts",
+							"host": [
+								"{{creditCardsBaseUrl}}"
+							],
+							"path": [
+								"cards",
+								"virtual-cards",
+								"debits",
+								"{{shadowCardNumber}}",
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fortuna",
+			"item": [
+				{
+					"name": "GetAllDebitCard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AppKey",
+								"value": "ddd",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Channel",
+								"value": "API",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "ChannelSessionId",
+								"value": "WebApiTest",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Header\": {\r\n        \"Transfer-Encoding\": \"chunked\",\r\n        \"Accept\": \"application/json\",\r\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\r\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\r\n        \"Channel\": \"MOBILEAPP\",\r\n        \"ChannelSessionId\": \"Postman\",\r\n        \"ChannelRequestId\": \"POstman\",\r\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\r\n    },\r\n    \"Parameters\": [\r\n        {\r\n            \"CustomerNo\": 5418730,\r\n            \"CardFilterStatus\": 1,\r\n            \"ChannelName\" : \"ATM\" \r\n            \r\n            //\"ChannelName\" : \"ATM\", TYFCALLCTR ayrı \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\", WA_APPS parametresinde var\r\n            //Kanal tanımlandığında appp key var.\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetAllDebitCard",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetAllDebitCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AccountActivityListMessage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "AppKey",
+								"value": "ddd",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Channel",
+								"value": "API",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "ChannelSessionId",
+								"value": "WebApiTest",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Header\": {\r\n        \"Transfer-Encoding\": \"chunked\",\r\n        \"Accept\": \"application/json\",\r\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\r\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\r\n        \"Channel\": \"MOBILEAPP\",\r\n        \"ChannelSessionId\": \"Postman\",\r\n        \"ChannelRequestId\": \"POstman\",\r\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\r\n    },\r\n    \"Parameters\": [\r\n        {\r\n            \"SourceAccount\": {\r\n                \"AccountSuffix\": 352,\r\n                \"BranchCode\": 9990,\r\n                \"CustomerNo\": 5418730\r\n            },\r\n            \"QueryStartDate\": \"2025-06-01T00:00:00+03:00\",\r\n            \"QueryEndDate\": \"2025-07-23T13:30:56.077+03:00\",\r\n            \"QueryMinimumAmount\": 0,\r\n            \"QueryMaximumAmount\": 0,\r\n            \"ActivityCount\": 0,\r\n            \"SenderName\": \"MERT LÜK\",\r\n            \"GmtTime\": \"2025-07-23T10:31:06.9685361Z\",\r\n            \"ClientTime\": \"2025-07-23T13:31:06.9685368+03:00\",\r\n            \"CustomerNo\": 5418730,\r\n            \"CustomerPersonelAccountNo\": -1,\r\n            \"CustomerIdentity\": 100344226,\r\n            \"EBranchSessionID\": 27405185,\r\n            \"Amount\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetAccountActivityList",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetAccountActivityList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitAllowedCardGroupsStyles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n           \n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetDebitAllowedCardGroupsStyles",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetDebitAllowedCardGroupsStyles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateNewDebitCard",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Yanıttan JSON verisini al\r",
+									"let responseData = pm.response.json();\r",
+									"\r",
+									"// ConfirmationToken değerini güvenli bir şekilde al\r",
+									"let confirmationToken = responseData?.Data?.ConfirmationToken;\r",
+									"\r",
+									"if (confirmationToken) {\r",
+									"    // Environment değişkeni olarak ayarla\r",
+									"    pm.environment.set(\"confirmationtoken\", confirmationToken);\r",
+									"    console.log(\"ConfirmationToken set edildi:\", confirmationToken);\r",
+									"} else {\r",
+									"    console.warn(\"ConfirmationToken bulunamadı!\");\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 6629000,\n            \"CardEmboss\": \"Barış Coşkun\",\n            \"CardGroup\": \"516944\",\n            \"CardStyle\": \"007\",\n            \"CardBranchNumber\": 1000,\n            \"SourceAccount\": {\n                \"BranchCode\": 1000,\n                \"AccountSuffix\": 351,\n                \"CurrencyCode\": \"TRY\",\n                \"CustomerNo\": 6629000\n            },\n            \"DeliveryBranchNumber\": 1000,\n            \"CardPrintReasonCode\": \"\",\n            \"CardDeliveryType\": 1,\n            \"PinDeliveryType\": 1,            \n            \"TempCardOnly\": false,\n            \"IsExistingCustomer\": true,\n            \"CardType\": 0\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/CreateNewDebitCard",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"CreateNewDebitCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateNewDebitCardConfirm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"State\": 1,\n            \"ConfirmationToken\": \"{{confirmationtoken}}\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/CreateNewDebitCard",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"CreateNewDebitCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDebitCard",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Yanıttan JSON verisini al\r",
+									"let responseData = pm.response.json();\r",
+									"\r",
+									"// ConfirmationToken değerini güvenli bir şekilde al\r",
+									"let confirmationToken = responseData?.Data?.ConfirmationToken;\r",
+									"\r",
+									"if (confirmationToken) {\r",
+									"    // Environment değişkeni olarak ayarla\r",
+									"    pm.environment.set(\"confirmationtoken\", confirmationToken);\r",
+									"    console.log(\"ConfirmationToken set edildi:\", confirmationToken);\r",
+									"} else {\r",
+									"    console.warn(\"ConfirmationToken bulunamadı!\");\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CardNumber\":\"5169440000868327\",\n            \"CustomerNo\": 110181,\n            \"EndDate\":\"2029-07-06T21:18:41.087Z\",\n            \"CardEmboss\": \"Barış Coşkun\",\n            \"CardGroup\": \"516944\",\n            \"CardStyle\": \"007\",\n            \"CardBranchNumber\": 1000,\n            \"SourceAccount\": {\n                \"BranchCode\": 1000,\n                \"AccountSuffix\": 351,\n                \"CurrencyCode\": \"TRY\",\n                \"CustomerNo\": 6629000 \n            },\n            \"TempCardOnly\" : false,\n            \"IsExistingCustomer\" : true,\n            \"CardType\" : 0,\n            \"IsCvvBlockRemove\" : false,\n            \"CardStatus\": \"M\",\n            \"ResetIncorrectPinEntryCount\": true,\n            \"UpdateOperation\": 2\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/UpdateDebitCard",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"UpdateDebitCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateDebitCard-Confirm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"State\": 1,\n            \"ConfirmationToken\": \"{{confirmationtoken}}\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/UpdateDebitCard",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"UpdateDebitCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DebitCardListWithDetailsUnique",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 110181,\n            \"Card_Styles\": [\"007\",\"008\",\"009\"]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/DebitCardListWithDetailsUnique",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"DebitCardListWithDetailsUnique"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DebitCardListAllWithDetails",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 110181\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/DebitCardListAllWithDetails",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"DebitCardListAllWithDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitCardLimit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\"CustomerNo\":5123337,\"ShadowCardNumber\":\"2025103111110008\", \"ChannelName\": \"TYFMOBAPP\"} //ATM -TYFMOBAPP\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetDebitCardLimit",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetDebitCardLimit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCardTransaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"CustomerNo\": 140099,\n            \"ShadowCardNumber\" : \"2025102300000017\",\n            \"count\": 100,\n            \"StartDate\": \"2025-01-01T00:00:00\",\n            \"EndDate\": \"2025-11-01T18:00:00\",\n            \"ProcessType\": 5\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetCardTransactions",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetCardTransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitCardSecurityInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"Properties\": [\n                {\n                    \"NAME\": \"DEBIT_CARD_NUMBER\",\n                    \"VALUE\": \"5427240000873766\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetDebitCardSecurityInfo",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetDebitCardSecurityInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCardRestriction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer null"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"Postman\",\n        \"ChannelRequestId\": \"POstman\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\n    },\n    \"Parameters\": [\n        {\"CustomerNo\":7760142,\"ShadowCardNumber\":\"2025102100000009\", \"ChannelName\": \"ATM\"}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetCardRestriction",
+							"protocol": "https",
+							"host": [
+								"uatintervisionapp",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"Intertech.Fortuna.WebApi.Services",
+								"api",
+								"fortuna",
+								"GetCardRestriction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEncrypteCardNumber",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer null"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"Postman\",\n        \"ChannelRequestId\": \"POstman\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\n    },\n    \"Parameters\": [\n        {\"CustomerNo\":3426412,\"ShadowCardNumber\":\"2025091000000002\"}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetEncrypteCardNumber",
+							"protocol": "https",
+							"host": [
+								"uatintervisionapp",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"Intertech.Fortuna.WebApi.Services",
+								"api",
+								"fortuna",
+								"GetEncrypteCardNumber"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetEncrypteCvvInfo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer null"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"Postman\",\n        \"ChannelRequestId\": \"POstman\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\n    },\n    \"Parameters\": [\n        {\"CustomerNo\":3426412,\"ShadowCardNumber\":\"2025091000000002\"}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetEncrypteCvvInfo",
+							"protocol": "https",
+							"host": [
+								"uatintervisionapp",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"Intertech.Fortuna.WebApi.Services",
+								"api",
+								"fortuna",
+								"GetEncrypteCvvInfo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitCardDetail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer null"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",//Banka tanımlamış, mobilapp channel olarak geliyor.\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"Postman\",\n        \"ChannelRequestId\": \"POstman\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\n    },\n    \"Parameters\": [\n        {\"CustomerNo\":5418730,\"ShadowCardNumber\":\"2025102000000005\", \"ChannelName\": \"ATM\"} //ATM -Odea\n        //{\"CustomerNo\":7760142,\"ShadowCardNumber\":\"2025102100000009\", \"ChannelName\": \"ATM\"} //TYFMOBAPP -Odea\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/GetDebitCardDetails",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"GetDebitCardDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDebitCardDetail Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer null"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\", //Banka tanımlamış, mobilapp channel olarak geliyor.\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"Postman\",\n        \"ChannelRequestId\": \"POstman\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\n    },\n    \"Parameters\": [\n        {\n            \"Name\": \"GLOBAL_PAR\",\n            \"Key\": \"ALLOWED_STYLE_CODES_NEW\"\n        } //TYFMOBAPP -Odea\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetGlobalParValue",
+							"protocol": "https",
+							"host": [
+								"uatintervisionapp",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"Intertech.Fortuna.WebApi.Services",
+								"api",
+								"fortuna",
+								"GetGlobalParValue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetDebitCardLimit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Yanıttan JSON verisini al\r",
+									"let responseData = pm.response.json();\r",
+									"\r",
+									"// ConfirmationToken değerini güvenli bir şekilde al\r",
+									"let confirmationToken = responseData?.Data?.ConfirmationToken;\r",
+									"\r",
+									"if (confirmationToken) {\r",
+									"    // Environment değişkeni olarak ayarla\r",
+									"    pm.environment.set(\"confirmationtoken\", confirmationToken);\r",
+									"    console.log(\"ConfirmationToken set edildi:\", confirmationToken);\r",
+									"} else {\r",
+									"    console.warn(\"ConfirmationToken bulunamadı!\");\r",
+									"}\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"Transfer-Encoding\": \"chunked\",\n        \"Accept\": \"application/json\",\n        \"Host\": \"uatintervisionapp.odeabank.com.tr\",\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"MOBILEAPP\",\n        \"ChannelSessionId\": \"Postman\",\n        \"ChannelRequestId\": \"POstman\",\n        \"traceparent\": \"00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM\"\n    },\n    \"Parameters\": [\n        {\n            \"TotalLimit\": 11000.0,\n            \"LimitResetType\": 1,\n            \"PassBalanceCheck\": false,\n            \"ResetAfterXDay\": 1,\n            \"CustomerNo\": 113208,\n            \"ShadowCardNumber\" : \"2025090800000002\",\n            \"ChannelName\" : \"TYFMOBAPP\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/SetDebitCardLimit",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"SetDebitCardLimit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SetDebitCardLimit-Confirm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Transfer-Encoding",
+								"value": "chunked",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "uatintervisionapp.odeabank.com.tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Header\": {\n        \"AppKey\": \"d00b33d618c44e9187f947f8eacbd80f\",\n        \"Channel\": \"API\",\n        \"ChannelSessionId\": \"APITEST_20190406_1644\",\n        \"ChannelRequestId\": \"4c9273cadac344a6b2b3c749d9d30c56\"\n    },\n    \"Parameters\": [\n        {\n            \"ConfirmationToken\": \"{{confirmationtoken}}\"\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{fortunaUrl}}/SetDebitCardLimit",
+							"host": [
+								"{{fortunaUrl}}"
+							],
+							"path": [
+								"SetDebitCardLimit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "Get Atms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://odeaapigwtest.odeabank.com.tr/atms",
+							"protocol": "https",
+							"host": [
+								"odeaapigwtest",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"atms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

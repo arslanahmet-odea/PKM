@@ -1,0 +1,24 @@
+curl --location 'https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetAllDebitCard' \
+--header 'Content-Type: application/json' \
+--data '{
+    "Header": {
+        "Transfer-Encoding": "chunked",
+        "Accept": "application/json",
+        "Host": "uatintervisionapp.odeabank.com.tr",
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "MOBILEAPP",
+        "ChannelSessionId": "Postman",
+        "ChannelRequestId": "POstman",
+        "traceparent": "00-26dacecf763eaf1217c4c2761d7afdc4-c466e838cf373bd7-MM"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 9592889,
+            "CardFilterStatus": 1,
+            "ChannelName" : "TYFMOBAPP" 
+            
+            
+            
+        }
+    ]
+}'

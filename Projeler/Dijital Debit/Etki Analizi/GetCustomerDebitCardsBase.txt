@@ -1,0 +1,26 @@
+GetCustomerDebitCardsBase
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/Web References/DebitCardService/Reference.cs
+	GetCustomerDebitCardsBase fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetCustomerDebitCardsBase servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetCustomerDebitCardsBaseAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Operation/Web References/DebitCardService/Reference.cs
+	GetCustomerDebitCardsBase fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetCustomerDebitCardsBase servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetCustomerDebitCardsBaseAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/Web References/DebitCardService/Reference.cs
+	GetCustomerDebitCardsBase fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetCustomerDebitCardsBase servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetCustomerDebitCardsBaseAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+	
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Operation/Intertech.Operation.DebitCard/DebitCardServiceWrapper.cs
+	GetCustomerAllDebitCardsWithDetails fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetCustomerDebitCardsBase fonksiyonu kullanılır.
+-------------------------
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/DebitCardsQueries.cs
+	GetCustomerAllDebitCardsWithDetails fonksiyonu tanımlanır. DebitCardServiceWrapper referansı üzerinden GetCustomerDebitCardsBase fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fAppCreditCards/fAppDebitCard.cs
+	DebitCardListAllWithDetails fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsQueries üzerinden GetCustomerAllDebitCardsWithDetails fonksiyonu kullanılır.
+	GetNewDebitCardConditions fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsQueries üzerinden GetCustomerAllDebitCardsWithDetails fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fAppCallcenter/CallCenterQuery.cs
+	HaveCreditAndDebitNormalCard fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsQueries üzerinden GetCustomerAllDebitCardsWithDetails fonksiyonu kullanılır.

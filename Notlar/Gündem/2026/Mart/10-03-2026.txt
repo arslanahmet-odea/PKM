@@ -1,0 +1,29 @@
+Acil-Önemli : These are vital tasks with substantial urgency. 
+-Onayını al https://jira.intertech.com.tr/browse/ODEA-11342
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+-Paycore yük testi,endpointler özelinde Özgeler çalışma yapıyor bize gelecekler. UAT Masterpass geçişi olsun,debit kartlarla masterpass'i üyk testi yapılacak
+-Kaan ile axess entegrasyonu, taaks ve muhasebe nasıl oluyor, konuşulmalı.
+-CMS'den Kurumsal'a Kapatılamayan KK ve Banka Kartı Alanlarının Kapatılması,Kaan ile Emine konuşacaklar 
+-Turgutlar bddk düzenlemesi kapsamında limitlerin lks bildirimlerini yapıp düşürecekler ancak ocean tarafındaki limitler otomatik bu limite dönecek mi bunu teyit etmemiz gerekecek
+-Şaban beylerle vadeli hesapların bağlanması , kapatıldığı zaman sistem nasıl davranacak vb toplantı ayarlanmalı.
+-KK başvuru'da dosya nasıl upload edilecek, nasıl saklanacak, personel için ayrışması gerekli.
+-Mobil Uygulama – Erişilebilirlik (VoiceOver/TalkBack) Geliştirmeleri / Ocak Release(Yasal olduğunu hatırlamıyorum)
+-QR dokümantasyonunu oku
+-Master MR'larda sorun yaşıyoruz, her Mr için otomatik code review yapan(clean code veya unit test yazan) bir tool var mı?
+-Uygulamada en çok nereyi kullanıyorlar, en çok nerede hata almışlar?
+-İzlenebilirlik konusunda çalışma yapılacak, Ömer Can sorgu hazırlayacak.
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+
+
+1e1'lere ekle.
+What can I do to help you work better? 
+What do you wish that I did less of? 
+What has frustrated you in the last sprint? 

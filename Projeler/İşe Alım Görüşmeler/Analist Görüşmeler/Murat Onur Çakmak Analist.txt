@@ -1,0 +1,38 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Alternatif bank'a mobil tarafla ilerlettiği redesign projesi, deadline kısaydı, mobil tarafıon
+bağımlılığı yüksekti. Mobil ekiple birlikte projeyi ilerletmiş.
+-Servis üzerinde çok oynamalar yapılmış, süreçleri dikkate almadan, belki onları dikkate alıp
+ikna süreçlerinde daha iyi olabilirmiş.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+✅ Reflects, adapts, moves forward.
+Yorumda bulunamıyor.
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+Softtekte çalışırken temassızlar sıkıntılı çıkmış,kartlar tekrar basılmış.
+
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+
+Fiziksel pos tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+Bilemedi.
+
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3ds doğrulamada nerede kullanılır?
+Bilemedi.
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+
+Sertifikasyon süreçlerine girdin mi, sanal pos ?

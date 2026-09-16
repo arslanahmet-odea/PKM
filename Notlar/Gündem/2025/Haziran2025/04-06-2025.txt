@@ -1,0 +1,9 @@
+1-KMH Tahsilat Onay - Teknik Detay Aktarımı ve Hedef Tarih Hatırlatma. Ticket yoksa açılacak, 
+Sefa gelince Kaan beraber halledecek.
+2-ATM den Nakit avans işlemlerinde SMS gönderimine saat aralığı ekleme(Kaan)
+Kaan yorumu: Koray Bey'e sormak lazım.
+3-Hesap Ekstre Adresi Boş Gelenler - Ayrıcalıklar Dünyası Yaygınlaştırması Öncesi Kontrol Edilmesi Gereken Müşteriler
+
+
+-Kdig konusunda mail atıldı yanıt bekleniyor, daha 
+Avni, cache refresh atması lazım. Kaan test yapacak, çalışmıyorsa dzd'ye mail atılacak.

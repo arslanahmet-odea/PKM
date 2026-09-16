@@ -1,0 +1,75 @@
+{
+   5223478391514161
+  "username": "fizikseluatkart",
+  "password": "741963"
+}
+
+{
+   "creditCardNo": "5273838165677024"
+   "creditCardNo": "5269528293014796"
+  "username": "baristest5",
+  "password": "741963"
+}
+{
+   5223562547880814
+  "username": "Baris11",
+  "password": "741963"
+  "customerno" : "7438723"
+}
+{
+   4691810771946876
+  "username": "kartbusra",
+  "password": "741963",
+  customerno: "147811"
+}
+
+{
+   5223478387373465
+  "username": "baristest2",
+  "password": "741963"
+  "customerno" : 
+}
+
+{
+   5169440000871610
+  "username": "Odea5",
+  "password": "741963"
+}
+
+{
+   5273698287367759
+  "username": "iron5",
+  "password": "741852"
+}
+
+{
+	5192613761179362
+  "username": "iron1",
+  "password": "741852"
+}
+
+{
+	5273695880386244
+  "username": "baristest8",
+  "password": "741963"
+  "customerno": "191113"
+}
+{
+  "creditCardNo": "5273698244435988"
+  "username": "baristest13",
+  "password": "741963"
+}
+
+{
+  "creditCardNo": "5273698244435988"
+  "username": "Mrv7711",
+  "password": "741963"
+  "customerno": "6366711"
+}
+
+{
+  "creditCardNo": "kartı yok"
+  "username": "test6144596",
+  "password": "741963"
+  "customerno": "6144596"
+}

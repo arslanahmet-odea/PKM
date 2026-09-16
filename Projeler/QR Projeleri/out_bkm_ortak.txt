@@ -1,0 +1,283 @@
+﻿
+İhtiyaç Analiz Dokümanı
+BKM Ortak Karekod Projesi
+
+Versiyon
+Tarih
+Düzenleyen
+Bölüm
+1.0
+04.08.2020
+Fırat GÜLTEKİN
+BT İş Analizi
+
+
+
+
+
+
+
+
+
+Kontroller
+Kontrol Eden
+Tarih
+Bölüm
+Açıklama
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Talep Bilgileri
+Talep Sahibi İşkolu
+Kart ekipleri 
+İş Kolu Talebi
+
+Değişiklik Talebi
+BKM Ortak Not On-Us  Karekod Para Yatırma  Projesi
+
+İhtiyaç Analiz Kontrol Listesi
+Kontrol Maddesi
+Kontrol
+Geliştirmeden etkilenecek işkolları tespit edildi mi?
+Evet☒Hayır☐
+Siron AML, Siron KYC Questionnaire, Siron KYC Person Check, Siron Embargo programları aracılığı ile yapılan kontrollere, uygulanan kural setlerine etkisi var mı?
+Evet☐Hayır☒
+Kimlik tespiti yükümlülüğü kapsamında alınan bilgi ve belgelere etkisi var mı?
+Evet☐Hayır☒
+FATCA ve CRS Kontrollerine etkisi var mı?
+Evet☐Hayır☒
+SPK düzenlemelerine etkisi var mı?
+Evet☐Hayır☒
+Risk Derecelendirme düzenlemelerine etkisi var mı?
+Evet☐Hayır☒
+Başvuru Güvenliği kontrolü gerekli mi?
+Evet☐Hayır☒
+İşlem Güvenliği kontrolü gerekli mi?
+Evet☒Hayır☐
+Muhasebe Şablon değişikliği içeriyor mu?
+Evet☐Hayır☒
+Yeni Muhasebe şablonu oluşturulacak mı?
+Evet☒Hayır☐
+Yasal raporlamalara etkisi var mı?
+Evet☒Hayır☐
+Personel Maaş Maskeleme kapsamına dahil edilmesi gerekiyor mu?
+Evet☐Hayır☒
+ETL, EoD, SoD, DWH, Rapor Servis ve İş Zekası düzenlemelerine etkisi var mı?
+Evet☐Hayır☒
+LOG Kayıtları için düzenleme gerekiyor mu?
+Evet☐Hayır☒
+Yasal düzenlemeler kapsamında yapılan bir geliştirim mi?
+Evet☒Hayır☐
+Denetim bulgusuna istinaden yapılan veya denetimlere konu olacak bir düzenleme mi?
+Evet☐Hayır☒
+Entegrasyon içeren bir düzenleme mi?
+Evet☐Hayır☒
+Server, Database, kurulum gerektiren bir çalışma mı?
+Evet☐Hayır☒
+Uygulamanın DRC’de kurulması gerekiyor mu?
+Evet☐Hayır☒
+
+Zorunlu Düzenleme 
+☒ Yasal Düzenleme☐ Denetim Bulgusu☐İç Kontrol Bulgusu
+Hedef Tarih
+16.04.2025
+Bulgu Referansı ve Açıklaması
+
+
+Servis Sağlayıcılar 
+Intertech-Cubetron + BKM + Paycore
+İş Kolu Talebine İlişkin Mevcut Durum
+Mevcut yapıda bankamız ATM’lerinden not on-us QR (Karekod) ile para yatırma işlemleri yapılamamaktadır. Talep kapsamında bankamız müşterilerinin başka banka ATM’lerinden işlem yapabilmesi ve diğer banka müşterilerin bankamız ATM’lerinden işlem yapabilmesi sağlanıyor olacaktır. 
+Mevcut projemiz  PPY-1555 no.lu talep ile takip edilecektir. 
+Proje için Intertech-Cubetron ve Paycore servislerinde geliştirime ihtiyaç duyulacaktır.
+İhtiyaç Analizi
+Kapsam
+BKM Karekod projesi kapsamında bankalardan mobil uygulama aracılığı ile QR kod (karekod) taratarak birbirlerinin ATM’lerinde Not on-us para yatırma işlemlerini desteklemeleri beklenmektedir. BKM Ortak Karekod’un hesaba  para yatırma işleminde kullanılabilmesi için hesabın debit kart numarasının olmasına gerek duyulmaktadır. Proje sadece debit kartları kapsayacaktır. Kredi kartları kapsam dışındadır. 
+Bu proje kapsamında Odeabank müşterisi başka banka ATM’lerinden, başka banka müşterileri de Odeabank ATM’lerinden para yatırma işlemi yapabilecektir. Bankamızdan bu kapsamda mobil uygulamasının BKM karekod taratarak başka banka ATM’lerinden işlem yapmaya uygun hale getirmesi ve ATM’lerimizden de başka banka müşterilerinin BKM QR karekod görüntüleyip işlem yapabilecek hale getirmesi beklenmektedir.
+Mobil Uygulama geliştirimi
+Odeabank Mobil uygulaması üzerinden ATM’den işlem yapma aşağıdaki aşamalarla sağlanacaktır.
+Mobil uygulamaya şifre girilmedi ise;
+Karekod işlemleri menüsü altında Başka banka  para yatırma  işlemi yer alacaktır. Ayrıca bu menünün Karekod işlemleri gibi tek çatı altında toplanması müşteri için kolaylık olacaktır. 
+Müşteri sol alttaki karekod işlemleri ikonuna tıkladığında Para Yatır  butonundan para yatırma işlemini başlatabilecektir.
+Müşteri para yatırmak  istediği ATM için diğer banka ATM’ini seçtikten sonra işlem yapmak istediği banka kartını seçerek otomatik olarak o  karta bağlı hesaba  para yatırabilecektir. Daha sonra mobil bankacılık şifresini girecektir. Eğer müşteri uygulamaya konum izni vermedi ise izin vermesi istenecektir. Müşteri eğer konum bilgisine izin vermezse Push Notification ile gönderilecek bildirimle konum bilgilerine izin verilmesi sağlanacaktır. Uyarı metin içeriği iş birimi tarafından kararlaştırılacaktır. Konum servisleri açık olan müşterilere herhangi bir uyarı çıkmayacaktır. İşlemlerin başarısız ve hatalı olması durumunda bilgilendirme Push Notification ve sms ıntertech debit ekibi tarafından iletilecektir.
+İşlem BKM kanalı ile gerçekleşeceğinden BKM’ye bir kart numarası iletilmelidir. Bunu sağlayabilmek için müşteriye bu işlem için kullanabileceği (sadece) debit kartları sıralanmalı, ve ardından karta bağlı ana hesaba para yatırılacak şekilde süreç ilerlemelidir. Login öncesi işlemde kartın ilk 6 ve son 4 hanesi açık, diğer alanları maskeli gösterilecektir.. Login sonrası bu bilgiler açık halde görüntülenmelidir.
+   Aşağıdaki şekilde pre login not onus ATM karekod başka  para yatırma  işlem akışı görülmektedir.
+Mobil uygulamaya şifre ile girildi ise
+Mobil uygulama ana menüsünde, karekod işlemleri altında karekod görüntüle, QR ile Para Çek ,QR ile Para Yatırma , işlemleri yer alacaktır. Bu menüde Para yatırma  butonu altında para yatırma  işlemleri başlatılabilecektir.
+   Aşağıdaki şekilde login sonrası not onus ATM karekod para yatırma işlem akışı görülmektedir.
+
+
+
+Mobil uygulamanın kamera kullanım izni olmayan müşterilerin, kullandıkları cihaz ayarlarından bu işleme izin vermeleri gerekmektedir. Verilen iznin ardından ATM ekranındaki QR kod taratılıp para yatırma süreci ATM’de başlatılacaktır. Müşteri eğer kamera bilgisine izin vermezse Push Notificationile gönderilecek bildirimle kamera bilgilerine izin verilmesi sağlanacaktır. Uyarı metin içeriği iş birimi tarafından kararlaştırılacaktır. Kamera servisleri açık olan müşterilere herhangi bir uyarı çıkmayacaktır. İşlemlerin başarısız ve hatalı olması durumunda bilgilendirme Push Notification ve sms ıntertech debit ekibi tarafından iletilecektir.
+Diğer banka komisyon tutarı ATM üzerinden onaylanacaktır.
+Okutulan barkod’a göre banka algılanıp uygun akış başlayacak. Başka banka ATM’sinden işlem yapıldığında BKM dokümanında belirtilen akışta issuer süreci işletilecek. İşlemin sonucu başarılı ya da hatalı olması durumunda müşteriye sms ya da Push Notification ile bilgilendirme yapılacaktır.
+
+
+ ATM Geliştirimi
+
+Başka banka mobil uygulaması ile Odeabank ATM’lerinden BKM standartları kapsamında QR Kod ile para yatırma işlemi için ATM’de yapılacak geliştirmeler aşağıda yer almaktadır;
+Karekod ile para yatırma ön yüz akış ve kontrolleri BKM standartlarına göre düzenlenecektir.
+ATM tarafında olan QR düzenlemesine ekleme yapılacaktır.
+İşlem muhasebesi için Paycore sisteminin vereceği muhasebe servisi kullanılacaktır.  
+
+QR işlemlerinde Not On us  yapılan işlemler için ayrı bir muhasebe tanımı yapılması gerekmektedir. 
+
+Bkm tarafından iletilen tanımlı kodlar dışında kalan ATM kontrollerinde (para yatırma ünitesinin arızalı olması gibi) BKM’ye işlem başarılı olarak dönülecek, alınan hata ATM de gösterilecektir. 
+
+Diğer banka mobil uygulamasında kart seçildikten sonra ATM üzerindeki karekod okutulur. 
+Terminal IDLE durumunda beklemeye devam eder. Aşağıda yer alan kontroller yapılır. Gönderilecek hata kodları 
+qrData alanında iletilen Qr kod kontrol edilir.
+ATM’nin oluşturduğu son 2 qr koddan biri değilse ya da daha önce kullanılmış bir kodsa karşı bankaya hata gönderilir.
+Cihaz kontrolleri yapılır. Donanım arızası varsa karşı bankaya hata gönderilir.
+Konumun kontrolleri yapılır. Hesaplanan mesafe parametrede tutulan uzaklık değerinden büyükse hata gönderilir.
+Ekran 1
+                      
+
+BKM tarafından iletilen request formatında yer alan zorunlu alanlar kontrol edilir. Zorunlu alanlardan birinin eksik gelmesi durumunda hata gönderilir.
+BKM’den iletilen servis isteğinde EncryptedCardData ya da CVM değerlerinden biri boşsa hata gönderilir.
+BKM’den iletilen servis isteğindeki tarih ile sistem saati karşılaştırılır. Aradaki süre farkı parametrede tutulacak olan değerden büyükse hata gönderilir.
+Request içerisinde gelen alanların format kontrolü yapılır. 
+BKM’den iletilen CVM alanındaki değer kontrol edilir. Formatın uymaması durumunda hata gönderilir.
+BKM’den iletilen processingCode alanındaki değer kontrol edilir. Formatın uymaması durumunda hata gönderilir.
+BKM’den iletilen trxType alanındaki değer kontrol edilir. Formatın uymaması durumunda hata gönderilir. 
+iletilen channelCode alanındaki değer kontrol edilir. ATM işlemleri için ChannelCode: 3 gelmelidir. Bu değer dışında bir değer gelmesi durumunda hata gönderilir.
+
+
+
+Tutar adımı sonrasında komisyon sorgu servisi çağrılır. 
+Komsiyon tutarı>0 ise aşağıdaki mesaj gösterilir.
+Ekran 2
+
+
+Yapacağınız Bu İşlem İçin sizden ücret alınmayacaktır.
+Komsiyon tutarı=0 ise aşağıdaki mesaj gösterilir.
+Ekran 3
+
+
+ATM de par sayma akıları aşağıdaki gibidir 
+Ekran 4
+
+
+
+
+
+
+Güvenlik Önlemleri
+Konum kontrolü
+Issuer kurumun mobil uygulama lokasyonunu acquirer kuruma, ATM lokasyonu ile karşılaştırılmak üzere paylaşması gerekiyor. Konum kontrolünü işlem BKM’ye uğrayacak ise (diğer banka kartı ile yapılan işlemler) BKM, Odeabank kartı ile Odeabank ATM’sinden yapılan işlemler için Odeabank web servisleri yapacaktır.
+İşlemlerin Interfraud’a yollanması
+Interfraud’a düşen diğer işlemlerin yanında, karekod ile yapılan işlemler de Interfraud’a akmalıdır (işlemlerin BKM karekod ile yapıldığı belirgin olacak şekilde). 
+ATM’den yatırılan  maksimum tutar kontrolü
+Karekod ile yatırılacak günlük maksimum tutar ise kartla yatırılan tutar ile aynı olmalı, gerektiğinde bankanın;
+Genel limitlerin & özel limitlerin belirlendiği 2 farklı limit belirleme opsiyonu olmalı.
+Bu işlemlerin loglama yapısı, geriye dönük süreklilik arz edecek şekilde arşivlenebilmeli.
+Rapor gereksinimi
+Aşağıdaki raporlara gereksinim duyulacaktır;
+İşlem masrafları raporu
+Raporlama konusunda, ATMTMQ ve ATMJLV ekranlarında NOU müşteriler ve ONus müşteriler için, Karekod ile işlem yapıldığında, ayrı bir işlem kodu oluşturulmalı
+ATMJLV ekranında yansıyan tüm veriler (başarılı-başarısız), QR kod ile para yatırma  işleminde, onus müşteri onus ATM - Notonus müşteri onus ATM (hangi banka müşterisi, hangi ATM'miz, miktar, adet..) - onus müşteri notonus ATM (hangi banka ATM'si, adet, hacim,lokasyon..) kırılımlarında olmak üzere burada da yansımalıdır.
+ATMTMQ ekranından, ilgili işleme ait detayların cep telefonu,hesap vs gibi bir veri ile ulaşılmasının sağlanması için gerekli geliştirme yapılmalı.
+Müşteri İletişim Bilgileri ekranına Not  On-Us QR ile para yatırma  de eklenmeli.
+Bununla birlikte, ilgili işlemlerin Çok Amaçlı İşlem Raporları ekranına kanal adı “MOBILEAPP” , işlem adı olarak da “Qr Kod ile Para Yatırma- BKM” olacak şekilde eklenmesi gerekmektedir.
+
+
+İş Kolu / Kullanıcı Bilgisi 
+Aşağıda “evet” olarak belirtilen iş kolları ve kanallar yapılacak geliştirmeden etkilenmektedir. 
+İş Kolu
+Evet / Hayır
+Bireysel Bankacılık
+☐
+Ticari Bankacılık
+☐
+Kurumsal Bankacılık
+☐
+İşlem Bankacılığı
+☐
+Direkt Bankacılık
+☐
+Operasyon ve Destek Hizmetleri
+☒
+Kredi Tahsis
+☐
+Finans
+☐
+Hazine
+☐
+Finansal Kurumlar ve Yatırım Bankacılığı
+☐
+İç Sistemler ve Kontrol
+☐
+Uyum
+☐
+Teftiş Kurulu
+☐
+Bilgi Teknolojileri
+☒
+
+Kullanıcı
+Evet / Hayır
+Genel Müdürlük
+☒
+Şube
+☐
+Direkt Bankacılık
+(İnternet Bankacılığı, Mobil Bankacılık, İletişim Merkezi, ATM, Kiosk)
+☐
+
+Akış 
+N/A
+Hata Mesajları
+ <Hata mesajlarının detaylandırılması gerekiyorsa bu kısımda belirtilmeli>
+Hata Durumu
+Hata Mesajı
+
+
+
+
+Muhasebe Kayıtları 
+<Yeni muhasebe oluşturulması gerekiyorsa bu kısımda belirtilmeli>
+Onay Yapısı
+N/A
+Log (Kayıt) İhtiyaçları  
+Raporlama İhtiyaçları
+N/A
+Topoloji 
+N/A
+Sunucu ve Veri Tabanı 
+N/A
+Bilgi Güvenliği 
+Uygulamaya ait sunucular ana bankacılık ve veritabanı segmenti gibi kritik bir segmentte yer almayacaktır. 
+Dış dünya ile haberleşmesi gereken sunucu var ise DMZ segmentinde bulunmalıdır ve erişim https olarak sağlanacaktır. 
+Entegrasyon kapsamında kullanılacak tüm web servisler ve sunucular arası iletişim encrypted olmalıdır ve web servisler için authentication kullanılacaktır. 
+Uygulamanın ana bankacılık veritabanına erişimi bulunmayacaktır. .
+Kullanıcıların erişeceği önyüz sunucuların, DMZ segmentinde bulunacak sunucuların ve dış dünya ile haberleşecek diğer sunucuların direkt veritabanına erişimleri bulunmayacaktır. 
+Uygulama içerisinde kullanılacak tüm kullanıcı adı/şifre bilgileri açıkça okunabilecek şekilde bulundurulmamalıdır. Encrypted olarak güvenli bir şekilde saklanacaktır. 
+Test ve production ortamları birbirinden izole segmentlerde bulundurulacaktır. 
+
+

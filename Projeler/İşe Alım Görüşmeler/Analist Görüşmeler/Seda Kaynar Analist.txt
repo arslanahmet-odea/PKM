@@ -1,0 +1,31 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+İmza neyim var, bakanlıklara yapılan ilk YZ projesi .
+Fintek , mutabakat süreçlerinin otomatikleşmesi, yurt içi ve yurt dışı para birimlerini besliyor.
+Yüzlerce ve fiş tanımları ona çok şey katmış. otomatik, splerin tetiklenmesi batchlerin hazırlanması
+teknik olarak ona çok şey katmış. Özgüvenini tetiklemiş.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+ ✅ Reflects, adapts, moves forward.
+ 
+Ek isterler geliyor, teknik aksaklıktan dolayı iş uzadıysa bildiriyormuş.
+Yazılımcılar, reworke neden olursa ekip içinde hallediyormuş.
+Kariyer olarak geri bildirim almamış.
+
+
+Kullanıcı deneyimini geliştirmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Kendisi Postman öğrenip API'leri test etmiş. Olumlu
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+yok, Başka projeleri yapmaması çalışkanlığı sorgulanabilir, olumsuz, meraklı değil
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

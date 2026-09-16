@@ -1,0 +1,52 @@
+curl --location 'https: //uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/UpsertCustomerRPs' \
+--header 'Content-Type: application/json' \
+--data '{
+    "Header": {
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "MOBILEAPP",
+        "ChannelSessionId": "APITEST_20190406_1644",
+        "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 3426412,
+            "CustomerIdentity": 100344123,
+            "CustomerPersonalAccountNo": -1,
+            "SecurityContext": {
+                "VerifiedType": "NFC"
+            },
+            "Entries": [
+                {
+                    "ModuleID": 89,
+                    "RPLimit": true,
+                    "LimitValue": 10000,
+                    "LimitCurrency": "TRY",
+                    "RPTime": false,
+                    "TimeWindowStart": null,
+                    "TimeWindowEnd": null,
+                    "IsRestricted": true
+                },
+                {
+                    "ModuleID": 90,
+                    "RPLimit": true,
+                    "LimitValue": 10000,
+                    "LimitCurrency": "TRY",
+                    "RPTime": false,
+                    "TimeWindowStart": null,
+                    "TimeWindowEnd": null,
+                    "IsRestricted": true
+                },
+                {
+                    "ModuleID": 91,
+                    "RPLimit": true,
+                    "LimitValue": 10000,
+                    "LimitCurrency": "TRY",
+                    "RPTime": false,
+                    "TimeWindowStart": null,
+                    "TimeWindowEnd": null,
+                    "IsRestricted": true
+                }
+            ]
+        }
+    ]
+}'

@@ -1,0 +1,44 @@
+Trendyol Dijital Debit Kart
+26 Eylül'e kadar Endpoint bazlı hata kodlarını ileteceğiz.
+26 Eylül'e kadar Endpoint bazlı hatalar giderilecek, test senaryolarını Kaan çıkaracak.
+Hata kodları için listeyi çeşitlendireceğiz, hata kodlarını Avni entegre edecek.
+
+Odea Dijital Debit Kart
+Sefa, Tunç toplantı yaptık, endpointler destekliyor mu yorumlar yaptık, daha yorumlayacağız.
+
+Dolandırıcılık Önleme,
+Testler OK, kodlar merge'leniyor. İsmet'le merge konusunu konuştuk,
+2. İş paketi için yapılacaklar bizim tarafta net ama diğer ekiplerin altyapısını kullanacağımız için geliştirmelerini beklemek gerekiyor.
+
+Açık Bankacılık - Kart:
+Kart statü değişikliklerini bildirmemiz için paycore ile toplantı yaptık, Fatih inceleyecek, yanıt gelmedi..
+
+Debit Projesi:
+Testler OK görünüyor, limit konusunda yanıt geç de olsa geldi, düzenlemeler . 
+
+Kdig:
+Ancak ileri tarihli borç ödeme için oluşturulan emiri iptal etmeye çalıştığımızda işlem imzalama olmadan işlem özeti adımına geçiyor; 
+oradan onay verdiğimizde ise hata alıyoruz:
+
+KMH Tahsilat Onay:
+Codem ekranında KMH uyarısı çıkmasında hata alınmış ve otomatik ödeme var, orada sadece test yapacak.
+
+
+-Trendyol'a verdiğimiz takvimi biraz daha özelleştirip görselle verilebilir.
+-Yetkin, Hangi servisler sdk'dan gelecekse onların BFF'i yazmamız gerekebilir. Planın detaylandırılıp bir yere konulmasını istiyor.
+BFF'i yazmamız gerekecek, bunu takvimine eklemek gerekecek. Sefa, bu endpointler için iş çıkarır mı?
+
+-Sefa Destek olursa hoşumuza gider,  Koray'la konuşacağız başka yerden destek almaya çalışacağım. 
+
+-PCI DSS konuları, neler açık neler konulmuyor.İlk aşamada neler açık tutuluyor, neler tutulmuyor hangi akışlarda neler var. 
+Ahmet Emin Şit'le konuşalım, birlikte yapalım.
+
+-Sanal ve Debit kartlarda kart no göstermek için dolandırıcılıkla önleme modülü çıksın mı?
+-Kart no, cvv2, SKT tokenization öneriyor. Cüzdan sahiib san token'la gelmesi gerekiyormuş. 
+-Cüzdana kart no nasıl eklenecek, tasarımı etkileyecek bir şey var mı konuşabiliriz. Sorgulayıp da, Özgür ve Çağatay bilgi güvenliğinden.
+Ramazan direktör seviyesinde Duygu'nun ekibine gelmiş.
+Yetkin Bey'in isteği: Api gateway tanımlanma, kart microservisindeki tüm servisleri tanımlayın. Fırat yaptırırız, yeni sıfırdan varsa update yaptırabiliriz.,
+ilk sprint'te al.
+
+-Duygu ile scrum konusu 
+BE bir çözümü var. Altyapı müdürü Özgür Çelik, yöneticilikten alıp BE yapmaya çalışıyorlar.

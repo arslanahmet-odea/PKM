@@ -1,0 +1,13 @@
+-Ödeal Paycore ile toplantı ilettik, 
+-Alert mekanızması için isterleri Kaan ve Ömer Can'a ilettim.
+-Toplantıda hangi projeden bahsedebilirim.(harcama kategorizasyonu, Gelir Beyanlaştırma,
+KK ve banka Kartı Geçici Kapama - BE/FE)
+--tek başlığın altında, harcama kategorizasyonu,Kontrol Sende( KK ve banka Kartı Geçici Kapama - BE/FE)
+Kartlarla alakalı deneyim düzenlemeleri, analitic işi de var.
+-açık bankacılık , güncelleme istediler, 4arch yapmış ve test etmemizi bekliyor, şu an 
+-harcama kategorileştirme
+
+-key block testleri Barış'la devam edecek
+
+Barış'a aşağıdaki konularda test ettirelim, pre-prod'da test edildi mi, bakılmalı.
+core maddesi olan konularda , prod'a geçtiğinin kontrol edilmesi gerekiyor.

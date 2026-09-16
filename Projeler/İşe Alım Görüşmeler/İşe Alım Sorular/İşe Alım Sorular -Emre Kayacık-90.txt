@@ -1,0 +1,29 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardın sor.
+-En son yaptığı proje, Taksitli açık hesap, başvuru takip, kullandırım, taksitlendirme, erken ödeme, kendi üstlenmiş.
+Birbirine benzer class'lar, bunları code generator'a koyup ortak yapıya geçirip kod tekrarını önleyebilirdi.
+Branch yönetimiyle alakalı sorunlar, ortak bir test branch'i yok, öyle bir şey yapmak isterdi.
+Magic string varmış onları kaldırırdı.
+
+"Bana haksızlık olarak algıladığınız bir geri bildirim aldığınız bir zamanı anlatın. Sonra ne yaptınız?"
+Tüm şirket uzaktayken bir anda yakına çağırmaları kendine özel değil.
+
+❌ Uzun uzun savunur, başkalarını suçlar.
+
+✅ Düşünür, uyum sağlar, ilerler.
+
+ 
+Kullanıcı deneyimini geliştirmek veya projeyi ilerletmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Tekrarlı şekilde veritabanına gidilmektense cache mekanızmasına konulmasıyla hızlandırmış. Kendi insiyatifiyle yapmış.
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+Fikri varmış ve hayata geçirmeye çalışmış. Side projeleri var. 
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

@@ -1,0 +1,26 @@
+ KDIG-BE-FE-Geliştirmeleri tamam, infra'dan dolayı sorunlar vardı,  bugün Kaan son testlerini yapıp bilgi verecek, Kaan %80 testleri bitti dedi
+ ayrı olarak iş bazlı bilgi verilecek.
+ 
+ 
+ Ek kart limit artır menü , ek kart kullanıcı göremeyecek, asıl kart sahibi görebilecek, Buse test ediyor, test sonucu bildirilecek, 
+ NFC işleri bitmeye yakın bilgi güvenliği ekibi ile irtibata geçilecek ve pentest için sıra alınacak, (bireysel gidilmemeli)
+enqura ,  işlem tnaımı ve kontör artırma işlemleri yapılacak
+enqura parametre yönetimine gidip tnaım yapılmalı, test adresini alınacak
+test uuserini kps(kimlik parametreleri sorgulama) tablosuna keni kimlik bilgileirni gimreis gerekli, analist yapablir
+testler için haber verilmeli
+
+kullanıcının bir defa işlem limitini değiştirse 
+
+ayrı ayrı çıkabiliriz kdig'de , bunu ayırın, haziran arasında bu paket çıkacak, hazira sonunda ayrı çıkacağım.
+denetleme madde bazında çıkabilmemiz
+tam olanları başka yerde toplayalım,
+bir sonraki geçişlerde ekibi koordine etmem lazım, benim de bulunmam lazım geçişlerde.
+onayı ve test yapacak kişi Eray, ona emir verme yetkim yok, Eray'ı koordine etmek lazım.yapmıyorlarsa Kora'ya söyle , geçiş oldu mu , sistemsel hata oldu mu Fırat'la yapacağız.
+Sıkıntı olduğunda Koray'a yazıp gece gündüz destek olacaklar.
+Adaptör için isim verecekti, konsorsiyum başlkanı gelip bana sorun demiş,
+
+Başka banka kredi kartı borcu ödeme, kalmış
+Otomatik Talimat ile Kredi Kartı Borcu Ödeme, başarılı  
+ 
+Kredi kartına başvuruda Evren Işık, LKS sistemine takılıyor, Baran yardımcı olabilir.
+

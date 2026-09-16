@@ -1,0 +1,63 @@
+Acil-Önemli : These are vital tasks with substantial urgency.
+-ai alanları: planning, implementation, docs, testing, review, validation, and release.
+-Sinem loglama test ortamda kapatılabilir mi diye soruyor, ne yapayım.
+-Batuhan'a kk performans testi yaptır.
+-garati de react native
+-yurtiçi yurtdışı kart ayarları konusunda takip, Çağlar, 
+-Kart ayarı değiştirildiğinde kart'ın kapanması konusunda ne durumdayız. Çağlara da bilgi ver.
+-kdig konusunda 3-4 işlem yapılacak be'de destek gererkir mi diye Ömer can'a sor.
+-Favori kart analiz incele
+-Sanal ve Fiziki Debit Kartlarda  QR Para Yatırma Limit Gösterimi
+-Gelir beyanlaştırma Özgün'den servis bilgisi al
+-Kaan, Barış, PPY kayıtlarını incelesin, statüslerini takip edelim.
+-Odea troy axess için ıntertech hızlandırılmalı.
+-QR witdrawal işlemi hızlandırması lazım
+- "Debit Kart Ana Hesap Değişkliğinde Yurtiçi &Yurtdişi İzinler Pasif Hale Gelmesi Hk .
+ https://jira.intertech.com.tr/browse/SD-3061256"	5 Mayıs: BT destek'ten Cemre Şen, kartın üzerindeki bilgiyle DZD'ye iletilecek.
+ Job'ı DZD'ye göndermeli.
+
+-Harcama Kategorilendirme Faz1 ve Faz2 Tasarımları paycore ile konuşma konusu
+-ATM konularında Koray'ı bilgilendir.
+-DGpays için Taha ve Kaan'la konuş.
+-Kredi Kartı başvuru, müşteri e-posta kontrolü,Ömer den takip
+-Fiziki debit akıllı hesaplar, Çağlar'la konuşulup atama yapılabilir, e-ticaret yurtiçi yurtdışı 
+-Deniz Adil Demirci ile konuşulacak,paycore'dan kimle iletişim kurabiliriz. 
+-RE: Sanal Kart Limit Yönetiminin Güncellenmesi Kapsam Dokümanı,paycore üstündeki işleri birlikte konuşalım, ben mail atayım.
+-Koray, Nisan sonunda yurt dışına çıkacak, akıllı hesaplar harcamayı test edebilir yurt dışından.
+-DWH, Çözümle gelsinler veya biz de inceleyelim, çok değişiklik yapmadan devam ettirebilecek durumdaysak kurculayalım
+-Paycore tarafındaki alert için Fatih'lerle toplantı yapmak gerekli.
+-Kart işlem yaptıktan sonra hangi aşamalardan geçiyor, anlatılmalı.
+-QR Para Yatırma Not onus Limit(PPY-2445 - ODEA-11660)
+-4Arc'in yapacağı hassas loglama proje kaydı açılmış mı, PPY-2386 için açılmış ma iş birimi ile netleştirip Koray'a bilgi ver.
+
+-Koray: 1e1:
+-debit tarafta Barış'lar performance inceleyecek.
+paycore tarafında bir yük testi yapacağız.
+Debit tarafta Özge'nin çalışmasını ve UAT Masterpass'in canlıya alınmasını bekliyoruz.
+Bizim mobil'deki servisleri isteyecekler, sonra karta geleckeler, Özge takvimi isteyecek.
+Volkan Usman'lar yapıyor
+UAT Masterpass'in kart ekleme ve harcama aynı servisten geliyorsa yük testi yapılmalı.
+Digipays en fazla kaç istek geliyor, 
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+-Turgutlar bddk düzenlemesi kapsamında limitlerin lks bildirimlerini yapıp düşürecekler ancak ocean tarafındaki limitler otomatik bu limite dönecek mi bunu teyit etmemiz gerekecek
+-KK başvuru'da dosya nasıl upload edilecek, nasıl saklanacak, personel için ayrışması gerekli.
+-Mobil Uygulama – Erişilebilirlik (VoiceOver/TalkBack) Geliştirmeleri / Ocak Release(Yasal olduğunu hatırlamıyorum)
+-Master MR'larda sorun yaşıyoruz, her Mr için  otomatik code review yapan(clean code veya unit test yazan) bir tool var mı?
+-Uygulamada en çok nereyi kullanıyorlar, en çok nerede hata almışlar?
+-İzlenebilirlik konusunda çalışma yapılacak, Ömer Can sorgu hazırlayacak.
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+
+
+1e1'lere ekle.
+What can I do to help you work better? 
+What do you wish that I did less of? 
+What has frustrated you in the last sprint? 
+

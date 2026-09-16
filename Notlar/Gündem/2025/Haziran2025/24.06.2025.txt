@@ -1,0 +1,11 @@
+-DZD'ye gecikme için mail at
+-Debit Projeleri için Duygu ile adres bilgisi ve DYS işleri , tasarımı nasıl olacak konuş
+-Dolandırıcılıkla mücadele kapsamında Duygu ile konuş.
+
+-Odea Yüzyılı sayfasına görev tanımı ekle.
+"Ekibimiz, kredi kartı alanında en iyi yazılım mühendisliği uygulamalarını benimseyerek; kanunlara uyumlu, güvenli, yüksek performanslı ve kullanıcı dostu mobil/web arayüzleri ile backend servisleri geliştirir.
+Amacımız, sadece işlevsel değil, aynı zamanda temiz kod, test otomasyonu ve sürekli iyileştirme ilkeleriyle desteklenen kaliteli yazılımlar üretmektir."
+
+
+
+https://secure.odeabank.com.tr/client

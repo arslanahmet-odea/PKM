@@ -1,0 +1,22 @@
+Bir işin bittiğine karar vermek istiyorsan "İş bitti" tanımın olmalı.
+-limit düşürme doküman incelenmesi,ben
+-dolandırıcılık önleme senaryolar, ben
+-be kodların merge edilmesi, ben
+-Vergi Dairesine git,ben
+-Sanal Kart üretilme sayacı, takip 
+-TY etki analizin incelenmesi,SMS'ler için CR açılması, takip
+-Etki analizine göre ATM tarafına bakılması cubetron gerekir mi, 
+-Log'lama kapama işinin halledilmesi, takip
+-Log'lama taskının projesi açıldı mı?
+-Codem konusu test, takip
+-Temassız ve yurt içi - yurt dışı açılması fortuna servislerinin yazdırılması 
+-Açık bankacılık kartlar fortuna servislerinin yazdırılması, takip
+-Açık bankacılık kartlar intertech projenin açılması, takip.
+-Aysanın kart başvuru limit maili, RE: 114963 MUSTAFA ÜSTÜNDAĞ , Özgün hanıma bilgi ver.
+-DWH Debit kart tablolarının aktarılması, takip 
+-Koray'a TCKN, Ad-Soyad, Vergi no vb. loglanırken maskelenmeli mi sor
+-Production Call Center Hataları, takip
+-KKB üyeliği gerekli, Murat'a söyle üye olup dokümantasyonu indirsin, FTP'ye yükleme yapılması gerektiği ne zaman söyleniyor? https://www.kkb.com.tr/urunler/limit-kontrol-sistemi
+-Damla'ya mesaj yaz, klavye için
+-1e1 olmayanlara 1e1 ayarla.
+-Debit kart dijital slip yetişir mi?

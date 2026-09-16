@@ -1,0 +1,41 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+-Çok fazla müşteriye değdiği , world mobil, kampanya sistemini göreiblecekleri sistemi
+kaç puan kazandık gibi gördükleri için , 
+-innovasyon projesi olarak üye işyerleri kendi kampanyalarını yaması projesi.
+güzel feedback aldığı projeler kendini memnun ediyor.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+ ✅ Reflects, adapts, moves forward.
+
+Genel olarak olmadı, 
+Çok çaba sarfediyorsun, haksızlık geri bildirim mi? 
+ 
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+Yapı Kredi'de bir arkadaşın geçişi yüzünden olmmuş, tüm ödeme sistemlerini etkiledi.
+müşteri ödeme yapamadığınız için herkere geri dönüşü oldu.
+Acil durumlarda ne yapılacağına dair bir senaryo oluşturmuşlar.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+
+ders çıkarmış.
+
+
+fiziksel pos tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3ds doğrulamada nerede kullanılır?
+bilemedi
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+Takas dosyası tekrar isteniyormuş.
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+
+Clearing dosyası ile authorization logu neden tutmayabilir?

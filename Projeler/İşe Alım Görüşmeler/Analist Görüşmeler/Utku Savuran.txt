@@ -1,0 +1,32 @@
+Ekibinde testçi var mı, bizim ekipte testçi yok, test eforu fazla oluyor.
+
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Dijital slip projesi, AID gibi kavramları bilmiyormuş, bilmeden girmiş ve hızlı yamış.
+Kısa sürede iş çıkarmış, ürünü bilmeden iş çıkarmış. Listeleme işini öğrenmiş olmuş.
+Yeniden yapsa daha hızlı yapar. 
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+ ✅ Reflects, adapts, moves forward.
+ 
+Hızlandırmak için seni dürtmek lazım. Haksızlık olduğunu düşünmüş, deadline belirtilmediği
+sürece ona göre uydurmaya çalışırmış.
+Bazen ekip içinde analizini yamaya çalışıyor, 
+
+ 
+Kullanıcı deneyimini geliştirmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Kendisi Postman öğrenip API'Leri test etmiş. Olumlu
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+yok, Başka projeleri yapmaması çalışkanlığı sorgulanabilir, olumsuz, meraklı değil
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

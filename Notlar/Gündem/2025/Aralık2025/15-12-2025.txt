@@ -1,0 +1,52 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Pluralsight satın alma gruba yaz.
+-ATM tarafını uygulama destek tarafını eklemek gerekebilir, Fırat'ın yollayacağı soruları yanıtlayıp gelsinler.
+Hepsi dijital kanallardan geliyor, sorumluluk sizde.
+-MCC konusunu Özgür'le konuş, hot fix' beklemeden ekleyelim.
+-Sistemlerimiz ne kadar hata alıyor
+-Sanal kart limit değişimi, Tunç'la ilerlenmeyecek
+-Limit artırım ve sanal kart başvuru transactioncode
+-UAT'i de batch çalışmıyor. Ayrıcalıklar dünyası MCC çalışmıyor.
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-Visa Clearing Exchange Geçişi , Emrah Mersinli ve Hasan Cihan, takas operasyon, 2026 Ağustos deadline
+Daily hızlıca konuşabilir, Meral de götürebilir.
+-LKS pazartesiden itibaren aktif olacağız. Netleştirelim, https://jira.intertech.com.tr/browse/SD-2866025
+-Production Call Center ek kart başvuru iptal, Çağlar'da, takip
+-Production Call Center teslimat adresi, Batuhan'a ata.
+-CMS menülerinin call center ekranlarında gizlenebilmesi isteri hakkında, maili ,konuyu konuşmak gerekli.
+-Pusula Ekstre Adres Değişikliği Hakkında , Murat Takip et
+-Ömercan Sucu,
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı, takip
+-Codem konusu test , takip deploy 18'inde takip et.
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+-Online Vergi Dairesine bilgi gir
+
+Retro Konuları:
+-Daha sık geçiş yapılmalı.
+-Freeze önce tüm testlerin bitmesi, tampon süre, retro konusu.
+-Daily süresi çok uzuyor, Sanal Debit Grup kuralım, retro konusu.
+-Pipeline'lar çok uzun sürüyor. Kod bölünmesi.
+-Çok fazla task alıyoruz.
+
+Koray'la 1e1:
+-4Arch'te işler, testçileri yok biz test ediyoruz, acemi yazılımcı, scriptler taşınmamış,
+3 yazılımcı, 2 analist, 2 iş bir'mi, neredeyse 8 kişi çalışıyoruz , 
+Paycore'da işler öyle yürümüyor.
+
+Paycore'da dedike online işlem, takas, 
+
+Regresyon hatası pre-login QR para çekme limitleri hatalı görünüyor.
+
+Mert'e yumuşak mail hazırlayalım. 
+
+2026' Q-1 slicing, Duygu ile konuşmak gerekli ,  Troy Debit, Key Block
+Proje varsa ilerletilmeyen, Açık Bankacılık Kartlar, 

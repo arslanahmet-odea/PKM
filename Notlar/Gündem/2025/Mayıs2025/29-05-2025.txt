@@ -1,0 +1,3 @@
+1- KDIG-BE-FE-Geliştirmeleri durum raporu hazırlanacak
+2- NFC ile ilgili toplantı yapılacak ve süreç uzatılacak(kaygılar derlenecek)
+3-Bug ticket yapılacak.

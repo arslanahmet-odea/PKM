@@ -1,0 +1,22 @@
+{
+    "$type": "ServiceResponseMessage",
+    "Data": {
+        "$type": "CashLimitQueryMessage",
+        "BankingCustomerNo": 123,
+        "CashLimit": 995.0,
+        "MaxCashLimit": 1000.0,
+        "FinansInvestCustNo": -1,
+        "QueryId": -1,
+        "CustomerNo": -1,
+        "QueryDate": "0001-01-01T00:00:00",
+        "EndDate": "0001-01-01T00:00:00",
+        "QueryCode": "",
+        "Explanation": "",
+        "QueryState": -1,
+        "QueryLogDate": "0001-01-01T00:00:00",
+        "LogQuery": false,
+        "CustomerPersonelAccountNo": 0,
+        "ShareAccountNumber": 0,
+        "SealId": 0
+    }
+}

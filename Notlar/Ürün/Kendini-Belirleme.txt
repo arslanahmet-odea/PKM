@@ -1,0 +1,10 @@
+Who are the ideal users of your product? 
+Why does the problem you’re solving matter to them? 
+How is your approach different than the others out there? 
+What edge does your technology provide? 
+Which features are currently implemented and working? 
+Which features are most requested or slated for the next releases?
+What is the company’s long-term vision? 
+How have the company’s values affected its approach so far?
+What are the most pressing issues for the business or assumptions that need to be validated? 
+Which of your current value offerings have the most traction or impact on the company?

@@ -1,0 +1,31 @@
+push öncesi bu kodu çalıştırarak boşlukları temizle
+dotnet format --severity error
+
+packages.lock.json dosyalarını geri almak için
+ 
+git checkout HEAD -- *packages.lock.json
+
+
+Bu işlem geri alınamaz, yani yapılan lokal değişiklikler silinir.
+
+Commit’lenmiş değişiklikleri etkilemez, sadece commit’lenmemiş (staged veya unstaged) değişiklikleri siler.
+
+İstersen bu işlemi önce git diff ile kontrol edebilirsin:
+
+git diff *packages.lock.json
+
+İstersen, sadece bir dosyada uygula:
+
+git checkout HEAD -- path/to/packages.lock.json
+
+
+
+Ya da:
+git checkout -- $(git ls-files | grep packages.lock.json)
+Bu komut:
+
+git ls-files ile versiyon kontrolündeki tüm packages.lock.json dosyalarını listeler,
+
+Sadece Git tarafından takip edilenleri geri alır (untracked olanlara dokunmaz),
+
+Platformdan bağımsız (Windows cmd/powershell veya bash fark etmez, shell’e uygunsa çalışır).

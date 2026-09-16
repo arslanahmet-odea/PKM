@@ -1,0 +1,41 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+-Akbank tarafında NFC ile onaylama, bazı fonksiyon süreçleri için analiz yazmış,
+güzel iş çıkardığı için kendisiyle gurur duyuyor.
+-Çok fazla case ve derine indikleri dönemler olmuş. Tez canlılıkla kendini yormuş.
+
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+✅ Reflects, adapts, moves forward.
+
+-Geri bildirim almamış, bazen emek veriliyor ama görünmüyor mu diye kendi içinde 
+söylenebiliyormuş. 
+-OBSS'ye geri bildirim vermiş ama dikkate alacaklarını pek sanmıyor. Konuşmayı ve sorunu bildirmeyi tercih ediyormuş.
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+-Limit artırım ekranındaki mesaj gösterimi bozulmuş.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+Fiziksel pos'tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+Son kullanıcı kadar bildi(qr ve NFC işlemleri özetledi)
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+Bilmiyor.
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+Yok
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+Yok
+
+Sertifikasyon süreçlerine girdin mi?
+Girmemiş.
+
+Otomasyon testi yapmamış.
+

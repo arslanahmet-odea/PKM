@@ -1,0 +1,24 @@
+-ATM para çekme işlem hızlandırma için kart var mı kontrolü eski endpoint kullanmış.
+-SME konusunda hesaplar hazır değil, Duygu Temmuz 2027 için bütçe hazırladık diyor,biz 5 ay öncesinde hazırdık
+-Dijital Gelir belgesi faz2 eylülde geçeceğiz(hatırlatma job'u, önceden başvurusu varsa son başvurusuna ekliyoruz)
+-LKS konusunda 
+-Pentest yapılıyor, BKM'den hata geldi tekrardan iletildi.
+-Alert konusu için 
+-Kdig kalan sayfalar için Engin'in ekibiyle toplantı yapacağız
+-ÇM KK ekranlarını açacağız( ie11 )
+-Dolandırıcılık önleme,
+-ödeal projesi(intertech alanlar)
+
+-Debit Core tarafta bir yazılımcı olsa 4Arch'e yaptırığımız işlerin %70'ini yaptırırız.
+-Debit core tarafı bizim yazılımcılar inceleyebilmeli.
+Tek kullanıcı ile girip kodları yazılımcılar inceleyebilir.
+İş yapabilen doğru iş çıkartan 
+-Acquier tarafı için test yapıyor, authorizasyon bilen kişinin eci(Toygun)
+-Mevcutta çalışmadığı için preprod ortam adına sorun kaydıyla gidilebilmeli.
+-Fatih'ten başka sorun yok, Uğur bilgili değil(yeterli değil).
+-Mustafa ile Kaan çalışırken yarım paket taşımış
+
+
+-Çağlar'la yaşadığımız konular
+
+

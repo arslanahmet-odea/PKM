@@ -1,0 +1,18 @@
+Set:
+curl --location --request PUT 'https://odeaapigwtest.odeabank.com.tr/virtual-cards/2025101000000001/restrictions/ecommerce' \
+--header 'Ocp-Apim-Subscription-Key: 1z***hH' \
+--header 'Authorization: Bearer eyJ***AA' \
+--header 'Cookie: 5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=bbd973c1db3ed20fd98769d66ff2e244; 5c9fb466de928c48479d8d688fe5837b=c9ad424b3143f3e7c231a1e5f111635e; f7217d2d75ee3ae3f6359914e2642b01=f21b4b7b4a87fe8a7733dd00eeca5b54' \
+--header 'Content-Type: application/json' \
+--data '{
+     "Contactless": true,
+    "IsAbroad": false,
+    "isDomestic": false,
+    "IsMailOrder" : false
+}'
+
+Get:
+curl --location 'https://odeaapigwtest.odeabank.com.tr/virtual-cards/2025101000000001?includeSettings=true' \
+--header 'Ocp-Apim-Subscription-Key: 1z***H' \
+--header 'Authorization: Bearer ey****qMBAA' \
+--header 'Cookie: 5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=c9ad424b3143f3e7c231a1e5f111635e; f7217d2d75ee3ae3f6359914e2642b01=f21b4b7b4a87fe8a7733dd00eeca5b54'

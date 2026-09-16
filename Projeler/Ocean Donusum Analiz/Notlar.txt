@@ -1,0 +1,41 @@
+Pusula'ya , Ocean kodlarına erişim istiyorum. Nasıl bir dönüş alacağız, paycore yetki vermeyecek 
+Aynı anda iki taraf ta çalışacak.
+intertechc core developer'lardan öğren,intertech development yetkisi düşüyor.
+pusula'dan çağırıyor, Rota'dan çağırıyor, hepsine iyi kötü bakılması gerekliara katmanla yapabilir miyiz yapamaz mıyız?
+Tüm vaktini harcama, Sinan bey sorduğunda , yetkiler alındaı, kodlar inceleniyor
+paycore kodumu açmam derse detayına bakamıyoruz deyip sekteye soracak.
+
+Hüseyin Yasin Sezer, Yusuf ya da Muzaffer, intertech tarafı için , ocean'dan gelen çağrılar lazım.
+olmam derse 
+Yusuf'tan alınan bilgiyie göre ilerle,
+Paycore için de , Meral'le kime gidilecek diye konuşulacak. 
+
+Pusula, customer DB veritabanı , müşteri bilgilerinin olduğu CRM
+
+Kartlarla ilgili kullandıımız endpoint'lerden örnek varsa Yusuf iletecek.
+ESB üzerinden giden
+doğrudan Core Servis (Paycore veya Ana Bankacılık(intervision ekranından açılan sayfalar))
+
+Rota-Pusula kodu varsa birlikte bakalım, projesi açılabiliyor mu?
+
+Rota(İş süreçlerinin tutulduğu servis) nasıl haberleşiyor,
+Veritabanına ulaşan örnek bir kod parçası.
+
+Pusula Nasıl haberleşşiyor
+Fortuna ve ESB haberleşmesi
+müşteri modülü le etkileşimi nedir
+
+İş konusunda know-how oluşması gerekli, dügzün dokümantasyon olması , Ahmet buradaki tüm servisleri akışlaro dokümantas etmiş olacak
+bendeki bu servislerin sendeki karşılığını alacak.
+
+Pusula'ya , Ocean kodlarına erişim istiyorum. Nasıl bir dönüş alacağız, paycore yetki vermeyecek 
+Aynı anda iki taraf ta çalışacak.
+intertechc core developer'lardan öğren,intertech development yetkisi düşüyor.
+pusula'dan çağırıyor, Rota'dan çağırıyor, hepsine iyi kötü bakılması gerekliara katmanla yapabilir miyiz yapamaz mıyız?
+Tüm vaktini harcama, Sinan bey sorduğunda , yetkiler alındaı, kodlar inceleniyor
+paycore kodumu açmam derse detayına bakamıyoruz deyip sekteye soracak.
+
+Hüseyin Yasin Sezer, Yusuf ya da Muzaffer, intertech tarafı için , ocean'dan gelen çağrılar lazım.
+olmam derse 
+Yusuf'tan alınan bilgiyie göre ilerle,
+Paycore için de , Meral'le kime gidilecek diye konuşulacak. 

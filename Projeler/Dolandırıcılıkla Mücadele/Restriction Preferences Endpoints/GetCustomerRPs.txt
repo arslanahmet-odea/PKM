@@ -1,0 +1,29 @@
+curl --location 'https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/GetCustomerRPs' \
+--header 'Content-Type: application/json' \
+--data '{
+    "Header": {
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "MOBILEAPP",
+        "ChannelSessionId": "APITEST_20190406_1644",
+        "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 3426412,
+            "CustomerPersonelAccountNo": -1,
+            "CustomerIdentity": 100344123,
+            "SessionLanguage": "TR",
+            "RPsFilter": {
+                "GroupModule": "CreditCardProducts",
+                "Module": "CashAdvance",
+                "Channel": "MOBILEAPP",
+                "CustomerType": 1,
+                "RPsState": 1,
+                "RPsApplicationType": 1,
+                "TransactionCodes": [
+                    "CreditCard_CashAdvance"
+                ]
+            }
+        }
+    ]
+}'

@@ -1,0 +1,24 @@
+Daha çok dinel
+ne kadardır bu roldesin
+Mobil uygulama konusunda şu ana kadar sizin tarafınızdan işler nasıl gidiyor?
+Son zamanlarda beklenenden daha yavaş ilerleyen bir şey var mı?
+Mühendislik ekibi tam olrak hangi noktada dahil olmalı , analiz geldikten sonra mı, bugünkü gibi beraber konuşmayı mı?
+
+roadmap türü şeyler varsa paylaşmnı rica ediyorum, hedefler vb
+ürün açısından öncelikleri ve nasıl yardımcı olabiliriz?
+
+işleri takip etmem gerek, it tarafından paycore ve intertech'e sıkıştırması gerekiyor,
+analizi yazarken onu da yönlendirmek ve kpsamı belirlemek gerekiyor, şu kısım bizde şu tablodan alınacak
+app performance iyileştirmesi, interapi hızlandırmak için, nasıl hızlandırılabilir, only backend işlerinde ahmet emin şite gidiyorlr nasıl hızlandırabilyorlar
+kendi kendilerini çözmesinler ,
+şu an için yasal işleri bitirmek gerekiyor. ms : microservices
+hazirana kadar, öncelik regülasyon. debit işlerini intertech yapıncaya kadr hızlandırmak yapılabilir
+yeni projeler gelecek,aile bankacılığı gelecek.
+şurası intertech veya bkm ye gidecek
+anlatılırken teknik anlamda neler 
+
+Duygu Merkit 5/15/2025 3:08 PM • 
+\\odeabank.com.tr\dfs\Retail Banking\Shared\Kredi Kartlari ve Krediler\BANKA VE KREDİ KARTLARI\KREDİ KARTI\House of cards\Sprintler
+
+
+masterpass ile avniye geldikten

@@ -1,0 +1,35 @@
+Gündem:
+
+-Trendyol projesi
+Fiziki endpointlerde de listeleme için Barış'ın yolladığı çözüm üstünden konuşalım
+Hassas veri şifreleme Proje açtırdık , içeriğini Ayşe'ye anlattım, mesaj tipleri ve endpointleri çıkaracak.
+
+-Dolandırıcılık Önleme, faz-1 için önyüzde mesajın değişmesi
+BE bitti, FE bitti, testler ve pentest devam ediyor. EFT altyapısında bir sorun çıktı, 
+
+-KK için contactless aç-kapa, yurt içi yurt dışı e-com ayrımı , bunlar için iş yaptırılacak
+
+-Açık bankacılık Kartlar
+Tunç baktığı zaman iş birimi çok itiraz ediyor,
+
+QR Projesi,
+Orada kodlama yapmayı ben planlıyorum,
+
+-Kmh geliştirmeleri
+Yusuf Zopçuk Codem geliştirmesini bitirmiş, Kaan'a ilettimç
+
+Maliyetler konusu:
+
+1-“Önümüzdeki 12 ayda bu pozisyonda benim için başarıyı nasıl tanımlarsınız? Hangi sonuçlara ulaştığımda 
+‘Ahmet bu rolde gerçekten fark yarattı’ dersiniz?”
+Amaçlanan: "Beni hangi sonuçlara göre değerlendireceksin?” sorusunun profesyonel hâli."
+2-“Senin yükünü nasıl hafifletebilirim?” Yöneticine doğrudan destek olabileceğin alanları öğrenmek.
+“Günlük operasyonlarınızda ya da projelerde üzerinizdeki iş yükünü azaltabilecek bir alan var mı? 
+Benim katkı sağlayabileceğim yerleri öğrenmek isterim.”
+
+3-“Şu anda çözülmesi gereken en acil konu nedir?”
+“Size göre şu anda benim odaklanmam gereken en kritik konu nedir? Nereden başlamam en doğru olurdu?”
+Timesheet konusu önemliymiş, geliştirme olarak trendyol olarak toparlıyoruz.
+Geçiş'le alakalı iş çıkmış, kritik değilse kalsın.
+
+4-“Yarın elimizde ek kaynak olsa, benim ekibim veya alanım içinde bunu nereye yatırmamı önerirsin?”

@@ -1,0 +1,26 @@
+Koray gündem:
+-Ödeal projesi, tyf kadar büyük bir proje, paycore tarafına be bize kaynak gerekli.kart paketi değişecekse anlamı da yok.
+-Timeout sorunları inceleniyor, iyileştirme yapacağız, bizde %99.95 oranında doğru yanıt vermesi gerekiyormuş.
+-Özgür'ün çıktığı ve geliştirdiği kodları Avni'yle birlikte tarıyoruz
+-BKM ekspress, bex diye ürün olmuş, onun entegrasyonu için barış çalışıyor.
+-TLS konusu için Fatih İstanbullu mail atmam diyor.
+-Limitler konusunda Engin'le toplantı yaptık, proje açılacak ve teknik çözüm anlat, tek servis konusu
+
+(dijital gelir belgesi canlıya açılması ve limit konusu nasıl çözülecek, selinle konuş)
+-Avni'nin kodlar takip ediyor.
+-Aktiftech'e daha yakın daha sorunsuz geçebilir, api servislerini dorğudan mobile bağlarız.
+-Ekibimde sorun varsa doğrudan bana gelinmeli  İşleri takip etmiyor düşüncesinin , gözlemi varsa sor.
+
+-Koray'a fe 'de intellisense'e sorun var, fe frameworkers çözmeli, 1 yıldan eskiden beri devam ediyor
+
+Kart bilgileri için cache yapılabilir mi?
+kart hareketleri ekstre ve dönem içi + provizyon(hesap tarafına da dönelim)
+-RE: BKM Express’in bex Olarak konusunda Meral'e gidip öncelik almamız lazım.
+
+
+
+-Barış'ın attığı, UAT geçiş izni mailleri, Koray dönmüyorsa bana teams'ten yazın.
+-Pre-prod testleri(acil,yapamayacağımız durum varsa netleştirelim), Barış'tan teyit edeyim, Yetkin takip ediyor. UAT'ye yönlendirip yapın demiş Özge Bey'den
+-DRC testleri için de aynı şekilde takip ediyor. HSM düzeltilmesi bekleniyor, ATM sorununda 
+
+Ekiplerden beklediğimiz konular, wiki sayfası oluşturalım

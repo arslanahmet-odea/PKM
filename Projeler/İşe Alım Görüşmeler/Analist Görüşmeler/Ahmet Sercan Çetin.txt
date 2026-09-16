@@ -1,0 +1,34 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+şu an son çalıştığı, Ziraat dinamik , banka sıfırdan baka kuruyor, tahsilat işlemleri yapılabiliyor.
+planlamasını daha iyi yapabilirmiş. Ziraat bankası üstünden gitmiş, doğrudan diğer kurumlara gidebilirmiş.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+ ✅ Reflects, adapts, moves forward.
+ 
+Terfi bekliyormuş ama alamamış, haksızlığa uğramış.
+YÖnetici ile konuşmuş ama bir şey söylenmemiş,
+komisyon var 10 dkk'lık mülakat var, iyi kötü emare yok.
+
+Projelerde neden böyle yetişmediği gibi sorular oluyormuş. Aynı şeyler tekrar soruluyormuş,
+banka tarafı durup durup parlıyor ve telaş kaplıyormuş.
+Aynı konular dönüp dolaşıp geri gelebiliyormuş.
+600 kurumla çalışıyormuş, bir kısmını devreye alabilmişler
+Üst yönetimden ne kadar z diye bilgi gelmiş.
+ 
+Kullanıcı deneyimini geliştirmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Kendisi Postman öğrenip API'Leri test etmiş. Olumlu
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+yok, Başka projeleri yapmaması çalışkanlığı sorgulanabilir, olumsuz, meraklı değil
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

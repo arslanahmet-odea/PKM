@@ -1,0 +1,69 @@
+Avni Kubat 9/4/2025 11:45 AM • 1)trendyol create card hesap currecy code gelmeli,
+2)trendyol create card'da yollanan değerler response olarak isteniyor mu, bize ilettiğiniz account id arayüzünde var.
+3)trendyol create card expire date değeri dönmüyor, şart mıdır ?
+4)trendyol card detay'da status dönmüyor, şart mıdır ? Barış bakacak
+5)language
+6)cardgroup konuları
+7)kart ve cvv2 şifre, verebilecek misiniz, sıkıntı var mı?
+8) kart listelmede trendyol ve odea ayrımı
+
+
+
+3) barışla konuştuk, dönmek için geliştirme yapmak gerekli. Eğer TY tarafında zorunlu olarak dönmek gerekmiyorsa null dönmeye devam etsin.
+4)burayı barış yaptırtacak enum olarak dönecek. enum içerisine yeni bir değer atanacak.
+
+8)listelemede şuan için channel da firma ayrımı yok, barış ile detayını konuştuk. bunun normalde planlarında olduklarını söyledi. şuan için bu geliştirmede bulunmuyor.
+
+
+None = 0,
+Active = 1,
+Closed = 2,
+PrintBlocked=3
+TemporarilyClosed = 4,
+All = Active | Closed | TemporarilyClosed // 7 olarak şu aşamada 
+
+1-AllDebitCard ve GetDebitCardDetails a cardstatu eklendi. eklenen stattuler de 
+None = 0,
+Active = 1,
+Closed = 2,
+PrintBlocked=3
+TemporarilyClosed = 4,
+All = Active | Closed | TemporarilyClosed
+
+2-GetDebitCardDetails maxlimit eklendi
+
+3- DebitDeliveryTypes = 0 ve CardTypes = 8 yollanacak
+public enum DebitDeliveryTypes
+{
+Unknown,=0
+CustomerAddressDelivery,=1
+BranchDelivery,=2
+NoDelivery=3
+}
+
+
+
+CardType: Barış tarafında değişmedi.
+
+public enum CardTypes
+{
+	/// <summary>
+	/// No card type specified.
+	/// </summary>
+	None = 0,
+
+	/// <summary>
+	/// A standard physical debit card.
+	/// </summary>
+	DebitCard = 8,
+
+	/// <summary>
+	/// An enhanced version of a debit card with additional features.
+	/// </summary>
+	ExtendedDebitCard = 16,
+
+	/// <summary>
+	/// A non-physical debit card used for online or virtual transactions.
+	/// </summary>
+	VirtualDebitCard = 32,
+} 

@@ -1,0 +1,3 @@
+Odeabank.DVP.Common.Session:PilotFeatures
+minVersion
+0.6369.46435

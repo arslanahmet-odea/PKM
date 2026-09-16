@@ -1,0 +1,45 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Garanti Çocuk bankacılık projesi, doğrudan onu atamışlar, yapabileceğini düşünümşler.
+Geniş kapsamlı kart teslim, kart basım, diğer ekiplerle çalışmışlar.
+En zorlandığı kısımlar müşteri tarafı, hesap tarafı, microfrontend yapısında çalışmışlar.
+İlgili servisleri bulmak ve entegrasyon kurmak teknik ve yorucu bir dönemmiş.
+Dealine uyumlu zamanda projeyi ayağa kaldırmışlar.
+Daha güzel yapacağı alanlar: Projenin işleri açık değilmiş, deadline çok kısaymış.
+Yolda yapılmış, efor ve bağlı olduğu kısımları netleştirip, doğru ekiplere doğru yerde gitmek
+ve daha sağlıklı gitmesi.
+
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+✅ Reflects, adapts, moves forward.
+
+Kötü geri bildirimler gelmeden kendisi insiyatif alıp konuları konuşuyormuş.
+
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+Mainframe , emeklilik uygulamasına giriş sağlayamamışlar, her ekip incelemiş,
+gece vakitlerinde incelemişler, sunucu sayılarını artırmışlar.
+
+Resilience ekibi servisleri farkediyor, anlık hatalarda ekipleri bildiriyorlar.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+Fiziksel pos'tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+Son kullanıcı kadar bildi
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+yok
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+genel olarak bildi
+
+Sertifikasyon süreçlerine girdin mi?
+ATM tarafında MC ve BKM sertifikasyon süreçlerine girmiş.
+

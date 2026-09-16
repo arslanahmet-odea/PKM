@@ -1,0 +1,701 @@
+openapi: 3.0.3
+info:
+  title: Virtual Card API
+  description: API for managing virtual cards, including creation, settings, limits, and transactions
+  version: 1.0.0
+  contact:
+    name: BaaS Team
+    email: baas@trendyol.com
+
+security:
+  - BearerAuth: []
+
+paths:
+  /virtual-cards:
+    post:
+      summary: Create a new virtual card
+      description: Creates a new virtual card linked to a specific account
+      tags:
+        - Virtual Cards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateVirtualCardRequest'
+            example:
+              accountId: "3920-3124158-829"
+      responses:
+        '201':
+          description: Virtual card created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualCardResponse'
+              example:
+                cardNo: "1234567890123456"
+                expiryDate: "12/25"
+                cvc: 123
+                limits:
+                  onlineLimit:
+                    currentLimit: 5000.00
+                    minAllowedLimit: 100.00
+                    maxAllowedLimit: 50000.00
+                    availableLimit: 5000.00
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+    get:
+      summary: Get user's virtual cards
+      description: Retrieves all virtual cards belonging to the authenticated user. Optionally include current limit information and linked accounts using query flags.
+      tags:
+        - Virtual Cards
+      parameters:
+        - name: status
+          in: query
+          description: Card status
+          schema:
+            type: string
+            enum: [ACTIVE, CLOSED, SUSPENDED, EXPIRED]
+        - name: includeLimits
+          in: query
+          description: Include current limit information for each card in the response
+          schema:
+            type: boolean
+            default: false
+        - name: includeLinkedAccounts
+          in: query
+          description: Include linked accounts for each card in the response
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Virtual cards retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualCardsListResponse'
+              example:
+                cards:
+                  - cardNo: "1234567890123456"
+                    expiryDate: "12/25"
+                    cvc: 123
+                    status: "ACTIVE"
+                    limits:
+                      onlineLimit:
+                        currentLimit: 5000.00
+                        minAllowedLimit: 100.00
+                        maxAllowedLimit: 50000.00
+                        availableLimit: 5000.00
+                    linkedAccounts:
+                      - accountId: "3920-3124158-829"
+                        balance: 10000.50
+                        currency: "TRY"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /virtual-cards/{cardIdentifier}/limit:
+
+    patch:
+      summary: Update card limit
+      description: Updates the maximum limit for the specified virtual card
+      tags:
+        - Card Limits
+      parameters:
+        - name: cardIdentifier
+          in: path
+          required: true
+          description: Card identifier (can be full card number or masked card number)  
+          schema:
+            type: string
+            example: "1234567890123456"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCardLimitRequest'
+            example:
+              onlineLimit:
+                currentLimit: 15000.00
+      responses:
+        '200':
+          description: Card details (including updated limits) returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualCardWithAccounts'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /virtual-cards/{cardIdentifier}/transactions:
+    get:
+      summary: Get card transaction history
+      description: Retrieves transaction history for the specified virtual card (up to 12 months)
+      tags:
+        - Card Transactions
+      parameters:
+        - name: cardIdentifier
+          in: path
+          required: true
+          description: Card identifier (can be full card number or masked card number)  
+          schema:
+            type: string
+            example: "1234567890123456"
+        - name: startDate
+          in: query
+          description: Start timestamp for transaction filtering (epoch milliseconds)
+          schema:
+            type: integer
+            format: int64
+        - name: endDate
+          in: query
+          description: End timestamp for transaction filtering (epoch milliseconds)
+          schema:
+            type: integer
+            format: int64
+        - name: limit
+          in: query
+          description: Maximum number of transactions to return
+          schema:
+            type: integer
+        - name: category
+          in: query
+          description: Filter transactions by category code
+          schema:
+            type: string
+            example: "1"
+      responses:
+        '200':
+          description: Transaction history retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionHistoryResponse'
+              example:
+                transactions:
+                  - transactionId: "txn_1234567890abcdef"
+                    source: "Amazon"
+                    category:
+                      name: "Shopping"
+                      mccCode: "5311"
+                    amount: -150.75
+                    date: "2024-01-15T10:30:00Z"
+                  - transactionId: "txn_0987654321fedcba"
+                    source: "Trendyol"
+                    category:
+                      name: "Entertainment"
+                      mccCode: "7832"
+                    amount: 89.50
+                    date: "2024-01-14T14:22:00Z"
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+
+
+  /virtual-cards/{cardIdentifier}/settings:
+    get:
+      summary: Get all card settings
+      description: Retrieves all configurable settings for the specified virtual card
+      tags:
+        - Card Settings
+      parameters:
+        - name: cardIdentifier
+          in: path
+          required: true
+          description: Card identifier (can be full card number or masked card number)  
+          schema:
+            type: string
+            example: "1234567890123456"
+      responses:
+        '200':
+          description: Card settings retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardSettingsResponse'
+              example:
+                internationalShopping: true
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+    patch:
+      summary: Update card settings
+      description: Updates one or more settings for the specified virtual card
+      tags:
+        - Card Settings
+      parameters:
+        - name: cardIdentifier
+          in: path
+          required: true
+          description: Card identifier (can be full card number or masked card number)  
+          schema:
+            type: string
+            example: "1234567890123456"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCardSettingsRequest'
+            examples:
+              internationalShopping:
+                summary: Update international shopping setting
+                value:
+                  internationalShopping: true
+      responses:
+        '200':
+          description: Card settings updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardSettingsResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /virtual-cards/{cardIdentifier}:
+    patch:
+      summary: Update card status
+      description: Updates the status of the specified virtual card (e.g., close card)
+      tags:
+        - Virtual Cards
+      parameters:
+        - name: cardIdentifier
+          in: path
+          required: true
+          description: Card identifier (can be full card number or masked card number)  
+          schema:
+            type: string
+            example: "1234567890123456"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateCardStatusRequest'
+            example:
+              status: "CLOSED"
+      responses:
+        '200':
+          description: Card status updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardStatusResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /parameters:
+    get:
+      summary: Get system parameters
+      description: Retrieves various system parameters based on the key parameter
+      tags:
+        - Parameters
+      parameters:
+        - name: key
+          in: query
+          description: Parameter key to retrieve
+          required: true
+          schema:
+            type: string
+            enum: [categories]
+            example: "categories"
+      responses:
+        '200':
+          description: Parameters retrieved successfully
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/CategoriesResponse'
+              examples:
+                categories:
+                  summary: Categories response
+                  value:
+                    categories:
+                      - name: "Shopping"
+                        mccCode: "5311"
+                      - name: "Food & Dining"
+                        mccCode: "5812"
+                      - name: "Transportation"
+                        mccCode: "4121"
+                      - name: "Entertainment"
+                        mccCode: "7832"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    CreateVirtualCardRequest:
+      type: object
+      required:
+        - accountId
+      properties:
+        accountId:
+          type: string
+          description: Account identifier to link the card to
+          example: "3920-3124158-829"
+
+    VirtualCardResponse:
+      type: object
+      properties:
+        cardNo:
+          type: string
+          description: Virtual card number
+          example: "1234567890123456"
+        expiryDate:
+          type: string
+          description: Card expiry date in MM/YY format
+          example: "12/25"
+        cvc:
+          type: integer
+          description: Card verification code
+          example: 123
+        limits:
+          $ref: '#/components/schemas/CardLimits'
+        status:
+          type: string
+          description: Card status
+          example: "ACTIVE"
+
+    VirtualCardsListResponse:
+      type: object
+      properties:
+        cards:
+          type: array
+          items:
+            $ref: '#/components/schemas/VirtualCardWithAccounts'
+
+    VirtualCardWithAccounts:
+      allOf:
+        - $ref: '#/components/schemas/VirtualCardResponse'
+        - type: object
+          properties:
+            linkedAccounts:
+              type: array
+              items:
+                $ref: '#/components/schemas/LinkedAccount'
+
+    LinkedAccount:
+      type: object
+      properties:
+        accountId:
+          type: string
+          description: Linked account identifier
+          example: "3920-3124158-829"
+        balance:
+          type: number
+          format: double
+          description: Account balance
+          example: 10000.50
+        currency:
+          $ref: '#/components/schemas/Currency'
+
+    CardLimitResponse:
+      type: object
+      properties:
+        onlineLimit:
+          $ref: '#/components/schemas/OnlineLimitInfo'
+    CardLimits:
+      type: object
+      description: All limits associated with the card
+      properties:
+        onlineLimit:
+          $ref: '#/components/schemas/OnlineLimitInfo'
+
+    UpdateCardLimitRequest:
+      type: object
+      required:
+        - onlineLimit
+      properties:
+        onlineLimit:
+          type: object
+          required:
+            - currentLimit
+          properties:
+            currentLimit:
+              type: number
+              format: double
+              description: New current online spending limit to set
+              minimum: 0
+              example: 15000.00
+
+    TransactionHistoryResponse:
+      type: object
+      properties:
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/Transaction'
+
+    Transaction:
+      type: object
+      properties:
+        transactionId:
+          type: string
+          description: Unique identifier for the transaction
+          example: "txn_1234567890abcdef"
+        source:
+          type: string
+          description: Transaction source/merchant
+          example: "Amazon"
+        category:
+          $ref: '#/components/schemas/Category'
+        amount:
+          type: number
+          format: double
+          description: Transaction amount (positive for credits, negative for debits)
+          example: -150.75
+        date:
+          type: string
+          format: date-time
+          description: Transaction date and time
+          example: "2024-01-15T10:30:00Z"
+
+    InternationalShoppingResponse:
+      type: object
+      properties:
+        internationalShopping:
+          type: boolean
+          description: Whether international shopping is enabled
+          example: true
+
+    CardSettingsResponse:
+      type: object
+      description: Consolidated view of all card settings
+      properties:
+        internationalShopping:
+          type: boolean
+          description: Whether international shopping is enabled
+          example: true
+
+    UpdateCardSettingsRequest:
+      type: object
+      description: Payload for updating one or more card settings
+      properties:
+        internationalShopping:
+          type: boolean
+          description: Enable/disable international shopping
+
+    LinkedAccountBasic:
+      type: object
+      properties:
+        accountId:
+          type: string
+          description: Linked account identifier
+          example: "3920-3124158-829"
+        currency:
+          $ref: '#/components/schemas/Currency'
+
+    UpdateInternationalShoppingRequest:
+      type: object
+      required:
+        - internationalShopping
+      properties:
+        internationalShopping:
+          type: boolean
+          description: Enable/disable international shopping
+          example: true
+
+    UpdateCardStatusRequest:
+      type: object
+      required:
+        - cardNo
+        - status
+      properties:
+        cardNo:
+          type: string
+          description: Card number to update
+          example: "1234567890123456"
+        status:
+          $ref: '#/components/schemas/CardStatus'
+
+    CardStatusResponse:
+      type: object
+      properties:
+        cardNo:
+          type: string
+          description: Card number
+          example: "1234567890123456"
+        status:
+          $ref: '#/components/schemas/CardStatus'
+        updatedAt:
+          type: string
+          format: date-time
+          description: Status update timestamp
+          example: "2024-01-15T10:30:00Z"
+
+
+
+    OnlineLimitInfo:
+      type: object
+      properties:
+        currentLimit:
+          type: number
+          format: double
+          description: Currently set online spending limit
+          minimum: 0
+          example: 10000.00
+        minAllowedLimit:
+          type: number
+          format: double
+          description: Minimum allowed online spending limit
+          minimum: 0
+          example: 100.00
+        maxAllowedLimit:
+          type: number
+          format: double
+          description: Maximum allowed online spending limit
+          minimum: 0
+          example: 50000.00
+        availableLimit:
+          type: number
+          format: double
+          description: Remaining available online spending limit
+          minimum: 0
+          example: 7500.00
+
+    Currency:
+      type: string
+      enum: [TRY, USD, EUR]
+      description: Currency code
+      example: "TRY"
+
+    CardStatus:
+      type: string
+      enum: [ACTIVE, CLOSED, SUSPENDED, EXPIRED]
+      description: Card status
+      example: "ACTIVE"
+
+
+
+    CategoriesResponse:
+      type: object
+      properties:
+        categories:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+
+    Category:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Category name
+          example: "Shopping"
+        mccCode:
+          type: string
+          description: Merchant Category Code
+          example: "5311"
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+        details:
+          type: object
+          description: Additional error details
+
+  responses:
+    BadRequest:
+      description: Bad request - invalid input parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "INVALID_REQUEST"
+            message: "Invalid request parameters"
+            details: 
+              field: "accountId is required"
+
+    Unauthorized:
+      description: Unauthorized - invalid or missing authentication
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "UNAUTHORIZED"
+            message: "Authentication required"
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "NOT_FOUND"
+            message: "Virtual card not found"
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "INTERNAL_ERROR"
+            message: "An unexpected error occurred"
+
+tags:
+  - name: Virtual Cards
+    description: Operations for managing virtual cards
+  - name: Card Limits
+    description: Operations for managing card spending limits
+  - name: Card Transactions
+    description: Operations for retrieving card transaction history
+  - name: Card Settings
+    description: Operations for managing card settings and preferences
+  - name: Parameters
+    description: Operations for retrieving system parameters

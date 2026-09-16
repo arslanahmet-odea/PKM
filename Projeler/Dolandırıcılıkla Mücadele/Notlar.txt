@@ -1,0 +1,59 @@
+müşteri no: 110181 -> intervision'da MAHMUT TAHA AVCI çıkıyor.
+"4691802481259443"
+5192613366483367
+
+
+çıktı intervision'da
+
+4687970000015079
+5169440000868327
+
+[
+    {
+        "creditCardNo": "4691********3035",
+        "cardOwnerFullName": "MERT CELAL BÜRİAN", "4691804511483035"
+        "cardType": "VISA",
+        "isAdditionalCard": true,
+        "currentDebtTL": -100.0,
+        "currentTermSpendings": 0.0,
+        "lastStatementDebtTL": 0.0,
+        "cardName": "Borajet BankO Card Axess ",
+        "availableLimit": 4120.0,
+        "totalLimit": 4020.0,
+        "isDigitalCard": false,
+        "isActive": false,
+        "cashAdvanceUsableLimit": 2693.40,
+        "lastStatementDebtUSD": 0.0,
+        "isLocalStatement": true,
+        "currentDebtUSD": 0.0
+    },
+    {
+        "creditCardNo": "5192********6909",
+        "cardOwnerFullName": "MERT CELAL BÜRİAN", "5192618302186909" 5192 6183 0218 6909
+        "cardType": "MASTERCARD",
+        "isAdditionalCard": true,
+        "currentDebtTL": -1739.0,
+        "currentTermSpendings": 0.0,
+        "lastStatementDebtTL": 0.0,
+        "cardName": "Bank'O Card Mastercard Contactless  ",
+        "availableLimit": 29729.0,
+        "totalLimit": 27990.0,
+        "isDigitalCard": false,
+        "isActive": true,
+        "cashAdvanceUsableLimit": 16794.0,
+        "cardImageUrl": "_img/kartbasvuru/classic.png",
+        "lastStatementDebtUSD": 0.0,
+        "isLocalStatement": false,
+        "currentDebtUSD": 0.0
+    }
+]
+
+trxcode :10 
+trxcodeDesc :Satis
+trxSubCode :12
+trxSubCodeDesc :Ecom
+
+trxcode :30 
+trxcodeDesc :Ön otorizasyon
+trxSubCode :11
+trxSubCodeDesc :Mail / Telephone Order

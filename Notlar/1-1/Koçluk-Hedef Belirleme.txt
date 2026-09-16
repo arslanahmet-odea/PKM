@@ -1,0 +1,46 @@
+Bitiş Süresi ve ara adımları belli olan bir hedef belirleme gerekli.
+Teknik Yetkinlikler (Tech Skills)
+• Belirli tekniklerde derin uzmanlık (ör. yeni bir framework, yeni bir programlama dili)
+• Farklı uzmanlık alanları (frontend, backend, DevOps)
+• Mimari bilgi
+• Performans ve optimizasyon
+• Güvenlik pratikleri
+• İşleri daha küçük, teslim edilebilir parçalara bölme
+• Pull request’ler ve tasarım incelemelerinde yapıcı geri bildirim verme
+• Alınan kararları dokümante etme ve bilgiyi paylaşma
+• Kaliteyi artırma (ör. daha fazla bug çıkaran birinin kaliteyi iyileştirmesi)
+• Mevcut ihtiyaca göre hız ile kalite arasında denge kurma
+• Ekibin süreçlerine uyma
+• Başkalarıyla verimli şekilde pair programming yapma
+• Gereksiz karmaşıklıktan kaçınma
+• Sektördeki değişimleri, yenilikleri ve trendleri takip etme
+• On-call sorumluluklarını etkin şekilde yönetme
+• Kök neden analizi (root-cause analysis) ve post-mortem dokümantasyonu öğrenme
+• Belirsiz problemler için prototip çözümler üretme
+• Organizasyon içinde teknik inovasyonu sürükleme
+
+Yönetim Becerileri (Management Skills)
+• Etkili geri bildirim verme
+• Departmanlar arası iletişim
+• Çatışma çözümü
+• Ekip içindeki kişilere görev delege etme
+• İnsanları güçlendirme (empowerment)
+• Etkili koçluk yapma
+• Vizyon belirleme ve insanlara ilham verme
+• Belirsizlik altında karar alma
+• İş önceliklendirme
+• Ekip ritüellerini (toplantılar, seremoniler) ustalıkla yürütme
+• Doğru insanları mülakata alma ve işe yerleştirme
+• Pozitif bir ekip kültürü oluşturma ve sürdürme
+
+Yumuşak Beceriler (Soft Skills)
+• Endişelerini veya sorunlarını dile getirebilme
+• Teknik olmayan kişilerle iletişim kurabilme
+• İş ihtiyaçlarını ve yapılan işin etkisini anlama
+• Etkili zaman yönetimi
+• Liderlik potansiyelini geliştirme (ör. liderliğe geçmeyi düşünen birinin bir sprint ya da feature sorumluluğunu alması)
+• Organizasyon içindeki başkalarına mentorluk yapma
+• Geri bildirimi kabul etmeyi öğrenme
+• Topluluk önünde konuşma
+• Mühendislik blog yazıları ve test senaryoları yazma
+• Karşılıklı başarı için ekipler arası iş birlikleri kurma

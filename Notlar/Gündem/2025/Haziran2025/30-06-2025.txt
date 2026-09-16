@@ -1,0 +1,11 @@
+-Debit Projeleri için Duygu ile tasarımı nasıl olacak konuş, analiz onayı, adres bilgisi ve DYS işleri 
+-Dolandırıcılıkla mücadele kapsamında kararlar alınmaya başlandı, ortak yapı kuruluyor ben yanıt veremiyorum, olur olmaz diye çöünkü bizim tarafta net değil
+-
+
+-Müşeriye artıabileceği limit değeri gösterilmeli, sadece 25 değil daha düşük belirleyebilecekse o değer dönülmeli. Bu değeri dönen bir endpoint olmalı.
+müşteri limiti bu kadar, kartınızın limiti, ek kartlarınızın limiti bu kadar diye bu endpoint dönemli.
+-Müşteri limiti ile kart ve ek kart limiti arasındaki ilişkiler tam açık olarak belirlenmemiş gibi görünüyor.
+-Hata mesajları nasıl dönülecek ve nasıl açıklayıcı olacak, müşteriyi bilgilendirme amaçlı mesaj nasıl gösterilecek açık olması lazım.
+-Kullanılabilir limit diye bir değer var, nasıl belirleniyor?
+
+-bir de bizim amalizde sms var ama hiç sms konusuna girilmemiş

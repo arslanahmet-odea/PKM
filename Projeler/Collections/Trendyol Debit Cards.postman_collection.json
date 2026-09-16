@@ -1,0 +1,1031 @@
+{
+	"info": {
+		"_postman_id": "5bf48338-0c2e-4077-830d-b9fac0d27613",
+		"name": "Trendyol Debit Cards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13093850"
+	},
+	"item": [
+		{
+			"name": "BFF",
+			"item": [
+				{
+					"name": "Get Decrypted Card Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJCNUxmcDZsVFlwbWVyQXk1VzZydExTbWo1VEtMTkRvSHRnck1jZlJmTjJjUW56UmZ4TEF1OGk5MUtHdERFWkJzTWpUL0tJemRaWEVpemlidlJSK005Zz09Iiwic3ViIjoiNGRkOWU1YmEtMDE5Yi00NzA1LWI4YTQtYWZkZDc1Y2YzZjBhIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MDAwMzk5MCwiZXhwIjoxNzYwMDA0MTEwLCJpYXQiOjE3NjAwMDM5OTAsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.skOSZYOs0yi0c8Hz5PAK4JGH3gtIThX3ZNfIDlk-MrwsvbQd1VTlFH4TyZjughqapbkEL9fuNfXFRuCyoJlK_FYhWUUq8orWHlKQGRvPBpPASEf5ryo8XUYp16IXPjH53vUEUQ8ABvMJO3UfIO7y1KAgMH51VkLKAtddHXypx0COOOBtk-91s3CO28cYOZ1QN5enaPVZJeBpPjIbKIWeEF6lRNSyP3me4u-oLumv12pm8YGucYSyA275r3Obu4hrA42c9_4wnzK4VI1qJ7eb--l_wfvnNshAOq5dS5LEpGUvjpfC83IxVhhQKIeguosJGTXOrwXppynqX_YOTj5QmQ"
+							},
+							{
+								"key": "Cookie",
+								"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=f823751a9ac5da2c7c109a6db57f5cf2; f7217d2d75ee3ae3f6359914e2642b01=645f1a8d14e7bfc300ee11fab212ceb7; 83ca665e986c3ca5251739f2cd93e189=76c6b3a619d59c37a6dc52c882fb388c"
+							}
+						],
+						"url": {
+							"raw": "https://bff-feature-6659.appdev.ocpdev.odeabank.com.tr/trendyol/cards/virtual-cards/{{shadowCardNumber}}/decrypted",
+							"protocol": "https",
+							"host": [
+								"bff-feature-6659",
+								"appdev",
+								"ocpdev",
+								"odeabank",
+								"com",
+								"tr"
+							],
+							"path": [
+								"trendyol",
+								"cards",
+								"virtual-cards",
+								"{{shadowCardNumber}}",
+								"decrypted"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetVirtualCardDetail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4Sm1wVXlsZHVxcDAwTEpZWjZEeHpVeHArbk51b0ZwNkFXbzlTbnljS3FLQm5oUVlzbmx5b3pMZUxvc2doOFZiZy9sSmIzM2IrN2JNVDFkb0ZzUDRlZz09Iiwic3ViIjoiMGVmNDNhODktZDkyOS00MzQ0LTlhMWYtMzA5NTBmZGI0ZWM2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzAwMzcwNCwiZXhwIjoxNzU3MDAzODI0LCJpYXQiOjE3NTcwMDM3MDQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.oqqWXVrlPUatafST_2zcvM66p3f0y1swkNwml8_crMUHaIzfMKrmrl1nKo80NxvgyFytiW2KwHR0gV4YnQ21JFBFdfe6j7ZVls-0wMnQwUyxzxvQpySzVtYonfHrg7aEFQUbEpRzijsU32aIT87rlAkOxSWLEhe9hvF1ymnzCsb3bEQVjzMyTJ64DrStUEHnUbpRQnj4YB8-CQr_WH9PF1bvCAPomQAqH-z932FEqqliSLhkX7oSUZVPca-oUZMa--BG3R2uho01hjMUp7IoEmyQzSPnK7jb22-g7Y0wgYYOQ7mJTG3S3c7ZxD7ZLdQK0tcFfN3YQX_LAACFKfORkw"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}?includeSettings=true",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}"
+					],
+					"query": [
+						{
+							"key": "includeSettings",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVirtualCardTransactions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4Sm1wVXlsZHVxcDAwTEpZWjZEeHpVeHArbk51b0ZwNkFXbzlTbnljS3FLQm5oUVlzbmx5b3pMZUxvc2doOFZiZy9sSmIzM2IrN2JNVDFkb0ZzUDRlZz09Iiwic3ViIjoiMGVmNDNhODktZDkyOS00MzQ0LTlhMWYtMzA5NTBmZGI0ZWM2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzAwMzcwNCwiZXhwIjoxNzU3MDAzODI0LCJpYXQiOjE3NTcwMDM3MDQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.oqqWXVrlPUatafST_2zcvM66p3f0y1swkNwml8_crMUHaIzfMKrmrl1nKo80NxvgyFytiW2KwHR0gV4YnQ21JFBFdfe6j7ZVls-0wMnQwUyxzxvQpySzVtYonfHrg7aEFQUbEpRzijsU32aIT87rlAkOxSWLEhe9hvF1ymnzCsb3bEQVjzMyTJ64DrStUEHnUbpRQnj4YB8-CQr_WH9PF1bvCAPomQAqH-z932FEqqliSLhkX7oSUZVPca-oUZMa--BG3R2uho01hjMUp7IoEmyQzSPnK7jb22-g7Y0wgYYOQ7mJTG3S3c7ZxD7ZLdQK0tcFfN3YQX_LAACFKfORkw"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"count\": 10,\r\n  \"startDate\": \"2023-11-07T10:49:48\",\r\n  \"endDate\": \"2025-11-15T10:50:49\",\r\n  \"processType\": 5 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/transactions",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVirtualCardEcommerceRestrictions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4Sm1wVXlsZHVxcDAwTEpZWjZEeHpVeHArbk51b0ZwNkFXbzlTbnljS3FLQm5oUVlzbmx5b3pMZUxvc2doOFZiZy9sSmIzM2IrN2JNVDFkb0ZzUDRlZz09Iiwic3ViIjoiMGVmNDNhODktZDkyOS00MzQ0LTlhMWYtMzA5NTBmZGI0ZWM2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzAwMzcwNCwiZXhwIjoxNzU3MDAzODI0LCJpYXQiOjE3NTcwMDM3MDQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.oqqWXVrlPUatafST_2zcvM66p3f0y1swkNwml8_crMUHaIzfMKrmrl1nKo80NxvgyFytiW2KwHR0gV4YnQ21JFBFdfe6j7ZVls-0wMnQwUyxzxvQpySzVtYonfHrg7aEFQUbEpRzijsU32aIT87rlAkOxSWLEhe9hvF1ymnzCsb3bEQVjzMyTJ64DrStUEHnUbpRQnj4YB8-CQr_WH9PF1bvCAPomQAqH-z932FEqqliSLhkX7oSUZVPca-oUZMa--BG3R2uho01hjMUp7IoEmyQzSPnK7jb22-g7Y0wgYYOQ7mJTG3S3c7ZxD7ZLdQK0tcFfN3YQX_LAACFKfORkw"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/restrictions/ecommerce",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"restrictions",
+						"ecommerce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetVirtualCards",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Yanıtı JSON olarak al\r",
+							"let response = pm.response.json();\r",
+							"\r",
+							"// İlk elemanın shadowCardNumber değerini al\r",
+							"let shadowCardNumber = response.virtualCardWithLimits?.[0]?.shadowCardNumber;\r",
+							"\r",
+							"// Değer mevcutsa environment variable olarak ayarla\r",
+							"if (shadowCardNumber) {\r",
+							"    pm.environment.set(\"shadowCardNumber\", shadowCardNumber);\r",
+							"    console.log(\"shadowCardNumber set edildi:\", shadowCardNumber);\r",
+							"} else {\r",
+							"    console.warn(\"shadowCardNumber bulunamadı!\");\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4Sm1wVXlsZHVxcDAwTEpZWjZEeHpVeHArbk51b0ZwNkFXbzlTbnljS3FLQm5oUVlzbmx5b3pMZUxvc2doOFZiZy9sSmIzM2IrN2JNVDFkb0ZzUDRlZz09Iiwic3ViIjoiMGVmNDNhODktZDkyOS00MzQ0LTlhMWYtMzA5NTBmZGI0ZWM2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzAwMzcwNCwiZXhwIjoxNzU3MDAzODI0LCJpYXQiOjE3NTcwMDM3MDQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.oqqWXVrlPUatafST_2zcvM66p3f0y1swkNwml8_crMUHaIzfMKrmrl1nKo80NxvgyFytiW2KwHR0gV4YnQ21JFBFdfe6j7ZVls-0wMnQwUyxzxvQpySzVtYonfHrg7aEFQUbEpRzijsU32aIT87rlAkOxSWLEhe9hvF1ymnzCsb3bEQVjzMyTJ64DrStUEHnUbpRQnj4YB8-CQr_WH9PF1bvCAPomQAqH-z932FEqqliSLhkX7oSUZVPca-oUZMa--BG3R2uho01hjMUp7IoEmyQzSPnK7jb22-g7Y0wgYYOQ7mJTG3S3c7ZxD7ZLdQK0tcFfN3YQX_LAACFKfORkw"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards?status=1&includeLimits=true",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "1"
+						},
+						{
+							"key": "includeLimits",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ATMs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI4Sm1wVXlsZHVxcDAwTEpZWjZEeHpVeHArbk51b0ZwNkFXbzlTbnljS3FLQm5oUVlzbmx5b3pMZUxvc2doOFZiZy9sSmIzM2IrN2JNVDFkb0ZzUDRlZz09Iiwic3ViIjoiMGVmNDNhODktZDkyOS00MzQ0LTlhMWYtMzA5NTBmZGI0ZWM2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzAwMzcwNCwiZXhwIjoxNzU3MDAzODI0LCJpYXQiOjE3NTcwMDM3MDQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.oqqWXVrlPUatafST_2zcvM66p3f0y1swkNwml8_crMUHaIzfMKrmrl1nKo80NxvgyFytiW2KwHR0gV4YnQ21JFBFdfe6j7ZVls-0wMnQwUyxzxvQpySzVtYonfHrg7aEFQUbEpRzijsU32aIT87rlAkOxSWLEhe9hvF1ymnzCsb3bEQVjzMyTJ64DrStUEHnUbpRQnj4YB8-CQr_WH9PF1bvCAPomQAqH-z932FEqqliSLhkX7oSUZVPca-oUZMa--BG3R2uho01hjMUp7IoEmyQzSPnK7jb22-g7Y0wgYYOQ7mJTG3S3c7ZxD7ZLdQK0tcFfN3YQX_LAACFKfORkw"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/atms",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"atms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateVirtualCard",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Yanıttan JSON verisini al\r",
+							"let responseData = pm.response.json();\r",
+							"\r",
+							"// ConfirmationToken değerini güvenli bir şekilde al\r",
+							"let confirmationToken = shadowCardNumber;\r",
+							"\r",
+							"if (confirmationToken) {\r",
+							"    // Environment değişkeni olarak ayarla\r",
+							"    pm.environment.set(\"shadowCardNumber\", shadowCardNumber);\r",
+							"    console.log(\"shadowCardNumber set edildi:\", shadowCardNumber);\r",
+							"} else {\r",
+							"    console.warn(\"shadowCardNumber bulunamadı!\");\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  //\"accountId\": \"1000-3426412-351\", // yenikart-5\n  //\"accountId\": \"1000-5418730-351\",//odea5\n    //\"accountId\": \"9990-9592889-351\",//baristest7\n  //\"accountId\": \"9990-7648438-355\", //baristest5\n  \"accountId\": \"9990-7648438-355\",\n  \"isAbroad\": false,\n  \"isDomestic\": false,\n  \"idempotencyKey\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"currencyCode\": \"TRY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Debit Card Limits",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"settableLimit\": 150000,\n  \"limitResetType\": 1,\n  \"passBalanceCheck\": true,\n  \"resetAfterXDay\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/limits",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Virtual Card Accounts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"accountId\": \"9990-9592880-354\",\n  \"currency\": \"TRY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/accounts",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Debit Card Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"status\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/status",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Debit Card Limits",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiI5YmdPMEZ0YTJlUStHMHY2ZTNRMFF3R0JVWmFoK1lsQ3ZRVWxjZ05iSi9YQ2NlVmp6L1pZaFVWVFJmU2RkdFJEOGU5TEdON1I5UzhoOEZkUVRWRlYwdz09Iiwic3ViIjoiNTg0ODE5ZmQtMWQ4YS00NWQ0LTkyNTgtZGUzMjc5OGUzZmVmIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1NzU4NjM3NywiZXhwIjoxNzU3NTg2NDk3LCJpYXQiOjE3NTc1ODYzNzcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.mt080l9Gpj9QIkcZuNQpF4a_D2TZNfzcWDbUPV-sk1LLgRICXTkhPmSDRWdPGkGMEdgn8UURsNNEZfg9eSqFdVqmlNn1YMVq30RY1XXl4CV9zjGjPgwe6IVonN6VZrLgjV012RBw_vbE8ImazSj_SbxLGQWizE9onUR2Q4VkfVnGLwv7-l8O3HvuJGKGwS7keul7sSYxE1g-kLFTiB7ytw5OSEAjRQZFNyui6IA0tJ23NsQGo4HNbCSjwImdD-ob5Bts5eu7THgMROHY0WDherKYyYbJcQ293Osp0tAsqd9lwUemdYRimhZU2pBNLW8q2-rhKiux2pp00vvAnc9svA"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=bbd973c1db3ed20fd98769d66ff2e244; f7217d2d75ee3ae3f6359914e2642b01=81ea8b9bee96d09d7273eb0ec0caf33d"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/limits",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Virtual Card Ecommerce Restrictions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer null"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=bbd973c1db3ed20fd98769d66ff2e244"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Contactless\": true,\n    \"IsAbroad\": false,\n    \"isDomestic\": false,\n    \"IsMailOrder\" : true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/restrictions/ecommerce",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"restrictions",
+						"ecommerce"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Encrypted Card No",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJjdThVVnJraWJTWU8ybXU5cUt2aEgxRVE4Zkc2R2F3eGdIUmM1cmY1bGJpSVVsNzRpb1hNOTNWTi85V3BpM29IdGZlUHUyVDhNclJvcFdXZXJJckRTdz09Iiwic3ViIjoiZGJhNzlmMjYtM2I4Zi00NmM0LThjMzYtOGI5MThhMzUwNWY2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1ODA0MTIxNCwiZXhwIjoxNzU4MDQxMzM0LCJpYXQiOjE3NTgwNDEyMTQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.SxoRaQWbON1sZO1AzKv5wfl-cGHzvACtKIzx9VSUeFNnNgHmiOraD1MPvJEiGeUgyXiaQn-3OfYVDUNS-eT-JYawr7BY0n4MM9i8XjukNZa_gytwGCOsUJUgm3MPxUYMtVi8Wx6LS7TuJ79_eX7-vtraqJQ-FOxVfelMYEyUfDbo7uHOvCkkhbLNJSs1wuv7igXEzK04jFeSagzk-YcEW9xBYMQ09QT5JJ1xuYcXaWESt3YVkCrLw5C_Azj5donQnAAZbNMBgUbZtvO4MHN5xhzsLeOvsoyV4GdNwwjrYOpZSMQ0NNe_ORveTVKCtASRlfDgP7iYZhqj86hkMMum4g"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=bbd973c1db3ed20fd98769d66ff2e244; f7217d2d75ee3ae3f6359914e2642b01=affce77ae076d3ef6763dbebec7fe7bb"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/card-no",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"card-no"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Encrypted CVV2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJjdThVVnJraWJTWU8ybXU5cUt2aEgxRVE4Zkc2R2F3eGdIUmM1cmY1bGJpSVVsNzRpb1hNOTNWTi85V3BpM29IdGZlUHUyVDhNclJvcFdXZXJJckRTdz09Iiwic3ViIjoiZGJhNzlmMjYtM2I4Zi00NmM0LThjMzYtOGI5MThhMzUwNWY2Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1ODA0MTIxNCwiZXhwIjoxNzU4MDQxMzM0LCJpYXQiOjE3NTgwNDEyMTQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.SxoRaQWbON1sZO1AzKv5wfl-cGHzvACtKIzx9VSUeFNnNgHmiOraD1MPvJEiGeUgyXiaQn-3OfYVDUNS-eT-JYawr7BY0n4MM9i8XjukNZa_gytwGCOsUJUgm3MPxUYMtVi8Wx6LS7TuJ79_eX7-vtraqJQ-FOxVfelMYEyUfDbo7uHOvCkkhbLNJSs1wuv7igXEzK04jFeSagzk-YcEW9xBYMQ09QT5JJ1xuYcXaWESt3YVkCrLw5C_Azj5donQnAAZbNMBgUbZtvO4MHN5xhzsLeOvsoyV4GdNwwjrYOpZSMQ0NNe_ORveTVKCtASRlfDgP7iYZhqj86hkMMum4g"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=bbd973c1db3ed20fd98769d66ff2e244; f7217d2d75ee3ae3f6359914e2642b01=affce77ae076d3ef6763dbebec7fe7bb"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/cvv2",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"cvv2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetIssuedCardCount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJrcVlKaVpQWE9vRHhsNWROdU96OTRVWjVJajNCTEdvNk1JWXZqbFhQY0Q5RjZmb1VHWFZaR1k4aDBtN0UwVEhBR2k4b0QxT0gxMDBqTWJ5TUpqV2dtQT09Iiwic3ViIjoiN2JkMzFiNjUtZGY0MS00YWRlLTk1MGMtNjRmOWRlNzkyZWU3Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1OTMxNTg5NSwiZXhwIjoxNzU5MzE2MDE1LCJpYXQiOjE3NTkzMTU4OTUsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.tKpir_dlUkIqPZuKG0HRcnmgx62jxeEM0Xef8f73-I6BBu4-GL3CurhrL_OQkBdB4pO-0WS5M2c9AQoXMcUAMrsGVIbBgt7wt5k_BfvNfgcD8faIcsLhpFufXeDCGNvqkHW7pppwscr5skk8D9EqiMIsW1Y6Mtdpvc_MOxXDstCDgtUkwyYuDdB4lSKMutL_aykCkznka88_vWIO4Ao8SDezCqYgV6Sj95bW7TBQ5NBKyMz2nsyY80aHf83buNkfkVqfEhQGd1fBfb9_igILCqMtQERXO6msz0Gky3Ss7k2Rfsj3Bkb8Gkfqz4YhgJU_cpj897jrMwDMr-DEkkcWjQ"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=8e8b5de91351d000e517ba5402b07c34; f7217d2d75ee3ae3f6359914e2642b01=e84920ecdcb0ad120664a21d64fc38a2"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/count",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Debit Card Details Decrypted",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiIxeW5RRWFUdkZnOG9wZTVWTmpLR2hqWkMvdHExV1g5WlEwNTFoM3BjbFZ1dWVXeHE2WnErQTh4M2JnNEozNlNYLytmcXVETkR2enZlSGg2WERQV2ZxZz09Iiwic3ViIjoiY2FhNzgyMjUtOWE3Yi00NTMxLWI1MTUtYjJkNTVkZWVlYzViIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc1OTc0NzUyNCwiZXhwIjoxNzU5NzQ3NjQ0LCJpYXQiOjE3NTk3NDc1MjQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.n3iyPQ0pbVuiNVMbDAKYLTijJx0FP8mPfZqChM2YFiOm0aK0GZorULn1MzpfNTYTIPLXGh4nGDvj-A4IzmHPy8nxaRw5SpYwCfDDi0SU5NfKTDULW2TSzpSsyTwGr9Dc2klqJnYUX7bDZ9UrBQQBhRV9zLu0Xtn8qmeXDVZY4iiym9rVm6Qw8DCmj2kPMOIIHZ5v6SY7DPJDnm2H2kTsMQRi6g3oqsLNBvsKRc2QyQDPvyWzyoo6rpEvLN3zucTSNeLeZEblvvBnDG_oaRjIx2tflMEF0bvxFf0UFSmS21_eKuI77B66njAwdryVYPxW4xu0LjNtLnEMRL3-yJ0etg"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=f823751a9ac5da2c7c109a6db57f5cf2; f7217d2d75ee3ae3f6359914e2642b01=645f1a8d14e7bfc300ee11fab212ceb7"
+					}
+				],
+				"url": {
+					"raw": "{{gatewayURL}}/virtual-cards/{{shadowCardNumber}}/decrypted",
+					"host": [
+						"{{gatewayURL}}"
+					],
+					"path": [
+						"virtual-cards",
+						"{{shadowCardNumber}}",
+						"decrypted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Atm QR Limits",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://odeaapigwtest.odeabank.com.tr/v2/atm-qr/transfer-limit",
+					"protocol": "https",
+					"host": [
+						"odeaapigwtest",
+						"odeabank",
+						"com",
+						"tr"
+					],
+					"path": [
+						"v2",
+						"atm-qr",
+						"transfer-limit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cvv-Verify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJPVDdEeUJIaTlXdXFZTC9oZmtieUVjTDQrQnBSY0JTSjdnc3N2VmljbFhlcTFXWXN5bXpmUmVWNmhtUXVsU0pBZmpSbmluVERSQ2w3b0Jsb09qVmZzUT09Iiwic3ViIjoiYTQ3YTQ4YzEtMjQwMi00YTRiLWE4NmItMzQ5MjZmYTUxZDdmIiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTIwODI3NSwiZXhwIjoxNzYxMjA4Mzk1LCJpYXQiOjE3NjEyMDgyNzUsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.ebgpI73Srs7_zleZ9ztEvh4o-5iXkBozOb518Fns5rYKK_cyQuEo7USMWIDIybDC4TS5_1DUyh020o8EBoEwaMrKV66NqopyIV24-UuHhHWVVH8JD7pf3gtLiBm59nf8yHIcqxRoFlhxVIMrFGz4C6xhB4Q4S6HmeLQASumFYR0bupCr4-_Hk-jj4fE7Wze6vf9ALP7uyDL0XJPYbJlsDzZfw6o1iir1XNgiHa3KpvlamubO8jeRapGjiHbxn8s-pYzJb5tPy2PLyVQpz1akhu9s_CGAOo01M45RSRVae0B6ks1A_XBBvC4_cPl-kVqyka7IGzS2665oA6Ri8xqfLw"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=c9ad424b3143f3e7c231a1e5f111635e; f7217d2d75ee3ae3f6359914e2642b01=3c2a2c8e9699299396b371bf4bd88844"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Cvv2\": \"556\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://odeaapigwtest.odeabank.com.tr/virtual-cards/:shadowCardNumber/cvv/verify",
+					"protocol": "https",
+					"host": [
+						"odeaapigwtest",
+						"odeabank",
+						"com",
+						"tr"
+					],
+					"path": [
+						"virtual-cards",
+						":shadowCardNumber",
+						"cvv",
+						"verify"
+					],
+					"variable": [
+						{
+							"key": "shadowCardNumber",
+							"value": "{{shadowCardNumber}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateNewCvv2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJEYzJLWXBaZjBPQWwrWjN3UkRreGhvc3crZUhmOE1HQ1E2ckc4VWR1a3B5VjQzYlpjQjNmVHFEc0pITVdCZng0ak81UWZzMGpOdUVyLzVOTC9aSStBZz09Iiwic3ViIjoiNzQwNGJhNmYtY2VlNi00ODJhLTlhZWEtZGFlNjllNWNiZDY0Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTIxMDE0MywiZXhwIjoxNzYxMjEwMjYzLCJpYXQiOjE3NjEyMTAxNDMsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.nuQOT7pnCnnceST6nZTdgL25Djq8cPmSgZByomrg0DJy-5rIUSqgOW9soxx7O_8LhTYPOm6CiqQKzoCEFNctoec1C5F4QR_SJ3VhDUVb4HdRr22gsC1CRxEowe0-aMq8oJe6gmOcqD_VaSRWS8kSjJmFw2qAvN1VTF1PcSIWaZgK15ByeJ93EGpbHFzn1pS9bmUhLdQUUDSOHU6ek5R5cfM89QyJmYrBKsAXGeoV5Xml77YDQLiatf1I-hcfrAJhkKqKDS8gMR1A3zwlpixBy_7_OWcXIIy8kLcqtHUCoBdQhU9MPE56rryIsw9Aq_ACFzoYAbEmIlMYVOsVmgtlkA"
+					},
+					{
+						"key": "Cookie",
+						"value": "5c9fb466de928c48479d8d688fe5837b=1c807d95e418274ea61c3bbf8ba199e0; e9e94615e22d0a5cf0c2f1bcb55783a6=8a8d94b507f0195a5b21f02af38b45ec; f7217d2d75ee3ae3f6359914e2642b01=28545e956e5ea851a9996483ce8cb9b8; fcb7339a89ef3e081a91396df29704d7=6ffc97cc1692ed1452c1fb382f17d00c; 5c9fb466de928c48479d8d688fe5837b=c9ad424b3143f3e7c231a1e5f111635e; f7217d2d75ee3ae3f6359914e2642b01=3c2a2c8e9699299396b371bf4bd88844"
+					}
+				],
+				"url": {
+					"raw": "https://odeaapigwtest.odeabank.com.tr/virtual-cards/:debitDigitalCardNo/cvv2",
+					"protocol": "https",
+					"host": [
+						"odeaapigwtest",
+						"odeabank",
+						"com",
+						"tr"
+					],
+					"path": [
+						"virtual-cards",
+						":debitDigitalCardNo",
+						"cvv2"
+					],
+					"variable": [
+						{
+							"key": "debitDigitalCardNo",
+							"value": "{{debitDigitalCardNo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TY Listeleme",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Ocp-Apim-Subscription-Key",
+						"value": "1zPHC1nE0EDO38XJjrtxmuiF4UlTjefKSuzwNKcYOtCSZXknYZjC9HwIIIGunThH"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJyclptNXh3ajV6ZDY3UWJuSmhCMi8yaUFHVmp0a2ZzREl3SDVUZGtHNS96ZzNGOUpuNXFNekR0K25aYjU2eXBJbm5VanNtUis0T3dxUy8vSm54Y1BXdz09Iiwic3ViIjoiYjFiNzhmOTUtZDkyZi00OGQ1LWI0YjgtNzhmYjQ3ZjllN2E5Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MjUxMTgxNCwiZXhwIjoxNzYyNTE1NDE0LCJpYXQiOjE3NjI1MTE4MTQsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.Rflfv5R5jQgoVyArufZVoufDJC7G8FVcLqJp7F8Z23dnFbchszk-sVONwIoyFggdfx_0TMy4-M-gwJ5C4Hpzy00AFzkm6EEjf0t5KXkliJQK2bRXaF3AT8CZYVNDRretkahxBKQwOKSU1beAHSpjJAu2m9OmuXvk66h4vfDzvzBf4JC2qWAqhkvDuyx7wVu2brHXNOaWD7PSB5bbiEoYnavbzz3cBKcQr69H6BLABxgoO3U3_ZCM2Yr5qUYZCf8ATcy-BkZiIBmFKAzJHTH6FNauXOqdNXvKlyJg5GHYHIW6JFBpqXWaSjL4e76Al-2SzqNDn4AXjn1MAHudeBaHNg"
+					},
+					{
+						"key": "Cookie",
+						"value": "185420d4e0736f7907d802cc6710dc00=92daeb249da1043a17fa55811e40115b; 5c9fb466de928c48479d8d688fe5837b=ac8fe62218c90918c76f1f22303b372a; 9550c566c33af54b9c7ffbacd5cab745=5bb9559dc1391e252d408e813e8d14cf; f7217d2d75ee3ae3f6359914e2642b01=06fb08d9f2684dc40b9052c9912ccfc4"
+					}
+				],
+				"url": {
+					"raw": "https://odeaapigwtest.odeabank.com.tr/virtual-cards?status=1&includeLimits=true",
+					"protocol": "https",
+					"host": [
+						"odeaapigwtest",
+						"odeabank",
+						"com",
+						"tr"
+					],
+					"path": [
+						"virtual-cards"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "1"
+						},
+						{
+							"key": "includeLimits",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "gatewayURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

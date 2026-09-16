@@ -1,0 +1,50 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Sanal kart limit değişimi, Tunç'la ilerlenmeyecek
+-Limit artırım ve sanal kart başvuru transactioncode
+-UAT'i de batch çalışmıyor. Ayrıcalıklar dünyası MCC çalışmıyor.
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-Visa Clearing Exchange Geçişi , Emrah Mersinli ve Hasan Cihan, takas operasyon, 2026 Ağustos deadline
+Daily hızlıca konuşabilir, Meral de götürebilir.
+-LKS pazartesiden itibaren aktif olacağız. Netleştirelim, https://jira.intertech.com.tr/browse/SD-2866025
+-Production Call Center ek kart başvuru iptal, Çağlar'da, takip
+-Production Call Center teslimat adresi, Batuhan'a ata.
+-CMS menülerinin call center ekranlarında gizlenebilmesi isteri hakkında, maili ,konuyu konuşmak gerekli.
+-Pusula Ekstre Adres Değişikliği Hakkında , Murat Takip et
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı, takip
+-Codem konusu test , takip , KMH ile alakalıydı, sıkıştıran var mı, varsa Yusuf'u sıkıştıralım.
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+-Online Vergi Dairesine bilgi gir
+
+Koray'la 1e1:
+-4Arch'te işler, testçileri yok biz test ediyoruz, acemi yazılımcı, scriptler taşınmamış,
+3 yazılımcı, 2 analist, 2 iş bir'mi, neredeyse 8 kişi çalışıyoruz , 
+Paycore'da işler öyle yürümüyor.
+
+Paycore'da dedike online işlem, takas, 
+
+LKS konusu, hergün toplantı yapıyorum,
+Murat'ı uyardın, beklentilerimi ilettim, aktif olmasını ve iş üretmesini istedim.
+Testlerden birini yapmamış ve fe ve be geçmek zorunda kaldık freeze döneminde.
+
+Regresyon hatası pre-login QR para çekme limitleri hatalı görünüyor.
+
+HSM, Fırat takip etsin, Emrah İstanbul'a gelince bakacaktı. 10k geçişi gerekecek ilgili Eforu key block'a adresleyelim
+HSM, history'sini bilinmiyor, 9k ne hatası yaşandı.
+Key Block'un içinde 10k yaşan.
+
+Mert'e yumuşak mail hazırlayalım. 
+
+-Kart başvuruda idempotency, profilde bir kaç serviste deniyorlar, test edelim
+
+2026' Q-1 slicing, Duygu ile konuşmak gerekli ,  Troy Debit, Key Block
+Proje varsa ilerletilmeyen, Açık Bankacılık Kartlar, 
+Arcan , chatgbt , iki teklif çıkmaya çalışıldı,     

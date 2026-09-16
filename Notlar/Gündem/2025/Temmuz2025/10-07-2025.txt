@@ -1,0 +1,30 @@
+-eksik (onay bekleyen) doküman*   imzalama feat üstünde işbirimi de testini yaptı.(feat üzerinden). 
+*Asıl başvuru üzerinden kredili ürünler aydınlatma metni ve kredi kartı ön bilgilendirme formu ne durumda.
+-İşlem imzalama testi yarına kaldı, Avni beklenecek 
+-Meral'a intertech kodlarının analist yetkisiyle incelenebilmesi için yasz
+
+-Timesheet konusu, o konuyu cumaya kadar istiyorlar, ne kadar çalıştılarsa, izin filan gözeterecek, doldurup geçecek
+-ATM altyapısı topoloji istenmişti ne durumda?
+
+Esra demiş: Duygu, Ezgi ile konuşup Nakit avans limitini bizim altyapımızı mı kullanacak?
+Hangi kanaldan paycore'a gitmeden çözülebilir mi kanal bağımzısz istenirse patlar. Paycore gitsin engellesin isteği varsa, Sercan'ın 
+ekranından giriş varsa paycore tarafında.
+
+
+-yetkin, o işlerde yapılmazsa ne sıkıntı yaşarız, key block ve hsm yapısını anlatın diye istiyormuş.
+pin doğrulama için hsm'den gidiyor. Yetkin'e şunu anlatmamız gerekiyor.
+Dijital debit konusu , getir gibi bir firma, bu adamın uygulamasından bize onboarding yapacak, bize müşteri olacak, kart üretilecek, direk alışverişe açık olmasını istiyormuşkendisnin cüzdan yapısı vamraış, bu cüzdana otomatik eklemek istiyor.
+bu kartı o uygulamanını o cüzdanına eklemekte sorun olur mu?
+BIN aralığı verildiğinde , PAN üretim algoritması incele, kaç müşteri verilebilir. 500 bin tane olabilir.
+bin range içinde noname ve debit kart da varmış, bir tane daha gelecek.
+mert taş'la konuşlalım, dijital debit nasıl ilerleyecek , 
+key block konusunu incele
+biz kredi kartlarında BIN'leri 8'li geçmişiz zamanında BIN'leri 6'da kalmışız, dijital kartlarla ilgisi var mı?
+Yetkin girecek, bizim HSM'lerde 9k versiyonu AES'i handle edilebilir mi?
+Meral'de TFS core tarafta codu incelememiz lazım, karşı tarafta zeynep yaman izindeymiş, 
+
+
+| Özellik         | 6 Haneli BIN    | 8 Haneli BIN       |
+| --------------- | --------------- | ------------------ |
+| Kullanım tarihi | **1989–2022+**  | **2022–bugün**     |
+

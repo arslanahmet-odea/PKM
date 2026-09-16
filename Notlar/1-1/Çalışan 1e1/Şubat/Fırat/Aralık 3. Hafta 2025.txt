@@ -1,0 +1,63 @@
+Hayat nasıl gidiyor?
+
+Ekip: Takım etkilişimi, ilişkiler vb.
+-Takımda işler nasıl gidiyor? 
+-Kiminle daha çok çalışmak isterdin?
+
+İşler
+Geçen hafta hangi işlerde çalıştın?
+-Müşteri edinim, QR kodu okuyarak müşteri olacak. Bu hafta prod'a çıkacak.
+-Eksik dekont tanımları, ATM qr para çekme-yatırma işlemleri yapılırken dekont çıkmıyordu.
+ATM'den işlem yaptığında mobil'de çıkan dekont, veritabanı isertleri yapıldı.Bu hafta prod'a çıkacak.
+-TYF ekibine QR para-çekme yatırma test desteği verildi.
+-Commission Hunters-Sprinters gibi ekiplere test ve uygulama desteği verildi.(kendi test case'lerine destek verildi).
+-Trendyol ATM sanal kart testleri
+-QR Para yatırma-çekme limit testleri.
+-ATM kaset tanımları ile ilgili Operasyonel destek.
+
+
+Söylediklerini buraya yaz, sesli tekrar et ve toplantı sonunda paylaş.Bir iş tıkanmışsa 1- dkk'da çözülecek bir şeyse hemen çöz, değilse kayıt altına al ve destek olmaya çalış.
+
+Süreçler
+-Seni daha üretken ve mutlu yapmak için ne yapabilirim?(araçlar, iş-ev ayarı, süreç iyileştirme)
+
+ATM tarafını uygulama destek tarafını eklemek gerekebilir, Fırat'ın yollayacağı soruları yanıtlayıp gelsinler.
+Hepsi dijital kanallardan geliyor, sorumluluk sizde.
+
+Ekibi sistemik olarak üretkenliğini düşüren şeyleri tespit etmek gerekir.
+İntelligence yavaş çalışıyor, kullanmaya alıştığı için şimdi çok zorlamıyor.
+How are these 1:1s working for you?
+İşe yarıyor.
+
+People (5min): How are team dynamics and relationships? 
+(e.g., “How are things going with the team?”). 
+“Who’s someone on the team you’ve enjoyed working with lately – and anyone who’s been hard to work with?”
+How do you feel about the team’s collaboration and communication recently?
+This can reveal interpersonal issues or successes.
+What’s one thing I could do better to support you or make your job easier?
+
+
+Product (10min): What’s the focus of their work? 
+(e.g., “What have you been working on lately?”).
+"What’s been the most challenging part of this project for you?" 
+Not a detailed status, but a high-level view of progress, victories, or blockers.
+What’s something you’re proud of this week? (Or something that frustrated you?)
+“What got in the way?”
+
+Process (10min): 
+Are there any tools, process issues, or general improvements that would make their work life better? (
+e.g., “Anything we can do to make your day-to-day easier or happier?”).
+What skills or areas do you want to grow in over the next few months?
+What’s one thing I could do better to support you or make your job easier?
+Is anything blocking your progress or draining your energy lately?
+“How are these 1:1s working for you?”
+“What can I do better?” 
+“What’s on your mind?
+“What have you already tried?” 
+“What would you do if you had to decide right now?”
+
+
+
+
+
+

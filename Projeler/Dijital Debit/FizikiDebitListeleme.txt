@@ -1,0 +1,704 @@
+DebitCardListAllWithDetails:
+curl --location 'https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/DebitCardListAllWithDetails' \
+--header 'Content-Type: application/json' \
+--header 'Transfer-Encoding: chunked' \
+--header 'Host: uatintervisionapp.odeabank.com.tr' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJKSW1BSFZXb2h1bjlHdnlrUStncHUvdklPS09DcmNGWnBFZzdUanJWOTBwazJPQ29YdXJkWjRsc1RiUTZDNFVSZE9wc1EzcFZxY2xRZUxvNXVJelREdz09Iiwic3ViIjoiODY3MWE4NTUtYzgwMi00OTBiLWE4OWMtYTI3ODZjN2JkOGI0Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTIyNjkxNywiZXhwIjoxNzYxMjI3MDM3LCJpYXQiOjE3NjEyMjY5MTcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.KLeEfLBXiR1k9Soz62ZwRT_PsKHiz_-f82GeOWz3soei3CfxaiFN4gMV1WJR3pq7Sqg-vlGRyDV-bWqLhN36zvnllludCUzyZP8P8HGjFeIE4q1TH0WQkd-O1Ew5-GU9gIi26awFJKoVitCiThS_wznC_bAqeWk1enhPoRsC8YcR_EOz3mNBBEmgL44k23wnar0Zn0KDgIeV4V3RboLVOwtgce0MSQPa4Fj5rwJ6afnlNNBQxOnj0lvLxCetqv-aOVLnEZmcZqhNB9ueGQSl6efnvWp3Fb8cbQFN5jVnkFElDME-jx6ti6W5b_n8_B6aIEfNjHZuhlFZSVgRs_qjAw' \
+--data '{
+    "Header": {
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "API",
+        "ChannelSessionId": "APITEST_20190406_1644",
+        "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 3426412
+        }
+    ]
+}'
+
+Response:
+{
+    "$type": "ServiceResponseMessage",
+    "Data": {
+        "$type": "DebitCardListMessage",
+        "DebitCardList": [
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "4687970000015848",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "VISA DEBİT",
+                "CardGroupCode": "468797",
+                "IsTempCard": true,
+                "CardAccount": "9990-3426412-353",
+                "ExpiryDate": "2028-08-31T00:00:00",
+                "CardEmboss": "",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902118",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-08-31T00:00:00",
+                "CardEmboss": "U RİFAT 81129264238",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902191",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "K",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902209",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "K",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902233",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "B",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902266",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "B",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902274",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902290",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "1000-3426412-355",
+                "ExpiryDate": "2030-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902324",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "B",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902555",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2030-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902811",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "B",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9019-3426412-354",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902894",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "K",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902902",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902910",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-358",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902928",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902936",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "1000-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902985",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "1000-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903033",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903231",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903249",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000875041",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "B",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "1000-3426412-351",
+                "ExpiryDate": "2029-06-30T00:00:00",
+                "CardEmboss": "U RİFAT 81129264238",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000876270",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "B",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "U RİFAT 81129264238",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000877773",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "1000-3426412-355",
+                "ExpiryDate": "2030-01-31T00:00:00",
+                "CardEmboss": "U RİFAT 81129264238",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5427240000873816",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "M",
+                "CardGroup": "Mastercard Ticari",
+                "CardGroupCode": "542724",
+                "IsTempCard": false,
+                "CardAccount": "1000-3426412-355",
+                "ExpiryDate": "2030-07-31T00:00:00",
+                "CardEmboss": "U RİFAT 81129264238",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5427240000873865",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "Z",
+                "CardGroup": "Mastercard Ticari",
+                "CardGroupCode": "542724",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2030-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            }
+        ],
+        "DebitCardAccounts": null,
+        "FinansInvestCustNo": -1,
+        "QueryId": -1,
+        "CustomerNo": 3426412,
+        "QueryDate": "0001-01-01T00:00:00",
+        "EndDate": "0001-01-01T00:00:00",
+        "QueryCode": "",
+        "Explanation": "",
+        "QueryState": -1,
+        "QueryLogDate": "0001-01-01T00:00:00",
+        "LogQuery": false,
+        "CustomerPersonelAccountNo": 0,
+        "ShareAccountNumber": 0,
+        "SealId": 0,
+        "PlatformCode": null
+    }
+}
+
+DebitCardListWithDetailsUnique:
+
+curl --location 'https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/DebitCardListWithDetailsUnique' \
+--header 'Content-Type: application/json' \
+--header 'Transfer-Encoding: chunked' \
+--header 'Host: uatintervisionapp.odeabank.com.tr' \
+--data '{
+    "Header": {
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "API",
+        "ChannelSessionId": "APITEST_20190406_1644",
+        "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 3426412
+        }
+    ]
+}'
+
+Response:
+{
+    "$type": "ServiceResponseMessage",
+    "Data": {
+        "$type": "DebitCardListMessage",
+        "DebitCardList": [
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "4687970000015848",
+                "CardStyle": "002",
+                "CardStatus": "N",
+                "CardGroup": "",
+                "CardGroupCode": "468797",
+                "IsTempCard": false,
+                "CardAccount": "",
+                "ExpiryDate": "2028-08-31T00:00:00",
+                "CardEmboss": "",
+                "CardName": "",
+                "StartDate": "2023-08-09T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902555",
+                "CardStyle": "007",
+                "CardStatus": "N",
+                "CardGroup": "",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "",
+                "ExpiryDate": "2030-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "2025-09-26T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903231",
+                "CardStyle": "011",
+                "CardStatus": "N",
+                "CardGroup": "",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "2025-10-14T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903249",
+                "CardStyle": "010",
+                "CardStatus": "N",
+                "CardGroup": "",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "2025-10-15T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5427240000873865",
+                "CardStyle": "009",
+                "CardStatus": "Z",
+                "CardGroup": "",
+                "CardGroupCode": "542724",
+                "IsTempCard": false,
+                "CardAccount": "",
+                "ExpiryDate": "2030-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "2025-10-06T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": null
+            }
+        ]
+    }
+}
+
+
+
+DebitCardListWithDetailsBkm:
+
+curl --location 'https://uatintervisionapp.odeabank.com.tr/Intertech.Fortuna.WebApi.Services/api/fortuna/DebitCardListWithDetailsBkm' \
+--header 'Content-Type: application/json' \
+--header 'Transfer-Encoding: chunked' \
+--header 'Host: uatintervisionapp.odeabank.com.tr' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjM1NTMzMmY0LWFkMWItNDdjNS1iNWYzLWEzYTk1ZjFiMmViMSIsInR5cCI6IkpXVCJ9.eyJtYzovL2lkZW50aXR5L2NsYWltcy90aWNrZXQiOiJKSW1BSFZXb2h1bjlHdnlrUStncHUvdklPS09DcmNGWnBFZzdUanJWOTBwazJPQ29YdXJkWjRsc1RiUTZDNFVSZE9wc1EzcFZxY2xRZUxvNXVJelREdz09Iiwic3ViIjoiODY3MWE4NTUtYzgwMi00OTBiLWE4OWMtYTI3ODZjN2JkOGI0Iiwicm9sZSI6IlByaW5jaXBhbCIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL3VzZXJ0eXBlIjoiTm9uZSIsIm1jOi8vaWRlbnRpdHkvY2xhaW1zL2N1c3RvbWVydHlwZSI6Ik5vbmUiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ByaXZhdGVjb21wYW55IjoiRmFsc2UiLCJtYzovL2lkZW50aXR5L2NsYWltcy9pc3ZlcmlmaWVkZW1haWwiOiJGYWxzZSIsIm5iZiI6MTc2MTIyNjkxNywiZXhwIjoxNzYxMjI3MDM3LCJpYXQiOjE3NjEyMjY5MTcsImlzcyI6Ik9ERUFCQU5LIiwiYXVkIjoiT0RFQUJBTksifQ.KLeEfLBXiR1k9Soz62ZwRT_PsKHiz_-f82GeOWz3soei3CfxaiFN4gMV1WJR3pq7Sqg-vlGRyDV-bWqLhN36zvnllludCUzyZP8P8HGjFeIE4q1TH0WQkd-O1Ew5-GU9gIi26awFJKoVitCiThS_wznC_bAqeWk1enhPoRsC8YcR_EOz3mNBBEmgL44k23wnar0Zn0KDgIeV4V3RboLVOwtgce0MSQPa4Fj5rwJ6afnlNNBQxOnj0lvLxCetqv-aOVLnEZmcZqhNB9ueGQSl6efnvWp3Fb8cbQFN5jVnkFElDME-jx6ti6W5b_n8_B6aIEfNjHZuhlFZSVgRs_qjAw' \
+--data '{
+    "Header": {
+        "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+        "Channel": "API",
+        "ChannelSessionId": "APITEST_20190406_1644",
+        "ChannelRequestId": "4c9273cadac344a6b2b3c749d9d30c56"
+    },
+    "Parameters": [
+        {
+            "CustomerNo": 3426412
+        }
+    ]
+}'
+
+Response:
+
+{
+    "$type": "ServiceResponseMessage",
+    "Data": {
+        "$type": "DebitCardListMessage",
+        "DebitCardList": [
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "4687970000015848",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "VISA DEBİT",
+                "CardGroupCode": "468797",
+                "IsTempCard": true,
+                "CardAccount": "9990-3426412-353",
+                "ExpiryDate": "2028-08-31T00:00:00",
+                "CardEmboss": "",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": "0"
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000902555",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2030-09-30T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": "0"
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903231",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": "0"
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5169440000903249",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "N",
+                "CardGroup": "Mastercard",
+                "CardGroupCode": "516944",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-351",
+                "ExpiryDate": "2029-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": "0"
+            },
+            {
+                "$type": "DebitCardList",
+                "DebitCartNo": "5427240000873865",
+                "CardStyle": "Normal Kart",
+                "CardStatus": "Z",
+                "CardGroup": "Mastercard Ticari",
+                "CardGroupCode": "542724",
+                "IsTempCard": false,
+                "CardAccount": "9990-3426412-354",
+                "ExpiryDate": "2030-10-31T00:00:00",
+                "CardEmboss": "KAAN RİFAT TEMELKAYA",
+                "CardName": "",
+                "StartDate": "0001-01-01T00:00:00",
+                "IncorrectPinEntryCount": 0,
+                "IsCvvBlocked": false,
+                "IncorrectCvvCount": "0"
+            }
+        ]
+    }
+}
+

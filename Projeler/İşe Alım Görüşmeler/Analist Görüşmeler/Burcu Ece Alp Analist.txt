@@ -1,0 +1,30 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Halk Bankası'ndaki dönüşüm projeleri için müşteriler ve yöneticilerden iyi dönüşler almışlar.
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+✅ Reflects, adapts, moves forward.
+
+Hayatında yaşadığın en kritik ödeme kesintisini anlat. Ne oldu, nasıl çözdün?
+Doktora eğitimine başlamak için yöneticisi çok destekleyicisi olmamış.
+Sınavı kazanmasına rağmen destek alamamış, önceden sözünü almış.
+
+Şuna bak:
+
+Sorumluluk alıyor mu?
+Başkasını suçluyor mu?
+Timeline net mi?
+Öğrenim çıkarmış mı?
+
+Fiziksel pos'tan yapılan işlemle sanal postan yapılan işlem arasındaki farklar nedir?
+
+Ödeme sistemlerinde HSM'in rolü nedir, authorization veya 3DS doğrulamada nerede kullanılır?
+
+Visa/Mastercard işlem akışı uçtan uca nasıl çalışır? Authorization → Clearing → Settlement farkı nedir?
+
+ISO 8583 mesaj yapısı nedir, nerede kullanılır bildiğin field isimleri var mı?
+
+Clearing dosyası ile authorization logu neden tutmayabilir?
+
+Sertifikasyon süreçlerine girdin mi, sanal pos ?

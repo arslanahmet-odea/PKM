@@ -1,0 +1,448 @@
+{
+  "$type": "Intertech.QueueManager.QueueMessage, Intertech.QueueManager.Client",
+  "QueueCode": "UserName=fortunaUser;Password=Odeabank2025;Server=10.224.122.209;Port=5672;ExchangeDurable=true;QueueRoutingKey=FortunaApiLog;QueueName=Fortuna.Apilogs.Queue;PrefetchCount=10;QueueNoAck=false;RabbitMqExchangeType=direct;ExchangeName=FortunaApiLog;VirtualHost=fortunalog;QueueDurable=true",
+  "OriginalMessage": {
+    "$type": "Intertech.Common.Messaging.WebApiLog, Intertech.Common.Messaging",
+    "MethodName": "CreateNewDebitCard",
+    "Version": "1.0.0",
+    "AppKey": "d00b33d618c44e9187f947f8eacbd80f",
+    "ApplicationCode": "interAPI",
+    "IpAddress": "10.224.107.200",
+    "Request": {
+      "Parameters": [
+        {
+          "CardEmboss": "Barýþ Coþkun",
+          "CardGroup": "516944",
+          "CardStyle": "007",
+          "CardBranchNumber": 1000,
+          "SourceAccount": {
+            "AccountSuffix": 351,
+            "BranchCode": 1000,
+            "CustomerNo": 6629000,
+            "CurrencyCode": "TRY"
+          },
+          "DeliveryBranchNumber": 1000,
+          "CardPrintReasonCode": "",
+          "CardDeliveryType": 1,
+          "PinDeliveryType": 1,
+          "TempCardOnly": false,
+          "IsExistingCustomer": true,
+          "CardType": 0,
+          "State": 0,
+          "SecurityContext": {
+            "OTPVerificationUsage": false,
+            "SMSVerificationUsage": true,
+            "MobileSignatureVerificationUsage": false
+          },
+          "FraudSessionId": "05f52875-641c-4f7c-b287-4d2c75397255",
+          "MainLogId": "727662ee-70ce-4a88-b7b0-235614de53b8",
+          "WebContext": {
+            "CallerIP": "0.0.0.1",
+            "BrowserType": "API,,None"
+          },
+          "SenderName": "MERT LÜK",
+          "GmtTime": "2025-07-25T06:09:53.6375267Z",
+          "ClientTime": "2025-07-25T09:09:53.6375439+03:00",
+          "Device": {
+            "DeviceId": "",
+            "Brand": "",
+            "Model": "",
+            "RecordDate": "2025-07-26T09:09:53.6377681+03:00",
+            "IsSealActivation": false
+          },
+          "CustomerNo": 5418730,
+          "CustomerPersonelAccountNo": 0,
+          "CustomerIdentity": 0,
+          "EBranchSessionID": 27407992,
+          "Amount": 0
+        }
+      ]
+    },
+    "Response": {
+      "$type": "ServiceResponseMessage",
+      "Data": {
+        "$type": "CreateNewDebitCardMessage",
+        "CardNumber": null,
+        "ShadowCardNumber": null,
+        "CardRefNumber": null,
+        "CardEmboss": "Barýþ Coþkun",
+        "CardGroup": "516944",
+        "CardStyle": "007",
+        "CardBranchNumber": 1000,
+        "DeliveryBranchNumber": 1000,
+        "CardPrintReasonCode": "",
+        "CardDeliveryType": 1,
+        "PinDeliveryType": 1,
+        "TempCardOnly": false,
+        "IsExistingCustomer": true,
+        "CardType": 0,
+        "TransactionLogData": {
+          "$type": "TransactionLog",
+          "ParentTransactionId": 0,
+          "CustomerNumber": 0,
+          "SourceAccount": {
+            "$type": "Account",
+            "IsBlockedAccount": false,
+            "IsPartialBlockedAccount": false,
+            "BlockageCode": "",
+            "IsAggregatedAccount": false,
+            "AccountSuffix": -1,
+            "BranchCode": -1,
+            "CustomerNo": -1,
+            "ProductCode": "",
+            "OriginalProductCode": "",
+            "ProjectCode": "",
+            "ShortName": "",
+            "IsClosed": false,
+            "IsDisplayedOnInternet": false,
+            "IsAutoInvested": false,
+            "AutoInvestedType": "",
+            "AutoInvestedCurrencyCode": "",
+            "AutoInvestedAvailableBalance": 0,
+            "CurrencyCode": "",
+            "AnalysisCode": "",
+            "ReceivableInterestRate": 0,
+            "DebtInterestRate": 0,
+            "AmountOfBalance": 0,
+            "AvailableCaptainBalance": 0,
+            "AvailableBalance": 0,
+            "MinimumBalance": 0,
+            "SCCode": null,
+            "IsPersonnelAccount": false,
+            "AccountName": "",
+            "IBANNo": "",
+            "CaptainAccountFundBalance": 0,
+            "CaptainAccountBalance": 0,
+            "AvailableCreditDepositBalance": 0,
+            "CaptainForeignCurrencyAccountTryBalance": 0,
+            "CaptainAccountFlag": false,
+            "ValueDate": null,
+            "MaturityDate": null,
+            "CaptainCampaignName": null,
+            "CaptainCampaignCode": null,
+            "CaptainCampaignOpeningDate": "0001-01-01T00:00:00",
+            "CaptainWelcomeRateMaturityDate": "0001-01-01T00:00:00",
+            "WelcomeRateFlag": 0,
+            "DailyNetAmount": 0,
+            "MontlyNetAmount": 0,
+            "ThreeMonhtlyNetAmount": 0,
+            "YearlyNetAmount": 0,
+            "BlockageReasonCode": null,
+            "BlockageReasonCodeName": null,
+            "TransferrableBlockageAmount": 0,
+            "AmountOfBalanceMasked": null,
+            "AvailableBalanceMasked": null,
+            "CustomerNoMasked": null,
+            "SeperatedAccountId": 0,
+            "TcmbRate": 0
+          },
+          "DestinationAccount": {
+            "$type": "Account",
+            "IsBlockedAccount": false,
+            "IsPartialBlockedAccount": false,
+            "BlockageCode": "",
+            "IsAggregatedAccount": false,
+            "AccountSuffix": -1,
+            "BranchCode": -1,
+            "CustomerNo": -1,
+            "ProductCode": "",
+            "OriginalProductCode": "",
+            "ProjectCode": "",
+            "ShortName": "",
+            "IsClosed": false,
+            "IsDisplayedOnInternet": false,
+            "IsAutoInvested": false,
+            "AutoInvestedType": "",
+            "AutoInvestedCurrencyCode": "",
+            "AutoInvestedAvailableBalance": 0,
+            "CurrencyCode": "",
+            "AnalysisCode": "",
+            "ReceivableInterestRate": 0,
+            "DebtInterestRate": 0,
+            "AmountOfBalance": 0,
+            "AvailableCaptainBalance": 0,
+            "AvailableBalance": 0,
+            "MinimumBalance": 0,
+            "SCCode": null,
+            "IsPersonnelAccount": false,
+            "AccountName": "",
+            "IBANNo": "",
+            "CaptainAccountFundBalance": 0,
+            "CaptainAccountBalance": 0,
+            "AvailableCreditDepositBalance": 0,
+            "CaptainForeignCurrencyAccountTryBalance": 0,
+            "CaptainAccountFlag": false,
+            "ValueDate": null,
+            "MaturityDate": null,
+            "CaptainCampaignName": null,
+            "CaptainCampaignCode": null,
+            "CaptainCampaignOpeningDate": "0001-01-01T00:00:00",
+            "CaptainWelcomeRateMaturityDate": "0001-01-01T00:00:00",
+            "WelcomeRateFlag": 0,
+            "DailyNetAmount": 0,
+            "MontlyNetAmount": 0,
+            "ThreeMonhtlyNetAmount": 0,
+            "YearlyNetAmount": 0,
+            "BlockageReasonCode": null,
+            "BlockageReasonCodeName": null,
+            "TransferrableBlockageAmount": 0,
+            "AmountOfBalanceMasked": null,
+            "AvailableBalanceMasked": null,
+            "CustomerNoMasked": null,
+            "SeperatedAccountId": 0,
+            "TcmbRate": 0
+          },
+          "TransactionCode": "",
+          "TransactionAmount": 0,
+          "Explanation": "",
+          "ReceiverName": "",
+          "SenderName": "",
+          "EFTDestinationBankCode": 0,
+          "EFTDestinationBranchCode": 0,
+          "EFTDestinationAccount": "",
+          "EFTDestinationIsCreditCardCenter": false,
+          "EFTDestinationIsEFTCenter": false,
+          "IBANNumber": ""
+        },
+        "TransactionCode": "CreateNewDebitCard",
+        "HasFinansInvest": false,
+        "FinansInvestCustNo": 0,
+        "BranchCode": 0,
+        "TerminalId": "",
+        "ExpenseAmount": 0,
+        "CustomerNo": 5418730,
+        "SourceAccount": {
+          "$type": "Account",
+          "IsBlockedAccount": false,
+          "IsPartialBlockedAccount": false,
+          "BlockageCode": "",
+          "IsAggregatedAccount": false,
+          "AccountSuffix": 351,
+          "BranchCode": 1000,
+          "CustomerNo": 6629000,
+          "ProductCode": "",
+          "OriginalProductCode": "",
+          "ProjectCode": "",
+          "ShortName": "",
+          "IsClosed": false,
+          "IsDisplayedOnInternet": false,
+          "IsAutoInvested": false,
+          "AutoInvestedType": "",
+          "AutoInvestedCurrencyCode": "",
+          "AutoInvestedAvailableBalance": 0,
+          "CurrencyCode": "TRY",
+          "AnalysisCode": "",
+          "ReceivableInterestRate": 0,
+          "DebtInterestRate": 0,
+          "AmountOfBalance": 0,
+          "AvailableCaptainBalance": 0,
+          "AvailableBalance": 0,
+          "MinimumBalance": 0,
+          "SCCode": null,
+          "IsPersonnelAccount": false,
+          "AccountName": "",
+          "IBANNo": "",
+          "CaptainAccountFundBalance": 0,
+          "CaptainAccountBalance": 0,
+          "AvailableCreditDepositBalance": 0,
+          "CaptainForeignCurrencyAccountTryBalance": 0,
+          "CaptainAccountFlag": false,
+          "ValueDate": null,
+          "MaturityDate": null,
+          "CaptainCampaignName": null,
+          "CaptainCampaignCode": null,
+          "CaptainCampaignOpeningDate": "0001-01-01T00:00:00",
+          "CaptainWelcomeRateMaturityDate": "0001-01-01T00:00:00",
+          "WelcomeRateFlag": 0,
+          "DailyNetAmount": 0,
+          "MontlyNetAmount": 0,
+          "ThreeMonhtlyNetAmount": 0,
+          "YearlyNetAmount": 0,
+          "BlockageReasonCode": null,
+          "BlockageReasonCodeName": null,
+          "TransferrableBlockageAmount": 0,
+          "AmountOfBalanceMasked": null,
+          "AvailableBalanceMasked": null,
+          "CustomerNoMasked": null,
+          "SeperatedAccountId": 0,
+          "TcmbRate": 0
+        },
+        "DestinationAccount": null,
+        "TransactionDate": "2025-07-25T09:09:54",
+        "AccountingReference": "",
+        "FundPackage": null,
+        "ProjectCode": null,
+        "LogBranchCode": 0,
+        "LogDate": "0001-01-01T00:00:00",
+        "CustomerPersonelNo": -1,
+        "CustomerPersonelAccountNo": 0,
+        "Amount": 0,
+        "GoldAndSilverKgvAmountByPush": 0,
+        "DepositRatioAmount": 0,
+        "FundRatioAmount": 0,
+        "AmountInLocalCurrency": 0,
+        "TransactionID": 111897573,
+        "ParentTransactionID": -1,
+        "Explanation": "",
+        "ReceiverName": "",
+        "SenderName": "MERT LÜK",
+        "State": 0,
+        "BonusForTransaction": 0,
+        "CreditInfoForConfirmations": null,
+        "SubmitNotificationPreferences": null,
+        "RunProcessorAssemblyMethodAfterCancel": false,
+        "NoBalanceCheck": false,
+        "IBANUsed": false,
+        "IsCancellingTransaction": false,
+        "ConfirmationCode": "",
+        "SourceCreditCard": null,
+        "PaymentElement": 0,
+        "ShowReceiptDivAtFinishPage": true,
+        "UpdateTransactionLogForCorporateTransaction": false,
+        "ProcessorAssemblyForCancel": null,
+        "ConfirmationToken": "7KW4MwiaieIarEUKpCAzw3fMDT8J-IWJoq0I6uKkaVXmuv8YINamxwy1kt0mTYDvxa2jKAZYnsX5UkXzHmrxFp-bBaZQR_HWQV-Y0wBACoqOuNo6dgT-8ZVaO5T5HL6iRfno_LXmy1vVA6dhfZuXYtZ4UeiyaZncnWYzcOm4XI_AaPNB1rCEqhkvZZpjdx2i3LIZ5dNdggyz8QTgbLJ9c48QqgpTO6N1MBQIqAoVRxI1;ZG-fIwdptGveIneVjcY3JA2",
+        "RequiredConfirmationType": 1,
+        "Otp": null,
+        "MobilePhoneNumber": null,
+        "CanUserCommitTransaction": true,
+        "IsExpenseSupported": false,
+        "SentSmsGuid": null,
+        "VerificationType": null,
+        "PushInfo": null,
+        "IsNfc": false,
+        "SealId": 0,
+        "OctopusCheckupOutput": null
+      }
+    },
+    "RequestTime": "2025-07-25T09:09:54.0467941+03:00",
+    "ResponseTime": "2025-07-25T09:09:54.2967851+03:00",
+    "ServiceResponseTime": 249.991,
+    "ChannelSessionId": "",
+    "ChannelRequestId": "88e81019f7244657a765a18afbdfe328",
+    "Channel": "MOBILEAPP",
+    "HttpStatus": 200,
+    "MachineName": "OMV3IXAPP2",
+    "RequestHeader": [
+      {
+        "Key": "Accept",
+        "Value": [
+          "application/json"
+        ]
+      },
+      {
+        "Key": "Host",
+        "Value": [
+          "uatintervisionapp.odeabank.com.tr"
+        ]
+      },
+      {
+        "Key": "User-Agent",
+        "Value": [
+          "Apache-HttpClient/4.2.5",
+          "(java 1.5)"
+        ]
+      },
+      {
+        "Key": "appkey",
+        "Value": [
+          "d00b33d618c44e9187f947f8eacbd80f"
+        ]
+      },
+      {
+        "Key": "channel",
+        "Value": [
+          "MOBILEAPP"
+        ]
+      },
+      {
+        "Key": "channelrequestid",
+        "Value": [
+          ""
+        ]
+      },
+      {
+        "Key": "channelsessionid",
+        "Value": [
+          ""
+        ]
+      },
+      {
+        "Key": "x-forwarded-for",
+        "Value": [
+          "10.229.3.36, 10.224.51.200"
+        ]
+      },
+      {
+        "Key": "x-forwarded-host",
+        "Value": [
+          "odeaapigwtest.odeabank.com.tr"
+        ]
+      },
+      {
+        "Key": "x-forwarded-port",
+        "Value": [
+          "443"
+        ]
+      },
+      {
+        "Key": "x-forwarded-proto",
+        "Value": [
+          "https"
+        ]
+      },
+      {
+        "Key": "forwarded",
+        "Value": [
+          "for=10.224.51.200;host=odeaapigwtest.odeabank.com.tr;proto=https"
+        ]
+      },
+      {
+        "Key": "X-dynaTrace",
+        "Value": [
+          "FW4;-596644504;1;1058951600;577;2;41217007;432;c07f;2h02;3h95c08ea6;4h401d;5h01;6h625088f8d7c1894ade17b315f51d02c9;7h63e1a051ba3c2bec"
+        ]
+      },
+      {
+        "Key": "traceparent",
+        "Value": [
+          "00-625088f8d7c1894ade17b315f51d02c9-63e1a051ba3c2bec-01"
+        ]
+      },
+      {
+        "Key": "tracestate",
+        "Value": [
+          "274ebef-dc6fed68@dt=fw4;1;3f1e51b0;241;2;0;0;1b0;5b65;2h02;3h95c08ea6;4h401d;5h01;7h63e1a051ba3c2bec"
+        ]
+      },
+      {
+        "Key": "X-dynaTrace-Application",
+        "Value": [
+          "v=2;appId=ea7c4b59f27d43eb;cookieDomain=odeabank.com.tr;rid=-397545923;rpid=522016429;en=gm7dpzyl"
+        ]
+      },
+      {
+        "Key": "X-dynaTrace-RequestState",
+        "Value": [
+          "agentId=0x8972a4f73f1e51b0&pathDepth=1"
+        ]
+      }
+    ],
+    "ResponseHeader": [
+      {
+        "Key": "Content-Type",
+        "Value": [
+          "application/json; charset=utf-8"
+        ]
+      }
+    ],
+    "LogSender": "WebApi"
+  },
+  "TryCount": 0,
+  "QueueName": "UserName=fortunaUser;Password=Odeabank2025;Server=10.224.122.209;Port=5672;ExchangeDurable=true;QueueRoutingKey=FortunaApiLog;QueueName=Fortuna.Apilogs.Queue;PrefetchCount=10;QueueNoAck=false;RabbitMqExchangeType=direct;ExchangeName=FortunaApiLog;VirtualHost=fortunalog;QueueDurable=true",
+  "MessageId": 0,
+  "State": 0,
+  "NextTryTime": "0001-01-01T00:00:00",
+  "Label": "ApiLog",
+  "OriginalMessageType": "Intertech.Common.Messaging.WebApiLog, Intertech.Common.Messaging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "SendMessageDirect": false
+}

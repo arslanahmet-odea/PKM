@@ -1,0 +1,2 @@
+Bunu search kısmına yaz ve enter'a bas
+\\serverfs\TempShare\erboy\Merchant_IIS

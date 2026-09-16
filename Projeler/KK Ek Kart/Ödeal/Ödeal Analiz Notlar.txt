@@ -1,0 +1,63 @@
+Ödeal Analiz Notlar
+Intertech
+2:
+-Müşteri oluşturma servisi arkada fazla işlem çağırıyorsa , bölünmeli ve ayrı servis olmalı.
+(KPS Servisi ayrı olmalı, sonra müşteri oluşturma için ne gerekiyorsa o parametrelerin olduğu bir endpoint)
+3:
+-Hakediş tutarları, Ödeal'in ilgili torba/havuz hesabından düşmesi için İntertech'e talimatı biz fortuna metodu ile iletelim.
+İntertech sadece başarılı ve başarısız diye dönsünler, kart bakiyesinin artırılması için PayCore'a yükleme talimatını biz iletelim.  
+ Asenktron yapıyı biz kurarız.
+ Core'da yapılacak işlemler atomik olsun, o parçaların akışını(tekil veya toplu) biz yönetelim.
+ Bir işlemde kart  bakiyesi artırılamıyorsa İntertech'teki işlemin geri alınabilmesi, Reversal yapılabilmesi gerekli.
+ -/cards/{card_token}/loads/{load_id}  , tekil olarak yükleme işlemi sorgulanabilmeli.
+ 
+ Başarılı/başarısız dönüşü mutabakat için Intertech'in her işlemde 
+ işlem referansı (muhasebe fiş no vb) dönmesi gerekir; 
+Reversal da idempotent olmalı: "geri al" çağrısı tekrar edebilir, 
+aynı reversal iki kez çalışmamalı. 
+Reversal için ayrı bir Fortuna metodu + Idempotency-Key olmalı.
+
+ 4:
+ Parametre Tanımları:
+ -Buradaki client id farklı,  OAuth2 ile bağlantısı yok
+ -Amount ve Currency yok
+ 5:
+ Topoloji, Yetkilendirme:
+fortuna servislerine erişim mevcuttaki gibi doğrudan fortuna metodlarıyla olsun, herhangi bir token olmayacak.
+Token'lar ödeal bize gelirken kullanılacak.
+6:
+Cursor yapamayabilirler, nerede gerektiğini konuşalım.
+
+-Genel olarak endpoint'lerdeki alanları dokümana yazalım. Endpoint'lerde şirketi(Ödeal, Tahsildar, iyzico) belirtecek
+bir parametreye ihtiyaç var mı kontrol edelim. Endpointlerin altına Ödeal'dan alınan ekran görüntüsü yapıştırılabilir.
+Her iki analizde de standart hata modeli ve örnek hata kodları ekleyelim
+
+
+
+Paycore:
+1-Karta yükleme talimatını biz yollaycağız ; sonuç sorgulaması veya webhook biz yöneteceğiz
+2-Ekstre olarak mı yoksa belli tarih aralıkları mı olacak?
+3-Kart oluşturma aşamasında müşteri no'dan hangi tipte ve hangi firma için ek kart üretilebileceği belirlenebilir
+ama anonim kartlar için firma id'si iletilmeli.(1-ödeal, 2-İyzico, 3-Tahsildar)
+4-(PAN saklanmaz, geçici kullanılır),ne demek? PAn değeri şifresiz ve açık şekilde bize gelmeli ve shadowCardNo gibi bir 
+eğer dönmeli.
+5-  "Kart Oluşturma ve Atama" başlığındaki tüm endpointlerde girdi ve çıktı parametreleri dokümanda belirtilmeli.
+6- Listelemelerde cursor kullanılabilecek mi sorgula.
+7-Kart yenilemede kartın üzerindeki isim ve izinler boşsa eskisinden devir alınıyor, parametreler eklenmeli.
+Eski kart kapanıp yeni kart üretildiğinde bakiye nasıl taşınacak?
+Yeni kartın teslim adresi her yenilemede isteniyor, bu da analize olmalı.
+8-Karttan karta transferin muhasebe, MASAK ve mutabakat kısmı(iptal/iade olacak mı?)
+PayCore'un işlem sonucunu DVP'ye nasıl bildireceği netleşmeli.
+9-İşlem Durum Bildirimi , DVP katmanında yapacağız.
+10-OAuth2 Client Credentials , dış firma ile Api gateway aracılığıyla DVP arasında olacak.
+11-PayCore analizinde "para gönderimi kapalı" ifadesi var; permission modelinde böyle bir izin yok. 
+Karttan karta transfer servisi varken bu kısıt hangi alanla uygulanacak, müşteri isterse kapatabilir mi?
+12-Idempotency yaklaşımı paycore ve intertech'e ilgili üretme-taşıma tarzı endpointler için zorunlu olmalı.
+13-PIN oluşturma, değiştirme, bloke kaldırma ve yeniden gönderim servisleri yok, bunları nasıl yöneteceğiz?
+14-Kartın teslim edildiği veya PIN alındığı doğrulanmadan aktivasyon yapılacak mı, süreç nasıl kurgulanacak?
+15-Karttan karta transferler kart hareketlerinde görünecek mi?
+16-Kart status değişimlerinin akışı nasıl olacak, her durum her duruma geçebilecek mi, bir matris olmalı mı?
+17-Kapalı veya süresi dolmuş karttaki bakiyenin iadesi, başka karta taşınması olacak mı?
+18-Harcama, iade ve takas muhasebesi başka dokümanlarda mı yazılacak?
+19-Ekstre sorgulama tarih aralığı verilmiş, bu tarihler aralığında
+balance değerleri doğru şekilde üretilebilir mi Paycore ile teyit edilmeli.

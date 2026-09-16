@@ -1,0 +1,28 @@
+KK başvurusunda belgeli_gelir alanı boş veya dolu ama belgesi eski tarihliyse Gelir_belgesi_gerekli statusu döner
+Belgenin zaman aşımı için belgeli_gelir alanı en son ne zaman doldurulmuş ona bakılabilir.(bu tabloya atılan
+her güncellemede değil sadece bu alan güncellendiğinde değişen bir tarih alanı olmalı ki güncelliğe güvenebilelim)
+
+Okuma başarılı
+belgeli_gelir alanı ve ilgili tarih alanı güncellenir, Customer_Income tablosunda dosya okunduğu belli olsun.
+Dosya status diye bir alan DYS'de tutulmalı ve RPA'dan istek geldiğinde bu bilgiyi DYS'ye alan olarak yazmalıyız.
+
+Okuma başarısız
+Dosya okunamadıysa belgeli_gelir alanı mevcut değerle, tarih alanı da o gün tarihiyle güncellenmeli, dosya okunamadığı belli olsun.
+Bu durumda DYS'ye gidip dosya statüs'ü kontrol edilebilir, okunamadıysa limitle ilgili karar verilip işlem yapılabilir.
+
+Mobil taraf sadece belge'ye Gelir_belgesi_gerekli status'u SM'den bize gelmeli.
+başvuru esnasında son 5 gün içinde yüklenmiş belgesi var mı kontrolü yapmayacak çünkü gün kontrolü SM'de 
+
+Job senaryoları:
+Dosya geldi ve RPA bizi çağırdı, belgeli_gelir alanı ve ilgili tarih alanı güncellenir , DVP tablosudanki başvuru id ile finalize çağır.
+
+2 gün sonra baktı DVP tablosunda müşterinin başlatılmış akışı var ve belgeli_gelir alanı boş veya dolu ama belgesi eski tarihli
+o zaman bilgilendirme push çıkar.
+
+5. gün sonunda her türlü finalize çağır(limit artışta çağrılıyor mu nasıl bir sonlandırma yapılacak)
+
+4-a ve 4-c durumu nasıl kurgulandı:
+4-a 8 no ile geldi, belgeli_gelir alanı ve tarihi güncelle ama finalize çağırma
+4-c geldi belgeli_gelir alanı - tarihi güncel ve son bir haftada DVP'deki akış tablosunda 4-a dosya tipi varsa finalize çağır
+
+

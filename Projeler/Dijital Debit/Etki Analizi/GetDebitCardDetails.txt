@@ -1,0 +1,31 @@
+GetDebitCardDetails
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/Web References/DebitCardService/Reference.cs
+	GetDebitCardDetails fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetDebitCardDetails servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetDebitCardDetailsAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Operation/Web References/DebitCardService/Reference.cs
+	GetDebitCardDetails fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetDebitCardDetails servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetDebitCardDetailsAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+	
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/Web References/DebitCardService/Reference.cs
+	GetDebitCardDetails fonksiyonu tanımlanır. DebitCardService.asmx üzerindeki GetDebitCardDetails servisine çağrı atan proxy metotudur. Senkron çalıştırır.
+	GetDebitCardDetailsAsync fonksiyonu tanımlanır. Aynı servisi asenkron olarak çalıştırır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Operation/Intertech.Operation.DebitCard/DebitCardServiceWrapper.cs
+	GetDebitCardSecurityInfo fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetails fonksiyonu kullanılır.
+	Get3DSecureInfoForDebitCard fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetails fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/DebitCardsQueries.cs
+	GetCardMainAccount fonksiyonu tanımlanır. DebitCardService referansı üzerinden GetDebitCardDetails fonksiyonu kullanılır.
+-------------------------
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/CreditCard.Layer/Intertech.CreditCard.Facade/fCoreCreditCards/DebitCardsCore.cs
+	GetDebitCardSecurityInfo fonksiyonu tanımlanır. DebitCardServiceWrapper referansı üzerinden GetDebitCardSecurityInfo fonksiyonu kullanılır.
+	Get3DSecureInfoForDebitCard fonksiyonu tanımlanır. DebitCardServiceWrapper referansı üzerinden Get3DSecureInfoForDebitCard fonksiyonu kullanılır.
+
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.Layers/Application.Layer/Intertech.Application.Facade/fAppCreditCards/fAppDebitCard.cs
+	GetDebitCardSecurityInfo fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsCore üzerinden GetDebitCardSecurityInfo fonksiyonu kullanılır.
+	Get3DSecureInfoForDebitCard fonksiyonu tanımlanır. Intertech.CreditCard.Facade/Intertech.Facade.DebitCardsCore üzerinden Get3DSecureInfoForDebitCard fonksiyonu kullanılır.
+	
+$/ADK_FORTUNA/PROD/Odeabank/Fortuna/ADK_InternetSube/Intertech.Fortuna.UILayers/WebUI.Layer/Intertech.Web.UIApplication/EBranchForms/CustomerInformation/CardLogin/RegisterMain.aspx.cs
+	CardInfo fonksiyonu tanımlanır. Intertech.Application.Facade/Intertech.Facade.fAppDebitCard üzerinden GetDebitCardSecurityInfo fonksiyonu kullanılır.

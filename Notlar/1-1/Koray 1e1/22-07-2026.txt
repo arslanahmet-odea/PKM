@@ -1,0 +1,19 @@
+-3D secure Sms hatası için Koray'la konuş Ömer'le çözüm düşün
+-key blocok işi son ne durumda, tarih alacağız
+-Logları inceliyorum, kart bilgilerinde ve müşteri izinlerinde sorunlar varmış.
+Kaç kullanıcı güncellendiğini bildir.
+-Dijital gelir belgesi için 7k kullanıcıyla pilota başlanacak.
+-Pentest için Hüseyin'le toplantı sonucunu bildir.
+
+PPY-2958 PYMNT-2316 ODEA-12449 Özlem Hanım Performans Ekranı	23.07 preprod'a alındı. Testler tamamlanınca PROD'a aktarımı için planlama yapılacak.
+PPY-2109 PYMNT-1866 ODEA-10899 ATM KMH Gösterimi Teklif 77 A/G geldi. Makbuzları biz yapabilir miyiz, maliyet düşer mi Intertech tarafından dönüş bekleniyor.
+PPY-3172 PYMNT-2504 ODEA-12867 ATM Cihaz Bilgisi Sil butonunun eklenmesi	Testler ok. Performans ekranı ile birlikte canlıya alınacak.
+
+
+İyileştirme maddeleri: (Orhancan'a sor.)
+-Geçecek maddeler birikiyor, freeze dönemi kaos oluyor, 
+her madde iş bittiğinde release'e eklensin, geçiş dönemi stressli oluyor.
+-Review maddeleri backlog'a madde ekletmesi hakkında sonraki geçişlerde fix'lenmesi olabilir.
+
+Efecan,
+

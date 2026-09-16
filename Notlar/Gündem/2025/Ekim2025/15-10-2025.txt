@@ -1,0 +1,9 @@
+- AES keyler ayrı olacak , tüm endpoint'lerde yapılması lazım.
+- Android testlerinin bitmesi lazım
+- Trendyol endpointlerini bizim uygulama için test et.
+- Kaan'a test senaryolarının hazırlanması, 
+-smart account nasıul çalışıyor, ty için bak
+??Yöneticinle ayrı düştüğünde önce hizalan ve neyin dikkate alınırsa işin resminin değişebileceğini söyle.
+Bulgularla konuş, inançlarını değil
+İnsanlar kendi keşfettikleri konulara karşı daha açık fikirlidir bu yüzden soru sorarak fikir uyandırmaya çalış.
+Çözüm sun ki amacın eleştri değil ortak çözüm üretmek olduğu anlaşışsın.

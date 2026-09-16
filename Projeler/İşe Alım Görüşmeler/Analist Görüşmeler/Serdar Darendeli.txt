@@ -1,0 +1,32 @@
+En başarılı bulduğun projen nedir, yanıtladıktan sonra neyi farklı yapardını sor.
+Sıfırdan başlanıp ilerlenen bir projede , en çok öğrendiği konu.
+Mevcut sistemi geliştirmeye yönelik adımlar atmış, web tarafında mevcut tarafı daha iyi hale getirmiş.
+
+
+
+To tell them apart, ask: “Tell me about a time you got feedback that felt unfair. What did you do next?"
+❌ Defends at length, blames others.
+
+ ✅ Reflects, adapts, moves forward.
+ 
+GTEK firmasından ayrılmış, yazılımcılar devamlı değişmiş.
+Ufak bulgu bildiriyordu, birden fazla tekrarlanmış. Yasal raporlamaya hakim
+,yazılıma hakim değil, herhangi bir gecikmede hesap sana soruyorlarmış.
+Yeterince iyi yapamadıkları için haksız yere ona fırça atıyormuş.
+Son aşamada söylemiş yöneticisine. Başka ekip arkadaşlarını suçluyor.
+ 
+Kullanıcı deneyimini geliştirmek için kendi inisiyatifinizle yaptığınız bir iyileştirmeyi anlatır mısınız?
+Kendisi Postman öğrenip API'leri test etmiş. Olumlu
+
+Başka projeler yapıyor musun, open source, veya başka projeler. 
+yok, Başka projeleri yapmaması çalışkanlığı sorgulanabilir, olumsuz, meraklı değil
+
+github adresini ve personel project adresini iste:
+
+var tasks = new Task[]
+{
+    Task.Run(async () => await SetBranchNameAsync(accountDetail, cancellationToken)),
+    Task.Run(async () => await SetAccountTypeAsync(accountDetail, cancellationToken))
+};
+
+await Task.WhenAll(tasks);

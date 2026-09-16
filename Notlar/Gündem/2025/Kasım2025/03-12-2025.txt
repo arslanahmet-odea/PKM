@@ -1,0 +1,37 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Re: Odea Banka Kartı Statü Değişiklikleri Servisi - Tüm Alanlar
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-Visa Clearing Exchange Geçişi ,Emrah Mersinli ve Hasan Cihan, takas operasyon
+-LKS pazartesiden itibaren aktif olacağız. Netleştirelim, https://jira.intertech.com.tr/browse/SD-2866025
+-Production Call Center Hataları, takip, Koray'a bilgi ver
+-Kart ekstre kesim tarihinin değişmemesi, takip,
+-Otomatik ödeme talimatı bir çalışıp bir çalışmaması
+-MCC geçişinin test edilmesi,takip
+-RE: CMS Menü Başlıklarının MVP+ Tasarımına Uyumlanması HK., konusu nedir?
+-CMS menülerinin call center ekranlarında gizlenebilmesi isteri hakkında, maili ,konuyu konuşmak gerekli.
+-Pusula Ekstre Adres Değişikliği Hakkında , Murat Takip et
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı mı,DZD'ye dosyayı ilet, takip
+-Codem konusu test , takip , KMH ile alakalıydı, sıkıştıran var mı, varsa Yusuf'u sıkıştıralım.
+-Temassız ve yurt içi - yurt dışı açılması fortuna servislerinin yazdırılması, Kaan mail atacaktı Yusuf'a
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme pilotta olmayıp mobil güncelleyenler için senaryolar, ben
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+-DWH Debit kart tablolarının aktarılması, takip
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+-Online Vergi Dairesine bilgi gir
+
+
+Barış'a hata listesini çıkaralım.
+
+Regresyon hatası pre-login QR para çekme limitleri hatalı görünüyor.
+
+HSM, Fırat takip etsin, Emrah İstanbul'a gelince bakacaktı. 10k geçişi gerekecek ilgili Eforu 
+ key block'a adresleyelim
+ 
+

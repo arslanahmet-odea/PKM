@@ -1,0 +1,20 @@
+-Debit kat transaction listeleme ekranında debit kart maskeli gelecek değil mi?
+-hesap no bilgsi yanlış geliyor, mesaj at.
+-Örnek curl konutu iste.
+-Kısıt koyma ile alakalı bir bug vardı, ne durumda?
+
+5169440000871610
+5169********1610
+
+
+"4687970000015079" 
+"4687********5079" 
+
+"6708680000003138"
+"6708********3138"
+
+"5169440000868327"
+"5169********8327"
+
+
+UpdateDebitCardOperationType

@@ -1,0 +1,1042 @@
+openapi: 3.0.3
+info:
+  title: Virtual Card API
+  description: API for managing virtual cards, including creation, settings, limits, and transactions
+  version: 1.0.0
+  contact:
+    name: Payment Team
+    email: ahmet.arslan@odeatech.com
+
+security:
+  - BearerAuth: []
+
+paths:
+  /virtual-cards:
+    get:
+      summary: Get user's virtual cards
+      description: Retrieves all virtual cards belonging to the authenticated user. Optionally include current limit information using query flags.
+      tags:
+        - Virtual Cards
+      parameters:
+        - name: status
+          in: query
+          description: Card status
+          required: false
+          schema:
+            $ref: '#/components/schemas/CardStatus'
+        - name: includeLimits
+          in: query
+          description: Include current limit information for each card in the response
+          schema:
+            type: boolean
+            default: false
+      responses:
+        '200':
+          description: Virtual cards retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualCardsListResponse'
+              example:
+                cards:
+                  - shadowCardNumber: "1234567890123456"
+                    maskedCardNumber: "5422********3650"
+                    expiryDate: "12/25"
+                    status: "ACTIVE"
+                    limits:
+                      schema:
+                        $ref: '#/components/schemas/OnlineLimitInfo'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'        
+    post:
+      summary: Create a new virtual card
+      description: Creates a new virtual card linked to a specific account
+      tags:
+        - Virtual Cards
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateVirtualCardRequest'
+            example:
+              accountId: "3920-3124158-829"
+              isEcommerceEnabled: true
+              IdempotencyKey : '550e8400-e29b-41d4-a716-446655440000'
+      responses:
+        '201':
+          description: Virtual card created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualCardResponse'
+              example:
+                shadowCardNumber: "1234567890123456"
+                maskedCardNumber: "1234********3456"
+                expiryDate: "12/25"
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+  /virtual-cards/{shadowCardNumber}:
+    get:
+      summary: Get virtual card by shadow card number
+      description: Retrieve a single virtual card resource using its shadow card number.
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          description: The shadow card number of the virtual card
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Virtual card details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualCardWithAccountsAndLimits'
+        '404':
+          description: Card not found
+  /virtual-cards/{shadowCardNumber}/card-no:
+    get:
+      summary: Get encrypted card no by shadow card number
+      description: Retrieve a single virtual card resource using its shadow card number.
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          description: The shadow card number of the virtual card
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Encrypted PAN of Virtual card
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EncryptedPAN'
+        '404':
+          description: Card not found
+  /virtual-cards/{shadowCardNumber}/cvv2:
+    get:
+      summary: Get encrypted cvv2 by shadow card number
+      description: Retrieve a single virtual card resource using its shadow card number.
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          description: The shadow card number of the virtual card
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Encrypted CVV2 of Virtual card
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EncryptedCVV2'
+        '404':
+          description: Card not found
+  /virtual-cards/{shadowCardNumber}/status:
+    put:
+      summary: Update virtual card status
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2024042900000004"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - status
+              properties:
+                status:
+                  type: integer
+                  description: status code to update, [ACTIVE, CLOSED, SUSPENDED, EXPIRED] equivalent values will be shared in future date
+                  example: 5
+      responses:
+        '200':
+          description: Virtual card process updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - shadowCardNumber
+                  - maskedCardNumber
+                  - responseCode
+                properties:
+                  shadowCardNumber:
+                    type: string
+                    example: "2025042200000275"
+                  maskedCardNumber:
+                    type: string
+                    example: "529545******0299"
+                  responseCode:
+                    type: string
+                    description: Response code of the process
+                    example: "00"
+        '400':
+          description: Invalid request
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/limits:
+    get:
+      summary: Get virtual card limits
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021031500000735"
+      responses:
+        '200':
+          description: Virtual card limits retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                items:
+                  $ref: '#/components/schemas/OnlineLimitInfo'
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+    put:
+      summary: Set virtual card limit
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021031500000735"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - settableLimit
+                - LimitResetType
+                - PassBalanceCheck
+                - ResetAfterXDay
+              properties:
+                settableLimit:
+                  type: number
+                  format: double
+                  example: 10000.0
+                  description: Limit to set for the card
+                LimitResetType:
+                  type: number
+                  description: How the limit resets, values will be integer
+                  enum:
+                    - AfterXDay
+                    - Daily
+                    - JustCustomerRequest
+                    - Weekly
+                    - Monthly
+                  example: 4
+                PassBalanceCheck:
+                  type: boolean
+                  example: false
+                  description: If the limit to be defined is desired to be higher than the account balance linked to the card, it is set to true.
+                ResetAfterXDay:
+                  type: integer
+                  example: 1
+                  description: Number of days after which limit resets (if AfterXDay)
+      responses:
+        '200':
+          description: Limit updated successfully
+        '400':
+          description: Invalid request
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/accounts:
+    put:
+      summary: Update an existing virtual card and its linked accounts
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021031500000735"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - CardGroup
+                - CardStyle
+                - Accounts
+              properties:
+                CardGroup:
+                  type: string
+                  example: "529545"
+                  description: Card group identifier to select the card, will be shared
+                CardStyle:
+                  type: string
+                  example: "053"
+                  description: Card style code to select the card, will be shared
+                Accounts:
+                  type: array
+                  description: List of accounts linked to this virtual card (update or replace)
+                  items:
+                    type: object
+                    required:
+                      - AccountId
+                      - Currency
+                    properties:
+                      AccountId:
+                        type: string
+                        example: "3920-3124158-827"
+                        description: Unique account ID
+                      Currency:
+                        type: string
+                        example: "USD"
+                        description: Currency of the linked account
+      responses:
+        '200':
+          description: Virtual card updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - Message
+                properties:
+                  Message:
+                    type: string
+                    example: "Virtual card updated successfully"
+        '400':
+          description: Invalid request
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/pin:
+    put:
+      summary: Update virtual card PIN
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021092800002006"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - NewPin
+              properties:
+                NewPin:
+                  type: string
+                  example: "1234"
+                  description: The new PIN to set
+      responses:
+        '200':
+          description: PIN update response
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - ResponseDescription
+                properties:
+                  ResponseDescription:
+                    type: string
+                    example: "00"
+                    description: |
+                      Response code of the PIN update.
+                      Possible values:
+                      - "00": Success
+                      - "-1": UNKNOWN_ERROR (Bilinmeyen Hata)
+                      - "86": WEAK_PIN_DETECTED (Zayıf pin)
+                      - "14": CARD_NOT_FOUND (Kart bulunamadı)
+                      - "54": CARD_EXPIRED (Vadesi dolan kart)
+                      - "34": INVALID_CARD_STATUS (Kart durum hatası)
+                      - "05": INCORRECT_CVV2 (Cvv2 hatalı)
+                      - "77": BLOCKED_CVV2 (Cvv2 blokeli)
+                      - "43": INVALID_FRAUDULENT_PIN (Geçersiz pin)
+        '400':
+          description: Invalid request
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/pin/check:
+    post:
+      summary: Check virtual card PIN
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021092800002006"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Pin
+              properties:
+                Pin:
+                  type: string
+                  example: "1234"
+                  description: PIN to verify
+      responses:
+        '200':
+          description: PIN verification response
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - ResponseDescription
+                properties:
+                  ResponseDescription:
+                    type: string
+                    example: "00"
+                    description: |
+                      Response code of the PIN verification. Possible values:
+                      - pincheckincorrectpin: Yanlış şifre
+                      - Pincheckcardblockedbyincorrectpinentries: Pin blokeli
+                      - cardstatusisnotvalid: Kart durumu geçersiz
+                      - pincheckdebitcardnotfound: Kart bulunamadı
+                      - Cardmaturityerror: Geçersiz son kullanma tarihi
+                      - Pincheckincorrecttrackdata: Kart manyetik bilgisi hatalı
+                      - pincheckcardstatusisnotvalid: Kart durumu geçersiz
+                      - pinchecktoomanyincorrectpinentries: Fazla sayıda başarısız şifre girişi
+                      - pincheckunknownerror: Bilinmeyen hata
+        '400':
+          description: Invalid request
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/transactions:
+    post:
+      summary: Get virtual card transactions within a date range
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021092800002006"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - StartDate
+                - EndDate
+                - Count
+                - ProcessType
+              properties:
+                StartDate:
+                  type: string
+                  format: date-time
+                  example: "2025-08-25T00:00:00"
+                  description: Start date of transaction range
+                EndDate:
+                  type: string
+                  format: date-time
+                  example: "2025-08-28T00:00:00"
+                  description: End date of transaction range
+                Count:
+                  type: string
+                  format: integer
+                  example: "20"
+                  description: It shows how many transactions will be returned before the end date. If 0 is passed, it lists all transactions between the relevant dates.
+                ProcessType:
+                  type: integer
+                  enum: [1,2,3,4,5]
+                  description: |
+                    Types of transactions to display:
+                    1 - POS Sales
+                    2 - Virtual POS Sales
+                    3 - Moto Sales
+                    4 - ATM Withdrawal
+                    5 - All Transactions
+                  example: 5
+      responses:
+        '200':
+          description: Transactions retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - fullName
+                  - maskedCardNumber
+                  - shadowCardNumber
+                  - totalSpending
+                  - cardType
+                  - productName
+                  - debitCardTransaction
+                properties:
+                  fullName:
+                    type: string
+                    example: "DENIZ YILDIZ"
+                  maskedCardNumber:
+                    type: string
+                    example: "529545******9953"
+                  shadowCardNumber:
+                    type: string
+                    example: "2021092800002006"
+                  totalSpending:
+                    type: number
+                    format: double
+                    example: -33258.17
+                  cardType:
+                    type: integer
+                    example: 78
+                  productName:
+                    type: string
+                    example: "DENIZ YILDIZ"                
+                  debitCardTransaction:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - currencyCode
+                        - accountText
+                        - amount
+                        - transactionName
+                        - transactionDate
+                        - isQrTransaction
+                        - serialNumber
+                        - usageType
+                        - digitalSlipAllowed
+                        - MCC
+                        - merchantName
+                      properties:
+                        currencyCode:
+                          type: string
+                          example: "949"
+                        accountText:
+                          type: string
+                          example: "9142-17375377-354"
+                        amount:
+                          type: number
+                          format: double
+                          example: 16.6
+                        transactionName:
+                          type: string
+                          example: "Pos satış"
+                        transactionCode:
+                          type: string
+                          nullable: true
+                          example: null
+                        transactionDate:
+                          type: string
+                          format: date-time
+                          example: "2022-04-19T13:57:33.93"
+                        isQrTransaction:
+                          type: boolean
+                          example: false
+                        serialNumber:
+                          type: string
+                          example: "5008433344"
+                        usageType:
+                          type: string
+                          example: "Income"
+                        digitalSlipAllowed:
+                          type: boolean
+                          example: true
+                        MCC:
+                          type: string
+                          example: "6075"
+                        merchantName:
+                          type: string
+                          example: "DENIZ BAKKAL"   
+        '400':
+          description: Invalid request
+        '404':
+          description: Card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/cvv2/check:
+    post:
+      summary: Check CVV2 of a virtual card
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021092800002006"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - Cvv2
+              properties:
+                Cvv2:
+                  type: string
+                  example: "720"
+                  description: CVV2 value to verify
+      responses:
+        '200':
+          description: CVV2 verification response
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - IsCvv2Valid
+                properties:
+                  IsCvv2Valid:
+                    type: boolean
+                    example: false
+                    description: Indicates whether the CVV2 is valid
+        '400':
+          description: Invalid request
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /virtual-cards/{shadowCardNumber}/cvv2/regenerate:
+    post:
+      summary: Regenerate CVV2 for a virtual card
+      tags:
+        - VirtualCards
+      parameters:
+        - name: shadowCardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Unique shadow card number
+          example: "2021092800002006"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              description: No body required for this request
+      responses:
+        '200':
+          description: CVV2 regenerated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - NewCvv2
+                properties:
+                  NewCvv2:
+                    type: string
+                    example: "123"
+                    description: Newly generated CVV2 for the card
+        '404':
+          description: Virtual card not found
+        '500':
+          description: Server error
+  /atms:
+    get:
+      summary: Get ATM list
+      description: Retrieves the list of ATMs by calling the internal SOAP service `BranchAndAtmService.asmx/GetAtmList`.
+      tags:
+        - ATM
+      responses:
+        '200':
+          description: ATM list retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AtmListResponse'
+              example:
+                atms:
+                  - terminalId: "A1000-02"
+                    terminalDefinition: "MASLAK ŞUBE"
+                    branchCode: 1000
+                    cityCode: 34
+                    subLocation: ""
+                    subLocationDistrict: "Şişli"
+                    locationType: "Branch"
+                    coordX: 41.115274
+                    coordY: 29.023964
+                    coordZ: 0.000000
+                    countyCode: "34000022000"
+                    brand: "Ncr"
+                    model: "Self Servis 6634 - SDM"
+                    isActive: "1"
+                    insertMoney: 1
+                    coinSupport: 1
+                    usdSupport: 0
+                    eurSupport: 0
+                    recordStatus: "A"
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    CreateVirtualCardRequest:
+      type: object
+      required:
+        - accountId
+      properties:
+        accountId:
+          type: string
+          description: Account identifier to link the card to
+          example: "3920-3124158-829"
+        isEcommerceEnabled:
+          type: boolean
+          description: Determines whether the card is open to online shopping based on user selection.
+          example: true
+        IdempotencyKey:
+          type: string
+          format: uuid
+          description: >
+            In case of an error during the request, the same key is sent again. This allows the core service
+            to recognize that the response of the previous request was not received and, if a card was created,
+            to return the details of the created card.
+          example: 550e8400-e29b-41d4-a716-446655440000
+    VirtualCardResponse:
+      type: object
+      properties:
+        shadowCardNumber:
+          type: string
+          description: Shadow card number
+          example: "1234567890123456"
+        maskedCardNumber:
+          type: string
+          description: masked card number
+          example: "1234********3456"
+        expiryDate:
+          type: string
+          description: Card expiry date in MM/YY format
+          example: "12/25"
+        sourceAccount:
+          $ref: '#/components/schemas/SourceAccount'
+
+    SourceAccount:
+      type: object
+      properties:
+        accountName:
+          type: string
+          example: "wage account"
+        branchCode:
+          type: integer
+          example: 9142
+        customerNo:
+          type: integer
+          example: 17491679
+        accountSuffix:
+          type: integer
+          example: 351
+        currencyCode:
+          type: string
+          example: "TRY"
+        branchName:
+          type: string
+          nullable: true
+          example: null
+        availableBalance:
+          type: number
+          format: double
+          example: 0
+        amountOfBalance:
+          type: number
+          format: double
+          example: 0
+        iban:
+          type: string
+          example: "TR880013400001749167900001"
+        accountNumber:
+          type: integer
+          example: 17491679
+
+    VirtualCardSensitiveResponse:
+      type: object
+      properties:
+        encryptedPAN:
+          $ref: '#/components/schemas/EncryptedPAN'
+        encryptedCVV2:
+          $ref: '#/components/schemas/EncryptedCVV2'
+        shadowCardNumber:
+          type: string
+          description: Shadow card number
+          example: "1234567890123456"
+        maskedCardNumber:
+          type: string
+          description: masked card number
+          example: "1234********3456"
+        expiryDate:
+          type: string
+          description: Card expiry date in MM/YY format
+          example: "12/25"
+        status:
+          $ref: '#/components/schemas/CardStatus'
+
+    VirtualCardsListResponse:
+      type: object
+      properties:
+        cards:
+          type: array
+          items:
+            $ref: '#/components/schemas/VirtualCardWithLimits'
+
+    VirtualCardWithAccountsAndLimits:
+      allOf:
+        - $ref: '#/components/schemas/VirtualCardSensitiveResponse'
+        - type: object
+          properties:
+            linkedAccounts:
+              type: array
+              items:
+                $ref: '#/components/schemas/LinkedAccount'
+            linkedLimits:
+              type: object
+              items:
+                $ref: '#/components/schemas/OnlineLimitInfo'
+
+    VirtualCardWithLimits:
+      allOf:
+        - $ref: '#/components/schemas/VirtualCardResponse'
+        - type: object
+          properties:
+            linkedLimits:
+              type: object
+              items:
+                $ref: '#/components/schemas/OnlineLimitInfo'
+
+    LinkedAccount:
+      type: object
+      properties:
+        accountId:
+          type: string
+          description: Linked account identifier
+          example: "3920-3124158-829"
+        balance:
+          type: number
+          format: double
+          description: Account balance
+          example: 10000.50
+        currency:
+          $ref: '#/components/schemas/Currency'
+
+    EncryptedPAN:
+      type: string
+      description: "Encrypted value of PAN"
+      example: "12345678901234561234567890123456"
+
+    EncryptedCVV2:
+      type: string
+      description: "Encrypted value of CVV2"
+      example: "1234567890123456"
+
+    OnlineLimitInfo:
+      type: object
+      properties:
+        settableLimit:
+          type: number
+          format: double
+          description: "The limit that can be configured by the customer through the provided endpoints. This value can be set up to the maximum allowed limit."
+          example: 50000.00
+        availableLimit:
+          type: number
+          format: double
+          description: "The currently available limit. On a specific date each month this value will be batch-updated to match the settableLimit."
+          example: 5000.00
+        maxAllowedLimit:
+          type: number
+          format: double
+          description: "The max allowed limit. The settableLimit value can be set up to the maxAllowedLimit value. This value could be different for Trendyol and Odeabank"
+          example: 75000.00
+
+    Currency:
+      type: string
+      enum: [TRY, USD, EUR]
+      description: Currency code
+      example: "TRY"
+
+    CardStatus:
+      type: string
+      enum: [ACTIVE, CLOSED, SUSPENDED, EXPIRED]
+      description: Card status
+      example: "ACTIVE"
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error code
+        message:
+          type: string
+          description: Error message
+        details:
+          type: object
+          description: Additional error details
+
+    # NEW: ATM schemas mapped from SOAP response
+    AtmListResponse:
+      type: object
+      properties:
+        atms:
+          type: array
+          items:
+            $ref: '#/components/schemas/Atm'
+
+    Atm:
+      type: object
+      properties:
+        terminalId:
+          type: string
+        terminalDefinition:
+          type: string
+        branchCode:
+          type: integer
+        cityCode:
+          type: integer
+        subLocation:
+          type: string
+        subLocationDistrict:
+          type: string
+        locationType:
+          type: string
+        coordX:
+          type: number
+          format: double
+        coordY:
+          type: number
+          format: double
+        coordZ:
+          type: number
+          format: double
+        countyCode:
+          type: string
+        brand:
+          type: string
+        model:
+          type: string
+        isActive:
+          type: string
+        insertMoney:
+          type: integer
+        coinSupport:
+          type: integer
+        usdSupport:
+          type: integer
+        eurSupport:
+          type: integer
+        recordStatus:
+          type: string
+
+  responses:
+    BadRequest:
+      description: Bad request - invalid input parameters
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "INVALID_REQUEST"
+            message: "Invalid request parameters"
+            details: 
+              field: "accountId is required"
+
+    Unauthorized:
+      description: Unauthorized - invalid or missing authentication
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "UNAUTHORIZED"
+            message: "Authentication required"
+
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "NOT_FOUND"
+            message: "Virtual card not found"
+
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "INTERNAL_ERROR"
+            message: "An unexpected error occurred"
+
+tags:
+  - name: Virtual Cards
+    description: Operations for managing virtual cards
+  - name: ATM
+    description: Operations for retrieving ATM list

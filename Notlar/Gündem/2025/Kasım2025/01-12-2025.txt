@@ -1,0 +1,46 @@
+Acil-Önemli : These are vital tasks with substantial urgency.  
+-Baas proje bağlama mesajı yaz, haftalık iş girişi görsel yolla. eforu takip et
+-İşleri atamak için bir takvim belirle.
+-LKS pazartesiden itibaren aktif olacağız. Netleştirelim, https://jira.intertech.com.tr/browse/SD-2866025
+-Production Call Center Hataları, takip, Koray'a bilgi ver
+-Debit kart dijital slip yetişir mi? Duygu’ya sor, takip
+-Transfer MS'i Call Center Yetki Hatası , takip.
+-AES keylerin tanımı için Tunç'a mail at.
+-Meral’in aktardığı Visa Clearing Exchange işini Tunç’a aktar.
+-BAAS için Proje – PPY takibini bitirenler bana özelden yazsın.
+-Dolandırıcılık Önleme , UAT testlere başlama durumu Orhancan sor
+-Kart ekstre kesim tarihinin değişmemesi
+-otomatik ödeme talimatı bir çalışıp bir çalışmaması
+-MCC geçişinin test edilmesi.
+-Trendyol İletişim Merkezi DVP IB Entegrasyonu kredi ve debit kartı olan kullanıcı temin edilmeli, Tunç'a ata
+-Eski mobil uygulama 4 aralık öncesi bw testleri, mobil mevcutta uat testleri, Sefa'dan iste.
+(Debit kart testleri, şifremi değiştir(bir test), dolandırıcılık önleme kart şifre ile modülü onaylama (bir test))
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+-Log'lama taskının projesi açıldı mı, takip
+-Codem konusu test , takip , KMH ile alakalıydı, sıkıştıran var mı, varsa Yusuf'u sıkıştıralım.
+-Temassız ve yurt içi - yurt dışı açılması fortuna servislerinin yazdırılması, Kaan mail atacaktı Yusuf'a
+-Açık bankacılık kartlar intertech projenin açılması, takip.
+-KKB üyeliği gerekli, Murat'a söyle üye olup dokümantasyonu indirsin, FTP'ye yükleme yapılması gerektiği ne zaman söyleniyor?
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+-Dolandırıcılık önleme pilotta olmayıp mobil güncelleyenler için senaryolar, ben
+-Dolandırıcılık önleme soft login uyumu, takip diğer ekipler
+-DWH Debit kart tablolarının aktarılması, takip
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye için
+-1e1 olmayanlara 1e1 ayarla.
+Online Vergi Dairesine bilgi gir
+-Doğum hediyesi yolla
+-odeabank vergi no ve bağlı olduğu vergi dairesi nedir
+
+Barış'a hata listesini çıkaralım.
+
+Geçişin eski versiyonundan UAT testlerini yapılması lazım
+Regresyon hatası pre-login QR para çekme limitleri hatalı görünüyor.
+
+HSM, Fırat takip etsin, Emrah İstanbul'a gelince bakacaktı. 10k geçişi gerekecek ilgili Eforu 
+ key block'a adresleyelim
+ 

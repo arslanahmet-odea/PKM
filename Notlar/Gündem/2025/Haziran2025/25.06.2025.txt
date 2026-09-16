@@ -1,0 +1,4 @@
+-Debit Projeleri için Duygu ile tasarımı nasıl olacak konuş, analiz onayı, adres bilgisi ve DYS işleri 
+-Dolandırıcılıkla mücadele kapsamında Duygu ile konuş.
+-Gürcan Bey’e Haziran Paketi Sunumu yapılacak görselleri kim hazırlayacak
+-Avni, PYMNT-1480-Bakiyen Yetersiz Uyarsının Düzenlenmesi

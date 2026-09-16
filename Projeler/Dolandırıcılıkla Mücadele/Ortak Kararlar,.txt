@@ -1,0 +1,46 @@
+Merhaba,
+Ortak alınan kararlar aşağıdaki gibidir.
+
+Ortak Menü'de
+Moto/E-tic
+Gündüz tarifesinde
+moto ve e-ticaret kısıtlandığında bu sadece NFC sorulup sorulmaması anlamına gelir. Şayet Ana menüde kısıtlı ise , Kredi Kartı menüsüne gittiğinde açma  
+yapmak istediğinde NFC soracak ve açacak, bilgilendirme mesajı olarak ana menüden NFC gerekliliğini kaldırma bilgisi verilecek.
+Gece tarifesinde Ana menüde kısıt olmasına bakılmaksızın her zaman NFC isteyecek.
+
+
+Nakit Avans
+Ortak menüdeki NA limiti sadece NFC sorulup sorulmaması limitini belirleyecek. 
+- 15 Bin olarak ayarlanmışsa kullanıcı 16 bin TL işlem yapacaksa NFC yapılacak ve bilgilendirme mesajı olarak ortak menüye git ve limiti artır diyeceğiz.
+
+- 15 Bin olarak ayarlanmışsa kullanıcı 14 bin TL işlem yapacaksa gündüz tarifesinde NFC gerekmeyecek.
+- 15 Bin olarak ayarlanmışsa kullanıcı 14 bin TL işlem yapacaksa gece tarifesinde NFC gerekeyecek.
+
+//NA için
+Nakit Avans, işlemi sadece kart menüsünde olacak ve moto ve e-tic'teki benzer yapı kullanılacak.
+
+NA gündüz tarifesinde kapamak istediğinde NFC gerekmeyecek.
+NA gündüz tarifesinde açmak istediğinde NFC gerekecek.
+
+NA gece tarifesinde kapamak istediğinde NFC gerekmeyecek.
+NA gece tarifesinde açmak istediğinde NFC gerekecek.
+
+
+E-tic gündüz tarifesinde kısıtlı değilse kapamak istediğinde NFC gerekmeyecek.
+E-tic gündüz tarifesinde kısıtlı değilse açmak istediğinde NFC gerekmeyecek.
+E-tic gece tarifesinde kısıta bakmaksızın açma-kapamak istediğinde NFC gerekecek.
+
+
+E-tic gündüz tarifesinde kısıtlı ise kapamak istediğinde NFC gerekmeyecek.
+E-tic gündüz tarifesinde kısıtlı ise açmak istediğinde NFC gerekecek.
+E-tic gece tarifesinde kısıta bakmaksızın açma-kapamak istediğinde NFC gerekecek.
+
+
+Moto gündüz tarifesinde kısıtlı değilse kapamak istediğinde NFC gerekmeyecek.
+Moto gündüz tarifesinde kısıtlı değilse açmak istediğinde NFC gerekmeyecek.
+Moto gece tarifesinde kısıta bakmaksızın açma-kapamak istediğinde NFC gerekecek.
+
+
+Moto gündüz tarifesinde kısıtlı ise kapamak istediğinde NFC gerekmeyecek.
+Moto gündüz tarifesinde kısıtlı ise açmak istediğinde NFC gerekecek.
+Moto gece tarifesinde kısıta bakmaksızın açma-kapamak istediğinde NFC gerekecek.

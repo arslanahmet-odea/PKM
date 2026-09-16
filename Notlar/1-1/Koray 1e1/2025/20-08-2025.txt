@@ -1,0 +1,59 @@
+
+Trendyol,
+ATM listesi için endpoint arayüzünü Ayşe hazırlayacak ve ileteceğiz bugün.
+Dijital Debit Kart Call Center İşlemleri için Meral bugün toplantı attı , saat 5'e.
+Netleşmesi gereken konular var, Cuma diyoruz her şeye.
+Limit ve  hesap  konusu için 4Arch'e sorduk
+Key seremonisi ve kullanılacak şifreleme yöntemine ilişkin dokümantasyon paylaşılacak.
+
+Fraud konusunda,
+Perizat'lar transaction tafında demiş ama orada sadece adet ve limit yok, merchant id gibi değerlerde var. 17:30'da toplantı sorulacak
+Open Api,
+-3 Endpoint teslim edildi, Nurşah test ediyor, hata olursa soracak.
+
+Dolandırıcılık Önleme,
+BE kodlama bitti, Sefa bizim tarfaları entegre etti, Kaan test ediyor, bitince diğer ekiplerin entegrasyonunu konuşacağız.
+Transfer ve KMH ekibiyle konuştuk, KMH tarafındaki işi biz yapacağız, Transfer ekibi ile netiz.
+UAT test senaryolarını ilettik.
+
+Debit Projesi:
+CVV2  gösterimi konusunu Duygu sordu, KartŞifre yapılması konusunu bekliyoruz.
+Limit'ten sıfır geliyor, testler yapılırken tespit edildi, Kaan tekrar sordu.
+Start date için CR açıldı, Kaan tekrar sordu
+Kart İptal akışı konusunun netleşmesi gerekiyor.
+
+Kdig:
+İşlem imzalama ve doküman imzalama yaygınlaştırma tamam
+
+KMH Tahsilat Onay:
+Bir tane FE , React Hook parametre yollanacak, Sefa yapacak
+Codem ekranında KMH uyarısı çıkmasında hata alınmış 
+
+ATM:
+
+Ortak ATM Para Çekme Limitleri Değişikliği 
+. PPY-2068: ATM Para Çekme Kaset Tanım Sıralama – Ödeme Algoritması – Faz 1 (ODEA-10837)
+•	Birden fazla kasetin aynı küpür olarak tanımlanması sağlanacaktır.
+•	ATM KKK ekranında düzenlemeler yapılacaktır.
+•	Journal düzenlemeleri kapsam dahilindedir.
+•	Kısmi algoritma düzenlemeleri yapılacaktır.
+•	T-Size “M” olarak belirlenmiştir.
+•	84 A/G verilmiştir. İş birimi onayı ve genel komite onayı sonrası süreç başlayacaktır.
+
+7. PPY-2110: ATM Üzerinden Müşteri Edinimi (ODEA-10920)
+•	ATM üzerinden müşteri edinimi adımı düzenlenecektir.
+•	Yeni akış hazırlanmış ve iş biriminin onayı alınmıştır.
+•	“S” düzeyinde bir T-Size beklenmektedir.
+
+
+Kaan,
+DB'de kontrolleri vardı hassas veriler için onları bitirdi.
+
+
+Eski Projelerin kapatılması , Tunç ve Duygu baktılar, Meral geldiğinde liste halinde iletecekler
+Chron'o girişleri eksik olan arkadaşları ielttim, Fırat 
+
+
+Barışa mail atılacak, şifrelem detaylarını yollamaları için.
+PGB incele
+Debit Create Kart kdig işlem imzalama gerektirir mi? Mevzuatta sorayım

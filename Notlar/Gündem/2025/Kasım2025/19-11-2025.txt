@@ -1,0 +1,33 @@
+Bir işin bittiğine karar vermek istiyorsan "İş bitti" tanımın olmalı.
+-limit düşürme Turgut ile toplantı,ben
+-Özgür'ü ara, ben
+-dolandırıcılık önleme senaryolar, ben
+-be kodların merge edilmesi, ben
+-Vergi Dairesine git,ben
+-SMS eğitim, birlikte
+-Sanal Kart üretilme sayacı, takip 
+-TY etki analizin incelenmesi, ben
+-Fe brach'lerin merge'lenmesi,takip
+-DVPrls maddesini oluştur, ben
+-Log'lama kapama işinin halledilmesi, takip
+-Log'lama taskının projesi açıldı mı?
+-Codem konusu test, takip
+-Temassız ve yurt içi - yurt dışı açılması fortuna servislerinin yazdırılması 
+-Açık bankacılık kartlar fortuna servislerinin yazdırılması
+-Açık bankacılık kartlar intertech projenin açılmaıs, takip.
+
+Acil gerekiyor mu?
+Hangi akışta gerekiyor,
+Core tarafta yapılması 
+Etki analizi öncesinde yapılması
+ATM tarafına bakılması cubetron gerekir mi, 
+Sopranos bakmazsa sorun çıkar
+
+
+
+Notlar:
+fiziki kartlarda call center için filtreleme çalışmaması
+Call center, aynı kodun web kanalında sorun yok.
+fiziki kartlarda sanal kart geliyor
+sanal kartlarda gelmiyor
+--callcenter tanımlı görünmüyor, Internet,Mobile,Robo ve TyfMobApp tanımlı. Burada 

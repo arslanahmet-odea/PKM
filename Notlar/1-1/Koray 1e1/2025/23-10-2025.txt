@@ -1,0 +1,25 @@
+Gündem:
+
+-Trendyol projesi
+TY ,fiziki debit verilerin birleştirilmesi en doğru yönten o kartların arkasında bir tane parametre okunacak bir yapı kurulması, önyüz de değişmez
+Hassas veri şifreleme için Ezgi ile yarın toplantı yapılacak, ATM, Iletişim Merkezi'nden kimseyi almak gerekir mi, mobil taraftan yapılan işlemlerde loglamada hassa veriler olmamalı
+Önyüzle alakalı yerler bitti, Intervision ve ATM limitleri konusu var.
+
+-Debit Kart Başvuru Düzenlemeleri
+
+-Dolandırıcılık Önleme, faz1 için önyüzde mesajın değişmesi
+BE bitti, FE çalışması devam ediyor.
+
+-Açık bankacılık Kartlar
+2 farklı yerden view alınacak ve okunarak bildirilecek.
+
+-Kmh geliştirmeleri
+Yusuf Zopçuk haftaya iletecek
+
+Maliyetler konusu:
+Fırat'la konuştuk, ATM'den son 5 yılda tek kişi bankaya müşteri olmamış, mail attı, tek bir sayfaya inecek
+
+Güvenç Arda konusu , olumsuz dönüyoruz.
+
+Özgür'e iletilmiş, 
+Yetkin konuşmuş 

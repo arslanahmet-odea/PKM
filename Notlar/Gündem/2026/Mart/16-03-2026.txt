@@ -1,0 +1,48 @@
+Acil-Önemli : These are vital tasks with substantial urgency. 
+-tsize , hesaptan para çekme Meral'le değerlendir
+-mail incele,Odeatech 15 günü geçmiş Incident ve Service Request kayıtları
+-Hüseyin'lerin kurumsal kart başvuru kapatma konuşmuş mu Duygu'ya sor.
+-kart no yoksa kart oluşturmaya mı yönlendirmeli?,
+-bazı hesapların kart no'su yok, olanları yolladığında yollanan kart no mu işlenmeli yoksa 
+kart no olmasa da mı olur?
+-isPilotApplication ne işe yarıyor? _httpContextAccessor.HttpContext.User.IsInRole(Constants.Authorization.Roles.Guest.Name)
+-Debit kartları listelerken bu alanlar farklı geliyor.
+Alan,1. Nesne,2. Nesne,Açıklama
+IncorrectPinEntryCount,2,0,PIN yanlış giriş sayısı sıfırlanmış
+IncorrectCvvCount,"""0"" (string)",null,CVV yanlış giriş sayısı temizlenmiş
+-Koray: 1e1:
+Hüseyin'in maili Sızma Testi Hizmeti Detayları
+-debit tarafta Barış'lar performance inceleyecek.
+paycore tarafında bir yük testi yapacağız.
+Debit tarafta Özge'nin çalışmasını ve UAT Masterpass'in canlıya alınmasını bekliyoruz.
+Bizim mobil'deki servisleri isteyecekler, sonra karta geleckeler, Özge takvimi isteyecek.
+Volkan Usman'lar yapıyor
+UAT Masterpass'in kart ekleme ve harcama aynı servisten geliyorsa yük testi yapılmalı.
+Digipays en fazla kaç istek geliyor, 
+Murat elindeki işleri versin
+
+-Temassız ve yurtiçi - yurtdışı ecom ve işlem açılması MS servislerinin yazdırılması, takip
+-Paycore yük testi, endpointler özelinde Özgeler çalışma yapıyor bize gelecekler. UAT Masterpass geçişi olsun,debit kartlarla masterpass'i yük testi yapılacak
+-CMS'den Kurumsal'a Kapatılamayan KK ve Banka Kartı Alanlarının Kapatılması,Kaan ile Emine konuşacaklar 
+-Turgutlar bddk düzenlemesi kapsamında limitlerin lks bildirimlerini yapıp düşürecekler ancak ocean tarafındaki limitler otomatik bu limite dönecek mi bunu teyit etmemiz gerekecek
+-Şaban beylerle vadeli hesapların bağlanması , kapatıldığı zaman sistem nasıl davranacak vb toplantı ayarlanmalı.
+-KK başvuru'da dosya nasıl upload edilecek, nasıl saklanacak, personel için ayrışması gerekli.
+-Mobil Uygulama – Erişilebilirlik (VoiceOver/TalkBack) Geliştirmeleri / Ocak Release(Yasal olduğunu hatırlamıyorum)
+-Master MR'larda sorun yaşıyoruz, her Mr için  otomatik code review yapan(clean code veya unit test yazan) bir tool var mı?
+-Uygulamada en çok nereyi kullanıyorlar, en çok nerede hata almışlar?
+-İzlenebilirlik konusunda çalışma yapılacak, Ömer Can sorgu hazırlayacak.
+
+Önemli: These are critical tasks with minimal urgency. 
+-Limit düşürme doküman incelenmesi,ben
+
+
+Atanacaklar:These are pressing tasks with negligible impact. 
+
+Önemsiz-Acil Olmayan: These are trivial tasks with minor urgency.
+-Damla'ya mesaj yaz, klavye indiren tuş için
+
+
+1e1'lere ekle.
+What can I do to help you work better? 
+What do you wish that I did less of? 
+What has frustrated you in the last sprint? 

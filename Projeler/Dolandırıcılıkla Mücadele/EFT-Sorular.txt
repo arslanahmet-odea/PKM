@@ -1,0 +1,55 @@
+"5273838187249695"
+
+TxnCode = 10;
+PhoneRestrictedCode = "11";
+ECommerceRestrictedCode = "12";
+
+
+CashAdvanceRestrictedCode = "10";
+CashAdvanceToAccountRestrictedCode = "20";
+CashAdvanceTxnCode = 11;
+
+
+-KMH kullandırılacak tüm ekranlarda bilgilendirme gerekiyor.
+
+ nakit avans: /cards/cash-advance/confirm
+ms:ConfirmCashAdvance
+*_creditCardManager.ProcessNARequestPostAsync => interapi
+
+?Bu transfer altypısını kullanıyor mu, herhangi bir kısıt varsa kontrol etmek gerekir mi? kredi kullanabiliyor
+kendi kart borç ödeme: /cards/payment/own/confirm
+ms:PayForOwnOdebankCardConfirmation
+*_creditCardManager.ProcessCCPaymentRequestPostAsync => interapi 
+
+?Bu transfer altypısını kullanıyor mu, herhangi bir kısıt varsa kontrol etmek gerekir mi?
+başka odea kartı borç ödeme: /cards/payment/other/confirm
+ms:PayForOtherOdebankCardConfirmation
+*_creditCardManager.ProcessThirdPersonPaymentRequestPost
+ 
+başka banka kartı borç ödeme: /eft/creditcard/confirm
+ms:GetPayForOtherConfirmationBankCard
+*_moneyTransferManager.ProcessScheduledTransactionForOtherBankCCPaymentAsync => interapi
+*_moneyTransferManager.PayForOtherBankCardAsync => interapi
+
+kredi kartı güvenlik kısıt: /cards/security/settings/confirm
+ms:ConfirmSecuritySettings
+*_creditCardManager.UpdateCreditCardRestrictionPost => interapi
+
+KDIG işlem imzalama akışları kapsamında aşağıdaki TransactionCode değerleri için yanlarında belirtilen kullanıcı gruplarının kademeli olarak pilot uygulamaya eklenmesini rica ederiz.
+
+•	CreditCard_ThirdPerson_Payment  Önceden tüm banka çalışanlarına açılmasını rica etmiştik, şu aşamada Login ekibi ile aynı şekilde (mevduat büyüklüğüne göre) kademelendirilerek açılabilir.
+•	CreditCard_Payment  Önceden tüm banka çalışanlarına açılmasını rica etmiştik, şu aşamada Login ekibi ile aynı şekilde (mevduat büyüklüğüne göre) kademelendirilerek açılabilir.
+•	OTHERBANKCCPAYMENT  Tüm banka çalışanlarına açılıp sonrasında yukarıdaki işlemler ile paralel şekilde yaygınlaştırma yapılabilir.
+•	Scheduled_OTHERBANKCCPAYMENT  Tüm banka çalışanlarına açılıp sonrasında yukarıdaki işlemler ile paralel şekilde yaygınlaştırma yapılabilir.
+
+Aşağıdaki TransactionCode değeri için farklı bir yaygınlaştırma planını ayrıca iletiyor olacağız:
+
+•	CreditCard_Settings  Önceden tüm banka çalışanlarına açılmasını rica etmiştik. Bu akışı ilgilendiren bir pilot bulgusunu giderip ardından (ara paket geçişi sonrasında) yaygınlaştırmayı planlayacağız
+
+
+
+private readonly IJsonLocalizationService _localizationService;
+
+var message = _localizationService.GetString("Error.SecurityVerificationNotCompleted");
+
+throw new InvalidOperationException(message);

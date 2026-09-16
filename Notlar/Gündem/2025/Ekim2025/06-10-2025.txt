@@ -1,0 +1,8 @@
+-Barış'a, işlemler listelendiğinde açıklama kısmına bir şey gelecek mi sor, dijital debit dizininde işlem detay diye bir resim var oraya koy.
+-İleriki fazlarda genel limit ekranının çektiği servis hazırsa, dzd ve ezgi çalışlara sorup oradan alabilir miyiz öğreniliecek.
+Avni için nenden DB bağlanmıyor Ahmet Emin Şit'e sor
+Kaan ve tunç iki tane kayıt var.
+
+hesap listeleme ve fortuna'da kart kapama için hangi servisler çağrılıyor
+
+
