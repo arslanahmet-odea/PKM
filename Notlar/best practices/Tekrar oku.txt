@@ -1,0 +1,20 @@
+“Anlamadım.” deme.
+“Biraz daha açar mısın?” de.
+“Sen yanlış biliyorsun.” deme.
+“Benim bildiğim biraz farklı.” de.
+“Bilmiyorum.” deme.
+“Bu konuda net bir bilgim yok.” de.
+“Bana ne!” deme.
+“Bu konuya dahil olmak istemiyorum.” de.
+“Saçmalama.” deme.
+“Ben aynı fikirde değilim.” de.
+“Vaktim yok.” deme.
+“Şu an buna zaman ayıramıyorum.” de.
+“Sen bilirsin.” deme.
+“Kararına saygı duyuyorum.” de.
+“Beni ilgilendirmez.” deme.
+“Bu konuda karar vermek bana düşmez.” de.
+“Sakin ol.” deme.
+“Seni dinliyorum, anlat.” de.
+“Yapamam.” deme.
+“Şu an bunu üstlenmem doğru olmaz.” de.

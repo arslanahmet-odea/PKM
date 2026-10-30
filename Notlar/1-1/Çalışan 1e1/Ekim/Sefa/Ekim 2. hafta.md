@@ -1,7 +1,7 @@
 Phase 5: Follow Up Consistently
 
 “Last time, you said you’d [specific action]. How did that go?”
--Yaptıysa tebrik et, değilse seni zorlayan neydi, işte göremediğimiz bir zorluk mu vardı? 
+-Yaptıysa tebrik et, değilse seni zorlayan neydi, işte göremeidğimiz bir zorluk mu vardı? 
 -Yanıtlardan nerede zorlandığını anlamaya çalış ve bir desen çıkar.
  
 Phase 1: Arrive Present
@@ -13,7 +13,9 @@ Before the meeting, ask yourself:
  
 Phase 2: Explore With Open Questions
 Hayat nasıl gidiyor?, "Geçen seferden beri aklını meşgul eden şeyler neler?"
-Core taraftaki işler için analistlerden görüş alalım.
+Yapay zeka konularına sarmış.
+Bruno collection mcp server gibi test yazdırılabilir.
+BE olduğunda veri üzerinden gidilebilir.
 
 Benzer sorular:
 “What’s been taking the most energy recently?”
@@ -23,6 +25,13 @@ Benzer sorular:
 
 Doğru anladığından emin ol, sorunu çözmeye çalışma, öneri al ve sonraki adımda neler yapmak gerektiğini sor.
 
+1-Benden daha ürüncü değil de teknik bakış açısı, ve konunun teknik olarak ele almam gerektiğini
+Duygu'nun söylediklerini ben söylüyorum.
+Duygu'yu ikna etmek zorunda olmasınlar, arayüz olup takım lideri rolünü üstlenmem gerekiyor.
+Duygu'nun beni öğüttünü ve düzenine uydurduğunu düşünüyor.
+
+2-Düzensiz ve verimsiz geliyor işler.
+
 Phase 3: Focus On What Matters Most
 Konuştuğumuz konulardan sence en önceliklisi hangisi ve nasıl çözmeliyiz?
 (çözümde anlaşamazsa, elle tutulabilir kanıt iste, seni bu şekilde düşünmeye iten sebepler nelerdir?)
@@ -31,51 +40,38 @@ Phase 4: Commit To Specific Action
 En önemli sorununu tespit ettikten sonra haftaya kontrol edebileceğin bir aksiyon iste.
 Bu aksiyonu not al ve kendisine ilet, haftaya  yapılabilir büyüklükte bir iş olsun, herşeyi çözmeye çalışma.
 
-Hayat nasıl gidiyor?
-
-1e1'lere ekle.
-What can I do to help you work better? 
-What do you wish that I did less of? 
-What has frustrated you in the last sprint? 
-
-
+Hayat nasıl gidiyor? Geçen seferden beri aklını meşgul eden şeyler neler?
 
 Ekip: Takım etkilişimi, ilişkiler vb.
-
-- Takımda işler nasıl gidiyor?
-- Kiminle daha çok çalışmak isterdin?
-
--Debit Core tarafta bir yazılımcı olsa 4Arch'e yaptırığımız işlerin %70'ini yaptırırız.
--Debit core tarafı bizim yazılımcılar inceleyebilmeli.
-Tek kullanıcı ile girip kodları yazılımcılar inceleyebilir.
-Mobil'de biraz daha rol almak istiyor.
-
-İş yapabilen doğru iş çıkartan 
--Acquier tarafı için test yapıyor, authorizasyon bilen kişinin eci(Toygun)
--Mevcutta çalışmadığı için preprod ortam adına sorun kaydıyla gidilebilmeli.
--Fatih'ten başka sorun yok, Uğur bilgili değil(yeterli değil).
--Mustafa ile Kaan çalışırken yarım paket taşımış
+-Takımda işler nasıl gidiyor?
+-Kiminle daha çok çalışmak isterdin? (Kaan'la iletişim daha zor, Fırat'la çalışmak istermiş.)
 
 Geçen hafta hangi işlerde çalıştın?
--Troy kartların axxes KTU adımının düzeltilmesi için script hazırlandı
--Insert ATM sorunu tespit edip düzelttirildi, 
--Fiziki debit kartlarda MOTO işlemlere açılması, debit tarafta düzeldildi, testi yapıldı, sonraki geçişe gönderilecek
--Fiziki Debit geçici kapama testleri, MS testleri yapılıyor.
--Harcama kategorizasyonu ile MCC listesi Burak'a iletildi 
--Dijital slip, paycore tarafında Samet' tarafından geliştirilmesi takibi
--QR pos satış işlemlerde QR ref  düzeltmesi ve test edilmesi, (23 Temmuz)
--Debit tarafta push notification yapılması ve business kontrolleri için Selin'e destek.
+-Harcama analizi, testte,
+-Yeni Anasayfa tasarım revizeleri
+ *favori kart listelemenin genele uygulanması
+ *kartı yoksa kart başvuru gelecek
+ *tek kartı varsa direk işleme gidecek
+-Limit Artım sayfası düzenlemesi, testte
+-Ayrıcalıklar Dünyası Anket,testte
+-App kısayoluna bastırınca  menü'nün düzeltilmesi
 
+Koçluk konusu : Mimari bilgi
+YZ ara hedefler yollayacağım, React mimarisi 
 
-Koçluk konusu: 
-Ara Aşamalar
-
+Söylediklerini buraya yaz, sesli tekrar et ve toplantı sonunda paylaş.Bir iş tıkanmışsa 1- dkk'da çözülecek bir şeyse hemen çöz, değilse kayıt altına al ve destek olmaya çalış.
 
 Süreçler
--Seni daha üretken ve mutlu yapmak için ne yapabilirim? ( araçlar, iş-ev ayarı, süreç iyileştirme )
+-Seni daha üretken ve mutlu yapmak için ne yapabilirim?(araçlar, iş-ev ayarı, süreç iyileştirme)
+-Freeze başlamadan önce tüm testlerin bitmesi, tampon süre, retro konusu.
+-
 
 Ekibi sistemik olarak üretkenliğini düşüren şeyleri tespit etmek gerekir.
+İntelligence yavaş çalışıyor, kullanmaya alıştığı için şimdi çok zorlamıyor.
+
 How are these 1:1s working for you?
+İşe yarıyor.
+
 
 People (5min): How are team dynamics and relationships? 
 (e.g., “How are things going with the team?”). 
@@ -83,6 +79,7 @@ People (5min): How are team dynamics and relationships?
 How do you feel about the team’s collaboration and communication recently?
 This can reveal interpersonal issues or successes.
 What’s one thing I could do better to support you or make your job easier?
+
 
 Product (10min): What’s the focus of their work? 
 (e.g., “What have you been working on lately?”).
@@ -104,20 +101,7 @@ Is anything blocking your progress or draining your energy lately?
 “What would you do if you had to decide right now?”
 
 
-Genel hatalar,
-1-dinle dinle boşa gitmesin,dinledikten sonra:
-"What would need to change for this to feel different?"
- mutlaka bir aksiyon alınacak madde çıkar.
 
-2-Kapsam Taşması
-Çok fazla madde varsa sadece aksiyon alınabileceklere odaklan.
-We’ve covered a lot. What feels most important to focus on today?
 
-3-Çözüm sunmak
-Kendi yolunu ve çözümünü bulsun, %20 konuş.
-Öneris unacaksan mutlaka onların çözüm yolunu öğren
-"What have you already considered?” and “What do you think would work?” 
 
-4-Neyi takip edeceğin karmaşıklaştı.
-"Just to make sure we’re aligned, what’s your action from today?” 
 

@@ -48,13 +48,15 @@ Ekip: Takım etkilişimi, ilişkiler vb.
 - Kiminle daha çok çalışmak isterdin?
 
 Geçen hafta hangi işlerde çalıştın?
--Settings endpoint'indeki Get metodu Eylül canlıya konulacak.
--KK harcama analiz, debit bitti, kk ve tüm kartlar başlayacak.
--KK kapama status değişiminde notifikasyon altyapı yapılıyor.
--KKforIntSube Cache , 10 public metodda yapılmış, en az 10 tane endpoint'e etki ediyor.
+-KK harcama analiz, debit bitti, kk ve tüm kartlar DB sorgu bekleniyor.
+YZ ile neler yapabiliriz, insight yapacağız
+-KK kapama status değişiminde notifikasyon test yapıldı, Ekim canlıya geçilecek.
+-KKforIntSube Cache, 10 public metodda yapılmış, en az 10 tane endpoint'e etki ediyor.
 Listesini çıkaralım, test ettireceğiz.
+-Debit Geçici kapama otomatik aktifleştirme
+-KK Geçici kapama otomatik aktifleştirme
 -Debit POS QR dijital slip, kodlama bitti, FE için Sefa ile konuşulacak.
--QR ikon Yusuf Zopçuk yapınca ms iş yapılacak
+-Debit, QR ikon Yusuf Zopçuk yapınca ms iş yapılacak
 
 
 Yaptığın işlerden en çok gurur duyduğun konu hangisiydi:

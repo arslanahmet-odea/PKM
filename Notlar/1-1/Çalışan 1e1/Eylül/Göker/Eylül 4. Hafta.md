@@ -50,9 +50,9 @@ Geçen hafta hangi işlerde çalıştın?
 -BKM, karakod para yatırmada pin ve kart no bilgisi yazılacak(Maliyet onaylandı, intertech ön analiz yollayacak)
 -Pentest, ATM tamam, POS QR kart tanımı yapıldı, test maddeleri devam ediyor.
 -Çok amaçlı işlem rapor hatası, DZD'den haber alınacak.
+
 Süreçler
 -Seni daha üretken ve mutlu yapmak için ne yapabilirim?(araçlar, iş-ev ayarı, süreç iyileştirme)
--Seviyelenme toplantılarında bir eğitim verecek konuyu kendi seçecek, ne zaman hazır olursa bana bildirecek
 
 
 What skills or areas do you want to grow in over the next few months?
