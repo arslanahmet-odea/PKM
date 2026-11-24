@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>CausalCampaign.Domain</RootNamespace>
+    <AssemblyName>CausalCampaign.Domain</AssemblyName>
+    <Description>Clean Architecture Core Domain Layer for Causal ML and MILP Dynamic Campaign Decision Engine</Description>
+  </PropertyGroup>
+</Project>

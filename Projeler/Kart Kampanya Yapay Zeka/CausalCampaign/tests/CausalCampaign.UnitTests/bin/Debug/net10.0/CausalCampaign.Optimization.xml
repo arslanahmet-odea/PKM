@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CausalCampaign.Optimization</name>
+    </assembly>
+    <members>
+        <member name="T:CausalCampaign.Optimization.Buckets.MicroBucketCatalogService">
+            <summary>
+            20 Standard Micro-Bucket Catalog that eliminates operational complexity and structurally guarantees
+            Algorithmic Fairness (Monotonicity: Target_a &gt; Target_b =&gt; Reward_a =&gt; Reward_b).
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Optimization.Buckets.MicroBucketCatalogService.GetAllMicroBuckets">
+            <summary>
+            Returns all 20 standard micro-bucket definitions.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Optimization.Buckets.MicroBucketCatalogService.CountMonotonicityViolations(System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Decimal,System.Decimal}})">
+            <summary>
+            Counts assignments in the given list that violate Algorithmic Fairness / Monotonicity
+            (Target_a &gt; Target_b =&gt; Reward_a &gt;= Reward_b) in O(N log N) time (KPI-8 target: 0 violations).
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.Optimization.Bundles.EquivalentOfferBundleBuilder">
+            <summary>
+            Generates 3 equivalent-profit alternative offer options that the customer can choose from in the mobile app
+            under Active Preference Learning, while preserving MILP budget caps, credit limit caps, and monotonicity.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Optimization.Bundles.EquivalentOfferBundleBuilder.BuildEquivalentOffersJson(System.Decimal,System.Decimal,System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            Builds a JSON array of 3 equivalent-profit offer options around the primary MILP-assigned offer (Option 1).
+            All alternatives respect maxAllowedTargetAmount, maxRewardPerCustomer, primaryRewardAmount (budget safety),
+            and monotonicity (Target_a &gt; Target_b =&gt; Reward_a &gt;= Reward_b).
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.Optimization.Configuration.OptimizationOptions">
+            <summary>
+            Configuration options for the Google.OrTools MILP portfolio optimizer and experiment hold-out splitter.
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.Optimization.Configuration.OptimizationOptions.SolverEngine">
+            <summary>
+            Google.OrTools mixed-integer linear programming solver engine ("SCIP" or "CBC_MIXED_INTEGER_PROGRAMMING").
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.Optimization.Configuration.OptimizationOptions.HoldoutControlGroupRatio">
+            <summary>
+            Stratified Randomized Controlled Trial (Stratified Hold-out RCT) control group ratio (10% = 0.10).
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.Optimization.Configuration.OptimizationOptions.MaxAvailableCreditLimitRatio">
+            <summary>
+            Maximum fraction of a customer's available credit card limit that can be assigned as a spend target (80% = 0.80).
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.Optimization.Configuration.OptimizationOptions.MisProfitabilityObjectiveWeight">
+            <summary>
+            Weight multiplier applied to the customer's bank-wide MIS monthly net profitability in the objective function.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.Optimization.DependencyInjection">
+            <summary>
+            Registers CausalCampaign.Optimization layer services into the Dependency Injection container.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.Optimization.Experiment.StratifiedRctHoldoutSplitter">
+            <summary>
+            Stratifies eligible customers by spend decile (SpendDecile) and prestige tier (PrestigeSegment)
+            into 90% Treatment and 10% Control (Control_Holdout) cohorts for CUPED net lift evaluation.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Optimization.Experiment.StratifiedRctHoldoutSplitter.SelectStratifiedControlGroupCustomerIds(System.Collections.Generic.IReadOnlyList{CausalCampaign.Domain.Entities.CustomerCausalFeatureView},System.Decimal)">
+            <summary>
+            Selects customer IDs into the stratified control (Hold-out) cohort.
+            </summary>
+            <param name="eligibleCustomers">Customers eligible to receive an offer.</param>
+            <param name="holdoutRatio">Control group ratio (default 0.10 = 10%).</param>
+            <returns>Set of customer IDs assigned to the Control_Holdout group.</returns>
+        </member>
+        <member name="T:CausalCampaign.Optimization.Solvers.MilpPortfolioOptimizer">
+            <summary>
+            Mixed-Integer Linear Programming (MILP) portfolio optimizer powered by Google.OrTools.LinearSolver (SCIP / CBC)
+            that maximizes net incremental economic value under:
+            1) Single Assignment and Free-Rider Exclusion (KPI-2: &lt;= 25%),
+            2) Total Campaign Reward Budget Constraint,
+            3) 80% Available Credit Card Limit and Per-Customer Reward Cap Constraint,
+            4) MIS Profitability and Marketing Consent Constraint,
+            5) Algorithmic Fairness / Monotonicity Constraint (KPI-8: Target_a &gt; Target_b =&gt; Reward_a =&gt; Reward_b).
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Optimization.Solvers.MilpPortfolioOptimizer.OptimizeCampaignPortfolio(CausalCampaign.Domain.Entities.CampaignTemplate,System.Collections.Generic.IReadOnlyList{CausalCampaign.Domain.Entities.CustomerCausalFeatureView},System.Collections.Generic.IReadOnlyList{CausalCampaign.Domain.DTOs.CustomerCausalPredictionDto})">
+            <summary>
+            Solves the optimal offer assignment across 20 micro-buckets to maximize net incremental economic value.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CausalCampaign.Web</name>
+    </assembly>
+    <members>
+        <member name="T:CausalCampaign.Web.Controllers.CampaignEngineController">
+            <summary>
+            REST API endpoints for real-time ISO 8583 card authorization/reversal processing,
+            R-Learner + MILP portfolio optimization, customer alternative offer selection, and Kill-Switch management.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.AuthorizeTransaction(CausalCampaign.Domain.DTOs.AuthorizeTransactionRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Processes a real-time ISO 8583 0100/0200 card authorization message (&lt; 500 ms).
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.ReverseTransaction(CausalCampaign.Domain.DTOs.ReversalTransactionRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Processes a real-time ISO 8583 0400/0420 reversal or refund message and applies Clawback if needed.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.OptimizeCampaign(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Runs Robinson R-Learner Uplift + Google.OrTools MILP portfolio optimization for the specified campaign.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.SelectOfferPreference(CausalCampaign.Domain.DTOs.SelectAlternativeOfferRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Records the customer's selection among 3 equivalent offers in the mobile app (Active Preference Learning).
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.TriggerKillSwitch(CausalCampaign.Domain.DTOs.TriggerKillSwitchRequestDto,System.Threading.CancellationToken)">
+            <summary>
+            Activates the emergency Kill-Switch for a campaign.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.GetDashboardSummary(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Returns the Back-Office 8-KPI and budget executive dashboard summary.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Controllers.CampaignEngineController.GetCustomerAudit(System.Int32,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Returns customer offer, tracker, XAI rationale, and transaction audit details for the Call Center and Mobile Simulator.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.Web.Middleware.GlobalExceptionHandler">
+            <summary>
+            Centralized Global Error Handling service implementing ASP.NET Core 10.0 IExceptionHandler.
+            Captures unhandled exceptions and returns standardized RFC 7807 ProblemDetails JSON without leaking stack traces.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.Web.Middleware.GlobalExceptionHandler.MapDomainErrorToProblemDetails(CausalCampaign.Domain.Common.DomainError,System.String)">
+            <summary>
+            Maps a DomainError instance to RFC 7807 ProblemDetails and its corresponding HTTP status code.
+            </summary>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>

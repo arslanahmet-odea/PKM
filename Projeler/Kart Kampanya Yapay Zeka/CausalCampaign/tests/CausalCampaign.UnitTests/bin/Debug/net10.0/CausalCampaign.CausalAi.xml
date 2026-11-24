@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CausalCampaign.CausalAi</name>
+    </assembly>
+    <members>
+        <member name="T:CausalCampaign.CausalAi.Analytics.BehavioralMicroClusterSummaryDto">
+            <summary>
+            Represents an HDBSCAN density-based behavioral micro-cluster discovery summary.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Analytics.BehavioralMicroClusterSummaryDto.#ctor(System.Int32,System.String,System.Int32,System.Decimal,System.Decimal,System.String)">
+            <summary>
+            Represents an HDBSCAN density-based behavioral micro-cluster discovery summary.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Analytics.BehavioralHdbscanClusterer">
+            <summary>
+            Discovers density-based behavioral micro-clusters across customer real spend, transaction frequency,
+            sector diversity, and dormancy features, producing analyst opportunity summaries.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Analytics.BehavioralHdbscanClusterer.DiscoverBehavioralClusters(System.Collections.Generic.IReadOnlyList{CausalCampaign.Domain.Entities.CustomerCausalFeatureView})">
+            <summary>
+            Partitions portfolio feature vectors into behavioral micro-clusters based on density and mutual reachability distance.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Analytics.CupedExperimentEvaluator">
+            <summary>
+            KPI-3 (Incremental ROI =&gt; 1.35x): Verifies net incremental economic value ((Incremental Spend * Margin) - Reward)
+            using Stratified Randomized Controlled Trials (Stratified RCT) and CUPED variance reduction.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Analytics.CupedExperimentEvaluator.EvaluateCampaignIncrementalRoi(System.Int32,System.Decimal,System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Decimal,System.Decimal,System.Decimal,System.Boolean}})">
+            <summary>
+            Uses pre-experiment baseline spend (X_pre) as a control variate to compute CUPED-adjusted incremental spend
+            and Incremental ROI per unit reward cost.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Analytics.InflationPsiDriftMonitor">
+            <summary>
+            KPI-7 (Monthly PSI &lt; 0.15): Detects nominal spending covariate drift in high-inflation environments
+            and verifies the stability of inflation-adjusted real spend distributions.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Analytics.InflationPsiDriftMonitor.CalculateMonthlyPsiDrift(System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList{System.Decimal},System.Collections.Generic.IReadOnlyList{System.Decimal},System.Collections.Generic.IReadOnlyList{System.Decimal},System.Collections.Generic.IReadOnlyList{System.Decimal})">
+            <summary>
+            Calculates the Population Stability Index (PSI) between reference and current spend distributions
+            for both nominal TRY and inflation-deflated real TRY.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Analytics.InflationPsiDriftMonitor.ComputePsiAcrossBins(System.Collections.Generic.IReadOnlyList{System.Decimal},System.Collections.Generic.IReadOnlyList{System.Decimal},System.Int32)">
+            <summary>
+            PSI = Sum( (ActualRatio_b - ExpectedRatio_b) * ln(ActualRatio_b / ExpectedRatio_b) )
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Bandit.ThompsonSamplingBanditService">
+            <summary>
+            Thompson Sampling Contextual Multi-Armed Bandit and active customer preference learning (Discrete Choice)
+            service powered by MathNet.Numerics Beta(alpha, beta) distributions.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Bandit.ThompsonSamplingBanditService.SelectRewardTypeWithBandit(System.Int32,System.String)">
+            <summary>
+            Selects a reward type by combining the customer's historical preference with a Thompson Sampling Beta draw.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Bandit.ThompsonSamplingBanditService.RecordCustomerChoiceFeedback(System.String,System.Boolean)">
+            <summary>
+            Updates the Beta(alpha, beta) posterior parameters of the selected reward arm when a customer chooses
+            one of the 3 equivalent offers or completes their spend goal.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Configuration.CausalAiOptions">
+            <summary>
+            Hyperparameters for Robinson R-Learner causal inference, Empirical Bayes shrinkage, and PSI drift monitoring.
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.CausalAi.Configuration.CausalAiOptions.PropensityClipMin">
+            <summary>
+            Minimum propensity score clipping boundary to prevent division by zero in R-Learner pseudo-outcomes (Y_res / W_res).
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.CausalAi.Configuration.CausalAiOptions.PropensityClipMax">
+            <summary>
+            Maximum propensity score clipping boundary in R-Learner pseudo-outcome calculation.
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.CausalAi.Configuration.CausalAiOptions.EmpiricalBayesPriorKappa">
+            <summary>
+            Empirical Bayes Shrinkage prior strength constant (kappa).
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.CausalAi.Configuration.CausalAiOptions.FreeRiderOrganicSpendThreshold">
+            <summary>
+            Minimum expected organic baseline spend (TRY) required to classify a customer as a Free-Rider (Sure Thing).
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.CausalAi.Configuration.CausalAiOptions.FreeRiderMaxRelativeUpliftRatio">
+            <summary>
+            Maximum marginal uplift-to-organic-spend ratio for classifying a customer as a Free-Rider.
+            </summary>
+        </member>
+        <member name="P:CausalCampaign.CausalAi.Configuration.CausalAiOptions.PsiAlertThreshold">
+            <summary>
+            KPI-7 monthly Population Stability Index (PSI) maximum safe drift threshold.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.DependencyInjection">
+            <summary>
+            Registers CausalCampaign.CausalAi layer services into the Dependency Injection container.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Explainability.XaiTurkishExplanationService">
+            <summary>
+            KPI-8 (100% Explainability): Calculates normalized feature contribution weights for each customer decision
+            and generates a human-readable XAI decision rationale for the mobile app and Call Center.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Explainability.XaiTurkishExplanationService.GenerateCustomerExplanation(CausalCampaign.Domain.Entities.CustomerCausalFeatureView,System.Decimal,System.Decimal,System.String)">
+            <summary>
+            Produces the top 3 contributing features (with normalized impact weights) and a clear English decision rationale.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.FeatureStore.InflationAdjustedFeatureStore">
+            <summary>
+            Feature Store service managing inflation-adjusted customer feature vectors (vw_CasualCampaign_CustomerCausalFeatures)
+            and monthly sectoral deflator multipliers (CasualCampaign_INFLATION_INDEX_MONTHLY).
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.FeatureStore.InflationAdjustedFeatureStore.GetPortfolioCausalFeaturesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves inflation-adjusted causal feature vectors across the entire customer portfolio.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.FeatureStore.InflationAdjustedFeatureStore.DeflateNominalToRealSpend(System.Decimal,System.Int32,System.String,System.Collections.Generic.IReadOnlyList{CausalCampaign.Domain.Entities.InflationIndexMonthly})">
+            <summary>
+            Deflates a nominal spend amount from a given period (YYYYMM) and sector into current real purchasing power (real TRY).
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Recommendation.MatrixFactorizationSectorRecommender">
+            <summary>
+            Recommends the next-best merchant sector with the highest cross-sell affinity using
+            ML.NET MatrixFactorization collaborative filtering.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Recommendation.MatrixFactorizationSectorRecommender.RecommendNextBestSector(CausalCampaign.Domain.Entities.CustomerCausalFeatureView)">
+            <summary>
+            Recommends the highest-affinity sector based on the customer's behavioral cluster and spending profile.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Uplift.CausalCustomerInput">
+            <summary>
+            ML.NET input schema for Robinson R-Learner Stage 1 (Expected Organic Spend m_hat) and Stage 2 (Pseudo-Outcome tau_hat).
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Uplift.RegressionScorePrediction">
+            <summary>
+            ML.NET LightGBM regression score output schema.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Uplift.DormantCardReactivationModel">
+            <summary>
+            Estimates the 60-day sustained reactivation probability (KPI-4: Reactivation =&gt; 6.5%)
+            and expected incremental spend for dormant credit cards inactive for 90+ days.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Uplift.DormantCardReactivationModel.PredictDormantReactivation(CausalCampaign.Domain.Entities.CustomerCausalFeatureView)">
+            <summary>
+            Predicts the reactivation probability and expected 60-day incremental spend for a dormant cardholder.
+            </summary>
+        </member>
+        <member name="T:CausalCampaign.CausalAi.Uplift.RobinsonRLearnerUpliftEngine">
+            <summary>
+            Causal machine learning engine that estimates Individual Treatment Effect (ITE / Uplift)
+            using a two-stage Robinson Decomposition R-Learner with Empirical Bayes Shrinkage,
+            and identifies Free-Rider customers.
+            </summary>
+        </member>
+        <member name="M:CausalCampaign.CausalAi.Uplift.RobinsonRLearnerUpliftEngine.PredictPortfolioCausalUplift(System.Collections.Generic.IReadOnlyList{CausalCampaign.Domain.Entities.CustomerCausalFeatureView},CausalCampaign.Domain.Entities.CampaignTemplate)">
+            <summary>
+            Predicts Stage 1 expected organic spend, Stage 2 R-Learner + Empirical Bayes shrunk incremental uplift,
+            Free-Rider persona classification, and XAI explanation across the customer portfolio.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>CausalCampaign.Web</RootNamespace>
+    <AssemblyName>CausalCampaign.Web</AssemblyName>
+    <Description>ASP.NET Core 10.0 REST API, Global Exception Handler, and 3-in-1 Blazor Interactive Server Command Center</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CausalCampaign.Domain\CausalCampaign.Domain.csproj" />
+    <ProjectReference Include="..\CausalCampaign.Infrastructure\CausalCampaign.Infrastructure.csproj" />
+    <ProjectReference Include="..\CausalCampaign.PosEnrichment\CausalCampaign.PosEnrichment.csproj" />
+    <ProjectReference Include="..\CausalCampaign.CausalAi\CausalCampaign.CausalAi.csproj" />
+    <ProjectReference Include="..\CausalCampaign.Optimization\CausalCampaign.Optimization.csproj" />
+    <ProjectReference Include="..\CausalCampaign.Application\CausalCampaign.Application.csproj" />
+  </ItemGroup>
+</Project>

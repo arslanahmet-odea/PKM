@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "pSkVSqE5zFc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\obu50550\\Documents\\PKM\\Projeler\\Kart Kampanya Yapay Zeka\\CausalCampaign\\src\\CausalCampaign.Optimization\\CausalCampaign.Optimization.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.ortools\\9.11.4210\\google.ortools.9.11.4210.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.ortools.runtime.linux-arm64\\9.11.4210\\google.ortools.runtime.linux-arm64.9.11.4210.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.ortools.runtime.linux-x64\\9.11.4210\\google.ortools.runtime.linux-x64.9.11.4210.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.ortools.runtime.osx-arm64\\9.11.4210\\google.ortools.runtime.osx-arm64.9.11.4210.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.ortools.runtime.osx-x64\\9.11.4210\\google.ortools.runtime.osx-x64.9.11.4210.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.ortools.runtime.win-x64\\9.11.4210\\google.ortools.runtime.win-x64.9.11.4210.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.2\\microsoft.extensions.dependencyinjection.abstractions.9.0.2.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\microsoft.extensions.options\\9.0.2\\microsoft.extensions.options.9.0.2.nupkg.sha512",
+    "C:\\Users\\obu50550\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.2\\microsoft.extensions.primitives.9.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
